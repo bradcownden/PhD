@@ -1,0 +1,157 @@
+\documentclass[12pt, a4paper]{report} %revtex options: notitlepage, eqsecnum, tightenlines
+\usepackage{cite}
+\usepackage{amsmath} 
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage[labelfont={bf,small},textfont={it,small}]{caption}
+\usepackage{subcaption}
+\usepackage{amsmath}      
+\usepackage{amsfonts}
+%\usepackage{dsfont}
+\usepackage{amssymb}
+%\usepackage{parskip}
+\usepackage{xfrac}
+\usepackage{mathrsfs}
+\usepackage{enumerate}
+\usepackage{setspace}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=red, urlcolor=cyan, linktoc=page}
+\numberwithin{equation}{chapter}
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]{\LARGE\bfseries}{\thechapter\hspace{10pt}}{0pt}{\LARGE\bfseries}
+\setlength{\parindent}{0.75cm}
+\usepackage{appendix}
+\usepackage{subfiles}
+\usepackage{wrapfig}
+
+
+\hoffset=-0.25in
+\voffset=0in
+\topmargin=-0.25in
+\topskip=0in
+\headheight=12pt
+\headsep=12pt
+\textwidth=7in
+\textheight=9.17in
+\footskip=30pt
+\oddsidemargin=0in
+\evensidemargin=0in
+\arraycolsep 2pt
+
+\renewcommand{\arraystretch}{1.5}
+\renewcommand{\chaptername}{}
+
+%\doublespacing    % <----- Initiate double spacing
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\setcounter{secnumdepth}{4}
+
+
+\begin{titlepage}
+\begin{center}
+\vspace*{1.5cm}
+
+{\bf Title}
+
+\vspace{1.5cm}
+ 
+By \linebreak
+Bradley Stuart Cownden
+\vspace{1.5cm}
+
+A Thesis submitted to the Faculty of Graduate Studies of \linebreak
+The University of Manitoba \linebreak 
+in partial fulfillment of the requirements for the degree of
+
+\vspace{1.5cm}
+
+{\bf Degree}
+
+\vspace{1.5cm}
+
+Department of Physics and Astronomy \linebreak
+University of Manitoba \linebreak
+Winnipeg
+
+\vspace{1.5cm}
+
+\textcopyright \, 2019 by Bradley Stuart Cownden
+\end{center}
+\end{titlepage}
+
+\pagenumbering{gobble}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\vspace*{\fill}
+\begin{center}
+{\it Dedication.}
+\end{center}
+\vspace*{\fill}
+\clearpage
+
+\newpage
+
+\pagenumbering{roman}
+
+\vspace*{\fill}
+\section*{Acknowledgments}
+\addcontentsline{toc}{chapter}{Acknowledgments}
+
+
+\vspace*{\fill}
+\clearpage
+
+\newpage
+
+\vspace*{\fill}
+\section*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+An abstract.
+
+\vspace*{\fill}
+\clearpage
+
+\setcounter{tocdepth}{2}
+
+\newpage
+
+\addcontentsline{toc}{chapter}{Table of Contents}
+\tableofcontents
+
+\listoffigures
+\listoftables
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+ \subfile{Introduction}
+ 
+ %\subfile{}
+ 
+\appendix
+\numberwithin{equation}{section}
+
+%\subfile{Appendices}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{/Users/bradc/Dropbox/D3_Research_Notes/JHEP}
+%\bibliography{/Users/bradc/Dropbox/D3_Research_Notes/thesisbib}
+\addcontentsline{toc}{chapter}{Bibliography}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+
