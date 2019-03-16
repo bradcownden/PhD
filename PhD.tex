@@ -1,7 +1,7 @@
 \documentclass[12pt, a4paper]{report} %revtex options: notitlepage, eqsecnum, tightenlines
 \usepackage{cite}
 \usepackage{amsmath} 
-\usepackage[latin1]{inputenc}
+%\usepackage[latin1]{inputenc}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage[labelfont={bf,small},textfont={it,small}]{caption}
@@ -24,6 +24,7 @@
 \usepackage{appendix}
 \usepackage{subfiles}
 \usepackage{wrapfig}
+\usepackage[utf8]{inputenc}
 
 
 \hoffset=-0.25in
@@ -41,6 +42,9 @@
 
 \renewcommand{\arraystretch}{1.5}
 \renewcommand{\chaptername}{}
+
+\newcommand{\beq}[1]{\begin{equation}\label{#1}}
+\newcommand{\eeq}{\end{equation}}
 
 %\doublespacing    % <----- Initiate double spacing
  
@@ -129,13 +133,16 @@ An abstract.
 
 \listoffigures
 \listoftables
+\newpage
+
+\pagenumbering{arabic}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  
- \subfile{Intro/Introduction}
+\subfile{Intro/Introduction}
  
- %\subfile{}
+\subfile{Chapter1/massivepaper}
  
 \appendix
 \numberwithin{equation}{section}
@@ -145,8 +152,8 @@ An abstract.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\bibliographystyle{/Users/bradc/Dropbox/D3_Research_Notes/JHEP}
-%\bibliography{/Users/bradc/Dropbox/D3_Research_Notes/thesisbib}
+\bibliographystyle{/Users/bradc/Documents/University_of_Manitoba/Thesis/PhD/JHEP}
+\bibliography{/Users/bradc/Documents/University_of_Manitoba/Thesis/PhD/PhD}
 \addcontentsline{toc}{chapter}{Bibliography}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

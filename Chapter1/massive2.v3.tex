@@ -1,0 +1,1363 @@
+\documentclass[aps,amsmath,amssymb,prd,nofootinbib,longbibliography,superscriptaddress]{revtex4-1}
+
+%\documentclass[letterpaper,11pt]{article}
+\pdfoutput=1 % to force arxiv to pdflatex
+
+%\usepackage{jheppub}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{caption,subcaption} % Subfigures
+\usepackage[section]{placeins}
+\usepackage[utf8]{inputenc}
+
+\newcommand{\comment}[1]{}
+\newcommand{\beq}[1]{\begin{equation}\label{#1}}
+\newcommand{\eeq}{\end{equation}}
+
+
+%%%%%%%%%%%%%%
+\begin{document}
+\title{Phase Diagram of Stability for Massive Scalars in Anti-de Sitter
+Spacetime}
+
+\author{Brad Cownden}
+\affiliation{Department of Physics \& Astronomy,\\ University of Manitoba\\
+Winnipeg, Manitoba R3T 2N2, Canada}
+\email{cowndenb@myumanitoba.ca}
+
+\author{Nils Deppe}
+\affiliation{Cornell Center for Astrophysics and Planetary Science and
+Department of Physics,\\ Cornell University\\
+122 Sciences Drive, Ithaca, New York 14853, USA}
+\email{nd357@cornell.edu}
+
+\author{Andrew R.~Frey}
+\affiliation{Department of Physics \& Astronomy,\\ University of Manitoba\\
+Winnipeg, Manitoba R3T 2N2, Canada}
+\affiliation{Department of Physics and Winnipeg Institute for Theoretical
+Physics,\\ University of Winnipeg\\
+515 Portage Avenue, Winnipeg, Manitoba R3B 2E9, Canada}
+\email{a.frey@uwinnipeg.ca}
+
+
+
+\begin{abstract}
+We present the phase diagram of stability of 5-dimensional
+anti-de Sitter spacetime against horizon
+formation in the gravitational collapse of a scalar field, treating the scalar
+field mass and width of initial data as free parameters. We find that 
+the stable phase becomes larger and shifts to smaller widths as the field
+mass increases. In addition to
+classifying initial data as stable or unstable, we identify two other phases
+based on nonperturbative behavior.  The metastable phase forms a horizon over
+longer time scales than suggested by the lowest order perturbation theory,
+and the irregular phase can exhibit non-monotonic and chaotic behavior in
+the horizon formation times. Our results include evidence for chaotic
+behavior even in the collapse of a massless scalar field.
+\end{abstract}
+
+%\keywords{}
+
+\maketitle
+
+\section{Introduction}
+
+Through the anti-de Sitter spacetime (AdS)/conformal field theory (CFT)
+correspondence, string theory on AdS$_5\times X^5$ is
+dual to a large $N$ conformal field theory in four spacetime dimensions
+($\mathbb{R}\times S^3$ when considering global AdS$_5$).  The simplest
+time-dependent system to study in this context is the gravitational dynamics
+of a real scalar field with spherical symmetry, corresponding to the
+time dependence of the expectation value of the zero mode of a single
+trace operator in the gauge theory.  Starting with the pioneering work of
+\cite{1104.3702,1106.2339,1108.4539,1110.5823}, numerical studies have
+suggested that these dynamics may in fact be generically unstable
+toward formation of (asymptotically) AdS$_{d+1}$ black holes
+even for arbitrarily small amplitudes.  While perhaps surprising compared
+to intuition from gravitational collapse in asymptotically flat spacetimes,
+the dual picture of thermalization of small energies in a compact space
+is more expected.  In terms of the scalar eigenmodes on a fixed AdS background,
+the instability is a cascade of energy to higher frequency modes and shorter
+length scales (weak turbulence), which eventually concentrates energy within
+its Schwarzschild radius.  In a naive perturbation theory, this is evident
+through secular growth terms.
+
+However, some initial scalar field profiles lead to quasi-periodic evolution
+(at least on the time scales accessible via numerical studies)
+at small but finite amplitudes; even early work \cite{1104.3702,1109.1825}
+noted that it is possible to remove the secular growth terms in the
+evolution of a single perturbative eigenmode.  A more sophisticated
+perturbation theory \cite{1403.6471,1407.6273,Basu:2014sia,1410.1880,1412.4761,1412.3249,Evnin:2015gma,1507.02684,1507.08261,1508.04943,1508.05474,1510.07836}
+supports a broader class of quasi-periodic solutions that can contain
+non-negligible contributions from many modes, and other stable solutions
+orbit the basic quasi-periodic solutions \cite{1507.08261}.  Stable
+solutions exhibit inverse cascades of energy from higher frequency to lower
+frequency modes due to conservation laws following from the high symmetry
+of AdS (integrability of the dual CFT).  Stable behavior also appears
+in the full non-perturbative dynamics for initial profiles with widths near
+the AdS length scale \cite{1304.4166,1307.2875,1308.1235}; however,
+analyses of the perturbative and full dynamics in the literature have not
+always been in agreement at fixed small amplitudes.  For example, some
+perturbatively stable evolutions at finite amplitude actually form black holes
+in numerical evaluation of the full dynamics
+\cite{1403.6471,1410.2631,1506.07907}.  Understanding the breakdown of the
+approximations used in the perturbative theory, as well as its region of
+validity, is an active and important area of research
+\cite{1506.03519,1606.02712,1607.08094,Dimitrakopoulos:2016euh,Liebling:2017gfn}.
+
+Ultimately, the main goal of this line of inquiry is to determine whether
+stability or instability to black hole formation (or both) is generic on
+the space of initial data, so the extent of the ``islands of stability''
+around single-mode or other quasi-periodic solutions and how it varies
+with parameters of the physics on AdS are key questions of interest.  The
+biggest changes occur in theories with a mass gap in the black hole spectrum,
+such as AdS$_3$ and Einstein-Gauss-Bonnet gravity in AdS$_5$, which cannot
+form horizons at small amplitudes.  While small-amplitude evolution in
+AdS$_3$ appears to be quasi-periodic \cite{1306.0317,1412.6002}, there is
+some evidence to point toward late-time formation of a naked singularity
+in AdS$_5$ Einstein-Gauss-Bonnet gravity \cite{1608.05402,1410.1869}
+(along with a power law energy spectrum similar to that at horizon
+formation).  Charged scalar and gauge field matter \cite{1606.00830}
+also introduces a qualitative change in that initial data may lead to
+stable evolution or instability toward either Reissner-Nordstr\"om black holes
+or black holes with scalar hair.
+
+In this paper, we extend the study of massive scalar matter initiated in
+\cite{1504.05203,1508.02709}.  Specifically, using numerical evolution of
+the full gravitational dynamics, we draw the phase diagram of gravitational
+collapse as a function of scalar field mass and initial scalar profile
+width.  By considering the time to horizon formation as a function of
+the initial profile's amplitude, we identify several different classes
+of stable behavior and indicate them on the phase diagram.  Finally, we
+analyze and characterize these different stable behaviors.  Throughout,
+we work in AdS$_5$, due to its relevance to strongly coupled gauge theories
+in four dimensions and because previous literature has indicated massless
+scalars lead to greater instability than in AdS$_4$ (the main other case
+considered), which makes the effects of the scalar field mass more visible.
+
+We note briefly two caveats for the reader.  First, horizon formation
+always takes an infinite amount of time on the AdS conformal boundary
+due to the usual time dilation effects associated with horizons; this agrees
+with the understanding of thermalization in the CFT as an asymptotic process.
+Horizon formation times discussed in this paper correspond to an approximate
+notion of horizon formation that we will describe below, but alternate
+measures of thermalization may be of interest.  Second, the black holes
+we discuss are smeared on the compact $X^5$ dimensions of the gravitational
+side of the duality, as in most of the literature concerning stability of
+AdS, and we are particularly interested in small initial amplitudes that
+lead to black holes small compared to the AdS scale. As described in
+\cite{hep-th/0202189,1502.01574,1509.07780}, small black holes in this
+situation suffer a Gregory-Laflamme-like instability toward localization
+on $X^5$ (which may in fact lead to formation of a naked singularity).  At
+the same time, certain light stable solutions for charged scalars (boson
+stars) are stable against localization on $X^5$ \cite{1509.00774}.  We
+therefore provisionally assume that the onset of the Gregory-Laflamme-like
+instability occurs only at horizon formation, not at any point of the
+earlier horizon-free evolution.
+
+
+The plan of this paper is as follows: in section \ref{s:review}, we review
+the time scales associated with horizon formation with an emphasis on
+the behavior of massive scalars and briefly discuss our methods.  Then,
+in section \ref{s:phases}, we present the phase diagram of different
+stability behaviors, and an attempt at heuristic analytic understanding 
+appears in \ref{s:analysis}.
+We close with a discussion of our results.
+
+
+
+\section{Review}\label{s:review}
+In this section, we review results on the stability of scalar field initial
+data as well as our methods (following the discussion of \cite{1508.02709}).
+
+\subsection{Massive scalars, stability, and time scales}
+
+As in most of the literature, we work in Schwarzschild-like coordinates,
+which have the line element (in asymptotic AdS$_{d+1}$)
+\beq{metric}
+  ds^2=\frac{1}{\cos^2(x)}\left(-Ae^{-2\delta}dt^2+
+  A^{-1}dx^2+\sin^2(x)d\Omega^{d-1}\right)
+\eeq
+in units of the AdS scale.  In these coordinates, a horizon appears at
+$A(x,t)=0$, but reaching zero takes an infinite amount of time (measured either
+in proper time at the origin or in conformal boundary time); following
+the standard approach, we define a horizon as having formed at the earliest
+spacetime point (as measured by $t$) where $A$ drops below a specified
+threshold defined in \S\ref{s:methods} below.  Of course, horizon formation
+represents a coarse-grained description since the pure initial state of
+the dual CFT cannot actually thermalize; a more precise indicator of
+approximate thermalization may be the appearance of a power law energy spectrum
+(exponentially cut off) in the perturbative scalar eigenmodes.  This
+indicator is tightly associated with horizon formation (though see
+\cite{1608.05402,1410.1869} for some counterexamples).
+
+A key feature of any perturbative formulation of the gravitational
+collapse is that deviations from $A=1,\delta=0$ appear at order $\epsilon^2$,
+where $\epsilon$ is the amplitude of initial data.  As a result,
+horizons can form only after a time $t\sim\epsilon^{-2}$; in the
+multiscale perturbation theory of \cite{1403.6471,1407.6273,1410.1880,1412.4761,1412.3249,1507.02684,1507.08261,1508.04943,1508.05474,1510.07836},
+there is in fact a scaling symmetry
+$\epsilon\to\epsilon',t\to t(\epsilon/\epsilon')^2$ that enforces the
+proportionality $t_H\propto \epsilon^{-2}$, where $t_H$ is the (approximate)
+horizon formation time for unstable initial data at small amplitude.
+
+\begin{figure}[!t]
+\centering
+\begin{subfigure}[t]{0.47\textwidth}
+\includegraphics[width=\textwidth]{m0w15.pdf}
+\caption{\textit{Stable} initial data for $\sigma=1.5$}
+\label{f:m0w15}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.47\textwidth}
+\includegraphics[width=\textwidth]{m0w025fit.pdf}
+\caption{\textit{Unstable} initial data for $\sigma=0.25$}
+\label{f:m0w025}
+\end{subfigure}
+\begin{subfigure}[t]{0.47\textwidth}
+\includegraphics[width=\textwidth]{m0w085fit.pdf}
+\caption{\textit{Metastable} initial data for $\sigma=0.85$}
+\label{f:m0w085}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.47\textwidth}
+\includegraphics[width=\textwidth]{m0w11.pdf}
+\caption{\textit{Irregular} initial data for $\sigma=1.1$}
+\label{f:m0w11}
+\end{subfigure}
+\caption{Classes of initial data for massless scalars and initial width
+$\sigma$.  Blue dots represent horizon formation;
+red triangles indicate a lower limit for $t_H$.  Red curves in subfigures
+\ref{f:m0w025},\ref{f:m0w085} are $t_H=a\epsilon^{-2}+b$ matched to largest
+two amplitudes in the curve.}
+\label{f:classes}
+\end{figure}
+
+As a result, initial data can be divided into several classes with respect
+to behavior at low amplitudes, as illustrated in figure \ref{f:classes}
+for massless scalars.  \textit{Stable} initial data evolves
+indefinitely without forming a horizon.  In practice, we identify this
+type of behavior in numerical evolutions by noting rapid horizon formation
+at high amplitude with a vertical asymptote in $t_H$ just above some
+critical amplitude.  In our numerical results, we see
+a sudden jump at the critical amplitude to evolutions with no horizon formation
+to a large time $t_{lim}$, possibly with a small
+window of amplitudes with large $t_H$ just above the critical amplitude.
+In a few cases, we have captured a greater portion of the asymptotic region.
+See figure \ref{f:m0w15}.
+\textit{Unstable} initial data, in contrast, forms a horizon at all
+amplitudes following the perturbative scaling relation $t_H\propto \epsilon^{-2}$
+as $\epsilon\to 0$. In our analysis, we will verify this scaling by
+fitting $t_H$ to a power law as
+described in section \ref{s:methods} below; if we limit the fit to smaller
+values of $\epsilon$, the scaling becomes more accurate.  Figure \ref{f:m0w025}
+shows unstable data. The red curve is of the form $t_H=a\epsilon^{-2}+b$
+with $a,b$ determined by matching the curve to the data for the largest
+two amplitudes with $t_H\geq 60$ (not a best fit); note that the data
+roughly follows this curve.
+The categorization of different initial data profiles with similar
+characteristic widths into stable and unstable is robust for massless and
+massive scalars \cite{1508.02709}; small and large width initial data are
+unstable, while intermediate widths are stable.  One of the major results
+of this paper is determining how the widths of initial data in these
+``islands of stability'' vary with scalar mass.
+
+A priori, there are other possible types of behavior, at least beyond
+the first subleading order in perturbation theory.
+\textit{Metastable} initial data collapses with $t_H\propto\epsilon^{-p}$ with
+$p>2$ at small amplitudes (or another more rapid growth of $t_H$ as
+$\epsilon\to 0$).  We will find this type of behavior common on the
+``shoreline'' of islands of stability where stable behavior transitions to
+unstable.  As we will discuss further below, metastable
+behavior may or may not continue as $\epsilon\to 0$;
+in principle, as higher order terms in perturbation theory become less
+important, the behavior may shift to either stable or unstable as described
+above.  We in fact find circumstantial evidence in favor of the different
+possibilities.
+Figure \ref{f:m0w085} shows metastable initial data that continues to collapse
+to times $t_H\sim 0.6t_{lim}$ but more slowly than $\epsilon^{-2}$;
+note that $t_H$ for collapsed evolutions at small amplitudes lies significantly
+above the curve $t_H=a\epsilon^{-2}+b$ (which is determined as in
+figure \ref{f:m0w025}).
+There was one additional type of behavior identified by \cite{1508.02709},
+which was called ``quasi-stable'' initial data at the time
+since the low-amplitude
+behavior was not yet clear.  We find here that these initial data are typically
+stable at small amplitude but exhibit irregular, often strongly non-monotonic
+or even chaotic,
+behavior in $t_H$ as a function of $\epsilon$, so we will denote them as
+\textit{irregular} initial data.  Figure \ref{f:m0w11} shows an example of
+irregular initial data.  Later, we will see more striking examples of
+this behavior for massive scalars.
+
+
+\subsection{Methods}\label{s:methods}
+
+For spherically symmetric motion,
+the Klein-Gordon equation for scalar mass $\mu$ can be written in first order
+form as
+\begin{align}
+\phi_{,t}=&Ae^{-\delta}\Pi,\quad\Phi_{,t}=\left(Ae^{-\delta}\Pi\right)_{,x},
+\label{evoleqns}\\
+\Pi_{,t}=&\frac{(Ae^{-\delta}\tan^{d-1}(x)\Phi)_{,x}}{\tan^{d-1}(x)}-
+\frac{e^{-\delta}\mu^2\phi}{\cos^2(x)}\ ,\label{KGequation}
+\end{align}
+where $\Pi$ is the canonical momentum and $\Phi=\phi_{,x}$ is an auxiliary
+variable.  The Einstein equation reduces to constraints, which can be
+written as
+\begin{align}
+  \label{deltaDeriv}
+  \delta_{,x}=&-\sin(x)\cos(x)(\Pi^2+\Phi^2)\\
+  \label{massDeriv}
+  M_{,x}=&\left(\tan(x)\right)^{d-1}\left[
+    A\frac{\left(\Pi^2+\Phi^2\right)}{2}+
+    \frac{\mu^2\phi^2}{2\cos^2(x)}\right],\\
+  A=&1-2\frac{\sin^2(x)}{(d-1)}\frac{M}{\tan^{d}(x)},
+\end{align}
+where the mass function $M$ asymptotes to the conserved ADM mass at the
+boundary $x=\pi/2$.  We will restrict to $d=4$ spatial dimensions.
+Since results are robust against changes in the type of
+initial data \cite{1508.02709},
+we can take the initial data to be a Gaussian of the areal radius in the
+canonical momentum and trivial in the field.  Specifically,
+\beq{PiGaussianID}
+\Pi(t=0,x)=\epsilon\exp\left(-\frac{\tan^2(x)}{\sigma^2}\right),
+\quad\phi(t=0,x)=0.
+\eeq
+The width $\sigma$ and field mass $\mu$ constitute the parameter space
+for our phase diagram.
+
+We solve the Klein-Gordon evolution equations (\ref{evoleqns},\ref{KGequation})
+and Einstein constraint equations (\ref{deltaDeriv},\ref{massDeriv})
+numerically using methods similar to those of \cite{1308.1235} on a spatial
+grid of $2^n+1$ grid points; we discuss the
+convergence properties of our code in the appendix.
+We denote the approximate horizon position $x_H$ and formation time $t_H$
+by the first point such that $A(x_H,t_H)\leq 2^{7-n}$.
+In detail, we evolve the system in time using a 4th-order Runge-Kutta
+stepper and initially use a 4th-order Runge-Kutta spatial integrator at
+resolution $n=14$.  If necessary, we switch to a 5th-order Dormand-Prince
+spatial integrator and increase resolution near horizon formation.  Due to
+time constraints, we do not increase the resolution beyond $n=21$ for any
+particular calculation; if a higher resolution would be required to track
+horizon formation for a given amplitude, we exclude that amplitude.
+
+To determine the stability class of initial data with a given width $\sigma$,
+we allow evolutions to run to a maximum time of $t_{lim}=500$ in AdS units, so
+$t_{lim}$ is a lower limit for $t_H$ for amplitudes that do not form a horizon
+within that time.  Normally, however, if the initial data appears unstable,
+we only evolve amplitudes with $t_H\lesssim 0.6t_{lim}$; this is partly to
+save computational resources and partly to distinguish stable evolutions from
+collapsing ones.  For unstable or metastable initial data, we find the
+best fit of the form $t_H=a \epsilon^{-p}+b$ to evolutions with $t_H>t_{fit}$,
+where $t_{fit}$ is a constant time chosen such that amplitudes with
+evolutions that last longer are usually roughly perturbative;
+in practice, $t_{fit}=60$ gives results close to the perturbative result
+$p=2$ for evolutions expected to be unstable from the literature, but we will
+also consider $t_{fit}=80,100$ as described below.
+
+
+\section{Phases}\label{s:phases}
+Here we give our main result, the phase diagram of stability classes
+as a function of initial profile width and scalar mass, along with a
+more detailed discussion of the scaling of horizon formation time with
+amplitude for varying initial data.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\textwidth]{phasediag.pdf}
+\caption{Phase diagram as a function of initial data width $\sigma$ and
+scalar mass $\mu$.  Filled circles represent the unstable phase, empty circles
+the stable phase, top-half-filled circles metastability, and right-half-filled
+circles the irregular phase.}
+\label{f:phase}
+\end{figure}
+
+The stability phase diagram for spherically
+symmetric scalar field collapse in AdS$_5$, treating the width $\sigma$
+of initial data and scalar field mass $\mu$ as tunable parameters,
+appears in figure \ref{f:phase}.  Each $(\mu,\sigma)$ combination that
+we evolved numerically is indicated by a circle, with filled and empty
+circles representing the unstable and stable phases respectively.  The
+metastable phase is represented by circles filled in the top half, while
+the irregular phase are filled in the right half.  At a glance, two features
+of the phase diagram are apparent: as $\mu$ increases, the island
+of stability moves toward smaller values of $\sigma$ and takes up a
+gradually larger range of $\sigma$.  To be specific, the stable phase
+is centered at $\sigma=\bar\sigma\sim 1.4$ and has a width of
+$\Delta\sigma\sim 0.7$ for $\mu=0,0.5$, with $\bar\sigma\sim 1.2$ for $\mu=1$.
+$\Delta\sigma$ increases to $\sim 1.1$, and the island of
+stability is centered at
+$\bar\sigma\sim 0.9$ for $\mu=5,10$, while $\Delta\sigma\sim 1.2$
+for $\mu=15,20$ with the stable phase centered at $\bar\sigma\sim 0.8$.
+Note that the transition between ``light field'' and ``heavy field'' 
+behavior occurs for $\mu>1$ in AdS units.
+
+The metastable and irregular phases appear at the shorelines of the island
+of stability, the boundary between unstable and stable phases.  In particular,
+the slope of the power law $t_H\sim \epsilon^{-p}$ as $\epsilon\to 0$
+increases as the width moves toward the island of stability, leading to a
+metastable phase.  We find metastability at the large $\sigma$ shoreline
+for all $\mu$ values considered and also at the small $\sigma$ shoreline
+for several scalar masses.  It seems likely that metastable behavior appears
+in only a narrow range of $\sigma$ for larger $\mu$, which makes it harder
+to detect in a numerical search, leading to its absence in some parts of the
+phase diagram.  We find the irregular phase at the small $\sigma$ shoreline
+for every mass and at the large $\sigma$ boundary for large $\mu$,
+closer to stable values of $\sigma$ than the metastable phase.  This phase
+includes a variety of irregular and non-monotonic behavior, as detailed below.
+Truly chaotic behavior especially becomes more prominent at larger values of
+$\mu$, as we will discuss below.
+
+\subsection{Metastable versus unstable phases}\label{s:metastable}
+
+While the stable and irregular phases are typically apparent by eye in a plot
+of $t_H$ vs $\epsilon$, distinguishing the unstable from metastable phase
+is a quantitative task.  As we described in section \ref{s:methods}, we
+find the least squares fit of $t_H=a\epsilon^{-p}+b$ to all evolutions
+with $t_H>t_{fit}$ for the given $(\mu,\sigma)$, running over values
+$t_{fit}=60,80,100$.  Using the covariance matrix of the fit, we also find
+the standard error for each fit parameter.  We classify a width as having
+unstable evolution if the best fit value of $p$ is within two standard
+errors of $p=2$ for $t_{fit}=60,80$ or one standard error for $t_{fit}=100$
+(due to a smaller number of data points, the standard errors for $t_{fit}=100$
+tend to be considerably larger).\footnote{except for poor fits as described
+in our discussion of the irregular phase.} Considering larger values of $t_{fit}$
+helps to ensure that the particular initial profile does not reach the
+perturbative regime at smaller amplitude values.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.5\textwidth]{CollapseCoefficientvsWidth.pdf}
+\caption{Coefficient $a$ from the fit $t_H=a\epsilon^{-p}+b$ as a function
+of width $\sigma$ using $t_{fit}=60$. 
+Shows data for $\mu=0$ (green diamonds), $0.5$ 
+(red triangles), $1$ (yellow stars), 5 (black circles), 10 (cyan squares),
+15 (magenta Y), and 20 (blue circles).  The orange line is the best 
+power law fit.}
+\label{f:unstable}
+\end{figure}
+
+The fits $t_H=a\epsilon^{-p}+b$ allow us to explore the time scale of 
+horizon formation across the phase diagram, for example through a contour
+plot of one of the coefficients vs $\sigma$ and $\mu$.  In most cases,
+this has not been informative, but an intriguing feature emerges if we
+plot the normalization coefficient $a$ vs $\sigma$ for unstable initial 
+data at small $\sigma$, as shown in figure \ref{f:unstable} for $t_{fit}=60$.  
+By eye, the coefficient is reasonably well described by the fit
+$a=32.0(3) \sigma^{-2.01(2)}$ (values in parentheses are standard errors of
+the best fit values) \textit{independent of scalar field mass}.
+This is not born out very well quantitatively; the reduced $\chi^2$ for the
+fit is $\chi^2$/d.o.f.$=180$, indicating a poor fit.  However, the large
+$\chi^2$ seems largely driven by a few outlier points with large
+scalar mass, so it is tempting
+to speculate that the gravitational collapse in this region of parameter
+space is driven by gradient energy, making all fields effectively massless
+at narrow enough initial $\sigma$.  The picture is qualitatively similar
+if we consider the parameter $a$ for $t_{fit}=80,100$ instead.
+
+
+\begin{figure}[!t]
+\centering
+\begin{subfigure}[t]{0.47\textwidth}
+\includegraphics[width=\textwidth]{m15w150fit.pdf}
+\caption{$\mu=15,\sigma=1.5$}
+\label{f:m15w150}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.47\textwidth}
+\includegraphics[width=\textwidth]{m5w170fit.pdf}
+\caption{$\mu=5,\sigma=1.7$}
+\label{f:m5w170}
+\end{subfigure}
+\begin{subfigure}[t]{0.47\textwidth}
+\includegraphics[width=\textwidth]{m0w18fit.pdf}
+\caption{$\mu=0,\sigma=1.8$}
+\label{f:m0w18}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.47\textwidth}
+\includegraphics[width=\textwidth]{m05w17fit.pdf}
+\caption{$\mu=0.5,\sigma=1.7$}
+\label{f:m05w17}
+\end{subfigure}
+\caption{Metastable behavior: blue dots represent horizon formation and
+red triangles a lower limit on $t_H$.  Magenta curves are fits
+$t_H=a\epsilon^{-p}+b$ over the shown range of amplitudes. See table
+\ref{t:figfits} for best fit parameters.}
+\label{f:metastable}
+\end{figure}
+
+Several examples of metastable behavior appear in figure \ref{f:metastable}.
+These figures show both data from the numerical evolutions (blue dots and
+red triangles) and fits of the form $t_H=a\epsilon^{-p}+b$ for points with
+$t_H>t_{fit}=60$ (magenta curves).  The best fit parameters are given in
+table \ref{t:figfits}.
+
+Figures \ref{f:m15w150},\ref{f:m5w170} demonstrate behavior typical of most
+of the instances of metastable initial data we have found; specifically,
+the initial data continue to collapse through horizon formation times of
+$t_H\sim 0.6 t_{lim}$ but with $p$ significantly greater than the perturbative
+value of $p=2$. Note that the evolutions of figure \ref{f:m5w170} have
+been extended to larger
+values of $t_H$ to demonstrate that the evolutions continue to collapse to
+somewhat smaller amplitude values.  Figure \ref{f:m5w170} is also of
+interest because its best fit value $p\approx 2.08$ is approximately as close
+to the perturbative value as several stable sets of initial data but has a
+smaller standard error for the fit, so the difference from the perturbative
+value is more significant.
+
+\begin{table}[!t]
+\begin{center}
+%\begin{footnotesize}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+&$a$&$p$ &$b$ & $\chi^2/$d.o.f.\\
+\hline
+$\mu=15,\sigma=1.5$& 0.10(1)&2.33(5)& -27(4)&0.7736\\
+\hline
+$\mu=5,\sigma=1.7$&0.89(5) &2.08(2)& -33(2)&0.3248\\
+\hline
+$\mu=0,\sigma=1.8$&0.06(2)&4.3(2)& 30(5)& 1.502\\
+\hline
+$\mu=0.5,\sigma=1.7$ ($t_H<0.4t_{lim}$)&4(32)$\times 10^{-45}$ &73(5) &70(2)
+&5.409 \\
+($t_H>0.72t_{lim}$)& 0.02(3) &5.6(8) &260(20) &1.078 \\
+\hline
+\end{tabular}
+%\end{footnotesize}
+\end{center}
+\caption{Best fit parameters for the cases shown in figure \ref{f:metastable}
+restricting to $t_H>t_{fit}=60$ and as noted.  Values in parentheses are
+standard errors in the last digit. $\chi^2/$d.o.f. is the
+reduced $\chi^2$ value used as a measure of goodness-of-fit. }
+\label{t:figfits}
+\end{table}
+
+Figure \ref{f:m0w18} shows metastable evolution to $t_H\lesssim 0.6t_{lim}$
+but then a sudden jump to stability until $t=t_{lim}$.  In the figure, the
+fit has been extended to the largest non-collapsing amplitude,
+which demonstrates that
+there is no collapse over a time period significantly longer than the fit
+predicts. This example argues that metastable data
+may in fact become stable at the smallest amplitudes.  On the other hand,
+figure \ref{f:m05w17} shows a similar jump in $t_H$ to values $t_H<t_{lim}$;
+evolution at lower amplitudes shows metastable scaling with $p\approx 6$ 
+for $360<t_H<t_{lim}$.  The figure also shows a metastable fit 
+with larger reduced $\chi^2$ at
+larger amplitudes corresponding to $t_{fit}<t_H<0.4 t_{lim}$.
+So this is another option: metastable behavior
+may transition abruptly to metastable behavior with different scaling
+(or possibly even perturbatively unstable behavior) at sufficiently
+small amplitudes. It is also reasonable to classify this case as irregular
+due to the sudden jump in $t_H$; we choose metastable due to the clean 
+metastable behavior at low amplitudes.
+
+%\textbf{PLOT AND DISCUSSION OF POWER AS FUNCTION OF WIDTH??}
+
+
+\subsection{Behaviors of the irregular phase}
+
+We have found a variety of irregular behaviors at the transition
+between the metastable and stable phases which we have classified together
+as the irregular phase; however, it may be better to describe them as
+separate phases.  The phase diagram \ref{f:phase} indicates that the
+irregular phase extends along the ``inland'' side of the small $\sigma$
+shoreline and at least part of the large $\sigma$ shoreline
+of the island of stability.  What is not clear from our evolutions up to
+now is whether each type of behavior appears along the entire shoreline
+or if they appear in pockets at different scalar field masses. Examples
+of each type of behavior that we have found appear in figure \ref{f:irregular}.
+
+\begin{figure}[!t]
+\centering
+\begin{subfigure}[t]{0.47\textwidth}
+\includegraphics[width=\textwidth]{m05w1.pdf}
+\caption{$\mu=0.5,\sigma=1$}
+\label{f:m05w1}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.47\textwidth}
+\includegraphics[width=\textwidth]{m5w034.pdf}
+\caption{$\mu=5,\sigma=0.34$}
+\label{f:m5w034}
+\end{subfigure}
+\begin{subfigure}[t]{0.47\textwidth}
+\includegraphics[width=\textwidth]{m20w016.pdf}
+\caption{$\mu=20,\sigma=0.16$}
+\label{f:m20w016}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.47\textwidth}
+\includegraphics[width=\textwidth]{m20w019.pdf}
+\caption{$\mu=20,\sigma=0.19$}
+\label{f:m20w019}
+\end{subfigure}
+\caption{Irregular behavior: blue dots represent horizon formation and
+red triangles a lower limit on $t_H$.
+}
+\label{f:irregular}
+\end{figure}
+
+The first type of irregular behavior, shown in figure \ref{f:m05w1}, is
+monotonic ($t_H$ increases with decreasing $\epsilon$ as usual), but it is
+not well fit by a power law.  In fact, this behavior would classify as
+metastable by the criterion of section \ref{s:metastable} in that the
+power law of the best fit $t_H=a\epsilon^{-p}+b$ is significantly different
+from $p=2$, except for the fact that the reduced $\chi^2$ value for the
+fit is very large (greater than 10)
+and also that different fitting algorithms can return
+significantly different fits, even though the data may appear to the eye
+like a smooth power law.  In any case, this type of behavior apparently
+indicates a breakdown of metastable behavior and hints at the appearance of
+non-monotonicity.  So far, our evolutions have not demonstrated sudden jumps
+in $t_H$ typical of stability at low amplitudes, however.
+
+Figure \ref{f:m5w034} exemplifies non-monotonic behavior in the irregular
+phase.  This type of behavior, which was noted already by \cite{1304.4166},
+involves one or more sudden jumps in $t_H$ as $\epsilon$ decreases,
+which may be followed by a sudden decrease in $t_H$ and then resumed smooth
+monotonic increase in $t_H$.  There are suggestions that this type of
+initial data is stable at low amplitudes due to the usual appearance of
+non-collapsing evolutions, but it is worth noting that these amplitudes could
+instead experience another jump and decrease in $t_H$, just at $t_H>t_{lim}$.
+Finally, \cite{1508.02709} studied this type of behavior in some detail,
+denoting it as ``quasi-stable.''
+
+The last type of irregular behavior is apparently chaotic, in that $t_H$
+appears to be sensitive to initial conditions (ie, value of amplitude) over
+some range of amplitudes. This type of behavior appears over the range
+of masses (see figure \ref{f:m0w11} for a mild case for massless scalars),
+but it
+is more common and more dramatic at larger $\mu$. Figures
+\ref{f:m20w016},\ref{f:m20w019} represent the most extreme chaotic behavior
+among the initial data that we studied with collapse at $t_H<50$ not very
+far separated from amplitudes that do not collapse for $t<t_{lim}$ along with
+an unpredictable pattern of variation in $t_H$.  This type of chaotic behavior
+has been seen previously in the collapse of transparent but gravitationally
+interacting thin shells in AdS \cite{Brito:2016xvw} as well as in the
+collapse of massless scalars in AdS$_5$ Einstein-Gauss-Bonnet gravity
+\cite{1410.1869,1608.05402}.  In both cases, the chaotic behavior is
+hypothesized to be due to the transfer of energy between two infalling shells,
+with horizon formation only proceeding when one shell is sufficiently
+energetic.  In the latter case, the extra scale of the theory
+(given by the coefficient of the Gauss-Bonnet term in the action) leads the
+single initial pulse of scalar matter to break into two pulses.
+
+We should therefore ask two questions: does this irregular behavior show
+evidence of true chaos, and is a similar mechanism at work here? To quantify
+the presence of chaos, we examine the difference in time evolution between
+similar initial conditions (nearby amplitudes), which diverge exponentially
+in chaotic systems. Specifically, any quantity $\Delta$ should satisfy
+$|\Delta| \propto \exp(\lambda t)$ for Lyapunov coefficient $\lambda$.
+Our characteristic will be the
+upper envelope of the Ricci scalar at the origin per light crossing time,
+$\bar{\mathcal R}(t)$. We consider the chaotic behavior exhibited by three
+states: a massless scalar of width $\sigma = 1.1$ with amplitudes
+$\epsilon=1.02,1.01,1.00$ (see figure \ref{f:m0w11}),
+a $\mu = 5$ massive scalar of width $\sigma = 0.34$ and
+$\epsilon=3.52,3.51,3.50$, and a $\mu = 20$ scalar of width $\sigma = 0.19$
+and $\epsilon=6.98,6.95,6.92$ (figure \ref{f:m20w019}).
+
+\begin{figure}[!t]
+\centering
+\begin{subfigure}[t]{0.47\textwidth}
+\includegraphics[width=\textwidth]{m5Ricci}
+\caption{Upper envelope of Ricci scalar at origin}
+\label{f:m5Ricci}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.47\textwidth}
+\includegraphics[width=\textwidth]{m5Lyapunov}
+\caption{$\log | \Delta |$ vs. $t_{mid}$}
+\label{f:m5Lyapunov}
+\end{subfigure}
+\caption{
+Left: The upper envelope of the Ricci scalar for amplitudes
+$\epsilon_1=3.50$ (blue circles), $\epsilon_2=3.51$ (red triangles), and
+$\epsilon_3=3.52$ (green squares) for $\mu=5,\sigma=0.34$.
+Right: $\log(|\Delta_{12}|)$ and best fit (blue
+circles and line) and $\log(|\Delta_{23}|)$ and best fit (red squares and line),
+calculated as a function of the midpoint $t_{mid}$ of the time interval.}
+\label{f:m5chaotic}
+\end{figure}
+
+Figure \ref{f:m5chaotic} details evidence for chaotic evolution in the
+$\mu=5,\sigma=0.34$ case; figure \ref{f:m5Ricci} shows our characteristic
+function $\bar{\mathcal{R}}(t)$ for the amplitudes $\epsilon_1 = 3.50$,
+$\epsilon_2 = 3.51$, and $\epsilon_3 = 3.52$. By eye, $\bar{\mathcal{R}}$ shows
+noticeable differences after a long period of evolution. These are more
+apparent in figure \ref{f:m5Lyapunov}, which shows the log of the differences
+$\Delta_{ab}\equiv\bar{\mathcal{R}}_{\epsilon_a}-\bar{\mathcal R}_{\epsilon_b}$,
+along with the best fits. Although there is considerable noise --- or
+oscillation around exponential growth --- in the
+differences (leading to $R^2$ values $\sim 0.2,0.26$ for the fits), the
+average slope gives Lyapunov coefficient $\lambda=0.007$ (within the error
+bar of each slope), and each slope differs from zero by more than 3 standard
+errors. One interesting point is that the $t_H$ vs $\epsilon$ curve
+in figure \ref{f:m5w034} does not appear chaotic to the eye, even though it
+shows some of the mathematical signatures of chaos at least for
+$\epsilon_1<\epsilon<\epsilon_3$, the amplitude values near the visible spike
+in $t_H$.
+
+The story is similar for the massless and $\mu=20$ cases we
+studied, which exhibit $\lambda$ values that
+differ from zero by at least 1.9 standard deviations; see table \ref{t:lyap}.
+This is a milder version of the chaotic behavior noted by
+\cite{Brito:2016xvw,1410.1869,1608.05402}, especially for the $\mu=5$ case
+studied.  To our knowledge, this is the first evidence of chaos in the
+gravitational collapse of a massless scalar in AdS.
+One thing to note is that the strength of oscillation in
+$\log(|\Delta|)$ around the linear fit increases with increasing
+mass, so that the two best fit Lyapunov exponents for $\mu = 20$ are no
+longer consistent with each other at the 1-standard deviation level.
+
+
+\begin{table}[!t]
+\begin{center}
+\begin{tabular}{|cc|c|c|}
+\hline
+&&$\lambda$ &average $\lambda$\\
+\hline
+$\mu=0,\sigma=1.1$ & $\Delta_{12}$ &0.011(6) & 0.011\\
+&$\Delta_{23}$ & 0.011(5) & \\
+\hline
+$\mu=5,\sigma=0.34$ & $\Delta_{12}$ &0.006(2)& 0.007\\
+&$\Delta_{23}$ & 0.007(2)& \\
+\hline
+$\mu=20,\sigma=0.19$ & $\Delta_{12}$ &0.046(9)& 0.032\\
+&$\Delta_{23}$ & 0.019(7) & \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Best fit Lyapunov coefficients $\lambda$ for adjacent amplitude
+pairs and average $\lambda$ value for each $\mu,\sigma$ system studied.
+The parenthetical value is the error in the last digit.}
+\label{t:lyap}
+\end{table}
+
+The mechanism underlying the chaotic behavior seems somewhat different
+or at least weaker than the two-shell or Einstein-Gauss-Bonnet systems.
+When examining the time evolution of the mass distributions of
+these data, we see a single large pulse of mass energy that oscillates
+between the origin and boundary without developing a pronounced peak.
+However, there is also apparently a smaller wave that travels across the
+large peak.  In the massless case examined, this wave deforms the pulse,
+leading at times to the double-shoulder appearance of figure \ref{f:m0hump}.
+In the $\mu=5,\sigma=0.34$ case, the secondary wave is more like a ripple,
+usually smaller in amplitude but more sharply localized, as toward the right
+side of the main pulse in figure \ref{f:m5ripple}.  So the chaotic behavior
+may be caused by the relative motion of the two waves, rather than energy
+transfer between two shells.  In this hypothesis, a horizon would form when
+both waves reach the neighborhood of the origin at the same time.
+
+\begin{figure}[!t]
+\centering
+\begin{subfigure}[t]{0.47\textwidth}
+\includegraphics[width=\textwidth]{m0chaoshump.pdf}
+\caption{$\mu=0,\sigma=1.1,\epsilon=1.01,t=60$}
+\label{f:m0hump}
+\end{subfigure}
+\begin{subfigure}[t]{0.47\textwidth}
+\includegraphics[width=\textwidth]{m5chaosripple.pdf}
+\caption{$\mu=5,\sigma=0.34,\epsilon=3.52,t=137$}
+\label{f:m5ripple}
+\end{subfigure}
+\caption{Radial derivative of the mass function at the indicated time
+for two chaotic systems.  Note the appearance of a secondary wave on top
+of the main pulse. $(\mu,\sigma,\epsilon)$ as indicated.}
+\label{f:chaosmechanism}
+\end{figure}
+
+As a note, we have run convergence tests on several sets of irregular
+initial data and find that our calculations are convergent overall, as expected
+(even at lower resolution than we used).  In particular, the massless
+scalar evolutions studied in table \ref{t:lyap} are convergent already at
+resolution given by $n=12$ (note that we typically start at $n=14$).
+The only caveat may be for some of the strongly chaotic initial data with 
+scalar mass $\mu=20$, which nonetheless appear well-behaved according to other 
+indicators.  The reader may or may not wish to take them at
+face value but should recall that we have presented other chaotic initial
+data with rigorously convergent evolutions.  See the appendix for a more 
+detailed discussion.
+
+
+\section{Spectral analysis}\label{s:analysis}
+
+As we discussed in the introduction, instability toward horizon formation
+proceeds through a turbulent cascade of energy to shorter wavelengths or,
+more quantitatively, to 1st-order scalar eigenmodes with more nodes.
+Inverse cascades are typical of stable evolutions.
+Therefore, understanding the energy spectrum of our evolutions, both initially
+and over time, sheds light on the behavior of the self-gravitating scalar
+field in asymptotically AdS spacetime, providing a heuristic analytic 
+understanding of the phase diagram.
+
+The (normalizable) eigenmodes $e_j$ are given by Jacobi polynomials as
+\beq{emodes}
+ e_j(x)=\kappa_j\cos^{\lambda_+}(x) P^{(d/2-1,\sqrt{d^2+4\mu^2}/2)}_j(\cos(2x))
+\eeq
+($\kappa_j$ is a normalization constant)
+with eigenfrequency $\omega_j=2j+\lambda_+$ and
+$\lambda_+=(d+\sqrt{d^2+4\mu^2})/2$ in AdS$_{d+1}$ for $j=0,1,\cdots$
+(see \cite{hep-th/9905111,Nastase:2015wjb} for reviews).
+Including gravitational backreaction, we define the energy spectrum
+\beq{spectrum}
+E_j\equiv\frac{1}{2}\left(\Pi_j{}^2-\phi_j\ddot{\phi}_j\right),\eeq
+where
+\begin{eqnarray}
+\Pi_j&=&\left(\sqrt{A}\Pi,e_j\right),\quad
+\phi_j=\left(\phi,e_j\right),\nonumber\\
+\ddot\phi_j&=&\left(\cot^{d-1}(x)\partial_x\left[\tan^{d-1}(x)A\Phi\right]
+-\mu^2\sec^2(x)\phi,e_j\right),
+\end{eqnarray}
+and the inner product is $(f,g)=\int_0^{\pi/2}dx\tan^{d-1}(x) fg$.
+The sum of $E_j$ over all modes is the conserved ADM mass.
+
+\subsection{Dependence on mass}
+\begin{figure}[!t]
+\centering
+\begin{subfigure}[t]{0.45\textwidth}
+\includegraphics[width=\textwidth]{gaussianspectra.pdf}
+\caption{Best fit gaussian energy spectra.} 
+\label{f:gaussian}
+\end{subfigure} \hfill
+\begin{subfigure}[t]{0.45\textwidth}
+\includegraphics[width=\textwidth]{gaussianfitting.pdf}
+\caption{Best fit gaussian and zeroth eigenmode.}
+\label{f:gaussianfits}
+\end{subfigure}
+\caption{Left: Spectra of the best fit gaussians (\ref{PiGaussianID}) to 
+the $j = 0$ eigenmode for masses $\mu=0$ (blue circles), 0.5 (yellow squares),
+1 (empty orange circles), 5 (green diamonds), 10 (empty cyan squares), 
+15 (upward red triangles), and 20 (downward purple
+triangles). Right: an overlay of the best fit Gaussian and $e_0$ eigenmode 
+for $\mu = 0$ (solid blue is best fit, orange dashed is eigenmode) and $\mu = 20$ (solid green, red short dashes).}
+\label{f:gaussians}
+\end{figure}
+
+The most visibly apparent feature of the phase diagram of figure \ref{f:phase}
+is that the island of stability both expands and shifts to smaller widths
+as the scalar mass increases.  As it turns out, the energy spectrum of the
+Gaussian initial data (\ref{PiGaussianID}) provides a simple heuristic
+explanation.
+
+It is well established both in perturbation theory and numerical studies that
+initial data given by a single scalar linear-order eigenmode is in fact
+nonlinearly stable, and the spectra of many quasi-periodic solutions are also
+dominated by a single eigenmode.  As a result, we should expect Gaussian
+initial data that approximates a single eigenmode (which must be $j=0$ due to
+lack of nodes) to be stable.  To explore how this depends on mass, we find the
+best fit values of $\epsilon,\sigma$ for the $j=0$ eigenmode for each mass
+that we consider (defined by the least-square error from the Gaussian to a
+discretized eigenmode);
+this is the ``best approximation'' Gaussian to the eigenmode.
+Then we find the energy spectrum of that best-fit Gaussian; these are shown
+in figure \ref{f:gaussian}.  From the figure, it is clear that the $j=0$
+eigenmode is closer to a Gaussian at larger masses.  That is, other
+eigenmodes contribute less to the Gaussian's spectrum at higher masses (by
+several orders of magnitude over the range from $\mu=0$ to 20).  Simply put,
+the shape of the $j=0$ eigenmode is closer to Gaussian at higher masses,
+which suggests that the island of stability should be larger at larger
+scalar field mass. Figure \ref{f:gaussianfits} compares the $j=0$ eigenmode
+and best fit Gaussian for $\mu=0$ and 20; on inspection, there is more
+deviation between the eigenmode and Gaussian for the massless scalar.
+
+In addition, the best-fit Gaussian width decreases from $\sigma\sim 0.8$
+for a massless scalar as the mass increases.  At $\mu=20$, the best-fit
+width is $\sigma\sim 0.31$. This suggests that Gaussians that approximate the
+$j=0$ mode well enough are narrower in width at higher masses.  An interesting
+point to note is that the island of stability for $\mu=0,0.5$ is actually
+centered at considerably larger widths than the best-fit Gaussian.  This may
+not be surprising, since the best-fit Gaussians at low masses actually
+receive non-negligible contributions from higher mode numbers; moving away from
+the best-fit Gaussian can actually reduce the power in higher modes.
+For example, the stable initial data shown in figure \ref{f:m0w15spect} below
+has considerably less power in the $j=2$ mode.
+
+
+
+
+
+\subsection{Spectra of different phases}
+\begin{figure}[!t]
+\centering
+\begin{subfigure}[t]{0.32\textwidth}
+\includegraphics[width=\textwidth]{m0w15spect.pdf}
+\caption{$\mu=0,\sigma=1.5$}
+\label{f:m0w15spect}
+\end{subfigure}
+\begin{subfigure}[t]{0.32\textwidth}
+\includegraphics[width=\textwidth]{m0w025spect.pdf}
+\caption{$\mu=0,\sigma=0.25$}
+\label{f:m0w025spect}
+\end{subfigure}
+\begin{subfigure}[t]{0.32\textwidth}
+\includegraphics[width=\textwidth]{m5w170spect.pdf}
+\caption{$\mu=5,\sigma=1.7$}
+\label{f:m5w170spect}
+\end{subfigure}
+\begin{subfigure}[t]{0.32\textwidth}
+\includegraphics[width=\textwidth]{m05w1spect.pdf}
+\caption{$\mu=0.5,\sigma=1$}
+\label{f:m05w1spect}
+\end{subfigure}
+\begin{subfigure}[t]{0.32\textwidth}
+\includegraphics[width=\textwidth]{m5w034spect.pdf}
+\caption{$\mu=5,\sigma=0.34$}
+\label{f:m5w034spect}
+\end{subfigure}
+\begin{subfigure}[t]{0.32\textwidth}
+\includegraphics[width=\textwidth]{m20w016spect.pdf}
+\caption{$\mu=20,\sigma=0.16$}
+\label{f:m15w150spect}
+\end{subfigure}
+\caption{Initial ($t=0$) energy spectra for the indicated evolutions. In order,
+these represent stable, unstable, metastable, monotonic irregular,
+non-monotonic irregular, and chaotic irregular initial data.}
+\label{f:initialspect}
+\end{figure}
+
+A key question that one might hope to answer is whether the stability phase
+of a given $(\mu,\sigma)$ can be determined easily by direct inspection
+of the initial data without requiring many evolutions at varying amplitudes.
+The initial energy spectra for examples of each phase, including monotonic,
+non-monotonic, and chaotic irregular behaviors, are shown in figure
+\ref{f:initialspect}.  These spectra are taken from among the smallest
+amplitudes we evolved in order to minimize backreaction effects.
+
+Unfortunately, the initial energy spectra do not seem to provide such a
+method for determining the stability phase.  Very broadly speaking, stable
+and metastable $(\mu,\sigma)$ correspond to initial spectra that drop off
+fairly quickly from the $j=0$ mode as $j$ increases, while unstable and
+irregular phases tend to have roughly constant or even slightly increasing
+spectra up to $j=5$ or $10$.  However, figure \ref{f:m05w1spect} shows that
+some irregular initial data have spectra that decrease rapidly after a small
+increase from $j=1$ to $j=2$.  Kinks in the spectrum are more prevalent for
+widths of the AdS scale or larger, while spectra for smaller widths tend
+to be smoother.
+
+
+
+
+\subsection{Evolution of spectra}
+\begin{figure}[!t]
+\centering
+\begin{subfigure}[t]{0.47\textwidth}
+\includegraphics[width=\textwidth]{m0w18EnergyDecomp.pdf}
+\caption{$\mu=0,\sigma=1.8,\epsilon=0.13$}
+\label{f:m0w18decomp}
+\end{subfigure}
+\begin{subfigure}[t]{0.47\textwidth}
+\includegraphics[width=\textwidth]{m0w025EnergyDecomp.pdf}
+\caption{$\mu=0,\sigma=0.25,\epsilon=2.28$}
+\label{f:m0w025decomp}
+\end{subfigure}
+\begin{subfigure}[t]{0.47\textwidth}
+\includegraphics[width=\textwidth]{m05w17EnergyDecomp.pdf}
+\caption{$\mu=0.5,\sigma=1.7,\epsilon=0.216$}
+\label{f:m05w17decomp}
+\end{subfigure}
+\begin{subfigure}[t]{0.47\textwidth}
+\includegraphics[width=\textwidth]{m20w019EnergyDecomp.pdf}
+\caption{$\mu=20,\sigma=0.19,\epsilon=6.95$}
+\label{f:m20w019decomp}
+\end{subfigure}
+\caption{The time dependence of the energy spectra as a fraction of the
+total ADM mass for the indicated
+$\mu,\sigma,\epsilon$.  Lower panels show the lowest 7 modes (in colors
+cyan, red, purple, green, yellow, brown, and gray
+respectively).  Upper panels show cumulative energy to mode
+$j=0,1,2,4,8,16,32$ (in colors blue, orange, brown, yellow, aqua, red, and
+magenta). }
+\label{f:evolvingspectra}
+\end{figure}
+
+While the initial spectrum for a given $(\mu,\sigma)$ pair does not have
+predictive value regarding the future behavior as far as
+we can tell, the time dependence of the spectrum throughout the evolution of
+the system is informative.  Figure \ref{f:evolvingspectra} shows the
+time-dependence of spectra for examples of the stable, unstable, metastable,
+and chaotic irregular phases. In each figure, the lower panel shows the
+fraction $E_j/M_{ADM}$ in each mode up to $j=6$, while the upper panel shows
+the cumulative fraction $\sum_j E_j/M_{ADM}$ to the mode $2^k$ with $k=0$ to 5.
+
+The difference between stable evolution in figure \ref{f:m0w18decomp} and
+unstable evolution in figure \ref{f:m0w025decomp} is readily apparent.
+As the evolution proceeds, we expect a cascade of energy into higher mode
+numbers, but inverse cascades to lower modes can also occur.  The stable
+evolution shows a slow pattern of cascades and inverse cascades, in fact.
+On the other hand, the unstable evolution shows a nearly monotonic cascade of
+energy into the highest modes along with a simultaneous cascade of energy
+into the lowest modes (therefore depleting intermediate modes).  These
+are common observations in the literature and are included here for
+completeness.
+
+The metastable evolution shown in figure \ref{f:m05w17decomp} is interesting
+in light of the stable and unstable spectra.  The amplitude shown is
+from the ``unstable'' portion of figure \ref{f:m05w17}, the part consistent
+with the perturbative scaling $t_H\sim\epsilon^{-2}$.  However, the spectrum
+shows a similar pattern of slow cascades and inverse cascades to the
+stable phase example, though on a somewhat faster time scale in this case.
+While perhaps surprising, this is in keeping with the similarities noted
+between the initial spectra in figures \ref{f:m0w15spect} and
+\ref{f:m5w170spect}.  We have also checked that the time-dependent spectrum
+at a higher amplitude with $t_H\sim 100$ follows the same pattern as
+\ref{f:m05w17decomp}; in fact, it looks essentially the same but simply
+ends at an earlier time.
+This lends some credence to the idea that the metastable
+phase is stable at lowest nontrivial order in perturbation theory, with
+instability triggered by higher-order corrections.  Alternately, the
+instability could be caused by an oscillatory singularity in the perturbative
+theory, as discussed in \cite{1506.03519,1508.04943,1606.02712,1607.08094}
+in the case of two-mode initial data.  These divergences do not appear in
+the energy spectrum.
+
+Figure \ref{f:m20w019decomp} shows the time-dependence of the spectrum
+in a chaotic irregular evolution, specifically $\mu=20,\sigma=0.19$
+at $\epsilon=6.95$, which is in the chaotic region of the $t_H$ vs $\epsilon$
+plot in figure \ref{f:m20w019}.  There is rapid energy transfer among modes,
+including cascades out of and inverse cascades into mode numbers $j\leq 32$
+over approximately a light-crossing time.  It is easy to imagine that
+horizon formation might occur at any of the cascades of energy into higher
+modes, leading to seemingly random jumps in $t_H$ as a function of amplitude.
+
+\begin{figure}[!t]
+\centering
+\begin{subfigure}[t]{0.47\textwidth}
+\includegraphics[width=\textwidth]{m0w11A101t71spect.pdf}
+\caption{$\epsilon=1.01$}
+\label{f:m0w11e101}
+\end{subfigure}
+\begin{subfigure}[t]{0.47\textwidth}
+\includegraphics[width=\textwidth]{m0w11A102t71spect.pdf}
+\caption{$\epsilon=1.02$}
+\label{f:m0w11e102}
+\end{subfigure}
+\caption{Spectra at time $t\approx 71$ for $\mu=0,\sigma=1.1$ for the two
+amplitudes given.  $\epsilon=1.01$ forms a horizon at $t_H\approx 71.1$,
+$\epsilon=1.02$ at $t_H\approx 248.0$.}
+\label{f:chaoticspect}
+\end{figure}
+
+Finally, the time-evolved energy provide another possible measure of
+approximate thermalization in the dual CFT; namely, the spectrum should
+approach an (exponentially cut-off) power law at thermalization.  In most
+cases, this occurs shortly before horizon formation, but there are exceptions,
+such as the late time behavior of initial data below the critical mass
+for black hole formation in Einstein-Gauss-Bonnet gravity \cite{1608.05402}.
+In the case of chaotic behavior, it is particularly interesting to know if
+the spectra for similar amplitudes approach a power law at similar times
+even if horizons form at very different times.  Figure \ref{f:chaoticspect}
+shows the energy spectra for two amplitudes in the chaotic region of
+the $t_H$ vs $\epsilon$ plot for $\mu=0,\sigma=1.1$.  Figure \ref{f:m0w11e101}
+is the spectrum just before horizon formation for $\epsilon=1.01$,
+while figure \ref{f:m0w11e102} is the spectrum at approximately the same
+time for $\epsilon=1.02$, which is very long before horizon formation.  In
+this example, we see that the spectrum does approach a power law for the
+evolution that is forming a horizon, while the other evolution demonstrates
+apparently exponential decay.  Therefore, this example suggests that
+a power law spectrum may yield similar results to horizon formation as a
+measure of thermalization in the dual CFT.
+
+
+\section{Discussion}
+
+We have presented the phase diagram of stability of AdS$_5$ against horizon
+formation, treating the scalar field mass $\mu$ and width $\sigma$ of initial
+data as free parameters.  In addition to mapping the location of the so-called
+``island of stability,'' we have gathered evidence for two non-perturbative
+phases on the ``shorelines'' of the island, the metastable and irregular phases.
+While these must either exhibit stability (no collapse below some critical
+amplitude) or instability (collapse at arbitrarily small but finite amplitude)
+as the amplitude $\epsilon\to 0$, they are distinguished by their behavior
+at computationally accessible amplitudes.  While perturbatively unstable
+evolutions obey $t_H\propto\epsilon^{-2}$ as $\epsilon\to 0$, metastable
+initial data follows $t_H\propto\epsilon^{-p}$ for $p>2$ over a range of
+amplitudes.  The irregular phase is characterized by horizon formation times
+$t_H$ that are not well described by a power law and sometimes exhibit
+non-monotonicity or even chaos.  Both of these phases appear across the range
+of $\mu$ values that we study and at both small- and large-width boundaries
+of the stable phase.
+
+At this time, it is impossible to say whether metastable initial data is
+stable or unstable as $\epsilon\to 0$ (or if all metastable data behaves in the
+same way in that limit).  Our numerical evolutions include cases in which
+the lowest amplitudes jump either to metastable scaling with smaller $p$
+or to evolutions that do not collapse over the timescales we study.
+In many cases, too, the power law $t_H\propto\epsilon^{-p}$ with $p$ some
+fixed value $>2$ is robust as we exclude larger amplitudes from our fit.
+It is also possible that some of the metastable phase is stable in the
+perturbative theory (ie, to $\epsilon^3$ order in a perturbative expansion)
+but not at higher orders.
+
+The irregular phase seems likely to be (mostly) stable at arbitrarily small
+amplitudes based on our numerical evolutions, though we have not found a
+critical amplitude for monotonic irregular initial data.  The irregular
+phase includes the ``quasi-stable'' initial data described in
+\cite{1304.4166,1508.02709}, which has a sudden increase then decrease in
+$t_H$ as $\epsilon$ decreases as well as truly chaotic behavior.  In fact,
+we have found evidence for weakly chaotic behavior at the jump in $t_H$
+for non-monotonic initial data in the form of a small but nonzero Lyapunov
+coefficient.  Both
+non-monotonicity and chaos become stronger and more common at larger scalar
+masses; however, we have also found chaotic behavior for the massless scalar.
+To our knowledge, this is the first evidence of chaos in spherically
+symmetric massless scalar collapse in AdS, which is particularly interesting
+because there is only one physically meaningful ratio of scales, $\sigma$
+as measured in AdS units.
+
+Aside from the ultimate stability or instability of the metastable and
+irregular phases, several questions remain.  For one, black holes formed in
+massive scalar collapse in asymptotically flat spacetime exhibit a mass
+gap for initial profiles wider than the Compton wavelength $1/\mu$
+\cite{Brady1997}.  Whether this mass gap exists in AdS is not clear, and it
+may disappear through repeated gravitational focusing as the field oscillates
+many times across AdS; investigating this type of critical behavior will
+likely require techniques similar to those of \cite{Santos-Olivan:2016djn}.
+Returning to our phase diagram, the physical mechanism responsible for chaos
+in the irregular phase is not yet clear.  Is it some generalization of the
+same mechanism as found in the two-shell system?  Also, would an alternate
+definition of approximate thermalization in the dual CFT, such as development
+of a power-law spectrum, lead to a different picture of the phase diagram?
+Finally, the big question is whether there is some test that could be performed
+on initial data alone that would predict in advance its phase? So far, no
+test is entirely successful, so new ideas are necessary.
+
+
+
+
+
+
+
+\begin{acknowledgments}
+We would like to thank Brayden Yarish for help submitting jobs for the
+$\mu=10$ evolutions.
+The work of ND is supported in part by a Natural Sciences and Engineering
+Research Council of Canada PGS-D grant to ND, NSF Grant PHY-1606654
+at Cornell University, and by a grant from the Sherman
+Fairchild Foundation.
+The work of BC and AF is supported by the Natural Sciences
+and Engineering Research Council of Canada Discovery Grant program.
+This research was enabled in part by support provided by WestGrid
+(www.westgrid.ca) and Compute Canada Calcul Canada (www.computecanada.ca).
+\end{acknowledgments}
+
+
+
+\appendix
+\section{Convergence Testing}
+
+Due to the large number of evolutions we have carried out, it is not
+computationally feasible to test all of them for convergence.  Therefore,
+we have checked several interesting cases from the irregular phase, which 
+are the most curious.  These are carried out by evolving the initial data
+with a base resolution $n=14$ and again at $n=15,16$ with commensurate
+time steps, as described in \cite{1508.02709}.  In the cases indicated, we
+evaluated the order of convergence at lower resolutions.  We remind the
+reader that the order of convergence $Q$ is the base-2 logarithm of the ratio
+of $L^2$ errors (root-mean-square over all corresponding grid points) between
+successive pairs of resolutions.  We also note that the initial data is 
+defined analytically, so $Q$ can appear poor at $t=0$ since the errors are
+controlled by round off; in some cases, $Q$ is therefore undefined and 
+not plotted.
+
+\begin{figure}[!t]
+\centering
+\begin{subfigure}[t]{0.47\textwidth}
+\includegraphics[width=\textwidth]{m05w1A112conv.pdf}
+\caption{$n=14$ base resolution}
+\label{f:m05w1e112conv}
+\end{subfigure}
+\begin{subfigure}[t]{0.47\textwidth}
+\includegraphics[width=\textwidth]{m05w1A112conv11.pdf}
+\caption{$n=11$ base resolution}
+\label{f:m05w1e112conv11}
+\end{subfigure}
+\caption{Convergence results for $\mu=0.5$, $\sigma=1$, $\epsilon=1.12$
+showing order of convergence $Q$ vs time for $\phi,M,A,\delta$ 
+(blue, green, red, yellow respectively). Left: Resolutions $n=14,15,16$ used.
+Right: Resolutions $n=11,12,13$ used.}
+\label{f:m05w1convergence}
+\end{figure}
+
+
+First, we carried out convergence tests for mass $\mu=0.5$, width
+$\sigma=1$, and amplitude $\epsilon=1.12$, which is monotonic irregular
+initial data presented in figure \ref{f:m05w1}.  
+This amplitude collapses with $t_H\sim 88$. Figure \ref{f:m05w1e112conv}
+shows the ($L^2$ norm) order of convergence for the field variable 
+$\phi$, the mass 
+function $M$, and the metric functions $A,\delta$.  While the order of
+convergence is initially poor and even negative, all these variables show
+approximately fourth order convergence for times $t\gtrsim 70$.  The 
+reason for the initially poor convergence is that the error between 
+successive resolutions is already given by (machine limited) round off.
+As a demonstration, we tested the order of convergence
+with base resolution $n=11$, as shown in figure \ref{f:m05w1e112conv11}.
+The variables show order of convergece $Q\gtrsim 3$ already at this resolution
+for most of the evolution, losing convergence only for $t>80$, where we
+see approximately 4th-order convergence in the $n=14$ resolution
+computations.
+
+Two of the authors have discussed the convergence properties of evolution for
+the nonmonotonic irregular initial data with 
+$\mu=20,\sigma=0.1,\epsilon=11.74$, which is in an amplitude region of 
+increased $t_H$ surrounded by smaller values, in detail in \cite{1508.02709}.
+In short, the variables $\phi,M,A,\delta$ all exhibit fourth order 
+convergence, as does $\Pi^2(t,0)$, and the conserved mass actually has 6th 
+order convergence.  
+
+\begin{figure}[!t]
+\centering
+\begin{subfigure}[t]{0.31\textwidth}
+\includegraphics[width=\textwidth]{m15w020.pdf}
+\caption{Horizon formation}
+\label{f:m15w020}
+\end{subfigure}
+\begin{subfigure}[t]{0.31\textwidth}
+\includegraphics[width=\textwidth]{m15w020A742conv.pdf}
+\caption{$\epsilon=7.42$}
+\label{f:m15w020A742conv}
+\end{subfigure}
+\begin{subfigure}[t]{0.31\textwidth}
+\includegraphics[width=\textwidth]{m15w020A740conv.pdf}
+\caption{$\epsilon=7.40$}
+\label{f:m15w020A740conv}
+\end{subfigure}
+\caption{Convergence results for $\mu=15$, $\sigma=0.2$.
+Left: $t_H$ vs $\epsilon$.  Middle \& Right: order of convergence vs time 
+for $\phi,M,A,\delta$ (blue, green, red, yellow respectively)
+for indicated amplitudes.
+}
+\label{f:m15w020convergence}
+\end{figure}
+
+Initial data for $\mu=15,\sigma=0.2$ is also nonmonotonic, as shown in 
+figure \ref{f:m15w020}.  While we have not analyzed all aspects of the 
+convergence, we see from the remainder of figure \ref{f:m15w020convergence}
+that $\phi,M,A,\delta$ exhibit convergent behavior at better than
+second order for $\epsilon=7.42$
+(figure \ref{f:m15w020A742conv}, second-largest value of $t_H$ in 
+figure \ref{f:m15w020}) and $\epsilon=7.40$ (figure \ref{f:m15w020A740conv},
+adjacent amplitude in figure \ref{f:m15w020}).  It is important to note that
+the larger amplitude also has the larger horizon formation time, contrary
+to the usual monotonic behavior.
+
+\begin{figure}[!t]
+\centering
+\begin{subfigure}[t]{0.31\textwidth}
+\includegraphics[width=\textwidth]{m0w11A102conv.pdf}
+\caption{$\epsilon=1.02$}
+\label{f:m0w11A102conv}
+\end{subfigure}
+\begin{subfigure}[t]{0.31\textwidth}
+\includegraphics[width=\textwidth]{m0w11A101conv.pdf}
+\caption{$\epsilon=1.01$}
+\label{f:m0w11A101conv}
+\end{subfigure}
+\begin{subfigure}[t]{0.31\textwidth}
+\includegraphics[width=\textwidth]{m0w11A100conv.pdf}
+\caption{$\epsilon=1.00$}
+\label{f:m0w11A100conv}
+\end{subfigure}
+\caption{Convergence results for $\mu=0$, $\sigma=1.1$ for listed amplitudes
+showing order of convergence $Q$ vs time for $\phi,M,A,\delta$ 
+(blue, green, red, yellow respectively); resolutions $n=12,13,14$.
+}
+\label{f:m0w11convergence}
+\end{figure}
+
+It is most crucial to validate the convergence of chaotic evolutions.
+In table \ref{t:lyap}, we noted that the Ricci scalar at the origin has
+nonzero Lyapunov exponent at almost the 2 sigma level for amplitudes
+$\epsilon=1.02,1.01,1.00$ for $\mu=0,\sigma=1.1$.  We show the results of
+convergence tests for these amplitudes in figure \ref{f:m0w11convergence};
+because these are longer evolutions, we consider the convergence at the lower
+resolutions $n=12,13,14$.  After a transient start-up period, these are all
+convergent with $Q>2.5$ for all variables considered at all times; for most
+of the time, the order of convergence is $Q>3.5$.  It is worth noting that
+one of the amplitudes does not form a horizon through $t=500$.  
+
+
+
+
+
+\begin{figure}[!t]
+\centering
+\begin{subfigure}[t]{0.31\textwidth}
+\includegraphics[width=\textwidth]{m1w100.pdf}
+\caption{Horizon formation}
+\label{f:m1w100}
+\end{subfigure}
+\begin{subfigure}[t]{0.31\textwidth}
+\includegraphics[width=\textwidth]{m1w100A115conv.pdf}
+\caption{$\epsilon=1.15$}
+\label{f:m1w100A115conv}
+\end{subfigure}
+\begin{subfigure}[t]{0.31\textwidth}
+\includegraphics[width=\textwidth]{m1w100A114conv.pdf}
+\caption{$\epsilon=1.14$}
+\label{f:m1w100A114conv}
+\end{subfigure}
+\caption{Convergence results for $\mu=1$, $\sigma=1$. Left: $t_H$ vs $\epsilon$.
+Middle \& Right: order of convergence $Q$ vs time for $\phi,M,A,\delta$ 
+(blue, green, red, yellow respectively); resolutions $n=11,12,13$.
+}
+\label{f:m1w100convergence}
+\end{figure}
+
+Initial data with $\mu=1,\sigma=1$ is chaotic over a narrow range of 
+amplitudes.  We have carried out convergence testing for amplitudes 
+$\epsilon=1.15,1.14$, which are the two amplitudes with $t_H<100$ between
+amplitudes with $t_H\gtrsim 150$ in figure \ref{f:m1w100}.  The order of
+convergence was poor for these amplitudes in our initial tests with base
+resolution $n=14$ because the error between resolutions was dominated by 
+round-off, similar to the convergence tests we discussed above for
+$\mu=0.5,\sigma=1$.  In subsequent tests with lower resolutions $n=11,12,13$,
+we find an order of convergence $Q\sim 4$ for most of the evolutions
+(and always $Q>3$). It is important to note again
+that our evolutions exhibit convergence while showing horizon formation at 
+a later time for a larger amplitude in this case.
+
+
+\begin{figure}[!t]
+\centering
+\begin{subfigure}[t]{0.47\textwidth}
+\includegraphics[width=\textwidth]{m20w019A695conv.pdf}
+\caption{$\epsilon=6.95$}
+\label{f:m20w019A695conv}
+\end{subfigure}
+\begin{subfigure}[t]{0.47\textwidth}
+\includegraphics[width=\textwidth]{m20w019A692conv.pdf}
+\caption{$\epsilon=6.92$}
+\label{f:m20w019A692conv}
+\end{subfigure}
+\caption{Order of convergence vs time for $\phi,M,A,\delta$ (red, blue, green,
+magenta) for $\mu=20,\sigma=0.19$ and indicated amplitudes. 
+}
+\label{f:m20w019convergence}
+\end{figure}
+
+
+Finally, we ran convergence tests for the chaotic initial data with
+$\mu=20,\sigma=0.19$ for $\epsilon=6.95,6.92$, with $t_H\approx 65.5,40.8$
+respectively.  As shown in figure \ref{f:m20w019convergence}, the simulations
+are close to fourth order convergence for most of the evolution, but
+there are periods where the order of convergence for evolution and constraint
+variabables becomes negative.  This of course leads to the concern that the
+evolutions should have collapsed during those periods and extend into an
+``afterlife'' evolution.  We have therefore
+evolved these amplitudes through these regions (approximately $t=30-40$ for
+$\epsilon=6.95$ and $t=18-30$ for $\epsilon=6.92$) at high resolution ($n=18$).
+If the evolutions are truly in an afterlife, this higher resolution 
+calculation may include horizon formation.  We do not observe this.  Another
+tell-tale of would-be horizon formation is a decrease in the timestep size
+by an order of magnitude or more followed by an increase.  We monitor
+the timestep size every 500 timesteps through this evolution but do not
+observe a decrease in timestep size by more than a factor of 2.  As a result,
+we believe the values of $t_H$ found are reliable, though the reader may 
+wish to consider them with some caution.  Nonetheless, we emphasize
+that we have found convergent behavior for chaotic initial data at other
+scalar masses.
+
+
+
+%\bibliographystyle{JHEP}
+\bibliography{massive2}
+
+
+\end{document}

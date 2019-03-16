@@ -1,1 +1,4 @@
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces Best fit parameters for the cases shown in figure \ref {f:metastable} restricting to $t_H>t_{fit}=60$ and as noted. Values in parentheses are standard errors in the last digit. $\chi ^2/$d.o.f. is the reduced $\chi ^2$ value used as a measure of goodness-of-fit. \relax }}{11}{table.caption.8}
+\contentsline {table}{\numberline {2.2}{\ignorespaces Best fit Lyapunov coefficients $\lambda $ for adjacent amplitude pairs and average $\lambda $ value for each $\mu ,\sigma $ system studied. The parenthetical value is the error in the last digit.\relax }}{14}{table.caption.11}
