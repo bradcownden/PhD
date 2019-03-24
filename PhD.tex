@@ -25,7 +25,9 @@
 \usepackage{subfiles}
 \usepackage{wrapfig}
 \usepackage[utf8]{inputenc}
-
+\usepackage{subcaption}
+\usepackage{chngcntr}
+\usepackage{etoolbox}
 
 \hoffset=-0.25in
 \voffset=0in
@@ -45,6 +47,27 @@
 
 \newcommand{\beq}[1]{\begin{equation}\label{#1}}
 \newcommand{\eeq}{\end{equation}}
+\newcommand{\p}{\partial}
+\newcommand{\oi}{\omega_i}
+\newcommand{\oj}{\omega_j}
+\newcommand{\ok}{\omega_k}
+\newcommand{\ol}{\omega_l}
+\newcommand{\mc}{\mathcal}
+\newcommand{\jm}{\ensuremath{j_{max}}}
+
+% Start of subappendices environment
+\AtBeginEnvironment{subappendices}{
+\chapter*{Appendix}
+%\addcontentsline{toc}{section}{Appendices}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+}
+
+% End of subappendices environment
+\AtEndEnvironment{subappendices}{
+\counterwithout{figure}{section}
+\counterwithout{table}{section}
+}
 
 %\doublespacing    % <----- Initiate double spacing
  
@@ -143,6 +166,8 @@ An abstract.
 \subfile{Intro/Introduction}
  
 \subfile{Chapter1/massivepaper}
+
+\subfile{Chapter2/ttfpaper}
  
 \appendix
 \numberwithin{equation}{section}

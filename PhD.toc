@@ -4,18 +4,42 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Nonlinear Evolution of Massive Scalar Fields}{2}{chapter.2}
 \contentsline {section}{\numberline {2.1}Contributions}{2}{section.2.1}
-\contentsline {section}{\numberline {2.2}Introduction}{3}{section.2.2}
-\contentsline {section}{\numberline {2.3}Review}{5}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Massive scalars, stability, and time scales}{5}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Methods}{7}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}Phases}{8}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Metastable versus unstable phases}{9}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Behaviors of the irregular phase}{11}{subsection.2.4.2}
-\contentsline {section}{\numberline {2.5}Spectral analysis}{15}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Dependence on mass}{16}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}Spectra of different phases}{17}{subsection.2.5.2}
-\contentsline {subsection}{\numberline {2.5.3}Evolution of spectra}{17}{subsection.2.5.3}
-\contentsline {section}{\numberline {2.6}Discussion}{20}{section.2.6}
-\contentsline {section}{Appendices}{21}{section.2.6}
-\contentsline {subsection}{\numberline {A}Convergence Testing}{21}{subsection.Alph0.0.1}
-\contentsline {chapter}{Bibliography}{27}{appendix*.22}
+\contentsline {section}{\numberline {2.2}Introduction}{4}{section.2.2}
+\contentsline {section}{\numberline {2.3}Review}{6}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Massive scalars, stability, and time scales}{6}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Methods}{9}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Phases}{11}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Metastable versus unstable phases}{12}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Behaviors of the irregular phase}{15}{subsection.2.4.2}
+\contentsline {section}{\numberline {2.5}Spectral analysis}{20}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Dependence on mass}{21}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Spectra of different phases}{22}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}Evolution of spectra}{23}{subsection.2.5.3}
+\contentsline {section}{\numberline {2.6}Discussion}{26}{section.2.6}
+\contentsline {section}{\numberline {2.A}Convergence Testing}{29}{section.1.2.A}
+\contentsline {chapter}{\numberline {3}Perturbative Stability of Massless Scalars in AdS$_4$}{34}{chapter.3}
+\contentsline {section}{\numberline {3.1}Contributions}{34}{section.3.1}
+\contentsline {section}{\numberline {3.2}Introduction}{36}{section.3.2}
+\contentsline {section}{\numberline {3.3}Minimally Coupled Scalar Fields in AdS$_{d+1}$}{38}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Linearized Solutions}{39}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Two-Time Formalism}{40}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Quasi-periodic Solutions in AdS$_4$}{41}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Persistence at Large $j_{max}$}{42}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}High Temperature Perturbations}{43}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Building High-Temperature Solutions}{46}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Stability of QP Solutions}{48}{subsection.3.4.4}
+\contentsline {subsubsection}{\numberline {3.4.4.1}The Ricci Scalar at the Origin}{48}{subsubsection.3.4.4.1}
+\contentsline {subsubsection}{\numberline {3.4.4.2}Constraint Equations}{48}{subsubsection.3.4.4.2}
+\contentsline {section}{\numberline {3.5}Time Evolution of Quasi-Periodic Solutions}{50}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Quasi-Periodic Solutions}{51}{subsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.1.1}Padded QP Solutions}{52}{subsubsection.3.5.1.1}
+\contentsline {subsection}{\numberline {3.5.2}High-Temperature Solutions}{53}{subsection.3.5.2}
+\contentsline {subsubsection}{\numberline {3.5.2.1}Regular Projections to the QP Plane}{54}{subsubsection.3.5.2.1}
+\contentsline {subsubsection}{\numberline {3.5.2.2}``By Hand'' High-Temperature Solutions}{54}{subsubsection.3.5.2.2}
+\contentsline {subsubsection}{\numberline {3.5.2.3}Perturbing to an Intermediate Temperature Before Reoptimizing}{55}{subsubsection.3.5.2.3}
+\contentsline {subsubsection}{\numberline {3.5.2.4}Padded Threshold Temperature Solutions}{55}{subsubsection.3.5.2.4}
+\contentsline {section}{\numberline {3.6}Discussion}{55}{section.3.6}
+\contentsline {section}{\numberline {3.A}Seeding Methods For Non-Linear Solvers}{65}{section.2.3.A}
+\contentsline {section}{\numberline {3.B}Auxiliary Integrals For Calculating the $T, R, S$ Coefficients}{66}{section.2.3.B}
+\contentsline {section}{\numberline {3.C}Frequency of Solution Checking}{69}{section.2.3.C}
+\contentsline {chapter}{Bibliography}{75}{appendix*.49}
