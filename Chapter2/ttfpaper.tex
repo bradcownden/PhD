@@ -208,7 +208,7 @@ As an example, consider solutions to \eqref{qp eqn} with the conditions $\alpha_
 		\caption{QP solutions up to $j_{max}~=~350$.}
 		\label{fig: j350 solutions}
 	\end{subfigure}
-	\caption{Energy spectra for various QP solutions.}
+	\caption[Energy spectra for various QP solutions]{Energy spectra for various QP solutions.}
 \end{figure}
 
 When examining the range of $\alpha_1$ values that result in QP solutions existing, it was found that any solution that existed at small $j_{max}$ could be extended to large $j_{max}$ with proper seeding and sufficient computing power. However, a hard limit exists at the maximum $\alpha_1$ value of $\alpha_1=0.442$, corresponding to a temperature of $T \simeq 4.643$. Above this limit, no QP solutions can be found even for $j_{max}$ values as low as $j_{max}=50$. There seem to be no solutions that exist at low $j_{max}$ that cease to exist at high $j_{max}$. Furthermore, there is no corresponding lower limit to $\alpha_1$ values; as $\alpha_1 \to 0$ with $\alpha_j > \alpha_{j+1}$, the TTF solution approaches the well-known single-mode solution.
@@ -247,7 +247,7 @@ Consider figure~\ref{fig: reop comparisons}. When the result of the linear pertu
 		\caption{Starting from the same $\alpha_1=0.44$ QP solution, linear perturbations are again applied, this time projecting back to the QP plane every 20 iterations.}
 		\label{fig: a_1andTa.2reop20}
 	\end{subfigure}
-	\caption{The results of projecting a $j_{max}=50$, $\alpha_1 = 0.44$ solution back to the QP plane at various frequencies during high temperature perturbations. Colour changes indicate that the non-linear solver has been applied.}
+	\caption[High temperature solutions resulting from projecting back to the QP solution plane at various frequencies]{The results of projecting a $j_{max}=50$, $\alpha_1 = 0.44$ solution back to the QP plane at various frequencies during high temperature perturbations. Colour changes indicate that the non-linear solver has been applied.}
 	\label{fig: reop comparisons}
 \end{figure}
 
@@ -264,7 +264,7 @@ Let us examine the energy spectra of the solutions shown in figure~\ref{fig: spe
 		$150$ & 4.30344544024198e+00 & $280$ \\ \hline
 		$200$ & 4.30344544023915e+00 & $300$ \\ \hline
 	\end{tabular}
-	\caption{Values of the threshold temperature $T_{th}$ for QP solutions with given $\jm$. Also included is the number of iterations applied (projecting back to the solution plane after every five iterations).}
+	\caption[Threshold temperatures for different series truncations with constant projection frequency]{Values of the threshold temperature $T_{th}$ for QP solutions with given $\jm$. Also included is the number of iterations applied (projecting back to the solution plane after every five iterations).}
 	\label{tab: T_thresh}
 \end{table}
 
@@ -283,7 +283,7 @@ When the projection frequency is decreased to 20 iterations an increase in tempe
 		\caption{The same initial QP solution as figure~\ref{fig: spec comparisons reop5} is used, but is projected back to the QP plane every 20 iterations.}
 		\label{fig: spec comparisons reop20}
 	\end{subfigure}
-	\caption{Comparing energy spectra of high-temperature perturbations of an $\alpha_1=0.44$ QP solution that have been projected back to the QP plane at different frequencies.}
+	\caption[Energy spectra resulting from perturbing the same QP solution at differing frequencies]{Comparing energy spectra of high-temperature perturbations of an $\alpha_1=0.44$ QP solution that have been projected back to the QP plane at different frequencies.}
 	\label{fig: spec comps with reop}
 \end{figure}
 
@@ -308,7 +308,7 @@ Despite high-temperature solutions being inaccessible via repeated energy pertur
 		\caption{Extensions of the $j_{max}=50$ solution from figure~\ref{fig: T30 vs j_max} to larger $j_{max}$ solutions using tail fitting on only the final 5 modes of the solution.}
 		\label{fig: manual highT}
 	\end{subfigure}
-	\caption{Constructing high temperature solutions ``by hand.''}
+	\caption[Constructing high temperature solutions by hand]{Constructing high temperature solutions ``by hand.''}
 	\label{fig: making highT}
 \end{figure}
 
@@ -324,7 +324,7 @@ While the TTF theory itself is stable by construction, we can examine the behavi
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.75\textwidth]{/Users/bradc/Documents/University_of_Manitoba/Thesis/PhD/Chapter2/figs/PiSq_comparison_4paper}
-	\caption{Comparing the upper envelope of $\Pi^2$ at the origin per light-crossing time for selected low- and high-temperature solutions with $\epsilon = 1$: $j_{max} = 375$, QP $T \simeq 3.15$ (blue crosses); $j_{max} = 75,$ high-temperature $T \simeq 26.9$ (yellow octagons); $j_{max} = 100$, high temperature $T \simeq 75.35$ (green squares); $j_{max} = 95$, high temperature $T \simeq 66.6$ (red diamonds).}
+	\caption[Upper envelope of $\Pi^2$ at the origin for selected low- and high-temperature QP solutions]{Comparing the upper envelope of $\Pi^2$ at the origin per light-crossing time for selected low- and high-temperature solutions with $\epsilon = 1$: $j_{max} = 375$, QP $T \simeq 3.15$ (blue crosses); $j_{max} = 75,$ high-temperature $T \simeq 26.9$ (yellow octagons); $j_{max} = 100$, high temperature $T \simeq 75.35$ (green squares); $j_{max} = 95$, high temperature $T \simeq 66.6$ (red diamonds).}
 	\label{fig: compare Pi sq}
 \end{figure}
 
@@ -355,7 +355,7 @@ The $L^2$-norm of the differences between \eqref{ddelta}-\eqref{dA} and \eqref{E
 		\caption{A $\jm = 100$, high-temperature solution is padded with zeros to $\jm = 125$ and evolved with $\epsilon = 0.001$.}
 		\label{fig:highTEEresid}
 	\end{subfigure}
-	\caption{Residuals from evaluating the constraints for QP and high temperature solutions.}
+	\caption[Absolute and relative residuals for low- and high-temperature QP solutions]{Residuals from evaluating the constraints for QP and high temperature solutions.}
 	\label{fig:EEresids}
 \end{figure}
 
@@ -393,7 +393,7 @@ Consider first the evolution of a known QP solution. We see in figure~\ref{fig:q
 		\includegraphics[width=\textwidth]{/Users/bradc/Documents/University_of_Manitoba/Thesis/PhD/Chapter2/figs/QPa2_00e-01_j100_highjenergyevo}
 		\caption{From top to bottom: $j=96, 97, 98, 99$ (purple, green, blue, orange).}
 	\end{subfigure}
-	\caption{Amplitude-phase evolution of an $\alpha_1 = 0.2$, $\jm = 100$, QP solution with $\epsilon=0.01$. Similar behaviour is observed for higher $\jm$ solutions and over values of $0.2 \leq \alpha_1 \leq 0.44$.}
+	\caption[Evolution of QP solutions at low temperature for different truncation values]{Amplitude-phase evolution of an $\alpha_1 = 0.2$, $\jm = 100$, QP solution with $\epsilon=0.01$. Similar behaviour is observed for higher $\jm$ solutions and over values of $0.2 \leq \alpha_1 \leq 0.44$.}
 	\label{fig:qpevo}
 \end{figure}
 
@@ -408,7 +408,7 @@ To better understand how well the QP solutions continue to satisfy the TTF equat
 	\begin{subfigure}[t]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{/Users/bradc/Documents/University_of_Manitoba/Thesis/PhD/Chapter2/figs/Qpa4_40e-01specevo}
 	\end{subfigure}
-	\caption{{\it Left:} $L^2$-norm of the residuals of \eqref{qp eqn} evaluated at intervals of $0.025$ during the evolution of a $\jm = 100$, $\alpha_1 = 0.44$ QP solution with $\epsilon = 0.1$. {\it Right:} The spectra of the QP solution at the beginning and end of the evolution.}
+	\caption[Residual and spectrum of a low-temperature QP solution during evolution]{{\it Left:} $L^2$-norm of the residuals of \eqref{qp eqn} evaluated at intervals of $0.025$ during the evolution of a $\jm = 100$, $\alpha_1 = 0.44$ QP solution with $\epsilon = 0.1$. {\it Right:} The spectra of the QP solution at the beginning and end of the evolution.}
 	\label{fig: Qpa4_40e-01QPresids}
 \end{figure}
 
@@ -427,7 +427,7 @@ Furthermore, we can attempt to project the evolved solutions back to the QP plan
 		\caption{The same QP solution is padded with zeros out to $\jm = 200$ and evolved in time. Intermediate solutions are projected back to the QP plane at $t \simeq 0.0, 5.1, 10.2, ...$ (red diamond, green cross, blue square ...)}
 		\label{fig: QPa4_40e-01padj200_evolutionprojection}
 	\end{subfigure}
-	\caption{Intermediate values from the amplitude/phase evolution of a solution are used as seeds for the nonlinear solver at various times. Arrows are oriented from amplitude/phase seed values (circles) to QP plane projections (pentagons).}
+	\caption[Taking the spectrum of a QP solution during evolution to use as a seed to find new QP solutions]{Intermediate values from the amplitude/phase evolution of a solution are used as seeds for the nonlinear solver at various times. Arrows are oriented from amplitude/phase seed values (circles) to QP plane projections (pentagons).}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -469,7 +469,7 @@ In an effort to extend the space of QP solutions, another method used to find so
 		\caption{The residuals of the QP equation \eqref{qp eqn} throughout the amplitude-phase evolution of the padded QP solution.}
 		\label{fig: Qp2_00e-01padj200_resids}
 	\end{subfigure}
-	\caption{The evolution of the padded QP solution for $\alpha_1 =0.2$ and $\jm = 200$, with amplitude $\epsilon=0.1$.}
+	\caption[The evolution of a padded QP solution]{The evolution of the padded QP solution for $\alpha_1 =0.2$ and $\jm = 200$, with amplitude $\epsilon=0.1$.}
 	\label{fig:paddedqpevo}
 \end{figure}
 
@@ -480,7 +480,7 @@ Using a known QP solution, we may ask how far away from the solution plane we ca
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.75\textwidth]{/Users/bradc/Documents/University_of_Manitoba/Thesis/PhD/Chapter2/figs/Qpa2_00e-01padj105_evolutionprojection}
-	\caption{{\it Left}: Normalized spectra for a $\jm = 100$, QP solution that has been padded with five extra modes, then evolved in time. Intermediate spectra are used as seeds for projecting back to the QP plane at times $\tau \simeq 4.1 \times 10^{-3}, 4.1 \times 10^{-2}, 4.1 \times 10^{-1}$ (green, blue, yellow). Arrows are oriented from seed spectra to best fit spectra. {\it Right:} Corresponding $L^2$-norms of the error for each solution.}
+	\caption[Spectra during evolution of a padded QP solution are used as seeds to project back to the QP plane]{{\it Left}: Normalized spectra for a $\jm = 100$, QP solution that has been padded with five extra modes, then evolved in time. Intermediate spectra are used as seeds for projecting back to the QP plane at times $\tau \simeq 4.1 \times 10^{-3}, 4.1 \times 10^{-2}, 4.1 \times 10^{-1}$ (green, blue, yellow). Arrows are oriented from seed spectra to best fit spectra. {\it Right:} Corresponding $L^2$-norms of the error for each solution.}
 	\label{fig: Qpa2_00e-01padj105_evolutionprojection}
 \end{figure}
 
@@ -517,7 +517,7 @@ Here we examine a high-temperature solution obtained from repeatedly adding smal
 	\begin{subfigure}[t]{0.48\textwidth}
 		\includegraphics[width=\textwidth]{/Users/bradc/Documents/University_of_Manitoba/Thesis/PhD/Chapter2/figs/HighTa4_072e-01j100T5_3921e+00Ricci}
 	\end{subfigure}
-	\caption{{\it Above}: The evolution the fraction of the total energy in specific modes for a $T \sim 5.4$, threshold temperature solution for $\tau \in [0, 4.25]$. {\it Below:} Snapshots of the full spectrum at various times in its evolution, as well as the upper envelope of $| \mc R(t,x=0)|$ when $\epsilon = 0.1$.}
+	\caption[Examining the energy per mode during the evolution of a threshold temperature solution]{{\it Above}: The evolution the fraction of the total energy in specific modes for a $T \sim 5.4$, threshold temperature solution for $\tau \in [0, 4.25]$. {\it Below:} Snapshots of the full spectrum at various times in its evolution, as well as the upper envelope of $| \mc R(t,x=0)|$ when $\epsilon = 0.1$.}
 	\label{fig:HighTa4_072e-01j100T5_3921e+00_evo}
 \end{figure}
 
@@ -538,7 +538,7 @@ Following the method outlined in \S~\!\ref{ssec: by hand highT}, we consider hig
 	\begin{subfigure}[t]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{/Users/bradc/Documents/University_of_Manitoba/Thesis/PhD/Chapter2/figs/HighTa2_1819e-01j100T6_6711e+01_specevo}
 	\end{subfigure}
-	\caption{The evolution of a high-temperature solution created by hand from lower $\jm$ solutions.}
+	\caption[Evolution of the energy spectrum for a high-temperature solution created by hand]{The evolution of a high-temperature solution created by hand from lower $\jm$ solutions.}
 	\label{fig: HighTa2_1819e-01j100T6_6711e+01}
 \end{figure}
 
@@ -561,7 +561,7 @@ Attempt padding out to $\jm = 125$ and run the evolution: see figure~\ref{fig:Hi
 	\begin{subfigure}[t]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{/Users/bradc/Documents/University_of_Manitoba/Thesis/PhD/Chapter2/figs/HighTa2_1819e-01padj125T6_6711e+01_ricci}
 	\end{subfigure}
-	\caption{Padding the same initial solution from figure~\ref{fig: making highT}, but with only $25$ extra modes.}
+	\caption[Evolution of the spectrum, absolute and relative residual, and Ricci scalar for a high-temperature solution that has been padded with $25$ extra modes]{Padding the same initial solution from figure~\ref{fig: making highT}, but with only $25$ extra modes.}
 	\label{fig:HighTa2_1819e-01padj125T6_6711e+01_evo}
 \end{figure}
 
@@ -576,7 +576,7 @@ Finally, consider padding such a solution out to $\jm = 200$. See figure~\ref{fi
 	\begin{subfigure}[t]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{/Users/bradc/Documents/University_of_Manitoba/Thesis/PhD/Chapter2/figs/HighTa2_1819e-01padj200T6_6711e+01_modesevo}
 	\end{subfigure}
-	\caption{Padding a $\jm = 100$, high temperature solution to $\jm = 200$ and evolving in time. $\epsilon = 0.1$}
+	\caption[Evolution of the spectrum of a high-temperature solution padded with $100$ modes]{Padding a $\jm = 100$, high temperature solution to $\jm = 200$ and evolving in time. $\epsilon = 0.1$}
 	\label{fig:HighTa2_1819e-01padj200T6_6711e+01_evo}
 \end{figure}
 
@@ -585,7 +585,7 @@ The evolved profile of the high-temperature solution can no longer be projected 
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.4]{/Users/bradc/Documents/University_of_Manitoba/Thesis/PhD/Chapter2/figs/HighTa2_1819e-01padj125T6_6711e+01_evolutionprojection}
-	\caption{A high-temperature solution is padded with $25$ extra modes, then evolved in time. Above are the results of projecting back to the QP plane at $t \simeq 0.002, 0.004, 0.006, 0.06$ (red diamond, green cross, blue square, yellow triangle, magenta cirlce).}
+	\caption[Evolution of the spectrum of a high-temperature solution padded with $25$ modes]{A high-temperature solution is padded with $25$ extra modes, then evolved in time. Above are the results of projecting back to the QP plane at $t \simeq 0.002, 0.004, 0.006, 0.06$ (red diamond, green cross, blue square, yellow triangle, magenta cirlce).}
 	\label{fig: HighTa2_1819e-01padj125T6_6711e+01_evolutionprojection}
 \end{figure}
 
@@ -617,7 +617,7 @@ Here, a QP solution is perturbed to a high temperature without regular projectio
 		\includegraphics[width=\textwidth]{/Users/bradc/Documents/University_of_Manitoba/Thesis/PhD/Chapter2/figs/HighTa1_779e-01j100T2_0000e+01_Ricci}
 		\caption{The upper envelope of the Ricci scalar at the origin, per light-crossing time.}
 	\end{subfigure}
-	\caption{The evolution of an intermediate, high-temperature solution that \emph{does not} correspond to a solution of the QP equations.}
+	\caption[Evolution of a high-temperature state that does not satisfy the QP equation]{The evolution of an intermediate, high-temperature solution that \emph{does not} correspond to a solution of the QP equations.}
 	\label{fig:HighTa1_779e-01j100T2_0000e+01evo}
 \end{figure}
 
@@ -644,7 +644,7 @@ Padding the threshold temperature solution of $T \sim 5.4$ from $\jm = 100$ to $
 	\begin{subfigure}[t]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{/Users/bradc/Documents/University_of_Manitoba/Thesis/PhD/Chapter2/figs/HighTa4_072e-01padj200T5_3921e+00_specevo}
 	\end{subfigure}
-	\caption{Padding a threshold temperature solution}
+	\caption[Evolution of the spectrum of a threshold temperature solution that has been padded with $100$ modes]{Padding a threshold temperature solution}
 	\label{fig:HighTa4_072e-01padj200T5_3921e+00_evo}
 \end{figure}
 
@@ -659,14 +659,14 @@ Padding the threshold temperature solution of $T \sim 5.4$ from $\jm = 100$ to $
 		\includegraphics[width=\textwidth]{/Users/bradc/Documents/University_of_Manitoba/Thesis/PhD/Chapter2/figs/HighTa4_072e-01padj200T5_3921e+00_ricci}
 		\caption{The upper envelope of the Ricci scalar at the origin per light-crossing time for the padded threshold temperature solution.}
 	\end{subfigure}
-	\caption{Despite the spectrum of the padded threshold temperature solution (figure~\ref{fig:HighTa4_072e-01padj200T5_3921e+00_evo}) resembling that of lower-temperature QP solutions, these solutions move away from the QP plane and can no longer be projected back.}
+	\caption[Padded threshold temperature solutions cannot be projected back to the QP solution plane]{Despite the spectrum of the padded threshold temperature solution (figure~\ref{fig:HighTa4_072e-01padj200T5_3921e+00_evo}) resembling that of lower-temperature QP solutions, these solutions move away from the QP plane and can no longer be projected back.}
 	\label{fig: HighTa4_072e-01padj200T5_3921e+00_projections}
 \end{figure}
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.75\textwidth]{/Users/bradc/Documents/University_of_Manitoba/Thesis/PhD/Chapter2/figs/HighTa4_072e-01spec_vs_pad}
-	\caption{{\it Top:} Overlay of the known threshold temperature solution for $\jm = 200$ (thick red line) with snapshots of the spectra of a $\jm = 100$ threshold solution that has been padded with zeros to $\jm = 200$ after amplitude/phase evolutions of $\tau =1, 2, 3, 4, 5 \times 10^{-5}$ (blue, green, yellow, magenta, cyan). {\it Bottom:} The absolute value of the difference between the cumulative sums of the $\jm = 200$ threshold temperature solution and each snapshot spectrum (same colouring).}
+	\caption[Comparison between a threshold temperature solution with $j_{max} = 200$ and the evolution of a $j_{max} = 100$ threshold temperature solution that has been padded by $100$ modes]{{\it Top:} Overlay of the known threshold temperature solution for $\jm = 200$ (thick red line) with snapshots of the spectra of a $\jm = 100$ threshold solution that has been padded with zeros to $\jm = 200$ after amplitude/phase evolutions of $\tau =1, 2, 3, 4, 5 \times 10^{-5}$ (blue, green, yellow, magenta, cyan). {\it Bottom:} The absolute value of the difference between the cumulative sums of the $\jm = 200$ threshold temperature solution and each snapshot spectrum (same colouring).}
 	\label{fig: HighTa4_072e-01spec_vs_pad}
 \end{figure}
 
@@ -719,7 +719,7 @@ Care was taken to avoid edge effects due to truncation when choosing the points 
 			 $70$ & 1.83414768e-26    \\ \hline
 			 $75$ & 1.83414768e-26    \\ \hline
 		\end{tabular}
-		\caption{$\alpha_{50}$ values for various $j_{max}$ QP solutions.}
+		\caption[Convergence of the real coefficient $\alpha_j$ of the $j = 50$ mode with increasing $j_{max}$]{$\alpha_{50}$ values for various $j_{max}$ QP solutions.}
 		\label{table: edge effects}
 \end{table}
 
@@ -736,7 +736,7 @@ Care was taken to avoid edge effects due to truncation when choosing the points 
 		\caption{$\alpha_1 = 0.2$ QP solutions for $j_{max}~\in~[140,200]$.}
 		\label{fig: sol vs fit high jmax}
 	\end{subfigure}
-	\caption{A comparison of seeds predicted by \eqref{old seed} to known QP solution. Also included for comparison are the results of fitting the QP solutions to a generic exponential fit.}
+	\caption[Comparison of seed values to known QP solutions and exponential fitting]{A comparison of seeds predicted by \eqref{old seed} to known QP solution. Also included for comparison are the results of fitting the QP solutions to a generic exponential fit.}
 	\label{fig: solutionfitting}
 \end{figure}
 			
@@ -756,7 +756,7 @@ To err on the side of caution, the modes $[ j_{max} - 30,\: j_{max} - 10]$ were 
 		\caption{Relative difference between $\alpha_1=0.2$ QP solutions found using tail-fitting and those from the exponential profile~\eqref{old seed}.}
 		\label{fig: seedvsunseed}
 	\end{subfigure}
-	\caption{The process and result of tail fitting the $\alpha_j$ spectra of QP solutions to generate better seed values.}
+	\caption[Illustrating the tail fitting procedure]{The process and result of tail fitting the $\alpha_j$ spectra of QP solutions to generate better seed values.}
    	\label{fig: fit & resids}
 \end{figure}
 
@@ -816,7 +816,7 @@ For example, consider the process of applying perturbations of $\delta E = 0.01\
 		\includegraphics[width=\textwidth]{/Users/bradc/Documents/University_of_Manitoba/Thesis/PhD/Chapter2/figs/j150T17cont_4paper}
 		\label{fig: reop check j150}
 	\end{subfigure}
-\caption{{\it Left}: the result of unchecked perturbations of a $j_{max} = 50$ QP solution up to an intermediate temperature before switching to regular checking. {\it Right}: the same procedure is applied to a $j_{max}=150$ QP solution.}
+\caption[Comparison of spectra and temperatures for different projection frequencies between $j_{max}=50$ and $j_{max} = 150$ solutions]{{\it Left}: the result of unchecked perturbations of a $j_{max} = 50$ QP solution up to an intermediate temperature before switching to regular checking. {\it Right}: the same procedure is applied to a $j_{max}=150$ QP solution.}
 \label{fig: reop check}
 \end{figure}
 

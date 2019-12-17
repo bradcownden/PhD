@@ -28,6 +28,9 @@
 \usepackage{subcaption}
 \usepackage{chngcntr}
 \usepackage{etoolbox}
+\usepackage{parskip}
+\usepackage{tocbasic}
+
 
 \hoffset=-0.25in
 \voffset=0in
@@ -69,6 +72,11 @@
 \counterwithout{table}{section}
 }
 
+% Adjust list of figures and list of tables spacing
+\DeclareTOCStyleEntry[numwidth=3.em]{tocline}{figure}
+\DeclareTOCStyleEntry[numwidth=3.em]{tocline}{table}
+
+
 %\doublespacing    % <----- Initiate double spacing
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -83,11 +91,11 @@
 \begin{center}
 \vspace*{1.5cm}
 
-{\bf Title}
+{\Large Gravitational Collapse in Anti-de Sitter Spacetime}
 
 \vspace{1.5cm}
  
-By \linebreak
+by \linebreak
 Bradley Stuart Cownden
 \vspace{1.5cm}
 
@@ -97,7 +105,7 @@ in partial fulfillment of the requirements for the degree of
 
 \vspace{1.5cm}
 
-{\bf Degree}
+DOCTOR OF PHILOSOPHY
 
 \vspace{1.5cm}
 
@@ -170,6 +178,8 @@ An abstract.
 \subfile{Chapter2/ttfpaper}
 
 \subfile{Chapter3/driventtf}
+
+\subfile{Conclusion/conclusion}
  
 \appendix
 \numberwithin{equation}{section}
