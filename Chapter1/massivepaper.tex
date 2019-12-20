@@ -7,11 +7,17 @@
 
 \chapter{Nonlinear Evolution of Massive Scalar Fields in Anti-de Sitter Spacetime}
 
-Published to the arXiv, submitted to Phys Rev Lett B.
+Refer to islands of stability and massive scalars in nonlinear stability.
 
 \section{Contributions}
 
-What my contributions were.
+The research covered in this work built upon on the numerical solving methods first utilized as part of\cite{1508.02709, 1410.1869} to examine nonlinear instabilities in the full Einstein/Klein-Gordon system of massive scalars in AdS$_{d+1}$. The goal of this work was to expand the space of initial data being considered and thereby chart the islands of stability. Previous work had identified these islands and commented on the transition regions between stable and unstable configurations, but had avoided the computationally costly simulations required for cases on the ``shoreline.'' 
+
+My role involved running multiple, simultaneous simulations over different heterogeneous computing clusters through the Westgrid network of the Compute Canada consortium. I was responsible for roughly 184 core years\footnote{From the \href{https://www.computecanada.ca/}{Compute Canada} website: ``a core year is the equivalent of running computations on a CPU core constantly for a period of one year.''} worth of simulations over the course of this work.
+
+To perform the data analysis required, I wrote new plotting programs that interfaced with existing data types while also providing extensions specifically for this project. For example, code for plotting the horizon formation time $t_H$ against the amplitude of the perturbation $\epsilon$ was rewritten in python with a range of fitting options for critical data above a specified $t_{fit}$ (see plots and insets in figure~\ref{f:metastable} along with fitting parameters in table~\ref{t:figfits}). I also programmed and performed all of the convergences tests included in appendix~\ref{a:convergence} that verified the evolution of the data. Of particular importance was discerning the reliability of the solutions for irregular data. In figures~\ref{f:m5w034convergence} and~\ref{f:m1w100convergence}, the order of convergence $Q$ is calculated for irregular data. These tests help to validate important observations of chaotic evolution, even for massless scalars.
+
+As is common for these types of projects, all members of the collaboration were equally involved in the interpretation of the data, as well as the late stages of editing. Authors are listed alphabetically and it is understood that all members contribute equally to the publication.
 
 \newpage
 
@@ -22,7 +28,7 @@ What my contributions were.
 {\bf{\Large Phase Diagram of Stability for Massive Scalars in Anti-de Sitter
 Spacetime}} \\
 \bigskip
-\bf{\href{https://arxiv.org/abs/1711.00454}{arXiv:1711.00454}} \\
+{\bf Phys. Rev. DV12204 $\big[$\href{https://arxiv.org/abs/1711.00454}{1711.00454}$\big]$ } \\
 \bigskip
 \bigskip
 Brad Cownden$^1$, Nils Deppe$^2$, and Andrew R.~Frey$^{3,4}$\\
@@ -1015,7 +1021,7 @@ The (normalizable) eigenmodes $e_j$ are given by Jacobi polynomials as
 \eeq
 ($\kappa_j$ is a normalization constant)
 with eigenfrequency $\omega_j=2j+\lambda_+$ and
-$\lambda_+=(d+\sqrt{d^2+4\mu^2})/2$ in AdS$_{d+1}$ for $j=0,1,\cdots$
+$\lambda_+=(d+\sqrt{d^2+4\mu^2})/2$ in AdS$_{d+1}$ for $j=0,1,\ldots$
 (see \cite{hep-th/9905111,Nastase:2015wjb} for reviews).
 Including gravitational backreaction, we define the energy spectrum
 \beq{spectrum}
@@ -1385,6 +1391,7 @@ This research was enabled in part by support provided by WestGrid
 
 \begin{subappendices}
 \section{Convergence Testing}
+\label{a:convergence}
 
 Due to the large number of evolutions we have carried out, it is not
 computationally feasible to test all of them for convergence.  Therefore,
