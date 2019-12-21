@@ -80,8 +80,8 @@
 \contentsline {subsection}{\numberline {4.5.2}Special Values of Non-normalizable Frequencies}{89}{subsection.4.5.2}
 \contentsline {subsubsection}{\numberline {4.5.2.1}Add to an integer}{91}{subsubsection.4.5.2.1}
 \contentsline {subsection}{\numberline {4.5.3}Integer Plus $\chi $}{96}{subsection.4.5.3}
-\contentsline {subsubsection}{\numberline {4.5.3.1}$\omega _i+ \omega _\gamma = \omega _{\beta }- \omega _l$}{96}{subsubsection.4.5.3.1}
-\contentsline {subsubsection}{\numberline {4.5.3.2}$\omega _i+ \omega _\gamma = \omega _{\beta }+ \omega _l$}{97}{subsubsection.4.5.3.2}
+\contentsline {subsubsection}{\numberline {4.5.3.1}$\omega _i+ \omega _\gamma = \omega _{\beta }- \omega _\ell $}{96}{subsubsection.4.5.3.1}
+\contentsline {subsubsection}{\numberline {4.5.3.2}$\omega _i+ \omega _\gamma = \omega _{\beta }+ \omega _\ell $}{97}{subsubsection.4.5.3.2}
 \contentsline {section}{\numberline {4.6}Discussion}{99}{section.4.6}
 \contentsline {section}{\numberline {4.A}Derivation of Source Terms For Massive Scalars}{100}{section.3.4.A}
 \contentsline {section}{\numberline {4.B}Two Non-normalizable Modes with Equal Frequencies}{103}{section.3.4.B}
