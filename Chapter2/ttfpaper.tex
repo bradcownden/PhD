@@ -7,9 +7,15 @@
 
 \chapter{Perturbative Stability of Massless Scalars in AdS$_4$}
 
-Refer to islands of stability and massive scalars in nonlinear stability.
+Having examined the collapse of massive scalars fields in AdS$_5$, we now wish to explore the perturbatively stable solutions for massless scalars. These solutions resist collapse on time scales of $t \sim \epsilon^{-2}$ and give analytic descriptions of the direct and inverse energy cascades that must be balanced for stability to be achieved.
+
+Using the Two-Time Formalism (TTF), renormalization flow equations are derived that absorb secular terms into renormalized integration constants in the first-order solution for the scalar field. These flow equations can be combined using a quasi-periodic (QP) ansatz to relate the amplitude and phases and lead to a system of $\jm + 1$ QP equations that relate the $\jm + 3$ unknowns. While the TTF theory technically involves an infinite sum of terms, by truncating the series to a finite $\jm$ value, numerical values for the amplitudes and phases can be calculated. How the truncation value affects the space of solutions, and whether these solutions continue to be valid during evolution, remains to be addressed.
 
 \section{Contributions of Authors}
+
+In this collaboration, QP solutions to \eqref{qp eqn} were found numerically through programs initially written by N.~Deppe, but later expanded and developed by myself. In particular, I developed code to achieve the tail fitting and seeding procedure detailed in appendix~\ref{app: seeding} that allowed for solutions to \eqref{qp eqn} to be developed for \jm values of several hundred -- almost an order of magnitude greater than the solutions previous found in the literature. Implementation of the high temperature perturbation method outlined in \ref{ssec: highT} was done using code I developed, as was the procedure of reoptimization that allowed for the high temperature solution to be projected back to the QP solution plane at various frequencies. Evolution of the solutions was based on numerical methods initially developed by N.~Deppe. All data management and analysis was done using programs written by myself.
+
+Much of the numerical work for this project was done using the University of Winnipeg's tesla server, where CPU hours are not tracked. However, for larger systems increased computing power was required, which necessitated transferring all code to Compute Canada's new Cedar cluster. Once there, I used 5.43 CPU years' worth of computing power to run evolutions and analysis of the results. Finally, I wrote the paper, with input from the other authors, that appears here.
 
 As is common for these types of projects, all members of the collaboration were equally involved in the interpretation of the data, as well as the late stages of editing. Authors are listed alphabetically and it is understood that all members contribute equally to the publication.
 
@@ -21,7 +27,7 @@ As is common for these types of projects, all members of the collaboration were 
 \begin{center}
 {\bf{\Large On the Stability of High-Temperature, Quasi-Periodic Solutions for Massless Scalars in AdS$_4$}} \\
 \bigskip
-{\bf To Appear on arXiv.org} \\
+{\bf To Appear on \href{https://arxiv.org}{arxiv.org}} \\
 \bigskip
 \bigskip
 Brad Cownden$^1$, Nils Deppe$^2$, and Andrew R.~Frey$^{3,4}$\\
