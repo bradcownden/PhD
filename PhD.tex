@@ -30,6 +30,7 @@
 \usepackage{etoolbox}
 \usepackage{parskip}
 \usepackage{tocbasic}
+%\usepackage{chapterbib}
 
 
 \hoffset=-0.25in
@@ -78,6 +79,8 @@
 \DeclareTOCStyleEntry[numwidth=3.em]{tocline}{figure}
 \DeclareTOCStyleEntry[numwidth=3.em]{tocline}{table}
 
+% Allow for a bibliography at the end of the introduction chapter
+\bibliographystyle{/Users/bradc/Documents/University_of_Manitoba/Thesis/PhD/JHEP}
 
 %\doublespacing    % <----- Initiate double spacing
  
@@ -117,7 +120,7 @@ Winnipeg
 
 \vspace{1.5cm}
 
-\textcopyright \, 2019 by Bradley Stuart Cownden
+\textcopyright \, 2020 by Bradley Stuart Cownden
 \end{center}
 \end{titlepage}
 
@@ -152,7 +155,7 @@ Winnipeg
 \section*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
 
-An abstract.
+An abstract (up to 350 words).
 
 \vspace*{\fill}
 \clearpage
@@ -191,7 +194,6 @@ An abstract.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\bibliographystyle{/Users/bradc/Documents/University_of_Manitoba/Thesis/PhD/JHEP}
 \bibliography{/Users/bradc/Documents/University_of_Manitoba/Thesis/PhD/PhD}
 \addcontentsline{toc}{chapter}{Bibliography}
 
@@ -199,5 +201,46 @@ An abstract.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{The Effects of Extra Dimensions on Stability}
+\label{sub: extra dims on stability}
+
+While our focus has mainly been on dynamics in the AdS dimensions, we must not forget that the full spacetime is actually ten-dimensional. Let us step back from the example of \ads for a moment to examine what effects the dynamics in AdS might have on the other dimensions.
+
+Consider the 10D background to be the product of two generic 5D manifolds $\mc M_5 \times \mc V_5$. The vacuum solution supports a 5-form flux and has the geometry $\mc M_5 =$ AdS$_5$; the dual strongly-coupled gauge theory lives on the conformal boundary $\p \mc M_5$. The details of the gauge theory depend on the choice of geometry for $\mc V_5$ since the central charge of the CFT is inversely related to the volume of $\mc V_5$. When $\mc V_5 =$ S$^5$, the gauge theory is an $\mc N = 4$, super-Yang-Mills theory. In the full 10D theory, when black holes form in the AdS$_5$ space, they are smeared across the $\mc V_5$. 
+
+In the small horizon limit, $r_+ \to 0$, the black hole will suffer a Gregory-Laflamme instability that causes the smeared solution to collapse to a point on S$^5$ \cite{hep-th/9301052}. This instability has been verified for \ads and generalized to arbitrary 5D manifolds \cite{1509.07780}. The threshold size for the instability to take effect is given by the size of the leading-order fluctuation; for \ads in particular, this is $r_+ / \ell \simeq 0.4259$ \cite{1502.01574}. The implication of the Gregory-Laflamme instability is that, for black holes of size (or, equivalently, mass) less than or equal to the instability size, collapse in the extra dimensions would precede collapse in the Anti-de Sitter dimensions, leading to a naked singularity. Such a violation of cosmic censorship would call the entire holographic description of quantum quenches into question. However, this effect as yet to be observed in numerical studies and might be avoided if the scalar field in AdS space develops a horizon before the Gregory-Laflamme collapse produces a singularity. Such a comparison has yet to be directly addressed in the literature, and may be the subject of future work by this author.
+
+A similar instability scale has been established for boson star configurations using the SUGRA effective action in 10D coupled to a complex scalar field. Once again, the threshold size is determined by examining the lowest-order contribution to the spectrum of linearized fluctuations. In contrast to the Gregory-Laflamme-type instabilities, localization on compact dimensions is observed \emph{above} a threshold mass \cite{1509.00774}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Beyond Spherical Symmetry}
+\label{sub: beyond spherical}
+
+As we have seen, the AdS/CFT correspondence imposes conditions on the asymptotic properties of the bulk space. However, this leaves open the possibilities for interior geometries outside of the spherically-symmetric ones we have considered so far. By studying background with different symmetry properties, we will be able to differential between what behaviour is intrinsic to the gravitational theory, and what behaviour depends on the matter profile.
+
+Threshold behaviour for axisymmetric scalar fields in flat geometries has confirmed the existence of critical phenomena of the type outlined in \S~\!\ref{sub: numerical}. In addition to confirming scale invariance for critical solutions, a critical exponent of $\gamma \approx 0.11$ was found \cite{gr-qc/0405101}. Further work examining axisymmetric vacuum solutions found critical behaviour of the same form, but with critical exponent $\gamma \approx 0.37$ \cite{Abrahams:1993wa}.
+
+In a more systematic study carried out in AdS$_5$, the degree of deformation away from spherical symmetry was included as an independent variable \cite{1706.04199}. While holding mass constant, it was shown that scalar fields collapsed to form black holes at earlier times and with fewer bounces as the deviation from spherical symmetry increased. By then considering data that required a fixed number of bounces to collapse, the effect of increased asymmetry isolated. The conclusion was that less mass was required to trigger a collapse after a fixed number of bounces as the degree of asymmetry was increased.
+
+More recently, a systematic approach to treating higher-order gravitational perturbations beyond spherical symmetry was developed by \cite{1701.07804}. Using axisymmetric solutions as an example of the method, time-periodic vacuum solutions -- {\it i.e.}, geon solutions -- were constructed. In such a system, the eigenvalues of the linear perturbations are degenerate as they depend not only on mode number, but also on the number of radial nodes, and the choice of either polar or axial modes. It was shown that the stable, time-periodic solutions are described by one-parameter families of solutions for each frequency, with the number of families equal to the multiplicity of the linear eigenfrequency.
+
+Finally, by breaking both spherical \emph{and} axial symmetry, the nonlinear instabilities due to secular terms become much stronger \cite{1705.03065}. In contrast to the spherically symmetric case, even single-mode data develop irremovable resonances at third order that lead to collapse.
+
+\subsubsection{Boson Stars Without Spherical Symmetry}
+
+Numerical boson star solutions with axisymmetry are able to incorporate the effects of angular momentum on the collapse of the scalar field. For an axisymmetric boson star data with momentum $J \propto \epsilon^2$, \cite{1706.06101} has shown that the timescale for collapse remains $t \sim \epsilon^{-2}$. Furthermore, as with spherically-symmetric oscillons, there are numerical solutions that are extensions of normal modes that remain stable over longer timescales. 
+
+The collapse of unstable boson star-like fields with angular momentum is sensitive to the type of perturbation applied, and may react by either collapsing to a Myers-Perry black hole, or by continuing to oscillate. For collapses in the full, nonlinear theory, critical phenomena such as self-similarity and mass scaling continue to hold \cite{gr-qc/0410040}. As the angular quantum number of the boson star solutions is increased, the resulting black hole is more and more distorted; in particular, the black hole develops multiple ``lobes'' about its centre that do not settle into more symmetric configurations due to the boundary properties of AdS \cite{1202.5809}. When considering oscillating solutions, it has been suggested that boson stars with angular momentum may continue to oscillate indefinitely, rather than tend towards radially-static solutions like the $J = 0$ case.
+
+\subsubsection{Extensions of Einstein's Gravity}
+
+In addition to considering various symmetry properties of solutions, the collapse of scalar fields in AdS has been extended to modified gravitational theories. One such extension was a generalization of the Einstein-Hilbert action to include higher-order curvature terms, {\it i.e.} Einstein-Gauss-Bonnet gravity. In such theories, \cite{1410.1869} has demonstrated the existence radius gaps in the near-critical scaling, thereby excluding black holes of arbitrarily small masses. Furthermore, for states below the mass threshold, gravitational focusing and growth of background curvature at late times suggest that either \emph{a}) naked singularities may develop, or \emph{b}) the curvature becomes sufficiently large excite string degrees of freedom, resulting in the end state being a gas of strings \cite{1608.05402}.
+
+
 
 

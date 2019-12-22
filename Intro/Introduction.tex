@@ -8,9 +8,9 @@
 \chapter{Introduction}
 \label{ch: intro}
 
-As experimental research into quantum information, condensed matter, and nuclear physics continues to reach new levels of precision, progress in developing theoretical predictions in these fields is hindered by a fundamental flaw: in strong coupling regimes, the perturbative methods that underpin theories such as Quantum Electrodynamics become invalid. This is because such systems are highly nonlinear. While some progress is possible by employing numerical schemes such as lattice approximations, analytical results are beyond our current mathematical understanding. It was not until a result derived from string theory -- and hinted at by studies of emergent gravity in gauge theories -- was developed that  strongly coupled phases of matter could be investigated analytically. By considering different coupling limits of a single string theory, a holographic description between strongly-coupled gauge theories and weakly-coupled gravitational theories in one higher dimension was established. Since its inception, this duality has been further developed into a dictionary that relates the fields in the gravitational theory to operators in the gauge theory. Thus, the Anti-de Sitter/Conformal Field Theory (AdS/CFT) correspondence allows strongly-coupled quantum processes to be reliably examined via geometric quantities in the dual theory. This duality has become a standard tool for theoretical physicists studying all kinds of dynamic processes in quantum theories, in particular the analysis of out-of-equilibrium dynamics at strong coupling. What the AdS/CFT correspondence is, and what it can tell us about dynamical processes in quantum field theories, will be the subject of this review.
+As experimental research into quantum information, condensed matter, and nuclear physics continues to reach new levels of precision, progress in developing theoretical predictions in these fields is hindered by a fundamental flaw: in strong coupling regimes, the perturbative methods that underpin theories such as Quantum Electrodynamics become invalid. This is because such systems are highly nonlinear. While some progress is possible by employing numerical schemes such as lattice approximations, analytical results are beyond our current mathematical understanding. It was not until a result derived from string theory -- and hinted at by studies of emergent gravity in gauge theories -- was developed that  strongly coupled phases of matter could be investigated analytically. By considering different coupling limits of a single string theory, a holographic description between strongly-coupled gauge theories and weakly-coupled gravitational theories in one higher dimension was established. Since its inception, this duality has been further developed into a dictionary that relates the fields in the gravitational theory to operators in the gauge theory. The Anti-de Sitter/Conformal Field Theory (AdS/CFT) correspondence allows strongly-coupled quantum processes to be reliably examined via geometric quantities in the dual theory. This duality has become a standard tool for theoretical physicists studying all kinds of dynamic processes in quantum theories, in particular the analysis of out-of-equilibrium dynamics at strong coupling.
 
-This document is organized as follows. In \S~\!\ref{sec: ads/cft} we wish to motivate the existence of a duality between a conformal field theory in $d$-dimensions and a negative-curvature gravitational theory in ($d + 1$)-dimensions. After examining a particular instance of this duality, we will discuss a few of the entries in the AdS/CFT dictionary that will prove useful later on. In \S~\!\ref{sec: bh in ads}, we see how black holes fit in to the AdS/CFT correspondence and examine how they can be used to describe a thermal state of a gauge theory. Finally, Section~\ref{sec: grav collapse} focuses on the modelling of dynamic processes in the gauge theory via the collapse of scalar fields in AdS. We discuss the holographic description of quantum quenches and revivals, describing current research into both analytic and numerical solutions in AdS.
+Before utilizing the correspondence to study any particular process, let us first review the main tenet of the duality: that there exists a fundamental relationship between a conformal field theory in $d$-dimensions and a negative-curvature gravitational theory in ($d + 1$)-dimensions.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -50,7 +50,7 @@ ds^2 = f(r)^{-1/2} \eta_{\mu \nu} dx^\mu dx^\nu + f(r)^{1/2} \left(  dr^2 + r^2 
 \end{align}
 where the $x^\mu$ span the worldvolume of the D3-branes and $d\Omega_5^2$ is the metric of the unit 5-sphere.
 
-Now we take the low-energy limit of the theories at either coupling limit. At weak coupling, the open strings decouple from the closed strings, resulting in an $SU(N)$ super-Yang-Mills gauge theory on the brane worldvolume. In the $g_s N \gg 1$ case, the low-energy limit corresponds to the near-horizon limit, $r \to 0$. In this limit, the 10D metric factors into the product AdS$_5 \times$S$^5$ ({\it cf.} the near-horizon limit of an extremal Reissner-Nordstr\o m black hole in $d=4$ \cite{Horowitz:1991cd}). To see this, we define\footnote{ This definition is actually derivable, and is motivated above equation \eqref{params}.} $\ell \equiv (4\pi g_s N)^{1/4} \ell_s$, so that $f^{1/2}(r) \to \ell^2 / r^2$ in the near-horizon limit and \eqref{bb geom} becomes
+Now we take the low-energy limit of the theories at either coupling limit. At weak coupling, the open strings decouple from the closed strings, resulting in an $SU(N)$ super-Yang-Mills gauge theory on the brane worldvolume. In the $g_s N \gg 1$ case, the low-energy limit corresponds to the near-horizon limit, $r \to 0$. In this limit, the 10D metric factors into the product AdS$_5 \times$S$^5$ ({\it cf.} the near-horizon limit of an extremal Reissner-Nordstr\o m black hole in $d=4$ \cite{Horowitz:1991cd}). To see this, we define $\ell \equiv (4\pi g_s N)^{1/4} \ell_s$, so that $f^{1/2}(r) \to \ell^2 / r^2$ in the near-horizon limit and \eqref{bb geom} becomes
 \begin{align}
 \label{param rels}
 ds^2 = \frac{r^2}{\ell^2} \eta_{\mu \nu} dx^\mu dx^\nu + \frac{\ell^2}{r^2}dr^2 + \ell^2 d\Omega_5^2 \, .
@@ -65,13 +65,15 @@ Given that we now know what string theory we are working with, we can more direc
 where $\lambda$ is the 't Hooft coupling $\lambda \equiv g_s N = g_{YM}^2 N$, and $\ell_s$ is the string length. To remove stringy corrections to the geometry, $\ell / \ell_s \gg 1$ so that the AdS length is much larger than the string length. Furthermore, string interactions are suppressed when $g_s \ll 1$. Thus, the bulk theory approaches  classical Einstein-Hilbert gravity when $N \gg \lambda \gg 1$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{The Gauge/Gravity Dictionary}
+\section{The Gauge/Gravity Dictionary}
 \label{ssec: dictionary}
 
-With the existence of the duality now motivated, we turn to what can be directly related through the correspondence. In particular, we wish to ask: \emph{what physical quantities in either theory can be related through the AdS/CFT correspondence?} In fact, many such relations arose from efforts to find counterexamples to the correspondence in the hopes of disproving it. Instead, each attempt confirmed the AdS/CFT correspondence and became an entry in the so-called dictionary. Here we will provide a few such examples.
+With the existence of the duality now motivated, we turn to what can be directly related through the correspondence. In particular, we wish to establish what physical quantities in either theory can be related through the AdS/CFT correspondence. In fact, many such relations arose from efforts to find counterexamples to the correspondence in the hopes of disproving it. Instead, each attempt confirmed the AdS/CFT correspondence and became an entry in the so-called dictionary. Here we will provide a few such examples.
 
-\subsubsection*{Symmetries}
+{\bf Symmetries}
+
 Consider the symmetries present in the \ads bulk theory. A $(p+2)$-dimensional Anti-de Sitter space can be presented by the hyperboloid $X_0^2 + X^2_{p+2} - \sum^{p+1}_{i=1} X_i^2 = \ell^2$ in a $(p+3)$-dimensional space with the metric
 \begin{align}
 \label{ads hyperboloid}
@@ -79,22 +81,19 @@ ds^2 = -dX_0^2 - dX_{p+2}^2 + \sum^{p+1}_{i = 1} dX^2_i \, .
 \end{align}
 This space has a $SO(2,p+1)$ isometry group \cite{hep-th/9905111}. Thus, the \ads theory has $SO(2,4)\times SO(6)$ symmetry. On the other hand, the gauge theory has an $SO(2,4)$ isometry from its conformal invariance (Poincar\'e plus scale and special conformal transformations) as well as $SU(4) \simeq SO(6)$ R-symmetry that relates the six scalar fields and four fermions of the theory \cite{1501.00007}. Therefore, the spatial isometries of the bulk space are interpreted as global symmetries of the boundary theory. Additionally, the supersymmetries inherent in the original theory type IIb superstring theory remain unbroken by the strong/weak coupling limits.
 	
-\subsubsection*{Observables}
-\label{ssub: lengths}
+{\bf Observables}
 
 Besides matching symmetry groups and relating dimensionless parameters, the AdS/CFT correspondence is able to produce more physically relevant relationships involving observables in either theory. One such concrete example comes from relating the asymptotic behaviour of bulk fields to the expectation values of operators in the boundary theory: a bulk field with leading-order value $\phi^{(0)}$ as $z \to 0$ acts as a source for an operator $\mc O$ on the boundary. Furthermore, by examining the next-to-leading order contribution to the bulk field, $\phi^{(1)}$, it can be shown that the expectation value of the operator is given by $\langle \mc O \rangle \propto \phi^{(1)}$ \cite{hep-th/9905104}. In \S~\!\ref{ssec: scalar fields}, we use the gauge/gravity duality to calculate the mass dimension of the boundary operator $\mc O$.
 
 Another such example is the quark anti-quark potential in the boundary theory. In the gauge theory, this can be calculated via the Wilson loop $W(\mathcal C)$, where $\mathcal C$ is the closed loop connecting the quark worldlines. The bulk interpretation of the Wilson loop is the extremized proper area of a string worldsheet anchored on $\mathcal C$ and extending into $z > 0$ \cite{hep-th/9803002}. 
 
+{\bf Entanglement Entropy}
 
-\subsubsection*{Entanglement Entropy}
-\label{ssub: EE}
 A significant utilization of the gauge/gravity duality comes from its unique ability to relate quantum characteristics of the gauge theory to geometric ones in the bulk. Among the most quantum of all characteristics is the spatial distribution of quantum correlations within a system, given by the entanglement entropy. For a given subsystem $\mc M$ of a local field theory with reduced density matrix $\rho_{\mc M}$, the entanglement entropy is given by the Von Neumann entropy $S_{\mc M} = - \text{Tr} \rho_{\mc M} \ln \rho_{\mc M}$. In practice, $\mc M$ is a spatial region that is bounded by the entangling surface $\p \mc M$.
 
-In the strong coupling limit, calculating the entanglement entropy can be prohibitively difficult. However, using the AdS/CFT correspondence, and an analogous process to the Wilson loop calculation discussed in \S~\!\ref{ssub: lengths}, it has been shown that $S_{\mc M}$ is given by a quarter of the area of the minimal surface at constant time in the bulk that is anchored on $\p \mc M$ \cite{hep-th/0603001}. Further properties of the entanglement entropy were subsequently shown to also have dual geometric descriptions in the bulk \cite{1304.4926}. In \S~\!\ref{sub: quenches}, we will see how entanglement entropy can also be calculated out of equilibrium, yielding the time-dependent entanglement behaviour of the strongly-coupled quantum theory.
+In the strong coupling limit, calculating the entanglement entropy can be prohibitively difficult. However, using the AdS/CFT correspondence it has been shown that $S_{\mc M}$ is given by a quarter of the area of the minimal surface at constant time in the bulk that is anchored on $\p \mc M$ \cite{hep-th/0603001}. Further properties of the entanglement entropy were subsequently shown to also have dual geometric descriptions in the bulk \cite{1304.4926}.
 
-\subsubsection*{Partition Functions}
-\label{ssec: partitions}
+{\bf Partition Functions}
 
 Since the underpinning of the AdS/CFT correspondence is taking different limits of the same theory, it is natural that the partition functions of either limit must still agree. We have already seen in \S~\!\ref{ssec: AdS5xS5} that the weak coupling limit of the type IIb string theory is supergravity (SUGRA) in the bulk, while the strong coupling limit gives a supersymmetric (SUSY) Yang-Mills gauge theory on the boundary. The gauge/gravity duality allows us to relate the two limits of the partition function:
 \begin{align}
@@ -108,7 +107,8 @@ Consider a bulk field $\phi(\vec x,z)$ with boundary value $\phi(\vec x, z=0) = 
 \label{ads/cft duality}
 \lim_{\epsilon \to 0} \big( S_{SUGRA} \left[ \phi(\vec x, z) \right] \big) \Big|_{\phi (\vec x, \epsilon) \to \phi_0(\vec x)} \simeq \left\langle \int d^dx \, \phi_0(\vec x) \mc O(\vec x) \right\rangle_{CFT} \, .
 \end{align}
-Let us now see what results can be derived from this duality for a scalar field in AdS$_{d+1}$.
+
+We will see that bulk scalar fields play an important role in the dual description of the thermalization of a CFT, as well as being a useful tool to study the nonlinear stability of AdS itself. To this end, let us examine how the scalar field is interpreted on either side of the gauge/gravity duality.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -120,7 +120,7 @@ To determine the solution for a massive scalar field $\phi(\vec x, z)$ in AdS$_{
 \label{free field act}
 S[\phi] = -\frac{G^{(d+1)}}{2} \int d^{d+1} x \, \sqrt{g} \left( g^{AB} \p_A \phi \p_B \phi + m^2 \phi^2 + \ldots \right) \, ,
 \end{align}
-where $G^{(d+1)}$ is the ($d+1$)-dimensional Newton's constant. Note that any higher-order terms in $\phi$ have been suppressed. The bulk metric written in Poinar\'e patch coordinates is as presented in \S~\!\ref{ssec: extra dims in gauge theories}. When integrating \eqref{free field act} by parts we must be careful to retain any surface terms since they will not go to zero like the flat-space case. With this is mind, we find that
+where $G^{(d+1)}$ is the ($d+1$)-dimensional Newton's constant. Note that any higher-order terms in $\phi$ have been suppressed. The bulk metric written in Poinar\'e patch coordinates as in \eqref{Poincare ads}. When integrating \eqref{free field act} by parts we must be careful to retain any surface terms since they will not go to zero like the flat-space case. With this is mind, we find that
 \begin{align}
 \label{action int by parts}
 S[\phi] = -\frac{G^{(d+1)}}{2} \int d^{d+1}x \, \sqrt{g}\, \phi \left( - \Box + m^2 \right) \phi - \frac{G^{(d+1)}}{2}\int_{\p AdS} d^d x \sqrt{\gamma} \, g^{zB} \phi \, \p_B \phi \, ,
@@ -156,21 +156,20 @@ and that the coupling between the field and the operator given in \eqref{ads/cft
 \end{align}
 Since the action must be finite as $\epsilon \to 0$, we have that $ \mc O(\vec x, \epsilon) \sim \epsilon^{d} \epsilon^{-\Delta^-} \mc O_0 (\vec x) = \epsilon^{d - \Delta^-} \mc O_0 (\vec x) = \epsilon^{\Delta^+} \mc O_0 (\vec x)$, where $\mc O_0(\vec x)$ is the normalizable operator in the CFT. The relevance of the operator will be determined by the value of $\Delta^+$.
 
+Our primary application of the AdS/CFT correspondence will be to examine in detail various processes in the bulk given that we have a dictionary to translate the solutions to the boundary gauge theory. In particular, we wish to consider thermal states of the CFT through their dual description of a static black hole in the bulk. Let us now see explicitly how a black hole in the bulk theory is dual to a thermal state in the gauge theory.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	
+
 \section{Black Holes and the AdS/CFT Correspondence}
 \label{sec: bh in ads}
-
-Our primary application of the AdS/CFT correspondence will be to examine in detail various processes in the bulk given that we have a dictionary to translate the solutions to the boundary gauge theory. In particular, we wish to consider thermal states of the CFT which have a dual description of a static black hole. We will require a working knowledge of black hole thermodynamics before seeing explicitly how a black hole in the bulk theory is dual to a thermal state in the gauge theory.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Black Holes in AdS}
 \label{sub: bh in ads}
 
-As discussed previously, the weak coupling limit of the $N$ D3-branes produced an extremal black-brane geometry given by \eqref{bb geom}, which is the Poincar\'e patch description of AdS. Since the interaction cross-section of the branes with low-energy states in the bulk shrinks to zero, the effective geometry for these states is  simply Anti-de Sitter. When discussing black holes in the AdS/CFT correspondence, we are referring to black holes embedded within an AdS geometry. 
+As discussed previously, the weak coupling limit of the $N$ D3-branes produced an extremal black-brane geometry given by \eqref{bb geom}, which is the Poincar\'e patch description of AdS. Since the interaction cross-section of the branes with low-energy states in the bulk shrinks to zero, the effective geometry for these states is Anti-de Sitter. When discussing black holes in the AdS/CFT correspondence, we are referring to black holes embedded within an AdS geometry. 
 
 The metric for the bulk space in the AdS/CFT correspondence can be found either through the 10-dimensional Einstein equations with quantized, self-dual 5-form flux, or as the vacuum solution to Einstein's equations in a 5-dimensional spacetime with a negative cosmological constant $\Lambda = -6/\ell^2$. Both approaches reveal a Schwarzschild-AdS$_5 \times$S$^5$ solution, which describes a spherical black hole in AdS$_5$ that is smeared over S$^5$. This unique, static, spherically symmetric solution has the form
 \begin{align}
@@ -205,7 +204,7 @@ The $\mathbb R^2$ portion of the metric suffers a conical singularity at $r=r_H$
 
 The connection between black hole physics and thermodynamics was noted by \cite{Bekenstein:1973ur}, and has been thoroughly examined since then. For a review of the thermodynamic properties of black holes, see \cite{Jacobson1996, Bardeen:1973gs, Hawking:1982dh}. It suffices for our purposes to highlight a few key features of the thermodynamic properties of black holes, and thereby motivate a correspondence between black holes in the bulk theory and a gauge theory in thermal equilibrium on the boundary.
 
-By considering quantum effects near the event horizon \cite{Hawking:1974rv}, it can be shown that black holes (with the metric specified in  \eqref{AdS5xS5 bh}) emit particles whose thermal spectrum is equivalent to a black body of temperature \cite{Hawking:1974sw}
+By considering quantum effects near the event horizon \cite{Hawking:1974rv}, it can be shown that black holes (with the metric specified in \eqref{AdS5xS5 bh}) emit particles whose thermal spectrum is equivalent to a black body of temperature \cite{Hawking:1974sw}
 \begin{align}
 \label{hawking temp}
 T_H = \frac{(\ell^2 + 2r_+^2)}{2 \pi r_+ \ell^2} \, .
@@ -238,7 +237,7 @@ A non-trivial check of this duality comes from a comparison of the entropies of 
 \label{bh dual entropy}
 S_{BH} = \frac{A}{4G^{(5)}} \sim \frac{r_+^3 \ell^5}{g_s^2 \ell_s^8} \sim \frac{T_H^3 \ell^{11}}{g_s^2 \ell_s^8} \sim N^2 T_H^3 \ell^3 \, ,
 \end{align}
-where we have used the fact that the gravitational constant scales with dimension as $G^{(d)} \sim g_s^2 \ell_s^{d-2}$ as well as \eqref{params}. On the other hand, the entropy of a 4D gauge theory with temperature $T_H$ in the limit of weak coupling\footnote{ In the strong coupling limit, the Yang-Mills degrees of freedom are interacting and the entropy calculation is not straightforward. However, the weak coupling limit can be smoothly interpolated to the strong coupling limit via a numerical factor that does not affect our comparison \cite{gr-qc/0602037}.} is
+where we have used the fact that the gravitational constant scales with dimension as $G^{(d)} \sim g_s^2 \ell_s^{d-2}$ as well as \eqref{params}. On the other hand, the entropy of a 4D gauge theory with temperature $T_H$ in the limit of weak coupling\footnote{In the strong coupling limit, the Yang-Mills degrees of freedom are interacting and the entropy calculation is not straightforward. However, the weak coupling limit can be smoothly interpolated to the strong coupling limit via a numerical factor that does not affect our comparison \cite{gr-qc/0602037}.} is
 \begin{align}
 \label{gauge dual entropy}
 S_{YM} \sim N^2 T_H^3 \ell^3 \, .
@@ -266,18 +265,9 @@ Calculations of nonlocal quantities in the confined phase of a gauge theory are 
 
 To study quantum quenches that start from coherent states, one starts with a scalar field minimally coupled to gravity and time-evolves the system. As we will see, the end state of the evolution is sensitive to the initial conditions of the scalar field, which allows us to examine a variety of phenomena using the same holographic mechanism by adjusting these conditions.
 
-\begin{figure}[h]
-\centering
-	\includegraphics[width=0.5\textwidth]{/Users/bradc/Research/Thesis/PhD/Intro/figs/EE.pdf}	
-	\caption[Gravitational picture of a holographic quantum quench in a CFT]{An infalling spherical shell can scatter of itself and begin expanding, eventually reaching the conformal boundary where it is reflected back and begins imploding again {\rm \cite{1412.6002}}.}
-	\label{fig: EE}
-\end{figure}
-
 Besides studying thermalizing systems, scalar field collapse can also be used to examine revivals in quantum systems away from equilibrium, and thus help explain the results from cold atom experiments, {\it e.g.} \cite{Dziarmaga2010, 2011arXiv1106.3567L}. Holographic quenches and revivals can also be used to confirm non-holographic results, such as the study of free, spinless Majorana fermions bound as pairs in meson excitations \cite{1706.02438}. Finally, we may wish to investigate the evolution of one thermal state into another, such as evolving from a non-hairy black hole in AdS to a hairy black hole -- a process equivalent to the spontaneous breaking of a discrete symmetry \cite{1704.05454}.
 
-Using various nonlocal holographic probes, such as entanglement entropy, the time evolution of the quantum properties of the boundary theory can be determined \cite{1410.6201}. For example, \cite{1412.6002} uses the implosion of a spherical shell of matter to study quenches in confined gauge theories. Figure~\ref{fig: EE} is a schematic representation of the holographic theory. The radial position of the shell in the bulk acts as a scale to measure the typical separation of entangled excitations. As the shell falls towards $x = 0$, one of two things can happen: if the shell has a high enough mass density, a black hole forms which signals the thermalization of the gauge theory; if the shell does not collapse, it can scatter off itself and begin expanding. Once the shell reaches the AdS boundary, the matter is reflected (under appropriate boundary conditions) and begins the infall again. This cycle of bounces is the holographic dual of so-called \emph{revivals} in the quantum theory.
-
-Note the boundary shadow region included in figure~\ref{fig: EE}. This area represents where holographic computations are done for a given interval on the boundary. Recall from \S~\!\ref{ssub: EE} that the geometric dual to entanglement entropy in some interval is a quarter of the minimal surface in the bulk anchored to the boundary interval. As the mass shell evolves and backreacts with the geometry, this minimal surface also evolves. Although the exact details depend on the number of dimensions, numerical results for AdS$_3$ and AdS$_4$ both show that the entanglement entropy reaches a maximum when the radial position of the spherical shell is equal to the maximum distance of incursion into the bulk by the extremal surface.
+Using various nonlocal holographic probes, such as entanglement entropy, the time evolution of the quantum properties of the boundary theory can be determined \cite{1410.6201, 1412.6002}. For example, the implosion of a spherical shell of matter is used to study quenches in confined gauge theories. The radial position of the shell in the bulk acts as a scale to measure the typical separation of entangled excitations. As the shell falls towards $x = 0$, one of two things can happen: if the shell has a high enough mass density, a black hole forms which signals the thermalization of the gauge theory; if the shell does not collapse, it can scatter off itself and begin expanding. Once the shell reaches the AdS boundary, the matter is reflected (under appropriate boundary conditions) and begins the infall again. This cycle of bounces is the holographic dual of so-called \emph{revivals} in the quantum theory.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -335,7 +325,7 @@ More general oscillating solutions exist as solutions to Einstein-Maxwell equati
 
 \subsubsection{Boson Stars}
 
-Boson stars are a class of localized, stationary, nonlinearly stable solutions involving complex scalar fields. Since the \ads action is invariant under the global phase transformation $\phi \to \exp(-i \theta) \phi$, boson stars carry a conserved charge, $Q$. They have since been numerically constructed and shown to be stable solutions to the full, nonlinear theory \cite{1304.4166}. They can be constructed from a range of initial conditions \cite{1209.2378, 1301.2452} and do not suffer from Gregory-Laflamme instabilities (see \S~\ref{sub: extra dims on stability} for details on how instabilities in the non-AdS dimensions may affect our understanding of holographic thermalization) \cite{1509.00774}. 
+Boson stars are a class of localized, stationary, nonlinearly stable solutions involving complex scalar fields. Since the \ads action is invariant under the global phase transformation $\phi \to \exp(-i \theta) \phi$, boson stars carry a conserved charge, $Q$. They have since been numerically constructed and shown to be stable solutions to the full, nonlinear theory \cite{1304.4166}. They can be constructed from a range of initial conditions \cite{1209.2378, 1301.2452} and do not suffer from Gregory-Laflamme instabilities \cite{1509.00774}. 
 
 \subsubsection{Single-mode and Nearly Single-Mode Data}
 
@@ -384,7 +374,7 @@ In \cite{1508.02709}, a large swath of the phase space of Gaussian data of the t
 \label{scalar ics}
 \phi(t=0,x) = 0 \quad \text{and} \quad \Pi (t=0,x) = \epsilon \exp \left( - \frac{\tan^2 (x)}{\sigma^2} \right)
 \end{align}
-was explored down to very low amplitudes in AdS$_4$ and AdS$_5$. Surveying such a wide range of masses and widths allowed for the confirmation of the periodic, discontinuous horizon behaviour observed for massless scalars in \cite{1104.3702}, as well as observing similar behaviour for light masses ($\mu < 1$) with both narrow widths ($\sigma \approx 0.3$) and wide widths ($\sigma \approx 4$). New, quasi-stable behaviour was found for heavy masses ($\mu = 20$) at intermediate widths, which was characterized by discontinuous behaviour in horizon formation time where fields with initial amplitudes in a small range experienced jumps in formation time of orders of magnitude. Finally, for very heavy scalars ($\mu = 100$), a threshold amplitude was found below which no black hole solution was seen. See figure~\ref{fig: massive x vs eps} for one such example.
+was explored down to very low amplitudes in AdS$_4$ and AdS$_5$. Surveying such a wide range of masses and widths allowed for the confirmation of the periodic, discontinuous horizon behaviour observed for massless scalars in \cite{1104.3702}, as well as observing similar behaviour for light masses ($\mu < 1$) with both narrow widths ($\sigma \approx 0.3$) and wide widths ($\sigma \approx 4$). New, quasi-stable behaviour was found for heavy masses ($\mu = 20$) at intermediate widths, which was characterized by discontinuous behaviour in horizon formation time where fields with initial amplitudes in a small range experienced jumps in formation time of orders of magnitude. See figure~\ref{fig: massive x vs eps} for one such example.
 
 \begin{figure}[h]
 	\centering
@@ -407,44 +397,6 @@ A picture of phase space for initial profiles of scalar fields has emerged: Gaus
 Two-mode initial data uses initial profiles of the form $\phi(t=0,x) = \epsilon ( e_0 (x) + \kappa e_1 (x) )/3$, where $\kappa$ is a free constant and $e_0(x), \: e_1(x)$ are the first two eigenmodes of \eqref{scalar eigens}. While initial results by \cite{1403.6471} indicated that such data was stable for $\kappa \sim 1$, it was pointed out by \cite{1410.2631} that  collapse did indeed occur. It was postulated that the observed stability was a result of too coarse a mesh and/or ineffective adaptive mesh refinement, resulting in the apparent horizon falling between grid points of the simulation. The instability of two-mode solutions was subsequently confirmed in \cite{1508.02709}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Beyond Spherical Symmetry}
-\label{sub: beyond spherical}
-
-As we have seen, the AdS/CFT correspondence imposes conditions on the asymptotic properties of the bulk space. However, this leaves open the possibilities for interior geometries outside of the spherically-symmetric ones we have considered so far. By studying background with different symmetry properties, we will be able to differential between what behaviour is intrinsic to the gravitational theory, and what behaviour depends on the matter profile.
-
-Threshold behaviour for axisymmetric scalar fields in flat geometries has confirmed the existence of critical phenomena of the type outlined in \S~\!\ref{sub: numerical}. In addition to confirming scale invariance for critical solutions, a critical exponent of $\gamma \approx 0.11$ was found \cite{gr-qc/0405101}. Further work examining axisymmetric vacuum solutions found critical behaviour of the same form, but with critical exponent $\gamma \approx 0.37$ \cite{Abrahams:1993wa}.
-
-In a more systematic study carried out in AdS$_5$, the degree of deformation away from spherical symmetry was included as an independent variable \cite{1706.04199}. While holding mass constant, it was shown that scalar fields collapsed to form black holes at earlier times and with fewer bounces as the deviation from spherical symmetry increased. By then considering data that required a fixed number of bounces to collapse, the effect of increased asymmetry isolated. The conclusion was that less mass was required to trigger a collapse after a fixed number of bounces as the degree of asymmetry was increased.
-
-More recently, a systematic approach to treating higher-order gravitational perturbations beyond spherical symmetry was developed by \cite{1701.07804}. Using axisymmetric solutions as an example of the method, time-periodic vacuum solutions -- {\it i.e.}, geon solutions -- were constructed. In such a system, the eigenvalues of the linear perturbations are degenerate as they depend not only on mode number, but also on the number of radial nodes, and the choice of either polar or axial modes. It was shown that the stable, time-periodic solutions are described by one-parameter families of solutions for each frequency, with the number of families equal to the multiplicity of the linear eigenfrequency.
-
-Finally, by breaking both spherical \emph{and} axial symmetry, the nonlinear instabilities due to secular terms become much stronger \cite{1705.03065}. In contrast to the spherically symmetric case, even single-mode data develop irremovable resonances at third order that lead to collapse.
-
-\subsubsection{Boson Stars Without Spherical Symmetry}
-
-Numerical boson star solutions with axisymmetry are able to incorporate the effects of angular momentum on the collapse of the scalar field. For an axisymmetric boson star data with momentum $J \propto \epsilon^2$, \cite{1706.06101} has shown that the timescale for collapse remains $t \sim \epsilon^{-2}$. Furthermore, as with spherically-symmetric oscillons, there are numerical solutions that are extensions of normal modes that remain stable over longer timescales. 
-
-The collapse of unstable boson star-like fields with angular momentum is sensitive to the type of perturbation applied, and may react by either collapsing to a Myers-Perry black hole, or by continuing to oscillate. For collapses in the full, nonlinear theory, critical phenomena such as self-similarity and mass scaling continue to hold \cite{gr-qc/0410040}. As the angular quantum number of the boson star solutions is increased, the resulting black hole is more and more distorted; in particular, the black hole develops multiple ``lobes'' about its centre that do not settle into more symmetric configurations due to the boundary properties of AdS \cite{1202.5809}. When considering oscillating solutions, it has been suggested that boson stars with angular momentum may continue to oscillate indefinitely, rather than tend towards radially-static solutions like the $J = 0$ case.
-
-\subsubsection{Extensions of Einstein's Gravity}
-
-In addition to considering various symmetry properties of solutions, the collapse of scalar fields in AdS has been extended to modified gravitational theories. One such extension was a generalization of the Einstein-Hilbert action to include higher-order curvature terms, {\it i.e.} Einstein-Gauss-Bonnet gravity. In such theories, \cite{1410.1869} has demonstrated the existence radius gaps in the near-critical scaling, thereby excluding black holes of arbitrarily small masses. Furthermore, for states below the mass threshold, gravitational focusing and growth of background curvature at late times suggest that either \emph{a}) naked singularities may develop, or \emph{b}) the curvature becomes sufficiently large excite string degrees of freedom, resulting in the end state being a gas of strings \cite{1608.05402}.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{The Effects of Extra Dimensions on Stability}
-\label{sub: extra dims on stability}
-
-While our focus has mainly been on dynamics in the AdS dimensions, we must not forget that the full spacetime is actually ten-dimensional. Let us step back from the example of \ads for a moment to examine what effects the dynamics in AdS might have on the other dimensions.
-
-Consider the 10D background to be the product of two generic 5D manifolds $\mc M_5 \times \mc V_5$. The vacuum solution supports a 5-form flux and has the geometry $\mc M_5 =$ AdS$_5$; the dual strongly-coupled gauge theory lives on the conformal boundary $\p \mc M_5$. The details of the gauge theory depend on the choice of geometry for $\mc V_5$ since the central charge of the CFT is inversely related to the volume of $\mc V_5$. When $\mc V_5 =$ S$^5$, the gauge theory is an $\mc N = 4$, super-Yang-Mills theory. In the full 10D theory, when black holes form in the AdS$_5$ space, they are smeared across the $\mc V_5$. 
-
-In the small horizon limit, $r_+ \to 0$, the black hole will suffer a Gregory-Laflamme instability that causes the smeared solution to collapse to a point on S$^5$ \cite{hep-th/9301052}. This instability has been verified for \ads and generalized to arbitrary 5D manifolds \cite{1509.07780}. The threshold size for the instability to take effect is given by the size of the leading-order fluctuation; for \ads in particular, this is $r_+ / \ell \simeq 0.4259$ \cite{1502.01574}. The implication of the Gregory-Laflamme instability is that, for black holes of size (or, equivalently, mass) less than or equal to the instability size, collapse in the extra dimensions would precede collapse in the Anti-de Sitter dimensions, leading to a naked singularity. Such a violation of cosmic censorship would call the entire holographic description of quantum quenches into question. However, this effect as yet to be observed in numerical studies and might be avoided if the scalar field in AdS space develops a horizon before the Gregory-Laflamme collapse produces a singularity. Such a comparison has yet to be directly addressed in the literature, and may be the subject of future work by this author.
-
-A similar instability scale has been established for boson star configurations using the SUGRA effective action in 10D coupled to a complex scalar field. Once again, the threshold size is determined by examining the lowest-order contribution to the spectrum of linearized fluctuations. In contrast to the Gregory-Laflamme-type instabilities, localization on compact dimensions is observed \emph{above} a threshold mass \cite{1509.00774}.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Summary}
@@ -452,9 +404,16 @@ A similar instability scale has been established for boson star configurations u
 
 In this review, we have seen how the AdS/CFT correspondence establishes a duality between strongly-coupled gauge theories and weakly-coupled gravitational theories in one extra dimension. Using this correspondence, various dynamical processes in strongly-coupled gauge theories can be explored via the collapse of scalar fields in Anti-de Sitter space. In particular, we have focused on the duality between the formation of black holes from scalar fields in \ads and the thermalization of an $\mc N = 4$, super-Yang-Mills theory in four dimensions. We have seen that the end state of the theory depends on the initial profile of the scalar field, and that a large variety of both stable and unstable phenomena are possible. Finally, we have seen that lingering questions about the role of bulk symmetries and the nature of instabilities in the full, 10D theory mean that there are more exciting avenues of research yet to be explored.
 
+This thesis will further explore the dynamics that govern the collapse of a scalar field in AdS through two complementary methods: numerical evolution of the full, nonlinear Einstein/Klein-Gordon system dual to the thermalization of a CFT, as well as analytic descriptions of the weakly turbulent instabilities at third-order in the perturbative picture of scalar field collapse.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%\bibliographystyle{/Users/bradc/Documents/University_of_Manitoba/Thesis/PhD/JHEP}
+%\bibliography{/Users/bradc/Documents/University_of_Manitoba/Thesis/PhD/Intro/introbib}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \end{document}
