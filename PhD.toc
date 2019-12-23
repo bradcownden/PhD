@@ -14,10 +14,10 @@
 \contentsline {subsection}{\numberline {1.4.1}Quenches \& Revivals}{9}{subsection.1.4.1}
 \contentsline {subsection}{\numberline {1.4.2}Scalar Fields in AdS$_{d+1}$}{10}{subsection.1.4.2}
 \contentsline {subsection}{\numberline {1.4.3}Stable Configurations}{11}{subsection.1.4.3}
-\contentsline {subsubsection}{\numberline {1.4.3.1}Oscillons, Oscillatons, and Geons}{11}{subsubsection.1.4.3.1}
+\contentsline {subsubsection}{\numberline {1.4.3.1}Oscillons, Oscillatons, and Geons}{12}{subsubsection.1.4.3.1}
 \contentsline {subsubsection}{\numberline {1.4.3.2}Boson Stars}{12}{subsubsection.1.4.3.2}
 \contentsline {subsubsection}{\numberline {1.4.3.3}Single-mode and Nearly Single-Mode Data}{12}{subsubsection.1.4.3.3}
-\contentsline {subsubsection}{\numberline {1.4.3.4}Gaussian Initial Data}{12}{subsubsection.1.4.3.4}
+\contentsline {subsubsection}{\numberline {1.4.3.4}Gaussian Initial Data}{13}{subsubsection.1.4.3.4}
 \contentsline {subsection}{\numberline {1.4.4}Unstable Configurations}{13}{subsection.1.4.4}
 \contentsline {subsubsection}{\numberline {1.4.4.1}Complex Scalars}{13}{subsubsection.1.4.4.1}
 \contentsline {subsubsection}{\numberline {1.4.4.2}Gaussian Initial Data Revisited}{14}{subsubsection.1.4.4.2}
@@ -81,3 +81,4 @@
 \contentsline {section}{\numberline {4.A}Derivation of Source Terms For Massive Scalars}{98}{section.3.4.A}
 \contentsline {section}{\numberline {4.B}Two Non-normalizable Modes with Equal Frequencies}{101}{section.3.4.B}
 \contentsline {chapter}{\numberline {5}Conclusion}{103}{chapter.5}
+\contentsline {chapter}{Bibliography}{110}{appendix*.59}
