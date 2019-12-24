@@ -7,14 +7,14 @@
 \contentsline {subsection}{\numberline {1.1.2}The AdS$_5 \times $S$^5$ Duality}{3}{subsection.1.1.2}
 \contentsline {section}{\numberline {1.2}The Gauge/Gravity Dictionary}{3}{section.1.2}
 \contentsline {subsection}{\numberline {1.2.1}Solutions For Scalar Fields in AdS$_{d+1}$}{5}{subsection.1.2.1}
-\contentsline {section}{\numberline {1.3}Black Holes and the AdS/CFT Correspondence}{6}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Black Holes in AdS}{6}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.2}Black Hole Thermodynamics \& Thermal States in a CFT}{7}{subsection.1.3.2}
+\contentsline {section}{\numberline {1.3}Black Holes and the AdS/CFT Correspondence}{7}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Black Holes in AdS}{7}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Black Hole Thermodynamics \& Thermal States in a CFT}{8}{subsection.1.3.2}
 \contentsline {section}{\numberline {1.4}Gravitational Collapse of Scalar Fields}{9}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}Quenches \& Revivals}{9}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.1}Quenches}{10}{subsection.1.4.1}
 \contentsline {subsection}{\numberline {1.4.2}Scalar Fields in AdS$_{d+1}$}{10}{subsection.1.4.2}
 \contentsline {subsection}{\numberline {1.4.3}Stable Configurations}{11}{subsection.1.4.3}
-\contentsline {subsubsection}{\numberline {1.4.3.1}Oscillons, Oscillatons, and Geons}{12}{subsubsection.1.4.3.1}
+\contentsline {subsubsection}{\numberline {1.4.3.1}Oscillons, Oscillatons, and Geons}{11}{subsubsection.1.4.3.1}
 \contentsline {subsubsection}{\numberline {1.4.3.2}Boson Stars}{12}{subsubsection.1.4.3.2}
 \contentsline {subsubsection}{\numberline {1.4.3.3}Single-mode and Nearly Single-Mode Data}{12}{subsubsection.1.4.3.3}
 \contentsline {subsubsection}{\numberline {1.4.3.4}Gaussian Initial Data}{13}{subsubsection.1.4.3.4}
@@ -23,7 +23,8 @@
 \contentsline {subsubsection}{\numberline {1.4.4.2}Gaussian Initial Data Revisited}{14}{subsubsection.1.4.4.2}
 \contentsline {subsubsection}{\numberline {1.4.4.3}Islands of Stability}{14}{subsubsection.1.4.4.3}
 \contentsline {subsubsection}{\numberline {1.4.4.4}Two-Mode Initial Data}{15}{subsubsection.1.4.4.4}
-\contentsline {section}{\numberline {1.5}Summary}{15}{section.1.5}
+\contentsline {subsection}{\numberline {1.4.5}Driven Scalars}{16}{subsection.1.4.5}
+\contentsline {section}{\numberline {1.5}Summary}{16}{section.1.5}
 \contentsline {chapter}{\numberline {2}Nonlinear Evolution of Massive Scalar Fields in Anti-de Sitter Spacetime}{17}{chapter.2}
 \contentsline {section}{\numberline {2.1}Contributions of Authors}{17}{section.2.1}
 \contentsline {section}{\numberline {2.2}Introduction}{18}{section.2.2}
