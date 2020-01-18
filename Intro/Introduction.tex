@@ -12,7 +12,7 @@ As experimental research into quantum information, condensed matter, and nuclear
 
 The goal of this thesis is to leverage the AdS/CFT correspondence to study the dynamics of strongly coupled quantum theories through their dual description as a weakly coupled gravitational theory. To do so, we focus on minimally coupled scalar fields in Einstein-Hilbert gravity on AdS backgrounds. Existing entries in the gauge/gravity dictionary will motivate the systems that are considered, and existing literature will point to areas within the topic that have yet to be explored. Both numerical and analytical methods will be employed to study the nonlinear stability of the theory. We will see that gravitational collapse in the bulk theory signals a phase transition in the dual gauge theory, and so examining the dynamics of the collapse is tantamount to understanding time dependent processes in the boundary theory.
 
-This thesis contains three manuscripts that either have been, or are about to be, submitted for publication. In chapter~\ref{ch: massive}, we examine the limits of the nonlinear stability of AdS$_5$ by examining the range of behaviours exhibited by differing initial data with static boundary conditions. Next, in chapter~\ref{ch: ttf}, we expand upon solutions to the perturbative theory that capture the weakly turbulent dynamics involved in the collapse process. We evolve these solutions in the perturbative theory and evaluate their longevity beyond the perturbative time scale. Finally, in chapter~\ref{ch: driven} we consider the addition of a time-dependent source term on the conformal boundary of the gravitational theory, and derive the renormalization flow equations for the first non-trivial order in the small-amplitude expansion. A discussion of the results follows in chapter~\ref{ch: conclusion}.
+This thesis contains three manuscripts that either have been, or are about to be, submitted for publication. In chapter~\ref{ch: massive}, we examine the limits of the nonlinear stability of AdS$_5$ by examining the range of behaviours exhibited by differing initial data with static boundary conditions. Next, in chapter~\ref{ch: ttf}, we expand upon solutions to the perturbative theory that capture the weakly turbulent dynamics involved in the collapse process. We focus on determining the stability of solutions to the leading nonlinear contributions to the perturbative theory, known as quasi-periodic solutions. We then evolve these solutions in the perturbative framework and evaluate their longevity beyond the perturbative time scale. Finally, in chapter~\ref{ch: driven} we consider the addition of a time-dependent source term on the conformal boundary of the gravitational theory, and derive the renormalization flow equations for the first non-trivial order in the small-amplitude expansion. A discussion of the results follows in chapter~\ref{ch: conclusion}.
 
 However, before utilizing the correspondence to study any particular process, we first review the main tenet of the gauge/gravity duality and it's consequences in chapter~\ref{ch: intro}. Namely, that there exists a fundamental relationship between a conformal field theory in $d$-dimensions and a negative-curvature gravitational theory in ($d + 1$)-dimensions.
 
@@ -22,14 +22,14 @@ However, before utilizing the correspondence to study any particular process, we
 \section{The AdS/CFT Correspondence}
 \label{sec: ads/cft}
 
-The AdS/CFT correspondence was first established by \cite{hep-th/9711200}, who studied two limits of type IIb string theory and found that the low-energy states in either limit described either a supergravity theory with a negative cosmological constant, or a superconformal quantum field theory living on the boundary of the gravity theory. Although this correspondence was originally conjectured from the point of view of string theory, more modern reviews of the duality rely less on the specifics of the string theory and instead develop a gravitational theory from the strong coupling limit of a gauge theory \cite{gr-qc/0602037}. We will use this paradigm to heuristically motivate the duality, as well as introduce relevant relationships between quantities in either theory.  
+The AdS/CFT correspondence was first established by \cite{hep-th/9711200}, who studied two limits of type IIb string theory and found that the low-energy states in either limit described either a supergravity theory with a negative cosmological constant, or a superconformal quantum field theory living on the boundary of the gravity theory. Although this correspondence was originally conjectured from the point of view of string theory, more modern reviews of the duality rely less on the specifics of the string theory and instead develop a gravitational theory from the strong coupling limit of a gauge theory; see \cite{gr-qc/0602037} for a review. We will use this paradigm to heuristically motivate the duality, as well as introduce relevant relationships between quantities in either theory.  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Extra Dimensions In Gauge Theories}
 \label{ssec: extra dims in gauge theories}
 
-Although \cite{hep-th/9711200} was the first to establish explicitly a correspondence between a gravitational theory in $(d+1)$-dimensional AdS and a conformal field theory in $d$-dimensions, the concept of a holographic relationship between a gauge theory and a gravitational theory in one higher dimension was established earlier by \cite{gr-qc/9310026} and \cite{hep-th/9409089} from the point of view of the field theory. 
+Although \cite{hep-th/9711200} was the first to establish explicitly a correspondence between a gravitational theory in $(d+1)$-dimensional AdS and a conformal field theory in $d$-dimensions, the concept of a holographic relationship between a gauge theory and a gravitational theory in one higher dimension was conjectured earlier by \cite{gr-qc/9310026} and \cite{hep-th/9409089} from the point of view of the field theory. 
 
 For most gauge theories, there is a running of the coupling that dictates the evolution of the couplings with energy. Therefore, the physics of the theory is local with respect to an extra dimension, the energy. However, since many gauge theories suffer UV divergences at large energies, the size of the extra dimension may be limited. In contrast, supersymmetric theories have vanishing beta functions; therefore, there is no running of the coupling. In this case, the energy scale is arbitrary and the extra dimension of the theory has no bound.
 
@@ -40,14 +40,14 @@ ds^2 = \frac{\ell^2}{z^2} \left( \eta_{\mu \nu}dx^\mu dx^\nu +dz^2 \right) \, ,
 \end{align}
 where $z = \ell^2 / r$. This is precisely the metric for AdS$_5$ with characteristic length $\ell$. 
 
-While this argument is for a specific gauge theory, the gauge/gravity correspondence is in fact a much deeper and wider relationship. The derivation of the duality is thoroughly covered from the full string theory perspective in, among others, \cite{hep-th/9711200, gr-qc/0602037, 1501.00007, hep-th/9902131, hep-th/9905111}. For now, let us establish the duality that will be most applicable to us: the duality between type IIb supergravity on conformal AdS$_5 \times$ S$^5$ and $\mc N = 4$ supersymmetric Yang-Mills theory in $(3+1)$-dimensions.
+More than being simply qualitative, the gauge/gravity correspondence is in fact a much deeper and more specific relationship. The derivation of the duality is thoroughly covered from the full string theory perspective in, among others, \cite{hep-th/9711200, gr-qc/0602037, 1501.00007, hep-th/9902131, hep-th/9905111}. For now, let us establish the duality that will be most applicable to us: the duality between type IIb supergravity on conformal AdS$_5 \times$ S$^5$ and $\mc N = 4$ supersymmetric Yang-Mills theory in $(3+1)$-dimensions.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{The AdS$_5 \times$S$^5$ Duality}
 \label{ssec: AdS5xS5}
 
-Consider a stack of $N$ coincident D3-branes in type IIb string theory (ten Minkowski dimensions), each of which couple to gravity with strength $g_s$. At weak coupling, $g_s N \ll 1$, there are closed string states as well as open strings that end on the branes and have an $SU(N)$ super-Yang-Mills effective action \cite{Zwiebach:2004tj}. At strong coupling, however, the branes curve the background and source an extremal black-brane geometry \cite{Horowitz:1991cd}, whose metric is
+Consider a stack of $N$ coincident D3-branes in type IIb string theory (ten Minkowski dimensions), each of which couple to gravity with strength $g_s$. At weak coupling, $g_s N \ll 1$, there are closed string states as well as open strings that end on the branes and have an $SU(N)$ super-Yang-Mills effective action. At strong coupling, however, the branes curve the background and source an extremal black-brane geometry \cite{Zwiebach:2004tj}, whose metric is
 \begin{align}
 \label{bb geom}
 ds^2 = f(r)^{-1/2} \eta_{\mu \nu} dx^\mu dx^\nu + f(r)^{1/2} \left(  dr^2 + r^2 d\Omega_5^2 \right)  \quad  \text{with} \quad f(r) = 1 + \frac{4 \pi g_s N \ell_s^4}{r^4} \, ,
@@ -61,12 +61,14 @@ ds^2 = \frac{r^2}{\ell^2} \eta_{\mu \nu} dx^\mu dx^\nu + \frac{\ell^2}{r^2}dr^2 
 \end{align}
 Note that the branes are now located at the bottom of the infinite throat. Any states near the horizon will be redshifted to low energies and any states in the asymptotic region will decouple from states near the black branes; all that remains are closed string states, i.e.~supergravity, on an asymptotically AdS$_5$ background. This motivates the duality we will examine in detail: the one between scalar fields in \ads and a supersymmetric $SU(N)$ Yang-Mills gauge theory on the boundary of AdS$_5$.
 
-Given that we now know what string theory we are working with, we can more directly relate the dimensionless parameters of the string theory (i.e.~the string coupling $g_s$ and AdS scale in string units, $\ell / \ell_s$) to the dimensionless parameters of the CFT (i.e.~the Yang-Mills coupling $g_{YM}$ and colour number $N$). By examining the D3-brane Lagrangian, we are able to relate $g_{YM}$ and $g_s$ through $4\pi g_s = g_{YM}^2$. Furthermore, since each D3-brane sources a 5-form field strength, quantization of the flux through the five-sphere S$^5$ leads to an expression for the radius of curvature of AdS. Altogether,
+Given that we now know what string theory we are working with, we can more directly relate the dimensionless parameters of the string theory (i.e.~the string coupling $g_s$ and AdS scale in string units, $\ell / \ell_s$) to the dimensionless parameters of the CFT (i.e.~the Yang-Mills coupling $g_{YM}$ and colour number $N$). By examining the D3-brane Lagrangian, we are able to relate $g_{YM}$ and $g_s$ through $4\pi g_s = g_{YM}^2$. Altogether,
 \begin{align}
 \label{params}
 4\pi g_s = g_{YM}^2 \sim \frac{\lambda}{N} \quad \text{and} \quad \frac{\ell}{\ell_s} = \left( 4\pi g_s N \right)^{1/4} \sim \lambda^{1/4} \, ,
 \end{align}
 where $\lambda$ is the 't Hooft coupling $\lambda \equiv g_s N = g_{YM}^2 N$, and $\ell_s$ is the string length. To remove stringy corrections to the geometry, $\ell / \ell_s \gg 1$ so that the AdS length is much larger than the string length. Furthermore, string interactions are suppressed when $g_s \ll 1$. Thus, the bulk theory approaches  classical Einstein-Hilbert gravity when $N \gg \lambda \gg 1$.
+
+By considering other superstring models, such as M-theory (eleven Minkowski dimensions), we are able to establish similar dualities between gravitational and conformal field theories. In particular, the M-theory\footnote{M-theory is a superstring theory that can be mapped to the other major, ten-dimensional superstring theories through choices of compactifications and length/coupling dualities \cite{Polchinski:1998rr}.} equivalent of D$2$-branes, M$2$-branes, are used -- along with corresponding coupling limits -- to establish a duality between a gravitational bulk theory on AdS$_4 \times$S$^7$ and a CFT on {$\mathbb{R}\times$S$^2$}~\cite{hep-th/9711200}. In fact, many such dualities can be constructed through applying different compactifications and/or sources in the extra dimensions, each of which describes a different type of CFTs on the boundary. For a review of other types of holographic constructions, see e.g.~\cite{1612.07324, 1606.08953}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -78,12 +80,25 @@ With the existence of the duality now motivated, we turn to what can be directly
 
 {\bf Symmetries}
 
-Consider the symmetries present in the \ads bulk theory. A $(p+2)$-dimensional Anti-de Sitter space can be presented by the hyperboloid $X_0^2 + X^2_{p+2} - \sum^{p+1}_{i=1} X_i^2 = \ell^2$ in a $(p+3)$-dimensional space with the metric
+Consider the symmetries present in the \ads bulk theory. A $(p+2)$-dimensional Anti-de Sitter space can be presented by the hyperboloid $X_0^2 + X^2_{p+2} - \sum^{p+1}_{i=1} X_i^2 = R^2$ in a $(p+3)$-dimensional space with the metric
 \begin{align}
 \label{ads hyperboloid}
 ds^2 = -dX_0^2 - dX_{p+2}^2 + \sum^{p+1}_{i = 1} dX^2_i \, .
 \end{align}
-This space has a $SO(2,p+1)$ isometry group \cite{hep-th/9905111}. Thus, the \ads theory has $SO(2,4)\times SO(6)$ symmetry. On the other hand, the gauge theory has an $SO(2,4)$ isometry from its conformal invariance (Poincar\'e plus scale and special conformal transformations) as well as $SU(4) \simeq SO(6)$ R-symmetry that relates the six scalar fields and four fermions of the theory \cite{1501.00007}. Therefore, the spatial isometries of the bulk space are interpreted as global symmetries of the boundary theory. Additionally, the supersymmetries inherent in the original theory type IIb superstring theory remain unbroken by the strong/weak coupling limits.
+The choice of $X_0 = R~\cosh \rho~\cos \tau$, $X_{p+2} = R~\cosh \rho~\sin \tau$, and $X_i = R~\sinh \rho~\Omega_i$ with $i=1,\ldots,p + 1$, $0 \leq \rho$, $0 \leq \tau \leq 2\pi$, and $\sum_i \Omega_i = 1$ is known as global coordinates. In these coordinates, the metric on AdS$_{p+2}$ is
+\begin{align}
+\label{global ads 1}
+ds^2 = R^2 \left( - \cosh^2 \rho~d\tau^2 + d \rho^2 + \sinh^2 \rho~d\Omega^2 \right) \, .
+\end{align}
+A common coordinate redefinition of $\tan x = \sinh \rho$ maps spatial infinity to $x = \pi / 2$, and allows \eqref{global ads 1} to be written as
+\begin{align}
+\label{global ads 2}
+ds^2 = \frac{R^2}{\cos^2 x} \left( - d\tau^2 + dx^2 + \sin^2 x~d\Omega^2 \right) \, .
+\end{align}
+
+AdS$_{p+2}$ has an $SO(2,p+1)$ isometry group \cite{hep-th/9905111}. Thus, the \ads theory has $SO(2,4)\times SO(6)$ symmetry. On the other hand, the gauge theory has an $SO(2,4)$ isometry from its conformal invariance (Poincar\'e plus scale and special conformal transformations) as well as $SU(4) \simeq SO(6)$ R-symmetry that relates the six scalar fields and four fermions of the theory \cite{1501.00007}. Therefore, the spatial isometries of the bulk space are interpreted as global symmetries of the boundary theory. Additionally, the supersymmetries inherent in the original theory type IIb superstring theory remain unbroken by the strong/weak coupling limits.
+
+Another common
 	
 {\bf Observables}
 
@@ -160,7 +175,7 @@ and that the coupling between the field and the operator given in \eqref{ads/cft
 \end{align}
 Since the action must be finite as $\epsilon \to 0$, we have that $ \mc O(\vec x, \epsilon) \sim \epsilon^{d} \epsilon^{-\Delta^-} \mc O_0 (\vec x) = \epsilon^{d - \Delta^-} \mc O_0 (\vec x) = \epsilon^{\Delta^+} \mc O_0 (\vec x)$, where $\mc O_0(\vec x)$ is the normalizable operator in the CFT. The relevance of the operator will be determined by the value of $\Delta^+$.
 
-Our primary application of the AdS/CFT correspondence will be to examine in detail various processes in the bulk given that we have a dictionary to translate the solutions to the boundary gauge theory. In particular, we wish to consider thermal states of the CFT through their dual description of a static black hole in the bulk. For a review of how the gauge/gravity dictionary is used to create holographic descriptions of a variety of quantum theories, see \cite{1612.07324}. Let us now see explicitly how a black hole in the bulk theory is dual to a thermal state in the gauge theory.
+Our primary application of the AdS/CFT correspondence will be to examine in detail various processes in the bulk given that we have a dictionary to translate the solutions to the boundary gauge theory. In particular, we wish to consider thermal states of the CFT through their dual description of a static black hole in the bulk. Let us now see explicitly how a black hole in the bulk theory is dual to a thermal state in the gauge theory.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
