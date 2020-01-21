@@ -40,7 +40,7 @@ ds^2 = \frac{\ell^2}{z^2} \left( \eta_{\mu \nu}dx^\mu dx^\nu +dz^2 \right) \, ,
 \end{align}
 where $z = \ell^2 / r$. This is precisely the metric for AdS$_5$ with characteristic length $\ell$. 
 
-More than being simply qualitative, the gauge/gravity correspondence is in fact a much deeper and more specific relationship. The derivation of the duality is thoroughly covered from the full string theory perspective in, among others, \cite{hep-th/9711200, gr-qc/0602037, 1501.00007, hep-th/9902131, hep-th/9905111}. For now, let us establish the duality that will be most applicable to us: the duality between type IIb supergravity on conformal AdS$_5 \times$ S$^5$ and $\mc N = 4$ supersymmetric Yang-Mills theory in $(3+1)$-dimensions.
+More than being an \emph{a posteriori} observation, the gauge/gravity correspondence is in fact a much deeper and more specific relationship. The derivation of the duality is thoroughly covered from the full string theory perspective in, among others, \cite{hep-th/9711200, gr-qc/0602037, 1501.00007, hep-th/9902131, hep-th/9905111}. For now, let us establish the duality that will be most applicable to us: the duality between type IIb supergravity on conformal AdS$_5 \times$ S$^5$ and $\mc N = 4$ supersymmetric Yang-Mills theory in $(3+1)$-dimensions.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -85,7 +85,7 @@ Consider the symmetries present in the \ads bulk theory. A $(p+2)$-dimensional A
 \label{ads hyperboloid}
 ds^2 = -dX_0^2 - dX_{p+2}^2 + \sum^{p+1}_{i = 1} dX^2_i \, .
 \end{align}
-The choice of $X_0 = R~\cosh \rho~\cos \tau$, $X_{p+2} = R~\cosh \rho~\sin \tau$, and $X_i = R~\sinh \rho~\Omega_i$ with $i=1,\ldots,p + 1$, $0 \leq \rho$, $0 \leq \tau \leq 2\pi$, and $\sum_i \Omega_i = 1$ is known as global coordinates. In these coordinates, the metric on AdS$_{p+2}$ is
+The choice of {$X_0 = R \cosh \rho \, \cos \tau$}, {$X_{p+2} = R\cosh \rho \,\sin \tau$}, and {$X_i = R \sinh \rho \,\Omega_i$} with $i=1,\ldots,p + 1$, $0 \leq \rho$, $0 \leq \tau \leq 2\pi$, and $\sum_i \Omega_i = 1$ covers the hyperboloid exactly once, and is known as global coordinates. In these coordinates, the metric on AdS$_{p+2}$ is
 \begin{align}
 \label{global ads 1}
 ds^2 = R^2 \left( - \cosh^2 \rho~d\tau^2 + d \rho^2 + \sinh^2 \rho~d\Omega^2 \right) \, .
@@ -95,14 +95,19 @@ A common coordinate redefinition of $\tan x = \sinh \rho$ maps spatial infinity 
 \label{global ads 2}
 ds^2 = \frac{R^2}{\cos^2 x} \left( - d\tau^2 + dx^2 + \sin^2 x~d\Omega^2 \right) \, .
 \end{align}
+Another common parameterization of AdS is a set of coordinates that cover half of the hyperboloid \eqref{ads hyperboloid}, known as Poincar\'e coordinates. These set {$X_0 = (1 + u^2 (R^2 + {\vec x}^2 - t^2) )/2u$}, {$X_{p+2} = Ru t$}, {$X^{p+1} = ( 1 - u^2 (R^2 - {\vec x}^2 + t^2) )/ 2u$}, and {$X^i = Rux^i$}, with {$i = 1, \ldots, p$}, {$0 < u$}, and {$\vec x \in \mathbb{R}^p$}. Thus, the metric of AdS$_{p+2}$ in the Poincar\'e patch description is
+\begin{align}
+\label{poincare ads}
+ds^2 = R^2 \left( \frac{d^2u}{u^2} + u^2 (- dt^2 + d {\vec x}^2) \right) \, .
+\end{align}
 
-AdS$_{p+2}$ has an $SO(2,p+1)$ isometry group \cite{hep-th/9905111}. Thus, the \ads theory has $SO(2,4)\times SO(6)$ symmetry. On the other hand, the gauge theory has an $SO(2,4)$ isometry from its conformal invariance (Poincar\'e plus scale and special conformal transformations) as well as $SU(4) \simeq SO(6)$ R-symmetry that relates the six scalar fields and four fermions of the theory \cite{1501.00007}. Therefore, the spatial isometries of the bulk space are interpreted as global symmetries of the boundary theory. Additionally, the supersymmetries inherent in the original theory type IIb superstring theory remain unbroken by the strong/weak coupling limits.
+AdS$_{p+2}$ has the isometry $SO(2,p+1)$, and is homogeneous and isotropic \cite{hep-th/9905111}. The global coordinate representation helps us to interpret the maximal compact subgroup of $SO(2, p+1)$, $SO(2)\times SO(p+1)$, as constant translations in $\tau$ plus rotations of S$^p$. Likewise, the Poincar\'e coordinates describe the symmetries of AdS in terms of the Poincar\'e transformation on $(t, \vec x)$ plus the dilatation transformation {$(t, \vec x, u) \to (ct, c \vec x, c^{-1}u)$} for $u >0$.
 
-Another common
-	
+In particular, a bulk theory on \ads has $SO(2,4)\times SO(6)$ symmetry. The gauge theory on the boundary of this space has an $SO(2,4)$ isometry from its conformal invariance (Poincar\'e plus scale and special conformal transformations), as well as $SU(4) \simeq SO(6)$ R-symmetry that relates the six scalar fields and four fermions of the theory \cite{1501.00007}. Therefore, the spatial isometries of the bulk space are interpreted as global symmetries of the boundary theory. Additionally, the supersymmetries inherent in the original type IIB superstring theory remain unbroken by the strong/weak coupling limits. Hence, the gauge/gravity correspondence conserves the symmetries of both theories.
+
 {\bf Observables}
 
-Besides matching symmetry groups and relating dimensionless parameters, the AdS/CFT correspondence is able to produce more physically relevant relationships involving observables in either theory. One such concrete example comes from relating the asymptotic behaviour of bulk fields to the expectation values of operators in the boundary theory: a bulk field with leading-order value $\phi^{(0)}$ as $z \to 0$ acts as a source for an operator $\mc O$ on the boundary. Furthermore, by examining the next-to-leading order contribution to the bulk field, $\phi^{(1)}$, it can be shown that the expectation value of the operator is given by $\langle \mc O \rangle \propto \phi^{(1)}$ \cite{hep-th/9905104}. In \S~\!\ref{ssec: scalar fields}, we use the gauge/gravity duality to calculate the mass dimension of the boundary operator $\mc O$.
+Besides matching symmetry groups and relating dimensionless parameters, the AdS/CFT correspondence is able to produce more physically relevant relationships involving observables in either theory. One such concrete example comes from relating the asymptotic behaviour of bulk fields to the expectation values of operators in the boundary theory: a bulk field in Poincar\'e AdS with metric \eqref{Poincare ads} has leading-order value $\phi^{(0)}$ as $z \to 0$ (i.e.~as the conformal boundary is approached) and acts as a source for an operator $\mc O$ on the boundary. Furthermore, by examining the next-to-leading order contribution to the bulk field, $\phi^{(1)}$, it can be shown that the expectation value of the operator is given by $\langle \mc O \rangle \propto \phi^{(1)}$ \cite{hep-th/9905104}. In \S~\!\ref{ssec: scalar fields}, we use the gauge/gravity duality to calculate the mass dimension of the boundary operator $\mc O$.
 
 Another such example is the quark anti-quark potential in the boundary theory. In the gauge theory, this can be calculated via the Wilson loop $W(\mathcal C)$, where $\mathcal C$ is the closed loop connecting the quark worldlines. The bulk interpretation of the Wilson loop is the extremized proper area of a string worldsheet anchored on $\mathcal C$ and extending into $z > 0$ \cite{hep-th/9803002}. 
 
@@ -121,116 +126,28 @@ e^{-S_{SUGRA}} \approx Z_{string} \simeq Z_{gauge} = e^{-W_{SUSY}} \, ,
 \end{align}
 where $W$ is the generating functional for connected Green's functions in the gauge theory.
 
-Consider a bulk field $\phi(\vec x,z)$ with boundary value $\phi(\vec x, z=0) = \phi_0 (\vec x)$. We then solve the bulk equations of motion away from the boundary (i.e.~$z > \epsilon$) and subject to the Dirichlet condition $\phi(\vec x, z=\epsilon) \to \phi_0(\vec x)$ as $\epsilon \to 0$. By definition, $S_{SUGRA}$ is extremized by this solution and so \eqref{partition functions} becomes \cite{hep-th/9802109, hep-th/9802150}
+Consider a bulk field $\phi(\vec x,z)$ with boundary value $\phi(\vec x, z=0) = \phi_0 (\vec x)$. We then solve the bulk equations of motion away from the boundary (i.e.~$z > \epsilon$) subject to Dirichlet boundary conditions. The leading term in the epsilon expansion of the bulk field is $\phi(\vec x, z=\epsilon) \sim \phi_0(\vec x)$. By definition, $S_{SUGRA}$ is extremized by this solution and so \eqref{partition functions} becomes \cite{hep-th/9802109, hep-th/9802150}
 \begin{align}
 \label{ads/cft duality}
 \lim_{\epsilon \to 0} \big( S_{SUGRA} \left[ \phi(\vec x, z) \right] \big) \Big|_{\phi (\vec x, \epsilon) \to \phi_0(\vec x)} \simeq \left\langle \int d^dx \, \phi_0(\vec x) \mc O(\vec x) \right\rangle_{CFT} \, .
 \end{align}
 
-We will see that bulk scalar fields play an important role in the dual description of the thermalization of a CFT, as well as being a useful tool to study the nonlinear stability of AdS itself. To this end, let us examine how the scalar field is interpreted on either side of the gauge/gravity duality.
+We will see that bulk scalar fields play an important role in the dual description of the thermalization of a CFT, as well as being a useful tool to study the nonlinear stability of AdS itself. 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf Black Holes}
 
-\subsection{Solutions For Scalar Fields in AdS$_{d+1}$}
-\label{ssec: scalar fields}
-
-To determine the solution for a massive scalar field $\phi(\vec x, z)$ in AdS$_{d+1}$ space, we begin with the bulk action for the free field
-\begin{align}
-\label{free field act}
-S[\phi] = -\frac{G^{(d+1)}}{2} \int d^{d+1} x \, \sqrt{g} \left( g^{AB} \p_A \phi \p_B \phi + m^2 \phi^2 + \ldots \right) \, ,
-\end{align}
-where $G^{(d+1)}$ is the ($d+1$)-dimensional Newton's constant. Note that any higher-order terms in $\phi$ have been suppressed. The bulk metric written in Poinar\'e patch coordinates as in \eqref{Poincare ads}. When integrating \eqref{free field act} by parts we must be careful to retain any surface terms since they will not go to zero like the flat-space case. With this is mind, we find that
-\begin{align}
-\label{action int by parts}
-S[\phi] = -\frac{G^{(d+1)}}{2} \int d^{d+1}x \, \sqrt{g}\, \phi \left( - \Box + m^2 \right) \phi - \frac{G^{(d+1)}}{2}\int_{\p AdS} d^d x \sqrt{\gamma} \, g^{zB} \phi \, \p_B \phi \, ,
-\end{align}
-with $\Box \phi = g^{-1/2} \p_A (\sqrt{g} \, g^{AB} \p_B) \phi$ and $\gamma$ equal to the induced metric on the boundary. Taking $\phi(\vec x, z)$ to be of the form $\phi(\vec x, z) = \exp( i k_\mu x^\mu) f_k (z)$, the wave equation becomes
-\begin{align}
-\label{bessel}
-0 &= \frac{1}{\ell^2} \left( z^2 k^2 - z^{d} \p_z (z^{-d} \p_z ) + m^2 \ell^2 \right) f_k(z) \, .
-\end{align}
-The solutions to \eqref{bessel} are Bessel functions, but for now it suffices to examine only their limiting behaviour. Near the boundary the solutions scale like a power law in $z$, and substituting $f_k(z) \propto z^{\Delta}$ into the equation above gives
-\begin{align}
-0 = \left(k^2 z^2 - \Delta(\Delta - d) + m^2 \ell^2 \right) z^\Delta \, .
-\end{align}
-Or, in the limit $z \to 0$,
-\begin{align}
-\label{Delta roots}
-m^2 \ell^2 = \Delta (\Delta - d) \qquad \Rightarrow \qquad \Delta^{\pm} = \frac{d}{2} \pm \sqrt{\frac{d^2}{4} + m^2\ell^2} \, .
-\end{align}
-{\it N.B.} requiring that the energies of scalar fields in the bulk be real means that the factor inside the square root of \eqref{Delta roots} is either positive or zero. The mass-squared must then be $m^2 \ell^2 \geq - d^2 /4$, which is known as the Breitenlohner-Freedman bound \cite{Breitenlohner:1982bm}. Of the two values permitted by \eqref{Delta roots}, $\Delta^+$ remains positive for all dimensions and therefore the solution $z^{\Delta^+}$ scales appropriately as $z \to 0$. However, the $z^{\Delta^-}$ solution may cause the scalar field to diverge at the boundary. To avoid this, we modify the boundary condition for $\phi(\vec x, z=0)$ to be
-\begin{align}
-\label{scalar bc}
-\phi(\vec x, z=0) = \lim_{\epsilon \to 0} \phi(\vec x, z=\epsilon) = \lim_{\epsilon \to 0} \epsilon^{\Delta^-} \phi_0 (\vec x) \, ,
-\end{align}
-where $\phi_0 (\vec x)$ is the renormalizable field on the boundary. 
-
-We can use \eqref{scalar bc} to motivate the scaling dimension of $\mc O (\vec x)$, which tells us how relevant that operator remains with renormalization group flow. First, note that the induced metric in \eqref{action int by parts} is
-\begin{align}
-ds^2 \Big|_{z=\epsilon} = \frac{\ell^2}{\epsilon^2} \eta_{\mu \nu} dx^\mu dx^\nu = \gamma_{\mu \nu} dx^\mu dx^\nu \, ,
-\end{align}
-and that the coupling between the field and the operator given in \eqref{ads/cft duality} is more correctly written in terms of a limit of a bulk interaction. Using the scaling behaviour of $\phi$ near the boundary, we see that
-\begin{align}
-\lim_{\epsilon \to 0} \int_{z=\epsilon} d^{d}x \sqrt{\gamma} \, \phi(\vec x, z = \epsilon) \mc O(\vec x, \epsilon) = \lim_{\epsilon \to 0} \int_{\p AdS} d^d x \left(\frac{\ell}{\epsilon}\right)^d \left( \epsilon^{\Delta^-} \phi_0 (\vec x) \right) \mc O (\vec x, \epsilon) \, .
-\end{align}
-Since the action must be finite as $\epsilon \to 0$, we have that $ \mc O(\vec x, \epsilon) \sim \epsilon^{d} \epsilon^{-\Delta^-} \mc O_0 (\vec x) = \epsilon^{d - \Delta^-} \mc O_0 (\vec x) = \epsilon^{\Delta^+} \mc O_0 (\vec x)$, where $\mc O_0(\vec x)$ is the normalizable operator in the CFT. The relevance of the operator will be determined by the value of $\Delta^+$.
-
-Our primary application of the AdS/CFT correspondence will be to examine in detail various processes in the bulk given that we have a dictionary to translate the solutions to the boundary gauge theory. In particular, we wish to consider thermal states of the CFT through their dual description of a static black hole in the bulk. Let us now see explicitly how a black hole in the bulk theory is dual to a thermal state in the gauge theory.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Black Holes and the AdS/CFT Correspondence}
-\label{sec: bh in ads}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Black Holes in AdS}
-\label{sub: bh in ads}
-
-As discussed previously, the weak coupling limit of the $N$ D3-branes produced an extremal black-brane geometry given by \eqref{bb geom}, which is the Poincar\'e patch description of AdS. Since the interaction cross-section of the branes with low-energy states in the bulk shrinks to zero, the effective geometry for these states is Anti-de Sitter. When discussing black holes in the AdS/CFT correspondence, we are referring to black holes embedded within an AdS geometry. 
-
-The metric for the bulk space in the AdS/CFT correspondence can be found either through the 10-dimensional Einstein equations with quantized, self-dual 5-form flux, or as the vacuum solution to Einstein's equations in a 5-dimensional spacetime with a negative cosmological constant $\Lambda = -6/\ell^2$. Both approaches reveal a Schwarzschild-AdS$_5 \times$S$^5$ solution, which describes a spherical black hole in AdS$_5$ that is smeared over S$^5$. This unique, static, spherically symmetric solution has the form
-\begin{align}
-\label{AdS5xS5 bh}
-ds^2 = -f(r) dt^2 + \frac{1}{f(r)} dr^2 + r^2 d\Omega^2_3 + \ell^2 d\Omega_5^2 \quad \text{with} \quad f(r) = 1 + \frac{r^2}{\ell^2} - \frac{r_0^2}{r^2} \quad \text{and} \quad r \geq r_+ \, ,
-\end{align}
-where $\ell$ is the curvature of AdS$_5$ and $r_+$ is Schwarzschild radius, given by the largest root of $f(r)= 0$. The constant $r_0$ is set by the mass of the black hole via
-\begin{align}
-r_0^2 = \frac{8 G^{(5)} M}{3\pi} = r_+^2 \left( 1 + \frac{r_+^2}{\ell^2} \right) \, .
-\end{align}
-In the asymptotic limit, $f(r) \to 1 + r^2 / \ell^2$ and the bulk approaches AdS$_5$. In the near-horizon limit, $f(r) \to 1 - r_0^2/r^2$ and the metric for the non-compact dimensions approaches a Schwarzschild black hole.
-
-The near-horizon limit is of particular importance to our discussion and therefore deserves further consideration. Recall the Schwarzschild black hole solution in (4+1)-dimensional static coordinates,
-\begin{align}
-ds^2 = -\left( 1 - \frac{2GM}{r} \right) dt^2 + \left(1- \frac{2GM}{r}\right)^{-1} dr^2 + r^2 d\Omega_3^2 \, .
-\end{align}
-The event horizon occurs at $r_H = 2GM$. After coordinate redefinitions, the near-horizon limit approaches
-\begin{align}
-ds^2 \approx d\rho^2 - \frac{\rho^2}{4r_H^2}dt^2 + r_H^2 d\Omega_3^2 \, .
-\end{align}
-The metric of the Wick-rotated, Schwarzschild black hole factors into the product of $\mathbb R^2$ in polar coordinates and a 3-sphere of radius $r_H$:
-\begin{align}
-\label{near-horizon thermal bh}
-ds^2 = d\rho^2 + \frac{\rho^2}{4r_H^2} d\tau^2 + r_H^2 d\Omega^2_3 \, .
-\end{align}
-The $\mathbb R^2$ portion of the metric suffers a conical singularity at $r=r_H$ unless the Euclidean time is periodically identified by $\tau \sim \tau + 2\pi r_H$.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Black Hole Thermodynamics \& Thermal States in a CFT}
-\label{sub: bh thermo}
+Another important ingredient of the AdS/CFT correspondence was first mentioned in \S~\!\ref{ssec: AdS5xS5}: black holes. As discussed previously, the weak coupling limit of the $N$ D3-branes produced an extremal black-brane geometry given by \eqref{param rels}, which is the Poincar\'e patch description of AdS. Since the interaction cross-section of the branes with low-energy states in the bulk shrinks to zero, the effective geometry for these states is Anti-de Sitter. When discussing black holes in the AdS/CFT correspondence, we are referring to black holes embedded within an AdS geometry. 
 
 The connection between black hole physics and thermodynamics was noted by \cite{Bekenstein:1973ur}, and has been thoroughly examined since then. For a review of the thermodynamic properties of black holes, see \cite{Jacobson1996, Bardeen:1973gs, Hawking:1982dh, 1803.03633}. It suffices for our purposes to highlight a few key features of the thermodynamic properties of black holes, and thereby motivate a correspondence between black holes in the bulk theory and a gauge theory in thermal equilibrium on the boundary.
 
-By considering quantum effects near the event horizon \cite{Hawking:1974rv}, it can be shown that black holes (with the metric specified in \eqref{AdS5xS5 bh}) emit particles whose thermal spectrum is equivalent to a black body of temperature \cite{Hawking:1974sw}
+By considering quantum effects near the event horizon \cite{Hawking:1974rv}, it can be shown that black holes emit particles whose thermal spectrum is equivalent to a black body of temperature \cite{Hawking:1974sw}
 \begin{align}
 \label{hawking temp}
-T_H = \frac{(\ell^2 + 2r_+^2)}{2 \pi r_+ \ell^2} \, .
+T_H = \frac{(\ell^2 + 2r_H^2)}{2 \pi r_H \ell^2} \, ,
 \end{align}
-When the black hole is placed in a geometry with a conformal boundary, it will be in thermal equilibrium with its Hawking radiation, and a stationary observer at asymptotic infinity will observe a black body spectrum corresponding to the temperature $T_H$ \cite{Carroll:2004st}. In the asymptotically flat limit (i.e.~the Schwarzschild solution discussed above) $\ell \gg r_+$ and $T_H \simeq 1/2\pi r_+$. That is, the temperature of the black hole is inversely related to the periodicity condition imposed on the Euclidean time coordinate.
+where $r_H$ is the size of the event horizon. When the black hole is placed in a geometry with a conformal boundary, it will be in thermal equilibrium with its Hawking radiation, and a stationary observer at asymptotic infinity will observe a black body spectrum corresponding to the temperature $T_H$ \cite{Carroll:2004st}. In the asymptotically flat limit (which we are concerned with) $\ell \gg r_H$ and $T_H \simeq 1/2\pi r_H$. 
 
-Now consider the partition function for a 4D thermal system in contact with a heat reservoir at temperature $\beta^{-1}$. The quantum partition involves the trace over the eigenvectors of the Hamiltonian,
+Now consider the partition function for a 4D thermal system in contact with a heat reservoir at temperature $\beta^{-1}$. The quantum partition function involves the trace over the eigenvectors of the Hamiltonian,
 \begin{align}
 \label{quantum par}
 Z = \text{Tr} \, e^{- \beta H} = \int dq \, \langle q | \exp ( - \beta H ) | q \rangle \, .
@@ -240,7 +157,9 @@ The trace vanishes by orthogonality of states except when the states have period
 \label{cft trace}
 \text{Tr} \, e^{ - \beta H} = \int dq \int^{q'(\beta)=q}_{q'(0)=q} [dq'] \, e^{-S_E[q']} = \int [dq]_P \, e^{-S_E[q]} \, ,
 \end{align}
-where $S_E$ is the Euclidean action. Equivalently, we may sum over all states but impose the periodicity condition $\tau \sim \tau + \beta$. Since this system lives on the $4$-dimensional boundary of AdS$_{5}$, it shares its time coordinate with the black hole solution in the bulk. By matching the conditions on $\tau$ from either side of the duality, we can see that 
+where $S_E$ is the Euclidean action. Equivalently, we may sum over all states but impose the periodicity condition $\tau \sim \tau + \beta$. 
+
+Since this system lives on the $4$-dimensional boundary of AdS$_{5}$, it shares its time coordinate with the black hole solution in the bulk. It can be shown that the metric of a Schwarzschild-AdS black hole in the near-horizon limit requires the Euclidean time $\tau$ to be periodically identified by $\tau \sim \tau + 2\pi r_H$ to avoid a conical singularity at $r=r_H$ \cite{1401.1504}. By matching the conditions on $\tau$ from the bulk and boundary theories, we can see that 
 \begin{align}
 \label{temp/grav}
 \left. \begin{aligned}
@@ -271,7 +190,7 @@ This agreement shows that the gauge theory possesses enough states to match the 
 
 The picture thus far is this: using the AdS/CFT correspondence, we are able to study strongly-coupled gauge theories through their holographic dual, which is a gravitational theory in Anti-de Sitter space with a conformal boundary. We have also seen that black hole solutions in the bulk correspond to thermal states in the boundary theory, and were able to derive the equilibrium temperature of the thermal system by examining the Hawking temperature of the black hole. These results are all to do with static systems; given a black hole solution, we know the CFT is in a thermal state. But what about the dynamics of the thermalization? 
 
-In \S~\!\ref{ssec: scalar fields}, we saw that scalar field solutions in the bulk are related to operators on the boundary. Therefore, whatever dynamical process occurs in the gravitational theory will be felt by the gauge theory through the field/operator correspondence, and vice versa. It is this process that allows us to model the thermalization of a strongly-coupled theory. Under an initial energy perturbation (dual to a localized scalar field with initial momentum in the bulk) of the CFT, we can use conventional general relativity in the bulk theory to solve for the equilibrium state. If we find that a black hole forms, then we know that the CFT is in a thermal state.
+In \S~\!\ref{ssec: scalar fields}, we will see that scalar field solutions in the bulk are related to operators on the boundary. Therefore, whatever dynamical process occurs in the gravitational theory will be felt by the gauge theory through the field/operator correspondence, and vice versa. It is this process that allows us to model the thermalization of a strongly-coupled theory. Under an initial energy perturbation (dual to a localized scalar field with initial momentum in the bulk) of the CFT, we can use conventional general relativity in the bulk theory to solve for the equilibrium state. If we find that a black hole forms, then we know that the CFT is in a thermal state.
 
 Consider some gauge theory initially in an out-of-equilibrium state. The subsequent evolution of such a quantum system is called a \emph{quench}. Quenches can result in thermal states, meta-stable configurations, or may never equilibriate. Using various nonlocal holographic probes, such as entanglement entropy, the phase space trajectory of the quench can be explored. For example, the implosion of a spherical shell of matter is used to study quenches in confined gauge theories. The radial position of the shell in the bulk acts as a scale to measure the typical separation of entangled excitations. As the shell falls towards $x = 0$, one of two things can happen: if the shell has a high enough mass density, a black hole forms which signals the thermalization of the gauge theory; if the shell does not collapse, it can scatter off itself and begin expanding. Once the shell reaches the AdS boundary, the matter is reflected (under appropriate boundary conditions) and begins the infall again. This cycle of bounces is the holographic dual of so-called \emph{revivals} in the quantum theory \cite{1410.6201, 1412.6002}, and has been used to help explain results from cold atom experiments \cite{Dziarmaga2010, 2011arXiv1106.3567L}.
 
@@ -282,18 +201,67 @@ Consider some gauge theory initially in an out-of-equilibrium state. The subsequ
 
 Calculations of nonlocal quantities in the confined phase of a gauge theory are often not possible due to the strongly-coupled nature of the interactions. However, using the AdS/CFT correspondence, we can analyze the dynamics of the quantum theory by examining the evolution of a scalar field in the dual bulk theory. To study quantum quenches that start from coherent states, one begins with a minimally-coupled scalar field. The negative curvature of AdS allows for states that do not immediately thermalize to oscillate around the minimum of an effective potential, undergoing repeated gravitational focusing with each oscillation. Therefore, unlike in asymptotically flat space, thermalizations can occur at long times with respect to the light crossing time. 
 
+Holographic thermalization \cite{1103.2683}.
+
 Holographic quenches and revivals can also be used to confirm non-holographic results, such as the study of free, spinless Majorana fermions bound as pairs in meson excitations \cite{1706.02438}. Finally, we may wish to investigate the evolution of one thermal state into another, such as evolving from a non-hairy black hole in AdS to a hairy black hole -- a process equivalent to the spontaneous breaking of a discrete symmetry \cite{1704.05454}. The focus of the work in this thesis will be on quenches in particular. Let us now establish the particulars of the gravitational dual to a coherent state in the boundary CFT. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Scalar Fields in AdS$_{d+1}$}
-Following \cite{1508.02709}, we begin by writing the metric of AdS$_{d+1}$ in Schwarzschild-like coordinates 
+\subsection{Scalar Fields in Holographic AdS$_{d+1}$}
+\label{ssec: scalar fields}
+
+To determine the solution for a massive scalar field $\phi(\vec x, z)$ in AdS$_{d+1}$ space, we begin with the bulk action for the free field
+\begin{align}
+\label{free field act}
+S[\phi] = -\frac{G^{(d+1)}}{2} \int d^{d+1} x \, \sqrt{g} \left( g^{AB} \p_A \phi \p_B \phi + m^2 \phi^2 + \ldots \right) \, ,
+\end{align}
+where $G^{(d+1)}$ is the ($d+1$)-dimensional Newton's constant. Note that any higher-order terms in $\phi$ have been suppressed. When integrating \eqref{free field act} by parts we must be careful to retain any surface terms since they will not go to zero like the flat-space case. With this is mind, we find that
+\begin{align}
+\label{action int by parts}
+S[\phi] = -\frac{G^{(d+1)}}{2} \int d^{d+1}x \, \sqrt{g}\, \phi \left( - \Box + m^2 \right) \phi - \frac{G^{(d+1)}}{2}\int_{\p AdS} d^d x \sqrt{\gamma} \, g^{zB} \phi \, \p_B \phi \, ,
+\end{align}
+with $\Box \phi = g^{-1/2} \p_A (\sqrt{g} \, g^{AB} \p_B) \phi$ and $\gamma$ equal to the induced metric on the boundary. 
+
+To study the boundary behaviour of the field in empty AdS, we first choose Poinar\'e patch coordinates and use the metric in \eqref{Poincare ads}. Taking $\phi(\vec x, z)$ to be of the form $\phi(\vec x, z) = \exp( i k_\mu x^\mu) f_k (z)$, the wave equation becomes
+\begin{align}
+\label{bessel}
+0 &= \frac{1}{\ell^2} \left( z^2 k^2 - z^{d} \p_z (z^{-d} \p_z ) + m^2 \ell^2 \right) f_k(z) \, .
+\end{align}
+The solutions to \eqref{bessel} are Bessel functions. To motivate two additional entries in the AdS/CFT dictionary, it suffices to examine only their behaviour as we approach the conformal boundary at $z = 0$. Near this boundary, the solutions scale like a power law in $z$, and substituting $f_k(z) \propto z^{\Delta}$ into the equation above gives
+\begin{align}
+0 = \left(k^2 z^2 - \Delta(\Delta - d) + m^2 \ell^2 \right) z^\Delta \, .
+\end{align}
+Or, in the limit $z \to 0$,
+\begin{align}
+\label{Delta roots}
+m^2 \ell^2 = \Delta (\Delta - d) \qquad \Rightarrow \qquad \Delta^{\pm} = \frac{d}{2} \pm \sqrt{\frac{d^2}{4} + m^2\ell^2} \, .
+\end{align}
+{\it N.B.} requiring that the energy of the scalar field be real means that the factor inside the square root of \eqref{Delta roots} is either positive or zero. The mass-squared must then be $m^2 \ell^2 \geq - d^2 /4$, which is known as the Breitenlohner-Freedman bound \cite{Breitenlohner:1982bm}. 
+
+Of the two values permitted by \eqref{Delta roots}, $\Delta^+$ remains positive for all dimensions and therefore the solution $z^{\Delta^+}$ scales appropriately as $z \to 0$. However, the $z^{\Delta^-}$ solution may cause the scalar field to diverge at the boundary. To avoid this, we modify the boundary condition for $\phi(\vec x, z=0)$ to be
+\begin{align}
+\label{scalar bc}
+\phi(\vec x, z=0) = \lim_{\epsilon \to 0} \phi(\vec x, z=\epsilon) = \lim_{\epsilon \to 0} \epsilon^{\Delta^-} \phi_0 (\vec x) \, ,
+\end{align}
+where $\phi_0 (\vec x)$ is the renormalizable field on the boundary. 
+
+We can use \eqref{scalar bc} to motivate the scaling dimension of $\mc O (\vec x)$, which tells us how relevant that operator remains with renormalization group flow. First, note that the induced metric in \eqref{action int by parts} is
+\begin{align}
+ds^2 \Big|_{z=\epsilon} = \frac{\ell^2}{\epsilon^2} \eta_{\mu \nu} dx^\mu dx^\nu = \gamma_{\mu \nu} dx^\mu dx^\nu \, ,
+\end{align}
+and that the coupling between the field and the operator given in \eqref{ads/cft duality} is more correctly written in terms of a limit of a bulk interaction. Using the scaling behaviour of $\phi$ near the boundary, we see that
+\begin{align}
+\lim_{\epsilon \to 0} \int_{z=\epsilon} d^{d}x \sqrt{\gamma} \, \phi(\vec x, z = \epsilon) \mc O(\vec x, \epsilon) = \lim_{\epsilon \to 0} \int_{\p AdS} d^d x \left(\frac{\ell}{\epsilon}\right)^d \left( \epsilon^{\Delta^-} \phi_0 (\vec x) \right) \mc O (\vec x, \epsilon) \, .
+\end{align}
+Since the action must be finite as $\epsilon \to 0$, we have that $ \mc O(\vec x, \epsilon) \sim \epsilon^{d} \epsilon^{-\Delta^-} \mc O_0 (\vec x) = \epsilon^{d - \Delta^-} \mc O_0 (\vec x) = \epsilon^{\Delta^+} \mc O_0 (\vec x)$, where $\mc O_0(\vec x)$ is the normalizable operator in the CFT. Thus, the relevance of the operator -- whether or not the operator will contribute positively, negatively, or marginally to renormalization group flow of the CFT \cite{0908.0333} -- will be determined by the value of $\Delta^+$.
+
+Our primary application of the AdS/CFT correspondence will be to examine in detail various processes in the bulk given that we have a dictionary to translate the solutions to the boundary gauge theory. In particular, we wish to consider the thermalization of states of the CFT through their dual description of the formation of a black hole in the bulk. In this case, the spacetime metric will initially be described by global AdS but will evolve into a Schwarzschild metric once collapse has occurred. By solving for the evolution of metric functions that interpolate between these two solutions, we are able to track the process of gravitational collapse. Following \cite{1508.02709}, we begin by writing the metric of AdS$_{d+1}$ in Schwarzschild-like coordinates 
 \begin{align}
 ds^2 = \frac{\ell^2}{\cos^2 \left(x / \ell \right)} \left( A e^{-2\delta} dt^2 + A^{-1}dx^2 \sin^2 \left(x / \ell \right) d\Omega^{d-1} \right) \, ,
 \end{align}
 where $x \in [0, \pi/2)$ and $x = \pi / 2$ corresponds to the conformal boundary. The metric functions $A(t,x)$ and $\delta(t,x)$ are functions of only two variables due to the spherical symmetry. We will hereafter work in units of the AdS length scale, setting $\ell = 1$. The Einstein and Klein-Gordon equations for the minimally-coupled scalar field $\phi(t,x)$ are
 \begin{align}
-G_{ab} + \Lambda g_{ab} = 8\pi \left( \nabla_a \phi \nabla_b \phi - \frac{1}{2} g_{ab} \big( \left( \nabla \phi \right)^2 + \mu^2 \phi^2 \big) \right) \quad \text{and} \quad \frac{1}{\sqrt{-g}} \p_a \sqrt{-g} \, g^{ab} \p_b \phi - \mu^2 \phi = 0 \, .
+\!\!\!\! G_{ab} + \Lambda g_{ab} = 8\pi \left( \nabla_a \phi \nabla_b \phi - \frac{1}{2} g_{ab} \big( \left( \nabla \phi \right)^2 + \mu^2 \phi^2 \big) \right) \quad \text{and} \quad \frac{1}{\sqrt{-g}} \p_a \sqrt{-g} \, g^{ab} \p_b \phi - \mu^2 \phi = 0 \, .
 \end{align}
 The canonical equations of motion are \cite{1210.1566}
 \begin{align}
@@ -308,17 +276,13 @@ where the momentum is $\Pi(t,x) = A^{-1} e^{\delta} \p_t \phi$ and $\Phi(t,x) \e
 \p_x M = \tan^{d-1}(x) \left[ \frac{A (\Pi^2 + \Phi^2)}{2} + \frac{\mu^2 \phi^2}{2 \cos^2 (x)} \right] \, ,
 \end{gathered}
 \end{align}
-with the mass function $M(t,x)$ subject to the conservation equation $\p_t M( t, x = \pi/2) = 0$. The value of $\delta(t,x)$ in this case is chosen to correspond to the interior gauge $\delta(t,x=0) = 0$. 
+with the mass function $M(t,x)$ subject to the conservation equation $\p_t M( t, x = \pi/2) = 0$. The value of $\delta(t,x)$ in this case is chosen to correspond to the interior gauge $\delta(t,x=0) = 0$. The spherical symmetry of the system requires that $\phi (t, 0) = 0$; without imposing extra conditions at the outer boundary, there are two classes of solutions for $\phi(t,x)$ based on their scaling as $x \to \pi/2$. For now, we consider only the normalizable class, i.e.~solutions that scale as $(x - \pi/2)^{\Delta^+}$ near the conformal boundary.
 
-Classes of solutions to this system can be generally grouped into either stable (those that resist gravitational collapse either indefinitely or over long\footnote{The definition of ``long'' is somewhat subjective, but generally taken as many multiples of the light-crossing time.} time scales) or unstable (those that collapse immediately or faster than the perturbative timescale). In exploring these solutions, we will find a rich landscape of behaviours that lie between these more simple classifications.
-
-\subsection{Stable Configurations}
-
-Consider perturbative solutions to $\{$\eqref{canon eqns}, \eqref{metric funcs}$\}$ arising from expanding the scalar field and metric functions via
+Before discussing the fully nonlinear solutions to this system, we first expand the scalar field and metric functions in terms of some (small) constant $\epsilon$:
 \begin{align}
 \phi(t,x) = \sum_{j=0}^{\infty} \epsilon^{2j + 1} \phi_{2j + 1} (t,x) \, , \quad A(t,x) = 1 - \sum_{j=1}^\infty \epsilon^{2j} A_{2j} (t,x) \, , \quad \delta(t,x) = \sum_{j=1}^\infty \epsilon^{2j} \delta_{2j} (t,x) \, ,
 \end{align}
-where $\epsilon$ is a (small) constant. At linear order, the gravitational system obeys
+At linear order, the gravitational system obeys
 \begin{align}
 \label{collapse eigen eqn}
 \p_t^2 \phi_1 = \left( \frac{ (d-1)}{\sin (x) \cos (x)} \p_x + \p^2_x - \frac{\mu^2}{\cos^2 (x)} \right) \phi_1 \equiv - L \phi_1 \, ,
@@ -332,33 +296,27 @@ The eigenvalues have the simple form $\omega_j = \lambda_\pm + 2j$, with $\lambd
 
 Solutions to the linearized equations of motion are stable to linear order on the timescale $t \sim \epsilon^{-2}$ \cite{1506.07907}. However, beyond linear order there are instabilities at $\mc O(\epsilon^3)$ due to secular terms, which are terms that grow larger with time. These terms cannot be removed by frequency shifts and arise from resonances in the spectrum of the scalar fields \cite{1407.6273}. Various resummation \cite{hep-th/9506161} and multi-scale techniques \cite{1403.6471} have been developed to help control the growth of such terms within the perturbative description. These methods will be used in chapters~\ref{ch: ttf}~and~\ref{ch: driven} to absorb the resonant terms into renormalized integration constants.
 
-\subsubsection{Oscillons, Oscillatons, and Geons}
-\label{sub: geons}
+The end point of the evolution of bulk scalar fields can be generally categorized into either stable (those that resist gravitational collapse either indefinitely or over long\footnote{The definition of ``long'' is somewhat subjective, but generally taken as many multiples of the light-crossing time.} time scales) or unstable (those that collapse immediately or faster than the perturbative timescale) configurations. In exploring these solutions, we will find a rich landscape of behaviours that lie between these more simple classifications.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Stability, Instability, and More}
 
 When $\mu = 0$ in \eqref{collapse eigen eqn}, we recover the \emph{oscillon} solution \cite{1701.09100}. Oscillons are long-lived and nearly time-periodic solutions. Further work has demonstrated that single oscillon solutions emit energy very slowly, leading to corresponding decreases in the amplitude and period of the solutions \cite{hep-ph/9503217}. A oscillon solution is stable over very long time scales; however, if a solution is constructed out of a linear combination of oscillons, the system exhibits possible third-order instabilities on the same timescale as the linearized solutions. These instabilities, however, can be absorbed by a frequency shift. Therefore, oscillons are non-linearly stable. A similar class of solutions, called \emph{oscillatons}, are oscillating, localized solutions for massive scalar fields, but are generic to backgrounds that are asymptotically flat. Oscillatons also remain stable over long time scales \cite{gr-qc/0310006}. Methods for numerically determining stationary solutions in the gravitational theory have been developed for a variety of backgrounds \cite{1510.02804}.
 
 More general oscillating solutions exist as solutions to the Einstein-Maxwell equations in a vacuum. These solutions, known as \emph{geons}, are high-frequency gravitational waves that are confined to a background geometry created by the waves themselves \cite{Wheeler:1955zz}. Geon solutions for AdS have been established by \cite{1109.1825} and are at least perturbatively stable at first order. Like the oscillons, geons exhibit instabilities at third order. By invoking various resummation techniques to account for the growth of secular terms at third order, there has been some success with constructing nonlinearly stable solutions for certain initial data \cite{1408.5906, 1701.07804}. Non-linearly stable numerical solutions in a number of different dimensions can also be derived from perturbing away from geon solutions \cite{1503.07746}. 
 
-\subsubsection{Boson Stars}
-
 Boson stars are a class of localized, stationary, nonlinearly stable solutions involving complex scalar fields. Since the \ads action is invariant under the global phase transformation $\phi \to \exp(-i \theta) \phi$, boson stars carry a conserved charge, $Q$. They have since been numerically constructed and shown to be stable solutions to the full, nonlinear theory \cite{1304.4166}. They can be constructed from a range of initial conditions \cite{1209.2378, 1301.2452}. 
-
-\subsubsection{Single-mode and Nearly Single-Mode Data}
 
 Stable, time-periodic solutions for scalar fields that were not based on linear solutions came from postulating an expansion for the scalar field that is dominated by a single mode in the limit of vanishing amplitude. This type of solution is referred to as single-mode solutions. By solving the system of linear equations -- using, for example, Newton-Raphson or Broyden optimizing algorithms -- we can determine the coefficients of the first $N$ terms in the expansion. This serves as the starting point for the pseudo-spectral or finite difference numerical evolution. Using this method, stable, single-mode solutions in AdS$_5$ were constructed and evolved in time. The solutions were found to be periodic and numerical evidence suggests they remained nonlinearly stable \cite{1303.3186}.
 
 Nearly single-mode solutions are similar to single-mode solutions in that they are dominated by a small number of modes in the limit of vanishing amplitude. Using nearly-single mode initial data for complex scalar fields, \cite{1304.4166} then numerically evolved the full, nonlinear system and found that these solutions were fully stable for sufficiently small perturbations. Further work into nearly single-mode solutions with real scalar fields, subject to various boundary conditions, has confirmed that stable solutions are all dominated by single modes when Dirichlet conditions are imposed. Surprisingly, when Neumann conditions are considered, there are non-collapsing solutions with fully resonant spectra that are not single-mode dominated \cite{1908.02296}.
 
-\subsubsection{Gaussian Initial Data}
 
 It was asserted by \cite{1106.2339} that scalar fields with small amplitudes were generically stable in AdS$_5$. This conclusion was proven to be false by \cite{1108.4539}, who showed that all fields with Gaussian initial momentum profiles collapsed for any AdS$_{d+1}$ with $d \geq 3$. What was initially missed was that low-amplitude fields could be focused, scatter out to the boundary, then be reflected back multiple times before finally collapsing. It was only by continuing simulation times to orders of magnitude more than the light crossing time that collapse was eventually witnessed. We will see in \S~\!\ref{ssub: islands} that the behaviour of Gaussian initial data is, in fact, more nuanced than generic stability or instability.
 
 By generalizing the geometry of the bulk space \emph{asymptotically} AdS spaces, some scalar field configurations with Gaussian initial data were found to be nonlinearly stable \cite{1208.5772}. This was because the resonances that plagued solutions in strict AdS had been sufficiently misaligned to resist collapse. 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- 
-\subsection{Unstable Configurations}
-\label{sub: numerical}
 
 As we have seen, although linearly stable, long-lived solutions exist for asymptotically AdS gravitational theories, all suffer from third-order instabilities. While these instabilities can be controlled in some scenarios, it is not clear that analytical solutions can be derived in general. This type of behaviour is called a \emph{weakly turbulent} instability because of its appearance at higher orders. What results is a transfer of energy from low eigenmodes to high ones, a process referred to as an energy cascade. With more energy transferred to higher frequencies, the energy density becomes sufficiently great to trigger the formation of an apparent horizon and, eventually, a black hole.
 
@@ -368,48 +326,41 @@ The earliest examination of black hole formation from scalar field collapse usin
 \item Just before the formation of the event horizon, the spacetime approaches a scale-invariant solution -- the critical solution -- that is also independent of the initial conditions.
 \end{itemize}
 
-These characteristics are collectively known as Choptuik scaling, and have also been observed in critical solutions in AdS spacetimes, independent of initial conditions.
-
-\subsubsection{Complex Scalars}
+These characteristics are collectively known as Choptuik scaling, and have also been observed in critical solutions in AdS spacetimes, independent of initial conditions \cite{hep-th/0101194, gr-qc/0210101}.
 
 Complex scalar fields in AdS$_{d+1}$ with $d \in [3,\ldots,6]$ and generic Gaussian initial data -- \emph{not} boson star solutions -- were examined by \cite{1210.0890}. When the effect of the conserved charge was included, it was shown that the rate of collapse was greater for charged scalars than for uncharged scalars. The generic instability of the spaces was also confirmed, since all solutions lead to collapse in the full, nonlinear theory. To probe the nature of the instability, scalar fields in AdS were considered, but with a reflective boundary at a finite distance. The result was the observation of turbulent cascade of energy to shorter wavelengths and collapse to a black hole. 
 
 However, when $Q = 0$, a threshold amplitude for black hole formation was found and scalar fields did not collapse. This contradicts the result of \cite{1208.2934}, who examined scalar field in flat space but with a reflective boundary. While turbulent cascades were also noted in that case, there was no threshold amplitude. Analytic solutions for critical scalar fields were purportedly developed in AdS$_3$ by \cite{1309.1629}, who reported a instability for a critical parameter $p > 1$ resulting an a black hole of mass $M \sim (p - 1)^{1/2}$. However, it was pointed out by \cite{1401.4093} that these solutions were part family of separable solutions first found by \cite{gr-qc/0109002}, and that critical behaviour of such solutions was contradicted by the numerical results of \cite{gr-qc/0007008, gr-qc/0008060}.
 
-\subsubsection{Gaussian Initial Data Revisited}
-
-The first examination of the time evolution of a massless scalar solution in AdS$_4$ returned a surprising result: for any scalar field with Gaussian initial momentum profile, the formation of a black hole was inevitable, even for amplitudes of order $\epsilon$ \cite{1104.3702}. This was a deviation from the flat background result, which required a minimum energy density in order for a black hole to form. For some critical value $\epsilon_0 > \epsilon_1 > \epsilon_1$ such that $x_H(\epsilon_i) = 0$, scale invariance of the solution was observed in agreement with the asymptotically flat results. Universal scaling of the horizon size (and therefore mass) was also confirmed. Furthermore, the difference in horizon formation times between successive critical values is $t(\epsilon_{i+1}) - t(\epsilon_i) \approx \pi$, the light-crossing time.
+The first examination of the time evolution of a massless scalar solution in AdS$_4$ returned a surprising result: for any scalar field with Gaussian initial momentum profile, the formation of a black hole was inevitable, even for amplitudes of order $\epsilon$ \cite{1104.3702}. This was a deviation from the flat background result, which required a minimum energy density in order for a black hole to form. For some critical value $\epsilon_0 > \epsilon_1 > \epsilon_2$ such that $x_H(\epsilon_i) = 0$, scale invariance of the solution was observed in agreement with the asymptotically flat results. Universal scaling of the horizon size (and therefore mass) was also confirmed. Furthermore, the difference in horizon formation times between successive critical values is $t(\epsilon_{i+1}) - t(\epsilon_i) \approx \pi$, the light-crossing time.
 
 To test the robustness of the solutions to changes in initial conditions, a phase diagram of initial profiles for real, massless scalar fields in AdS$_5$ was constructed by \cite{1106.2339} and improved upon by \cite{1110.5823}. The initial profile of the scalar field was taken to be $\phi(t=0, x) = \epsilon \exp \big( -(x^2 - x_0^2) / \sigma^2 \big)$, where $x_0$ is the centre of the profile. By varying the value of $\epsilon$ or $\sigma$ while holding the other constant, the strength of the dependence of horizon formation time and size on these two parameters was determined. Qualitatively, it was found that the formation time depended more strongly on the amplitude than the width. 
 
 While some of the disagreement regarding the stability of certain initial data was due to modelling errors or other factors, there was some indication that there might exist a finite number of configurations within a range of unstable profiles that were stable over long periods. These solutions made up ``islands of stability'' within the unstable data.
-
-\subsubsection{Islands of Stability}
-\label{ssub: islands}
  
 In \cite{1508.02709}, a large swath of the phase space of Gaussian data of the type
 \begin{align}
 \label{scalar ics}
 \phi(t=0,x) = 0 \quad \text{and} \quad \Pi (t=0,x) = \epsilon \exp \left( - \frac{\tan^2 (x)}{\sigma^2} \right)
 \end{align}
-was explored down to very low amplitudes in AdS$_4$ and AdS$_5$. Surveying such a wide range of masses and widths allowed for the confirmation of the periodic, discontinuous horizon behaviour was observed for massless scalars in \cite{1104.3702}, as well as observing similar behaviour for light masses ($\mu < 1$) with both narrow widths ($\sigma \approx 0.3$) and wide widths ($\sigma \approx 4$). New, quasi-stable behaviour was found for heavy masses ($\mu = 20$) at intermediate widths, which was characterized by discontinuous behaviour in horizon formation time where fields with initial amplitudes in a small range experienced jumps in formation time of orders of magnitude. See figure~\ref{fig: massive x vs eps} for one such example.
+was explored down to very low amplitudes in AdS$_4$ and AdS$_5$. Surveying such a wide range of masses and widths allowed for the confirmation of the periodic, discontinuous horizon behaviour for massless scalars in \cite{1104.3702}, as well as observing similar behaviour for light masses ($\mu < 1$) with both narrow widths ($\sigma \approx 0.3$) and wide widths ($\sigma \approx 4$). New, irregular behaviour was found for heavy masses ($\mu = 20$) at intermediate widths, which was characterized by discontinuous behaviour in horizon formation time where fields with initial amplitudes in a small range experienced jumps in formation time of orders of magnitude. Stable behaviour -- characterized by a minimum amplitude below which collapses did not occur -- was also observed. See figure~\ref{fig: massive x vs eps} for one such example.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.65\textwidth]{/Users/bradc/Research/Thesis/PhD/Intro/figs/massive_x_vs_eps.pdf}
-	\caption[Horizon size and horizon formation time for a massive scalar]{Horizon size $x_H$ and horizon formation time $t_H$ as a function of amplitude in AdS$_5$ for a massive scalar field with $\sigma = 2$ in {\rm\eqref{scalar ics}}. Instead of the periodic, discontinuous behaviour, there is some minimal value $\epsilon_{min}$ below which black holes to not form. Used with permission from {\rm\cite{1508.02709}}.}
+	\caption[Horizon size and horizon formation time for a massive scalar]{Horizon size $x_H$ and horizon formation time $t_H$ as a function of amplitude in AdS$_5$ for a massive scalar field with $\sigma = 2$ in {\rm\eqref{scalar ics}}. Instead of the periodic, discontinuous behaviour, there is some minimal value $\epsilon_{min}$ below which black holes do not form. Used with permission from {\rm\cite{1508.02709}}.}
 	\label{fig: massive x vs eps}
 \end{figure}
 
 A picture of phase space for initial profiles of scalar fields has emerged: Gaussian data describing either narrow or wide pulses will always lead to collapse on the timescales corresponding to turbulent cascades of energy to shorter wavelengths; however, there is a set of intermediate widths that exhibit stable behaviour below some critical amplitude, at least to time scales on the order of $t \sim \epsilon^{-2}$. These islands of stability and the their interpretation remains a subject of ongoing research \cite{1507.08261, TTF, 1706.07413, 1803.02830, 1912.07143}.
-
-\subsubsection{Two-Mode Initial Data}
 
 Two-mode initial data uses initial profiles of the form $\phi(t=0,x) = \epsilon ( e_0 (x) + \kappa e_1 (x) )/3$, where $\kappa$ is a free constant and $e_0(x), \: e_1(x)$ are the first two eigenmodes of \eqref{scalar eigens}. While initial results by \cite{1403.6471} indicated that such data was stable for $\kappa \sim 1$, it was pointed out by \cite{1410.2631} that  collapse did indeed occur. It was postulated that the observed stability was a result of too coarse a mesh and/or ineffective adaptive mesh refinement, resulting in the apparent horizon falling between grid points of the simulation. The instability of two-mode solutions was subsequently confirmed in \cite{1508.02709}. In general, both numerical and analytical results point to single- and nearly single-mode data being stable against collapse, while multi-mode data is generically unstable \cite{1311.7409, 1211.7076, 1512.00349, 1509.00232, 1512.04383, 1504.05203, 1904.02168}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Driven Scalars}
+
+We have previously limited our discussion to the normalizable scalar field solutions, as these are responsible for the weakly turbulent instabilities that lead to gravitational collapse. In general, the linearized equations of motion \eqref{collapse eigen eqn} admit two types of solutions with two different scaling behaviours near the boundary. The second set of solutions, which scale as $z^{\Delta^-}$ as $z \to 0$, are known as non-normalizable solutions and are not restricted to integer frequencies. These solutions can couple to time-dependent terms on the boundary, thereby carrying energy into the bulk, and are known as driven, or \emph{pumped}, scalar fields.
 
 The emergence of new phases in a Conformal Field Theory as a function of driving frequency is known as Floquet dynamics \cite{1805.00031, 1802.05285}. The holographic dual to such a system is described by the driving of a massless, complex, bulk scalar field by a time-dependent boundary term. The vacuum bulk solution corresponds to a Floquet condensate on the boundary. Such solutions exhibit both stable and unstable evolution over the space of initial data, with the unstable data branching into two possible endpoints: the formation of a black hole in the bulk theory, or a horizonless, pulsating, late-time solution \cite{1712.07637}.
 
@@ -422,7 +373,7 @@ The question of the linear and nonlinear stability of AdS subject to various tim
 \section{Summary}
 \label{sec: summary}
 
-We have now seen how the AdS/CFT correspondence establishes a duality between strongly-coupled gauge theories and weakly-coupled gravitational theories in one extra dimension. Using this correspondence, various dynamical processes in strongly-coupled gauge theories can be explored via the collapse of scalar fields in Anti-de Sitter space. Furthermore, we have seen that the end state of the theory depends on the initial profile of the scalar field, and that a large variety of both stable and unstable phenomena are possible. However, a better understanding of the islands of stability in the full theory, as well as the limits of the perturbative description, is still required. Similarily, the incorporation of time dependent boundary conditions into a perturbative theory for the weakly turbulent instabilities remains an outstanding issue. The work collected in this thesis aims to address these issues.
+We have now seen how the AdS/CFT correspondence establishes a duality between strongly-coupled gauge theories and weakly-coupled gravitational theories in one extra dimension. Using this correspondence, various dynamical processes in strongly-coupled gauge theories can be explored via the collapse of scalar fields in Anti-de Sitter space. Furthermore, we have seen that the end state of the theory depends on the initial profile of the scalar field, and that a large variety of both stable and unstable phenomena are possible. However, a better understanding of the islands of stability in the full theory, as well as the limits of the perturbative description, is still required. Similarly, the incorporation of time dependent boundary conditions into a perturbative theory for the weakly turbulent instabilities remains an outstanding issue. The work collected in this thesis aims to address these issues.
 
 The following chapters each contain a manuscript that is focused on research into one of the areas described above. After a brief discussion of how each project contributes to the resolution of these issues, the contributions of the authors are laid out. The work itself is then presented. A discussion of how these works contribute to a better understanding of gravitational collapse in Anti-de Sitter space follows in chapter~\ref{ch: conclusion}.
 
