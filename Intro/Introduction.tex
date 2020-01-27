@@ -202,14 +202,12 @@ To determine the solution for a massive scalar field $\phi(\vec x, z)$ in AdS$_{
 \label{free field act}
 S[\phi] = -\frac{G^{(d+1)}}{2} \int d^{d+1} x \, \sqrt{g} \left( g^{AB} \p_A \phi \p_B \phi + m^2 \phi^2 + \ldots \right) \, ,
 \end{align}
-where $G^{(d+1)}$ is the ($d+1$)-dimensional Newton's constant. Note that any higher-order terms in $\phi$ have been suppressed. When integrating \eqref{free field act} by parts we must be careful to retain any surface terms since they will not go to zero like the flat-space case. With this is mind, we find that
+where $G^{(d+1)}$ is the ($d+1$)-dimensional Newton's constant. Note that any higher-order terms in $\phi$ have been suppressed. We choose Poinar\'e patch coordinates and use the metric in \eqref{Poincare ads}. When integrating \eqref{free field act} by parts we must be careful to retain any surface terms since they will not go to zero like the flat-space case. With this is mind, we find that
 \begin{align}
 \label{action int by parts}
 S[\phi] = -\frac{G^{(d+1)}}{2} \int d^{d+1}x \, \sqrt{g}\, \phi \left( - \Box + m^2 \right) \phi - \frac{G^{(d+1)}}{2}\int_{\p AdS} d^d x \sqrt{\gamma} \, g^{zB} \phi \, \p_B \phi \, ,
 \end{align}
-with $\Box \phi = g^{-1/2} \p_A (\sqrt{g} \, g^{AB} \p_B) \phi$ and $\gamma$ equal to the induced metric on the boundary. 
-
-To study the boundary behaviour of the field in empty AdS, we first choose Poinar\'e patch coordinates and use the metric in \eqref{Poincare ads}. Taking $\phi(\vec x, z)$ to be of the form $\phi(\vec x, z) = \exp( i k_\mu x^\mu) f_k (z)$, the wave equation becomes
+with $\Box \phi = g^{-1/2} \p_A (\sqrt{g} \, g^{AB} \p_B) \phi$ and $\gamma$ equal to the induced metric on the boundary. Taking $\phi(\vec x, z)$ to be of the form $\phi(\vec x, z) = \exp( i k_\mu x^\mu) f_k (z)$, the wave equation becomes
 \begin{align}
 \label{bessel}
 0 &= \frac{1}{\ell^2} \left( z^2 k^2 - z^{d} \p_z (z^{-d} \p_z ) + m^2 \ell^2 \right) f_k(z) \, .
@@ -242,7 +240,7 @@ and that the coupling between the field and the operator given in \eqref{ads/cft
 \end{align}
 Since the action must be finite as $\epsilon \to 0$, we have that $ \mc O(\vec x, \epsilon) \sim \epsilon^{d} \epsilon^{-\Delta^-} \mc O_0 (\vec x) = \epsilon^{d - \Delta^-} \mc O_0 (\vec x) = \epsilon^{\Delta^+} \mc O_0 (\vec x)$, where $\mc O_0(\vec x)$ is the normalizable operator in the CFT. Thus, the relevance of the operator -- whether or not the operator will contribute positively, negatively, or marginally to renormalization group flow of the CFT \cite{0908.0333} -- will be determined by the value of $\Delta^+$.
 
-Our primary application of the AdS/CFT correspondence will be to examine in detail various processes in the bulk given that we have a dictionary to translate the solutions to the boundary gauge theory. In particular, we wish to consider the thermalization of states of the CFT through their dual description of the formation of a black hole in the bulk. In this case, the spacetime metric will initially be described by global AdS but will evolve into a Schwarzschild metric once collapse has occurred. By solving for the evolution of metric functions that interpolate between these two solutions, we are able to track the process of gravitational collapse. Note that our discussion above has been written in terms of the boundary behaviour of the scalar field in Poincar\'e coordinates. We now turn to the more suitable choice of global coordinates to examine the evolution of the scalar field. As we approach the conformal boundary in the bulk, one choose a new radial coordinate $\theta \equiv x - \pi/2$ so that the boundary limit $x \to \pi/2$ in global AdS is equivalent to $\theta \to 0$. Expanding the scalar field in this regime, we find the same falloff as in the Poincar\'e coordinates, this time with respect to $\theta$.
+Our primary application of the AdS/CFT correspondence will be to examine in detail various processes in the bulk given that we have a dictionary to translate the solutions to the boundary gauge theory. In particular, we wish to consider the thermalization of states of the CFT through their dual description of the formation of a black hole in the bulk. In this case, the spacetime metric will initially be described by global AdS but will evolve into a Schwarzschild metric once collapse has occurred. By solving for the evolution of metric functions that interpolate between these two solutions, we are able to track the process of gravitational collapse. Note that our discussion above has been written in terms of the boundary behaviour of the scalar field in Poincar\'e coordinates. We now turn to the more suitable choice of global coordinates to examine the evolution of the scalar field. As we approach the conformal boundary in the bulk, one may choose a new radial coordinate $\theta \equiv x - \pi/2$ so that the boundary limit $x \to \pi/2$ in global AdS is equivalent to $\theta \to 0$. Expanding the scalar field in this regime gives the same power law falloff as the Poincar\'e coordinates, but this time with respect to $\theta$.
 
 Following \cite{1508.02709}, we begin by writing the metric of AdS$_{d+1}$ in Schwarzschild-like coordinates 
 \begin{align}
@@ -265,18 +263,18 @@ where the momentum is $\Pi(t,x) = A^{-1} e^{\delta} \p_t \phi$ and $\Phi(t,x) \e
 \p_x M = \tan^{d-1}(x) \left[ \frac{A (\Pi^2 + \Phi^2)}{2} + \frac{\mu^2 \phi^2}{2 \cos^2 (x)} \right] \, ,
 \end{gathered}
 \end{align}
-with the mass function $M(t,x)$ subject to the conservation equation $\p_t M( t, x = \pi/2) = 0$. The value of $\delta(t,x)$ in this case is chosen to correspond to the interior gauge $\delta(t,x=0) = 0$. The spherical symmetry of the system requires that $\phi (t, 0) = 0$; without imposing extra conditions at the outer boundary, there are two classes of solutions for $\phi(t,x)$ based on their scaling as $x \to \pi/2$. For now, we consider only the normalizable class, i.e.~solutions that scale as $(\cos x)^{\Delta^+}$ near the conformal boundary.
+with the mass function $M(t,x)$ subject to the conservation equation $\p_t M( t, x = \pi/2) = 0$. The value of $\delta(t,x)$ in this case is chosen to correspond to the interior gauge $\delta(t,x=0) = 0$. Finally the spherical symmetry of the system requires that $\phi (t, 0) = 0$. Without imposing extra conditions at the outer boundary, there are two classes of solutions for $\phi(t,x)$ based on their scaling as $x \to \pi/2$. For now, we consider only the normalizable class, i.e.~solutions that scale as $(\cos x)^{\Delta^+}$ near the conformal boundary.
 
-Before discussing the fully nonlinear solutions to this system, we first expand the scalar field and metric functions in terms of some (small) constant $\epsilon$:
+Expanding the scalar field and metric functions in terms of some (small) constant $\epsilon$:
 \begin{align}
-\phi(t,x) = \sum_{j=0}^{\infty} \epsilon^{2j + 1} \phi_{2j + 1} (t,x) \, , \quad A(t,x) = 1 - \sum_{j=1}^\infty \epsilon^{2j} A_{2j} (t,x) \, , \quad \delta(t,x) = \sum_{j=1}^\infty \epsilon^{2j} \delta_{2j} (t,x) \, ,
+\phi(t,x) = \sum_{j=0}^{\infty} \epsilon^{2j + 1} \phi_{2j + 1} (t,x) \, , \quad A(t,x) = 1 - \sum_{j=1}^\infty \epsilon^{2j} A_{2j} (t,x) \, , \quad \delta(t,x) = \sum_{j=1}^\infty \epsilon^{2j} \delta_{2j} (t,x) \, .
 \end{align}
 At linear order, the gravitational system obeys
 \begin{align}
 \label{collapse eigen eqn}
-\p_t^2 \phi_1 = \left( \frac{ (d-1)}{\sin (x) \cos (x)} \p_x + \p^2_x - \frac{\mu^2}{\cos^2 (x)} \right) \phi_1 \equiv - L \phi_1 \, ,
+\p_t^2 \phi_1 = \left( \frac{ (d-1)}{\sin (x) \cos (x)} \p_x + \p^2_x - \frac{\mu^2}{\cos^2 (x)} \right) \phi_1 \equiv - L \phi_1 \, .
 \end{align}
-whose normalized eigenfunctions are the Jacobi polynomials
+Separating the time and position dependence, we seek the normalized eigenfunctions $e_j(x)$ that satisfy $L e_j(x) = \omega_j^2 e_(x)$. These are the Jacobi polynomials:
 \begin{align}
 \label{scalar eigens}
 e_j (x) = k_j \cos^{\lambda_\pm}(x) P_j^{(\frac{d}{2} - 1, \lambda_\pm - \frac{d}{2})} \left( \cos \left( 2x \right)\right) \, .
@@ -285,36 +283,32 @@ The eigenvalues have the simple form $\omega_j = \lambda_\pm + 2j$, with $\lambd
 
 Solutions to the linearized equations of motion are stable to linear order on the timescale $t \sim \epsilon^{-2}$ \cite{1506.07907}. However, beyond linear order there are instabilities at $\mc O(\epsilon^3)$ due to secular terms, which are terms that grow larger with time. These terms cannot be removed by frequency shifts and arise from resonances in the spectrum of the scalar fields \cite{1407.6273}. Various resummation \cite{hep-th/9506161} and multi-scale techniques \cite{1403.6471} have been developed to help control the growth of such terms within the perturbative description. These methods will be used in chapters~\ref{ch: ttf}~and~\ref{ch: driven} to absorb the resonant terms into renormalized integration constants.
 
-The end point of the evolution of bulk scalar fields can be generally categorized into either stable (those that resist gravitational collapse either indefinitely or over long\footnote{The definition of ``long'' is somewhat subjective, but generally taken as many multiples of the light-crossing time.} time scales) or unstable (those that collapse immediately or faster than the perturbative timescale) configurations. In exploring these solutions, we will find a rich landscape of behaviours that lie between these more simple classifications.
+The end point of the evolution of nonlinear bulk scalar fields can be generally categorized into either stable (those that resist gravitational collapse either indefinitely or over long\footnote{The definition of ``long'' is somewhat subjective, but generally taken as many multiples of the light-crossing time.} time scales) or unstable (those that collapse immediately or faster than the perturbative timescale) configurations. In exploring these solutions, we will find a rich landscape of behaviours that lie between these more simple classifications.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Stability, Instability, and More}
 
-
-Localized, self-gravitating solutions to the Einstein-Maxwell equations in a vacuum are known as \emph{geons}, and have long lifetimes with respect to the characteristic periods of the system \cite{Wheeler:1955zz}. The excitation of a single (scalar) geon mode is stable in Anti-de Sitter space; however, any combination of two or more such modes becomes unstable \cite{1109.1825}. Furthermore, AdS is unstable against all vector geon modes \cite{1408.5906}. In asymptotically-AdS$_4$ spacetimes, stable geon solutions can be constructed numerically \cite{1701.09100, 1701.07804}. 
-
 Preliminary examinations of the onset of instability in a gravitational theory coupled to a scalar field focused on the case of a flat background geometry. For generic initial data parameterized by $p$, the following critical phenomena were observed by \cite{Choptuik:1992jv} for spherically-symmetric solutions:
 \begin{itemize}
-\item If collapse is guaranteed for values $p > p^*$, then as $p \to p^*$, black holes can be created with masses $M \propto |p - p^*|^\gamma$. The critical exponent $\gamma$ is independent of initial conditions and depends only on the type matter. For spherically symmetric, massless scalar field, $\gamma \approx 0.37$.
+\item If collapse is guaranteed for values $p > p^*$, then as $p \to p^*$, black holes can be created with masses $M \propto |p - p^*|^\gamma$. The critical exponent $\gamma$ is independent of initial conditions and depends only on the type matter. For a spherically symmetric, massless scalar field, $\gamma \approx 0.37$.
 \item Just before the formation of the event horizon, the spacetime approaches a scale-invariant solution -- the critical solution -- that is also independent of the initial conditions.
 \end{itemize}
-These characteristics are collectively known as Choptuik scaling, and are found in all gravitational collapses, independent of geometry, initial conditions, or boundary conditions \cite{gr-qc/0210101, 1208.2934}. Choptuik scaling of critical solutions for scalars in AdS are also well established \cite{gr-qc/0109002, hep-th/0101194}.  
+These characteristics are collectively known as Choptuik scaling, and are found in all critical gravitational collapses, independent of geometry, initial conditions, or boundary conditions \cite{gr-qc/0210101, 1208.2934, 1210.0890}. Choptuik scaling of critical solutions for scalars in AdS are also well established \cite{gr-qc/0109002, hep-th/0101194}. 
+
+Let us consider the types of scalar field profiles that might be applied to perturbations in the minimally-coupled theory. \emph{Soliton} solutions -- localized field configurations with fixed profiles that move at constant velocities and are generic to all background curvatures -- can be constructed in asymptotically-AdS$_4$ spacetime which, \cite{hep-th/0406134} argued, meant that the system must evolve towards a space-like singularity. When these fields were given charges in AdS$_5$, their evolution exhibited phase transitions such as the development of scalar hair that are indicative of spontaneous symmetry breaking in the boundary theory \cite{1301.2452}. A similar type of field configuration is known as an \emph{oscillon}. These too are localized, long-lived scalar field configurations generic to all background curvatures, but have time-dependent profiles \cite{hep-ph/9503217}. It should be noted that the construction of numerical solutions to the nonlinear Einstein equations for a given field profile is a common practice; for a review on the methods used to construct such solutions, see~\cite{1510.02804}. In general, asymptotically-AdS spacetime admits a variety of stable solutions \cite{1208.5772}.
+
+So-called \emph{boson star} solutions are stationary, perturbatively stable, complex scalar field solutions \cite{gr-qc/0309131}. Since the \ads action is invariant under the global phase transformation $\phi \to \exp(-i\theta) \phi$, boson stars carry a conserved charge, $Q$. For small values of $Q$, boson star solutions are related to oscillon solutions \cite{1304.4166}. They can be constructed in both global AdS, as well as asymptotically-AdS, spacetimes \cite{1209.2378}. More recently, stable boson star solutions have been described in terms of a mutli-oscillator description, wherein the scalar field is written as an infinite sum over normal modes with non-integer frequencies \cite{1904.02168}.
+
+However, the question of nonlinear stability of AdS must be addressed in terms of generic data rather than the special solutions discussed so far. The evolution of massless scalars in AdS$_3$ various degrees of symmetry found that collapse was always the final state of the system, however the black holes formed by the collapse may or may not support scalar hair \cite{gr-qc/0007008, gr-qc/0008060, 1303.3186, 1211.7076}. For a review of the stability of AdS$_3$, see \cite{1311.7409}. The most influential examination of the nonlinear stability of AdS$_4$ was undertaken in \cite{1104.3702}, which found that it was generically unstable to any perturbation with amplitude $\epsilon > 0$. This was particularly surprising given that it was well known that flat spacetime required a minimum energy density for a black hole to form. It was further demonstrated that generic massless scalars in AdS$_{d+1}$ would collapse for all $d \geq 3$ \cite{1106.2339, 1108.4539}. Universal scaling of the horizon size (and therefore mass) was confirmed for critical data, as was scale invariance just before collapse \cite{1110.5823, 1504.05203}. Finally, for the critical amplitudes {$\epsilon_0 > \epsilon_1 > \epsilon_2$} such that $r_H(\epsilon_i) = 0$, the difference in horizon formation times between successive critical values follows {$t_H(\epsilon_{i+1}) - t(\epsilon_i) \approx \pi$}, the light-crossing time.
 
 
-
-Scalar fields coupled to AdS$_{d+1}$ have been studied extensively
-Solitons in AdS$_4$ \cite{hep-th/0406134}, charged solitons in AdS$_5$ exhibited phase transitions indicative of spontaneous symmetry breaking in the boundary theory \cite{1301.2452}.
+It is also worth noting that scalar field perturbations are not the only type of instabilities considered. Localized, self-gravitating solutions to the Einstein-Maxwell equations in a vacuum are known as \emph{geons}, and have long lifetimes with respect to the characteristic periods of the system \cite{Wheeler:1955zz}. The excitation of a single (scalar) geon mode is stable in Anti-de Sitter space; however, any combination of two or more such modes becomes unstable \cite{1109.1825}. This complements the conjecture that the stability islands in the space of scalar field data may be anchored by linear modes. In asymptotically-AdS$_4$ spacetimes, stable geon solutions can be constructed numerically \cite{1701.09100, 1701.07804}. AdS is unstable against all vector geon modes \cite{1408.5906}.
 
 
-The construction of numerical solutions to the nonlinear Einstein equations is a common practice; for a review on the methods used to construct such solutions, see~\cite{1510.02804}. 
-
-{\bf oscillon}: localized, long-lived, time-dependent scalar field configurations
-{\bf soliton}: localized, fixed profile scalar field configurations
-
-
+%%%%%%%%%%%
 \rule{\textwidth}{1pt}
-
+%%%%%%%%%%%
 
 When $\mu = 0$ in \eqref{collapse eigen eqn}, we recover the \emph{oscillon} solution \cite{1701.09100}. Oscillons are long-lived and nearly time-periodic solutions. Further work has demonstrated that single oscillon solutions emit energy very slowly, leading to corresponding decreases in the amplitude and period of the solutions \cite{hep-ph/9503217}. A oscillon solution is stable over very long time scales; however, if a solution is constructed out of a linear combination of oscillons, the system exhibits possible third-order instabilities on the same timescale as the linearized solutions. These instabilities, however, can be absorbed by a frequency shift. Therefore, oscillons are non-linearly stable. A similar class of solutions, called \emph{oscillatons}, are oscillating, localized solutions for massive scalar fields, but are generic to backgrounds that are asymptotically flat. Oscillatons also remain stable over long time scales \cite{gr-qc/0310006}. Methods for numerically determining stationary solutions in the gravitational theory have been developed for a variety of backgrounds \cite{1510.02804}.
 
