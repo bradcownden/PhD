@@ -13,59 +13,59 @@
 \contentsline {section}{\numberline {1.4}Summary}{14}{section.1.4}
 \contentsline {chapter}{\numberline {2}Nonlinear Evolution of Massive Scalar Fields in Anti-de Sitter Spacetime}{16}{chapter.2}
 \contentsline {section}{\numberline {2.1}Contributions of Authors}{16}{section.2.1}
-\contentsline {section}{\numberline {2.2}Introduction}{17}{section.2.2}
-\contentsline {section}{\numberline {2.3}Review}{19}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Massive scalars, stability, and time scales}{19}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Methods}{22}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}Phase Diagram of Stability}{23}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Metastable versus unstable initial data}{24}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Irregular behaviors}{27}{subsection.2.4.2}
-\contentsline {section}{\numberline {2.5}Spectral analysis}{32}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Dependence on mass}{33}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}Spectra of different behaviors}{34}{subsection.2.5.2}
-\contentsline {subsection}{\numberline {2.5.3}Evolution of spectra}{35}{subsection.2.5.3}
-\contentsline {section}{\numberline {2.6}Discussion}{37}{section.2.6}
-\contentsline {section}{\numberline {2.A}Convergence Testing}{39}{section.1.2.A}
-\contentsline {chapter}{\numberline {3}Perturbative Stability of Massless Scalars in AdS$_4$}{44}{chapter.3}
-\contentsline {section}{\numberline {3.1}Contributions of Authors}{44}{section.3.1}
-\contentsline {section}{\numberline {3.2}Introduction}{45}{section.3.2}
-\contentsline {section}{\numberline {3.3}Minimally Coupled Scalar Fields in AdS$_{d+1}$}{47}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Linearized Solutions}{47}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Two-Time Formalism}{48}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}Quasi-periodic Solutions in AdS$_4$}{49}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Persistence at Large $j_{max}$}{50}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}High Temperature Perturbations}{51}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Building High-Temperature Solutions}{52}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Stability of QP Solutions}{53}{subsection.3.4.4}
-\contentsline {subsubsection}{\numberline {3.4.4.1}The Ricci Scalar at the Origin}{53}{subsubsection.3.4.4.1}
-\contentsline {subsubsection}{\numberline {3.4.4.2}Constraint Equations}{54}{subsubsection.3.4.4.2}
-\contentsline {section}{\numberline {3.5}Time Evolution of Quasi-Periodic Solutions}{55}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Quasi-Periodic Solutions}{55}{subsection.3.5.1}
-\contentsline {subsubsection}{\numberline {3.5.1.1}Padded QP Solutions}{56}{subsubsection.3.5.1.1}
-\contentsline {subsection}{\numberline {3.5.2}High-Temperature Solutions}{57}{subsection.3.5.2}
-\contentsline {subsubsection}{\numberline {3.5.2.1}Regular Projections to the QP Plane}{58}{subsubsection.3.5.2.1}
-\contentsline {subsubsection}{\numberline {3.5.2.2}``By Hand'' High-Temperature Solutions}{59}{subsubsection.3.5.2.2}
-\contentsline {subsubsection}{\numberline {3.5.2.3}Perturbing to an Intermediate Temperature Before Reoptimizing}{59}{subsubsection.3.5.2.3}
-\contentsline {subsubsection}{\numberline {3.5.2.4}Padded Threshold Temperature Solutions}{60}{subsubsection.3.5.2.4}
-\contentsline {section}{\numberline {3.6}Discussion}{60}{section.3.6}
-\contentsline {section}{\numberline {3.A}Seeding Methods For Non-Linear Solvers}{70}{section.2.3.A}
-\contentsline {section}{\numberline {3.B}Auxiliary Integrals For Calculating the $T, R, S$ Coefficients}{70}{section.2.3.B}
-\contentsline {section}{\numberline {3.C}Frequency of Solution Checking}{72}{section.2.3.C}
-\contentsline {chapter}{\numberline {4}Perturbative Descriptions of Driven Instabilities in AdS}{75}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introduction}{76}{section.4.1}
-\contentsline {section}{\numberline {4.2}Source Terms and Boundary Conditions}{77}{section.4.2}
-\contentsline {section}{\numberline {4.3}Resonances From Normalizable Solutions}{81}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Naturally Vanishing Resonances: $(+++)$ and $(+--)$}{82}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Non-vanishing Resonance: $(++-)$}{83}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Resonances From Non-normalizable Modes}{84}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Two Non-normalizable Modes with Equal Frequencies}{85}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Special Values of Non-normalizable Frequencies}{86}{subsection.4.4.2}
-\contentsline {subsubsection}{\numberline {4.4.2.1}Add to an integer}{88}{subsubsection.4.4.2.1}
-\contentsline {subsection}{\numberline {4.4.3}Integer Plus $\chi $}{91}{subsection.4.4.3}
-\contentsline {subsubsection}{\numberline {4.4.3.1}$\omega _i+ \omega _\gamma = \omega _{\beta }- \omega _\ell $}{93}{subsubsection.4.4.3.1}
-\contentsline {subsubsection}{\numberline {4.4.3.2}$\omega _i+ \omega _\gamma = \omega _{\beta }+ \omega _\ell $}{93}{subsubsection.4.4.3.2}
-\contentsline {section}{\numberline {4.5}Discussion}{95}{section.4.5}
-\contentsline {section}{\numberline {4.A}Derivation of Source Terms For Massive Scalars}{97}{section.3.4.A}
-\contentsline {section}{\numberline {4.B}Two Non-normalizable Modes with Equal Frequencies}{100}{section.3.4.B}
-\contentsline {chapter}{\numberline {5}Conclusion}{102}{chapter.5}
-\contentsline {chapter}{Bibliography}{110}{appendix*.59}
+\contentsline {section}{\numberline {2.2}Introduction}{18}{section.2.2}
+\contentsline {section}{\numberline {2.3}Review}{20}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Massive scalars, stability, and time scales}{20}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Methods}{23}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Phase Diagram of Stability}{24}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Metastable versus unstable initial data}{25}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Irregular behaviors}{28}{subsection.2.4.2}
+\contentsline {section}{\numberline {2.5}Spectral analysis}{33}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Dependence on mass}{34}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Spectra of different behaviors}{35}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}Evolution of spectra}{36}{subsection.2.5.3}
+\contentsline {section}{\numberline {2.6}Discussion}{38}{section.2.6}
+\contentsline {section}{\numberline {2.A}Convergence Testing}{40}{section.1.2.A}
+\contentsline {chapter}{\numberline {3}Perturbative Stability of Massless Scalars in AdS$_4$}{45}{chapter.3}
+\contentsline {section}{\numberline {3.1}Contributions of Authors}{45}{section.3.1}
+\contentsline {section}{\numberline {3.2}Introduction}{46}{section.3.2}
+\contentsline {section}{\numberline {3.3}Minimally Coupled Scalar Fields in AdS$_{d+1}$}{48}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Linearized Solutions}{48}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Two-Time Formalism}{49}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Quasi-periodic Solutions in AdS$_4$}{50}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Persistence at Large $j_{max}$}{51}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}High Temperature Perturbations}{52}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Building High-Temperature Solutions}{53}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Stability of QP Solutions}{54}{subsection.3.4.4}
+\contentsline {subsubsection}{\numberline {3.4.4.1}The Ricci Scalar at the Origin}{54}{subsubsection.3.4.4.1}
+\contentsline {subsubsection}{\numberline {3.4.4.2}Constraint Equations}{55}{subsubsection.3.4.4.2}
+\contentsline {section}{\numberline {3.5}Time Evolution of Quasi-Periodic Solutions}{56}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Quasi-Periodic Solutions}{56}{subsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.1.1}Padded QP Solutions}{57}{subsubsection.3.5.1.1}
+\contentsline {subsection}{\numberline {3.5.2}High-Temperature Solutions}{58}{subsection.3.5.2}
+\contentsline {subsubsection}{\numberline {3.5.2.1}Regular Projections to the QP Plane}{59}{subsubsection.3.5.2.1}
+\contentsline {subsubsection}{\numberline {3.5.2.2}``By Hand'' High-Temperature Solutions}{60}{subsubsection.3.5.2.2}
+\contentsline {subsubsection}{\numberline {3.5.2.3}Perturbing to an Intermediate Temperature Before Reoptimizing}{60}{subsubsection.3.5.2.3}
+\contentsline {subsubsection}{\numberline {3.5.2.4}Padded Threshold Temperature Solutions}{61}{subsubsection.3.5.2.4}
+\contentsline {section}{\numberline {3.6}Discussion}{61}{section.3.6}
+\contentsline {section}{\numberline {3.A}Seeding Methods For Non-Linear Solvers}{71}{section.2.3.A}
+\contentsline {section}{\numberline {3.B}Auxiliary Integrals For Calculating the $T, R, S$ Coefficients}{71}{section.2.3.B}
+\contentsline {section}{\numberline {3.C}Frequency of Solution Checking}{73}{section.2.3.C}
+\contentsline {chapter}{\numberline {4}Perturbative Descriptions of Driven Instabilities in AdS}{76}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{77}{section.4.1}
+\contentsline {section}{\numberline {4.2}Source Terms and Boundary Conditions}{78}{section.4.2}
+\contentsline {section}{\numberline {4.3}Resonances From Normalizable Solutions}{82}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Naturally Vanishing Resonances: $(+++)$ and $(+--)$}{83}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Non-vanishing Resonance: $(++-)$}{84}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Resonances From Non-normalizable Modes}{85}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Two Non-normalizable Modes with Equal Frequencies}{86}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Special Values of Non-normalizable Frequencies}{87}{subsection.4.4.2}
+\contentsline {subsubsection}{\numberline {4.4.2.1}Add to an integer}{89}{subsubsection.4.4.2.1}
+\contentsline {subsection}{\numberline {4.4.3}Integer Plus $\chi $}{92}{subsection.4.4.3}
+\contentsline {subsubsection}{\numberline {4.4.3.1}$\omega _i+ \omega _\gamma = \omega _{\beta }- \omega _\ell $}{94}{subsubsection.4.4.3.1}
+\contentsline {subsubsection}{\numberline {4.4.3.2}$\omega _i+ \omega _\gamma = \omega _{\beta }+ \omega _\ell $}{94}{subsubsection.4.4.3.2}
+\contentsline {section}{\numberline {4.5}Discussion}{96}{section.4.5}
+\contentsline {section}{\numberline {4.A}Derivation of Source Terms For Massive Scalars}{98}{section.3.4.A}
+\contentsline {section}{\numberline {4.B}Two Non-normalizable Modes with Equal Frequencies}{101}{section.3.4.B}
+\contentsline {chapter}{\numberline {5}Conclusion}{103}{chapter.5}
+\contentsline {chapter}{Bibliography}{111}{appendix*.59}
