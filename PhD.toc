@@ -35,17 +35,17 @@
 \contentsline {section}{\numberline {3.4}Quasi-periodic Solutions in AdS$_4$}{50}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Persistence at Large $j_{max}$}{51}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}High Temperature Perturbations}{52}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Building High-Temperature Solutions}{53}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.3}Building High-Temperature Solutions}{54}{subsection.3.4.3}
 \contentsline {subsection}{\numberline {3.4.4}Stability of QP Solutions}{54}{subsection.3.4.4}
 \contentsline {subsubsection}{\numberline {3.4.4.1}The Ricci Scalar at the Origin}{54}{subsubsection.3.4.4.1}
 \contentsline {subsubsection}{\numberline {3.4.4.2}Constraint Equations}{55}{subsubsection.3.4.4.2}
 \contentsline {section}{\numberline {3.5}Time Evolution of Quasi-Periodic Solutions}{56}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Quasi-Periodic Solutions}{56}{subsection.3.5.1}
-\contentsline {subsubsection}{\numberline {3.5.1.1}Padded QP Solutions}{57}{subsubsection.3.5.1.1}
-\contentsline {subsection}{\numberline {3.5.2}High-Temperature Solutions}{58}{subsection.3.5.2}
-\contentsline {subsubsection}{\numberline {3.5.2.1}Regular Projections to the QP Plane}{59}{subsubsection.3.5.2.1}
+\contentsline {subsection}{\numberline {3.5.1}Quasi-Periodic Solutions}{57}{subsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.1.1}Padded QP Solutions}{58}{subsubsection.3.5.1.1}
+\contentsline {subsection}{\numberline {3.5.2}High-Temperature Solutions}{59}{subsection.3.5.2}
+\contentsline {subsubsection}{\numberline {3.5.2.1}Regular Projections to the QP Plane}{60}{subsubsection.3.5.2.1}
 \contentsline {subsubsection}{\numberline {3.5.2.2}``By Hand'' High-Temperature Solutions}{60}{subsubsection.3.5.2.2}
-\contentsline {subsubsection}{\numberline {3.5.2.3}Perturbing to an Intermediate Temperature Before Reoptimizing}{60}{subsubsection.3.5.2.3}
+\contentsline {subsubsection}{\numberline {3.5.2.3}Perturbing to an Intermediate Temperature Before Reoptimizing}{61}{subsubsection.3.5.2.3}
 \contentsline {subsubsection}{\numberline {3.5.2.4}Padded Threshold Temperature Solutions}{61}{subsubsection.3.5.2.4}
 \contentsline {section}{\numberline {3.6}Discussion}{61}{section.3.6}
 \contentsline {section}{\numberline {3.A}Seeding Methods For Non-Linear Solvers}{71}{section.2.3.A}
