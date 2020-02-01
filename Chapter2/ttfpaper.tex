@@ -212,7 +212,7 @@ As an example, consider solutions to \eqref{qp eqn} with the conditions $\alpha_
 	\:
 	\begin{subfigure}[t]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/j350_solutions_4paper}
-		\caption{QP solutions up to $j_{max}~=~350$.}
+		\caption{Families of QP solutions up to $j_{max}~=~350$.}
 		\label{fig: j350 solutions}
 	\end{subfigure}
 	\caption[Energy spectra for various QP solutions]{Energy spectra for various QP solutions.}
@@ -237,35 +237,38 @@ In \cite{1507.08261}, additional QP solutions were found by repeatedly perturbin
 \end{align}
 Therefore, by solving \eqref{HT1}-\eqref{HT3} for $\{ u_j, \theta_1, \theta_2 \}$, the existing QP solution can be updated and the process can be repeated. 
 
-For a standard QP solution with $\alpha_1 = 0.2$, the initial temperature is $T_0 = 3.146$. By applying the high temperature perturbation method described above, we are able to increase the temperature of the solution. However, this process must be examined with some scrutiny; applying repeated perturbations to a known solution does not guarantee the final result remains a valid solution. To investigate this further, we have implemented two high temperature solvers, both of which increment the energy of the system using \eqref{HT1}-\eqref{HT3} and are able to project back to the QP solution plane after a specified number of perturbations. However, the projection used by one solver is the fixed-$\alpha_1$ method used to determine the existing QP solutions, while the other holds the temperature of the solution fixed during projection. To do this, we use the definition of $T$ and the freedom to rescale such that $\alpha_0 = 1$ to solve for $\alpha_1$ via
+For a standard QP solution with $\alpha_1 = 0.2$, the initial temperature is $T_0 = 3.146$. By applying the high temperature perturbation method described above, we are able to increase the temperature of the solution. However, this process must be examined with some scrutiny; applying repeated perturbations to a known solution does not guarantee the final result remains a valid solution. To investigate this further, we have implemented two high temperature solvers, both of which increment the energy of the system using \eqref{HT1}-\eqref{HT3} and are able to project back to the QP solution plane after a specified number of perturbations. However, the projection used by one solver takes an input $\alpha_1$ value when solving the QP equation \eqref{qp eqn}, while the other holds the temperature of the solution fixed during projection. To hold the temperature fixed, we use the definition of $T$ and the freedom to rescale the $\alpha_j$ such that $\alpha_0 = 1$ to solve for $\alpha_1$ via
 \begin{align}
 \label{a1 eqn}
 \alpha_1^2 = \frac{1}{\omega_1 (T - \omega_1)} \left( \omega_0 (\omega_0 - T) + \sum_{j \geq 2} \omega_j (\omega_j - T) \alpha_j^2 \right)
 \end{align}
-Since we are imposing a fixed temperature $T$ instead of a fixed $\alpha_1$ value, we are still solving a system of $j_{max} + 1$ equations for $j_{max} + 1$ unknowns.
+It can easily be seen that $\alpha_1$ will become singular when $T = \omega_1 = 5$ in AdS$_4$. Since we are inputting a value for the temperature $T$ instead of a $\alpha_1$, we are still solving a system of $j_{max} + 1$ equations for $j_{max} + 1$ unknowns.
 
-Consider figure~\ref{fig: reop comparisons}. When the result of the linear perturbations is projected back down to the QP plane every 5 iterations, we see that the solution approaches an attractor and is unable to accumulate enough energy to escape this local minimum before being projected back down to the QP plane. However, when the projection frequency is decreased to every 20 iterations, the attractor solution is able to be bypassed; note that as the iteration number increases, we actually see a \emph{decrease} in $\alpha_1$ value while the temperature continues to increase. At iteration 150 in figure~\ref{fig: a_1andTa.2reop20}, there is a cusp in $\alpha_1$ and a corresponding drop in temperature. Moreover, $\alpha_1$ becomes negative after several hundred iterations.
+\subsection{Projections With $\alpha_1$ as the Input}
+\label{ssec: a1 projections}
+
+Let us first consider the results of the $\alpha_1$ projection method, shown in figure~\ref{fig: reop comparisons}. We have fixed the perturbation amount $\delta E$ to $1\%$ of the energy of the initial solution. Beginning with an $\alpha_1 = 0.44$ solution with low \jm, we apply repeated energy perturbations and project back to the QP solution plane with a frequency of once per 5 temperature iterations. Figure~\ref{fig: a_1andTa0.2reop5} shows the resulting values of $\alpha_1$ and $T$ during these perturbations. We see that $\alpha_1$ approaches an attractor solution of $\alpha_1 \simeq 0.43$ with $T \simeq 4.3$. The energy perturbations between the projections are insufficient to escape this local minimum so that the same solution is found by the next projection. However, when the projection frequency is decreased to once every 20 iterations, the attractor solution is able to be bypassed. Note that as the iteration number increases, we actually see a \emph{decrease} in $\alpha_1$ value while the temperature continues to increase. At iteration 150 in figure~\ref{fig: a_1andTa.2reop20}, there is a cusp in $\alpha_1$ and a discontinuity in the temperature. After several hundred iterations, $\alpha_1$ becomes negative.
 
 \begin{figure}[h]
 	\centering
 	\begin{subfigure}[t]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/a_1andTvsIteration_reop5}
-		\caption{The result of applying repeated iterations of the linear perturbations to the initial QP solution of $\alpha_1=0.44$, projecting back to the QP plane every five iterations. The perturbation amount ($\delta E$ in \eqref{HT1}) is fixed to $1\%$ of the initial energy.}
+		\caption{Applying repeated energy perturbations to the initial solution with $\alpha_1=0.44$, projecting back to the QP plane every five iterations.}
 		\label{fig: a_1andTa0.2reop5}
 	\end{subfigure}
 	\:
 	\begin{subfigure}[t]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/a_1andTvsIteration_reop20}
-		\caption{Starting from the same $\alpha_1=0.44$ QP solution, linear perturbations are again applied, this time projecting back to the QP plane every 20 iterations.}
+		\caption{The same QP solution, but projecting back to the QP plane every 20 iterations.}
 		\label{fig: a_1andTa.2reop20}
 	\end{subfigure}
-	\caption[High temperature solutions resulting from projecting back to the QP solution plane at various frequencies]{The results of projecting a $j_{max}=50$, $\alpha_1 = 0.44$ solution back to the QP plane at various frequencies during high temperature perturbations. Colour changes indicate that the non-linear solver has been applied.}
+	\caption[High temperature solutions resulting from projecting back to the QP solution plane at various frequencies]{The results of projecting a $j_{max}=50$, $\alpha_1 = 0.44$ solution back to the QP plane at various frequencies during high temperature perturbations. Colour changes indicate that the solution has been projected back to the QP plane.}
 	\label{fig: reop comparisons}
 \end{figure}
 
-Let us examine the energy spectra of the solutions shown in figure~\ref{fig: spec comparisons reop5}. When projecting back to the QP plane every 5 perturbations, the energy spectra do not deviate far from the initial solution; however, no temperature increase is observed. We denote solutions found by this method as ``threshold temperature'' solutions. The threshold temperature $T_{th}$ is robust against increases in $\jm$ and therefore is independent of edge effects. See table~\ref{tab: T_thresh} for further details.
+Let us examine the energy spectra these solutions. In figure~\ref{fig: spec comparisons reop5} we see that when we choose a high projection frequency, the resulting energy spectra do not deviate far from the initial solution (using the $\alpha_1$ projection method) in either shape or temperature. We denote solutions found by this method as ``threshold temperature'' solutions. The values of the threshold temperature $T_{th}$ is robust against increases in $\jm$ and is independent of the starting value of $\alpha_1$, as shown in table~\ref{tab: T_thresh}.
 
-\begin{table}
+\begin{table}[h]
 	\centering
 	\begin{tabular}[t]{|c|c|c|}
 		\hline
@@ -276,11 +279,11 @@ Let us examine the energy spectra of the solutions shown in figure~\ref{fig: spe
 		$150$ & 4.30344544024198e+00 & $280$ \\ \hline
 		$200$ & 4.30344544023915e+00 & $300$ \\ \hline
 	\end{tabular}
-	\caption[Threshold temperatures for different series truncations with constant projection frequency]{Values of the threshold temperature $T_{th}$ for QP solutions with given $\jm$. Also included is the number of iterations applied (projecting back to the solution plane after every five iterations).}
+	\caption[Threshold temperatures for different truncation values with constant projection frequency]{Values of the threshold temperature $T_{th}$ for QP solutions with given $\jm$. Also included is the number of iterations applied (projecting back to the solution plane after every five iterations).}
 	\label{tab: T_thresh}
 \end{table}
 
-When the projection frequency is decreased to 20 iterations an increase in temperature can be observed, as seen in figure~\ref{fig: spec comparisons reop20}. However, the discontinuous behaviour of the temperature as a function of iteration is a signal of the energy spectrum loosing its smooth profile ({\it c.f.} spectra of iterations 120 and 180). This in itself is not necessarily a breakdown of the quasi-periodic nature of the solution. Upon examining the condition number of the matrix formed by \eqref{HT1}-\eqref{HT3}, we find that in fact the problem becomes ill-conditioned. This results in a absolute value of $u_i$ that is greater than $\alpha_i$; that is, the perturbative condition required to derive the system of linear equations \eqref{HT1}-\eqref{HT3} breaks down. For many prospective high-temperature solutions, this break-down of the perturbative condition is signalled by the development of spikes in the energy spectra caused by the values of $\alpha_j$ becoming negative. In \S~\ref{sssec: evo of regular projections} we will examine the effects of using such solutions as initial data in the evolution of the QP solution.
+When the projection frequency is decreased, the temperature is able to exceed $T_{th}$. However, as seen in figure~\ref{fig: spec comparisons reop20}, once $\alpha_1 < 0$ the energy spectrum is no longer $C^1$ differentiable ({\it c.f.} spectra of iterations 120 and 180). This in itself is not necessarily a breakdown of the quasi-periodic nature of the solution, as $\alpha_j < 0$ if {$\beta_j \tau = (2n + 1) \pi$} for {$n \in \mathbb{N}^0$}. However, upon examining the condition number of the matrix formed by \eqref{HT1}-\eqref{HT3}, we find that in fact the problem becomes ill-conditioned. This results in a absolute value of $u_i$ that is greater than $\alpha_i$; that is, the perturbative condition required to derive the system of linear equations \eqref{HT1}-\eqref{HT3} breaks down. For many prospective high-temperature solutions, this break-down of the perturbative condition is signalled by the loss of $C^1$ differentiability in the energy spectrum due to the values of $\alpha_j$ becoming negative. 
 
 \begin{figure}[h]
 	\centering
@@ -299,6 +302,19 @@ When the projection frequency is decreased to 20 iterations an increase in tempe
 	\label{fig: spec comps with reop}
 \end{figure}
 
+\subsection{Projections at Constant Temperature}
+\label{ssec: T projections}
+
+We again use a series of small energy perturbations to seek high-temperature QP solutions, this time using a constant-temperature projection method at regular intervals. Starting from a standard $\alpha_1 = 0.44$ QP solution, perturbations are applied to increase the temperature. After five increments, the temperature is calculated and used as the input to the second nonlinear solver. This ensures that the temperature is not changed when projecting back to the solution plane. Goal temperatures of $T=5.5$, $6.0$, and $7.0$ were chosen -- when the solution reached or exceeded this temperature, it would be projected back to the QP plane and the perturbations would cease. The resulting spectra for each temperature goal over several choices of $\jm$ are shown in figure~\ref{fig: const T perturbs}. It is worth noting that $\jm = 250$ spectra are not included for temperature goals of $T=6.0$ and $7.0$ because the constant-temperature projection failed to find a solution.
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTemperatureComparison}
+		\caption{Finding high temperature QP solutions using repeated perturbations with regular projections back to the QP plane.}
+		\label{fig: const T perturbs}
+\end{figure}
+
+Recall that solutions must be robust in the limit of $\jm \to \infty$ in order to be considered solutions to the full TTF theory. While the upper panel of figure~\ref{fig: const T perturbs} suggests that solutions with temperatures at or near $T=5.5$ can be constructed in the large-$\jm$ limit, it is clear that goal temperatures of $T=6.0, 7.0$ do not support solutions to the full TTF theory. In fact, when solutions were not projected back to the QP plane at regular intervals during the energy perturbations, no solutions at all could be found when the temperature was held fixed. It would seem that the domain of high temperature QP solutions is restricted to a narrow region near the QP plane defined by \eqref{qp eqn}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -326,12 +342,6 @@ Despite high-temperature solutions being inaccessible via repeated energy pertur
 
 Starting with a low-$\jm$, high-temperature solution, we can use a fitting procedure similar to that used to find high-$\jm$, quasi-periodic solutions in \S~\!\ref{ssec: large jmax}. Instead of fitting $\alpha_j$ values away from the highest modes, we instead apply the tail fitting the final 5 modes and use the fit to generate seed values for a $\jm + 5$ solution. We see in figure~\ref{fig: manual highT} that this method results in spectra where energy becomes increasingly concentrated in high-$j$ modes. In fact, for solutions with $\jm \geq 90$, and equal or greater amount of energy resides in the high-$j$ modes than in the zero-mode. Intuitively, such a solution would collapse very quickly in the full system due to the high concentration of energy on small length scales. However, because we have arrived at this solution through the two-time formalism, evolution using \eqref{RN1}-\eqref{RN2} would ensure the solutions remain stable. To help quantify the stability of QP solutions against collapse, we calculate the scalar curvature at the origin. 
 
-\begin{figure}[h]
-	\centering
-		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTemperatureComparison}
-		\caption{Finding high temperature QP solutions using repeated perturbations with regular projections back to the QP plane.}
-		\label{fig: const T perturbs}
-\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
