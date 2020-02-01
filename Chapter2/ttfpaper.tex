@@ -10,7 +10,7 @@
 
 Having examined the collapse of massive scalars fields in AdS$_5$, we now wish to explore the perturbatively stable solutions for massless scalars. These solutions resist collapse on time scales of $t \sim \epsilon^{-2}$ and give analytic descriptions of the direct and inverse energy cascades that must be balanced for stability to be achieved.
 
-Using the Two-Time Formalism (TTF), renormalization flow equations are derived that absorb secular terms into renormalized integration constants in the first-order solution for the scalar field. These flow equations can be combined using a quasi-periodic (QP) ansatz to relate the amplitude and phases and lead to a system of $\jm + 1$ QP equations that relate the $\jm + 3$ unknowns. While the TTF theory technically involves an infinite sum of terms, by truncating the series to a finite $\jm$ value, numerical values for the amplitudes and phases can be calculated. How the truncation value affects the space of solutions, and whether these solutions continue to be valid during evolution, remains to be addressed.
+Using the Two-Time Formalism (TTF), renormalization flow equations are derived that absorb secular terms into renormalized integration constants in the first-order solution for the scalar field. These flow equations can be combined using a quasi-periodic (QP) ansatz to relate the amplitude and phases and lead to a system of $\jm + 1$ QP equations that relate the $\jm + 3$ unknowns. While the TTF theory technically involves an infinite sum of terms, by truncating the series to a finite \jm value, numerical values for the amplitudes and phases can be calculated. How the truncation value affects the space of solutions, and whether these solutions continue to be valid during evolution, remains to be addressed.
 
 \section{Contributions of Authors}
 
@@ -52,18 +52,18 @@ Physics,\\ University of Winnipeg\\
 
 \bigskip
 
-We construct a family of perturbative solutions for massless scalar fields in AdS$_4$ using the \emph{Two-Time Formalism} (TTF) to high eigenmode numbers. We furthermore investigate the validity of \emph{quasi-periodic} (QP) solutions with high $j_{max}$ values and examine their stability to perturbations. Finally, check that TTF and QP solutions continue to satisfy the Einstein equation at times greater than $t \sim \epsilon^{-2}$ and compare these results to the full numerical solutions at low amplitude.
+We construct a family of perturbative solutions for massless scalar fields in AdS$_4$ using the \emph{Two-Time Formalism} (TTF) to high eigenmode numbers. We furthermore investigate the validity of \emph{quasi-periodic} (QP) solutions with high \jm values and examine their stability to perturbations. Finally, check that TTF and QP solutions continue to satisfy the Einstein equation at times greater than $t \sim \epsilon^{-2}$ and compare these results to the full numerical solutions at low amplitude.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Introduction}
 
-The question of the nonperturbative stability of AdS$_{d+1}$ has been examined extensively, both as a question of mathematical physics and given its application to the AdS/CFT correspondence; see \cite{1708.05600} for a recent review. Beginning with the seminal work of \cite{1104.3702}, many works \cite{1108.4539, 1106.2339, 1110.5823, 1210.0890, 1510.02592} have demonstrated the generic instability of AdS$_{d+1}$ gravity minimally coupled to a scalar field in a variety of dimensions. The primary driver of the instability in the fully nonlinear system is the weakly turbulent flow of energy to short length scales; in the perturbative description, secular growth of resonant terms with high frequencies triggers the collapse \cite{1109.1825, 1306.0317, 1312.5544}. However, \cite{1303.3186, 1307.2875, 1403.5434} (and others) have shown that some initial conditions in asymptotically AdS spacetime resist gravitational collapse and therefore form islands of stability in the space of initial data.  The stable solutions within the island are variously known as oscillons or breathers for real scalars \cite{1104.3702,1210.0890,1303.3186,1503.07746}, boson stars for complex scalars \cite{1304.4166,1307.2875}, and geons for pure gravity \cite{1109.1825,1208.5772}.\footnote{citations given for studies in asymptotically AdS space.} \cite{1508.02709, 1711.00454,1602.03535} have shown that the classification of initial data is more complex nonperturbatively, intriguingly finding evidence of chaos at the boundary between stable and unstable initial data. While past studies have mostly dealt with spherically symmetric collapse, an increasing amount of work is focused on removing this restriction \cite{1602.03890,1705.03065, 1706.06101}.
+The question of the nonperturbative stability of AdS$_{d+1}$ has been examined extensively, both as a question of mathematical physics and given its application to the AdS/CFT correspondence; see \cite{1708.05600} for a recent review. Beginning with the seminal work of \cite{1104.3702}, many works \cite{1108.4539, 1106.2339, 1110.5823, 1210.0890, 1510.02592} have demonstrated the generic instability of AdS$_{d+1}$ gravity minimally coupled to a scalar field in a variety of dimensions. The primary driver of the instability in the fully nonlinear system is the weakly turbulent flow of energy to short length scales; in the perturbative description, secular growth of resonant terms with high frequencies triggers the collapse \cite{1109.1825, 1306.0317, 1312.5544}. However, \cite{1303.3186, 1307.2875, 1403.5434} (and others) have shown that some initial conditions in asymptotically AdS spacetime resist gravitational collapse and therefore form islands of stability in the space of initial data.  The stable solutions within the island are variously known as oscillons or breathers for real scalars \cite{1104.3702,1210.0890,1303.3186,1503.07746}, boson stars for complex scalars \cite{1304.4166,1307.2875}, and geons for pure gravity \cite{1109.1825,1208.5772}.\footnote{Citations given for studies in asymptotically AdS space.} \cite{1508.02709, 1711.00454,1602.03535} have shown that the classification of initial data is more complex nonperturbatively, intriguingly finding evidence of chaos at the boundary between stable and unstable initial data. While past studies have mostly dealt with spherically symmetric collapse, an increasing amount of work is focused on removing this restriction \cite{1602.03890,1705.03065, 1706.06101}.
 
-While the nonperturbative physics of AdS instability requires numerical study, a perturbative formulation should give insight into stability at low amplitudes.  In a naive perturbation theory, the fully resonant spectrum of eigenmodes of pure AdS leads to secular growth; this can be removed order by order by frequency shifts if the initial data consists of a single eigenmode but not for superpositions of eigenmodes \cite{1109.1825}.  If instead the amplitude and phase of each eigenmode are allowed to flow slowly, resummation of the perturbation theory leads to a ladder of coupled first-order ordindary differential equations describing the flow.  There are several equivalent methods to arrive at the flow equations: a ``two-time formalism'' (similar to a temporal gradient expansion for the amplitude and phase variables) \cite{1403.6471}, a renormalization-like formalism \cite{1407.6273,1412.3249}, time averaging \cite{1412.3249,1510.07836}, and keeping only resonant source terms \cite{1506.03519}.  (We will commonly refer to the perturbative theory as the TTF theory, for two-time formalism.)  A key feature of this perturbative theory is a scaling symmetry $\phi(t)\to \epsilon^{-1}\phi(\epsilon^2 t)$, so it is possible to divide out the amplitude of the scalar and describe the solution in terms of the ``slow time'' $\tau=\epsilon^2 t$.  Furthermore, the perturbative theory has conserved quantities beyond the total energy $E$, including a ``particle number'' $N$, which leads to inverse cascades in energy from higher eigenmodes to lower modes along with the expected direct cascades from low to high.  On the other hand, while the flow equations are significantly less computationally intensive than the full Einstein and Klein-Gordon equations, finding a solution requires truncating to a maximum eigenmode number \jm.
+While the nonperturbative physics of AdS instability requires numerical study, a perturbative formulation should give insight into stability at low amplitudes.  In a naive perturbation theory, the fully resonant spectrum of eigenmodes of pure AdS leads to secular growth; this can be removed order by order by frequency shifts if the initial data consists of a single eigenmode but not for superpositions of eigenmodes \cite{1109.1825}.  If instead the amplitude and phase of each eigenmode are allowed to flow slowly, resummation of the perturbation theory leads to a ladder of coupled first-order ordinary differential equations describing the flow.  There are several equivalent methods to arrive at the flow equations: a ``two-time formalism'' (similar to a temporal gradient expansion for the amplitude and phase variables) \cite{1403.6471}, a renormalization-like formalism \cite{1407.6273,1412.3249}, time averaging \cite{1412.3249,1510.07836}, and keeping only resonant source terms \cite{1506.03519}.  (We will commonly refer to the perturbative theory as the TTF theory, for two-time formalism.)  A key feature of this perturbative theory is a scaling symmetry $\phi(t)\to \epsilon^{-1}\phi(\epsilon^2 t)$, so it is possible to divide out the amplitude of the scalar and describe the solution in terms of the ``slow time'' $\tau=\epsilon^2 t$.  Furthermore, the perturbative theory has conserved quantities beyond the total energy $E$, including a ``particle number'' $N$, which leads to inverse cascades in energy from higher eigenmodes to lower modes along with the expected direct cascades from low to high.  On the other hand, while the flow equations are significantly less computationally intensive than the full Einstein and Klein-Gordon equations, finding a solution requires truncating to a maximum eigenmode number \jm.
 
-At a given mode truncation \jm, the TTF theory has stable quasi-periodic (QP) solutions with constant energy spectrum as described in \cite{1403.6471,1507.08261}, and other stable solutions orbit the QP solutions in phase space.  Since the amplitude scales out of the TTF, the QP solutions are described by ``temperature'' $T=E/N$; for fixed maximum mode number \jm, the maximum possible temperature is $d+2\jm$. The QP solutions are special in that the time-dependence of each mode is harmonic, so QP solutions satisfy algebraic equations; \cite{1507.08261} found low-temperature solutions to these equations directly.  To reach higher temperatures, \cite{1507.08261} perturbed low-temperature solutions by the addition of energy.  Our main concern in this work is the persistence of QP solutions, especially those at high temperatures, as $\jm$ increases since the full TTF theory takes $\jm\to\infty$.
+At a given mode truncation \jm, the TTF theory has stable quasi-periodic (QP) solutions with constant energy spectrum as described in \cite{1403.6471,1507.08261}, and other stable solutions orbit the QP solutions in phase space.  Since the amplitude scales out of the TTF, the QP solutions are described by ``temperature'' $T=E/N$; for fixed maximum mode number \jm, the maximum possible temperature is $d+2\jm$. The QP solutions are special in that the time-dependence of each mode is harmonic, so QP solutions satisfy algebraic equations; \cite{1507.08261} found low-temperature solutions to these equations directly.  To reach higher temperatures, \cite{1507.08261} perturbed low-temperature solutions by the addition of energy.  Our main concern in this work is the persistence of QP solutions, especially those at high temperatures, as \jm increases since the full TTF theory takes $\jm\to\infty$.
 
 ****
 LEFT THE REST ALONE, NEED TO DISCUSS ORGANIZATION AND METHODS WHEN WE'RE FINISHED
@@ -78,7 +78,7 @@ This work is organized as follows: we begin in \S~\!\ref{sec: scalar in AdS} wit
 \section{Minimally Coupled Scalar Fields in AdS$_{d+1}$}
 \label{sec: scalar in AdS}
 
-Consider a spherically-symmetric, asymptotically AdS$_{d+1}$ spacetime with characteristic curvature $\ell$. Written in Schwarzschild-like coordinates, the metric in units of AdS scale is given by
+Consider a spherically-symmetric, asymptotically AdS$_{d+1}$ spacetime with characteristic curvature $L=1$. Written in Schwarzschild-like coordinates, the metric in units of AdS scale is given by
 \begin{align}
 ds^2 = \frac{1}{\cos^2(x)} \left( -Ae^{-2\delta} dt^2 + A^{-1}dx^2 + \sin^2(x) d\Omega^{d-1}\right) \, ,
 \end{align}
@@ -124,7 +124,7 @@ Note the the normalizations are chosen such that $\hat L e_j = \omega^2_j e_j$ a
 \begin{align}
 \langle e_i | e_j \rangle \equiv \int^{\frac{\pi}{2}}_0 dx \, \bar e_i e_j \tan^{d-1}(x) \, .
 \end{align}
-By expanding the scalar field functions in terms of the eigenbasis given in \eqref{ttf eigens} and substituting into \eqref{ttf eom}, we find that the time-dependent functions $c^{(2j + 1)}_n (t) = \langle \phi_{2j + 1}(t,x), e_n (x) \rangle$ satisfy $\ddot c_j^{(1)} + \omega^2_j c_j^{(1)} = 0$. The general solution for the scalar field is can then be written in terms of time-dependent amplitude and phase variables:
+By expanding the scalar field functions in terms of the eigenbasis given in \eqref{ttf eigens} and substituting into \eqref{ttf eom}, we find that the time-dependent functions {$c^{(2j + 1)}_n (t) = \langle \phi_{2j + 1}(t,x), e_n (x) \rangle$} satisfy {$\ddot c_j^{(1)} + \omega^2_j c_j^{(1)} = 0$}. The general solution for the scalar field is can then be written in terms of time-dependent amplitude and phase variables:
 \begin{align}
 \label{ttf phi}
 \phi_1 (t,x) = \sum_{j=0}^\infty A_j (t) \cos \left(\omega_j t + B_j(t) \right) e_j (x) \, .
@@ -150,22 +150,22 @@ The Two-Time Formalism (TTF) describes the solution to \eqref{ttf eom} in terms 
 \label{phi ttf}
 \phi(t,x) = \epsilon \sum_{j=0}^\infty A_j (\epsilon^2 t) \cos \left(\omega_j t + B_j(\epsilon^2 t) \right) e_j(x) .
 \end{align}
-The next non-trivial order in the equations of motion include gravitational self-interactions of the scalar field, and provides source terms for $A_j$ and $B_j$. Following the time-averaging procedure of \cite{1407.6273} -- and using the resonance condition $\oi + \oj = \ok + \ol$ to eliminate one of the indices -- the $l^{th}$ amplitude and phase are given by
+The next non-trivial order in the equations of motion include gravitational self-interactions of the scalar field, and provides source terms for $A_j$ and $B_j$. Following the time-averaging procedure of \cite{1407.6273} -- and using the resonance condition $\oi + \oj = \ok + \ol$ to eliminate one of the indices -- the $\ell^{th}$ amplitude and phase are given by
 \begin{align}
 \label{RN1}
--\frac{2\omega_l}{\epsilon^2} \frac{d A_l}{d t} &= \stackrel{l \leq i + j}{\sum_{i \neq l} \sum_{j \neq l}} S_{ij (i + j -l) l} A_i A_j A_{i + j - l} \sin \left( B_l + B_{i+j-l} - B_i - B_j \right) , \\
+-\frac{2\omega_\ell}{\epsilon^2} \frac{d A_\ell}{d t} &= \stackrel{\ell \leq i + j}{\sum_{i \neq \ell} \sum_{j \neq \ell}} S_{ij (i + j -\ell) \ell} A_i A_j A_{i + j - \ell} \sin \left( B_\ell + B_{i+j-\ell} - B_i - B_j \right) , \\
 \label{RN2}
-- \frac{2 \omega_l A_l}{\epsilon^2} \frac{d B_l}{dt} &= T_l A_l^3 + \sum_{i \neq l} R_{i l} A^2_i A_l  \nonumber \\
-& \qquad + \stackrel{l \leq i + j}{\sum_{i \neq l} \sum_{j \neq l}} S_{ij (i + j -l) l} A_i A_j A_{i + j - l} \cos \left( B_l + B_{i+j-l} - B_i - B_j \right) \, .
+- \frac{2 \omega_\ell A_\ell}{\epsilon^2} \frac{d B_\ell}{dt} &= T_\ell A_\ell^3 + \sum_{i \neq \ell} R_{i \ell} A^2_i A_\ell  \nonumber \\
+& \qquad + \stackrel{\ell \leq i + j}{\sum_{i \neq \ell} \sum_{j \neq \ell}} S_{ij (i + j -\ell) \ell} A_i A_j A_{i + j - \ell} \cos \left( B_\ell + B_{i+j-\ell} - B_i - B_j \right) \, .
 \end{align}
-The coefficients $T, R, S$ are calculated directly from integrals over the product of eigenmodes and contain some useful symmetry properties: the integrals vanish except with the resonance condition $\omega_i + \omega_j = \omega_l$ is met. 
+The coefficients $T, R, S$ are calculated directly from integrals over the product of eigenmodes and contain some useful symmetry properties: the integrals vanish except with the resonance condition $\omega_i + \omega_j = \omega_\ell$ is met. 
 
 Computationally, we find it more convenient to write $T, R, S$ in terms of auxiliary coefficients with greater symmetry properties (as shown in \cite{1508.04943}). The explicit expressions for these integrals in the interior gauge, in which $\delta(t,x=0)=0$, are given in appendix~\ref{app: integrals}. 
 
 Using a complex amplitude of the form $\mc A_j(\tau) = A_j \exp (-i B_j )$ in \eqref{phi ttf} allows us to combine equations \eqref{RN1} and \eqref{RN2} into a single TTF equation:
 \begin{align}
 \label{ttf eqn}
--2i \ol \frac{\mc A_l}{d \tau} = T_l |\mc A_l|^2 \mc A_l + \sum_{i \neq l} R_{il} |\mc A_i|^2 \mc A_l + \stackrel{l \leq i+j}{\sum_{i \neq l} \sum_{j \neq l}} S_{ij(i+j-l)l} \mc A_i \mc A_j \bar{\mc A}_{i+j-l} \, .
+-2i \ol \frac{\mc A_\ell}{d \tau} = T_\ell |\mc A_\ell|^2 \mc A_\ell + \sum_{i \neq \ell} R_{i\ell} |\mc A_i|^2 \mc A_\ell + \stackrel{\ell \leq i+j}{\sum_{i \neq \ell} \sum_{j \neq \ell}} S_{ij(i+j-\ell)\ell} \mc A_i \mc A_j \bar{\mc A}_{i+j-\ell} \, .
 \end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -182,7 +182,7 @@ The stability of the solutions to \eqref{ttf eqn} can be examined using a \emph{
 where $\alpha_j, \beta_j \in \mathbb{R}$. Substituting \eqref{qp ansatz} into \eqref{phi ttf} allows us to relate the QP modes $\alpha_j$ and $\beta_j$ to the amplitude/phase modes via $A_j = 2 \alpha_j$, $B_j = \beta_j \tau$. When we examine how well the QP solutions solve the Einstein equations, we use this conversion to re-construct the scalar and metric fields from the QP solutions. The time dependence in \eqref{ttf eqn} is removed via the condition $\beta_j = \beta_0 + j(\beta_1~-~\beta_0)$, leaving $\beta_0$ and $\beta_1$ as unknown parameters. Considering modes of \eqref{phi ttf} up to some $j_{max}$, the QP ansatz results in a set of $j_{max} + 1$ algebraic equations for $j_{max} + 3$ unknowns
 \begin{align}
 \label{qp eqn}
-2 \omega_l \alpha_l \beta_l = T_l \alpha_l^3 + \sum_{i \neq l} R_{il} \alpha_i^2 \alpha_l + \stackrel{l \leq i + j}{\sum_{i \neq l} \sum_{j \neq l}} S_{ij(i+j-l)l} \alpha_i \alpha_j \alpha_{i+j-l} \, .
+2 \omega_\ell \alpha_\ell \beta_\ell = T_\ell \alpha_\ell^3 + \sum_{i \neq \ell} R_{i\ell} \alpha_i^2 \alpha_\ell + \stackrel{\ell \leq i + j}{\sum_{i \neq \ell} \sum_{j \neq \ell}} S_{ij(i+j-\ell)\ell} \alpha_i \alpha_j \alpha_{i+j-\ell} \, .
 \end{align}
 As shown in \cite{1507.08261, 1510.07836}, the TTF is invariant under a $U(1)$ transformation that leads to the conserved quantities
 \begin{align}
@@ -191,7 +191,7 @@ E = 4\sum_j \omega^2_j \alpha_j^2 \qquad \text{and} \qquad N= 4 \sum_j \omega_j 
 \end{align}
 These definitions allow for two of the free parameters to be fixed. Families of solutions can be examined by fixing $\alpha_0 = 1$ and sampling a range of $\alpha_1$ values in the range $\alpha_1 \ll \alpha_0$. The families of solutions can be distinguished by their ``temperature'', or energy per particle number $T=E/N$. 
 
-Practically speaking, finding solutions to the $j_{max}$ equations that arise from \eqref{ttf eqn} requires truncating the series at a finite value $j_{max} < \infty$. These solutions must continue to be present and unaffected by increasing $j_{max}$ to represent true solutions to the perturbative system. 
+Practically speaking, finding solutions to the $j_{max}$ equations that arise from \eqref{ttf eqn} requires truncating the series at a finite value $j_{max} < \infty$. However, solutions must continue to be present and unaffected by increasing $j_{max}$ to represent true solutions to the TTF theory. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -200,7 +200,7 @@ Practically speaking, finding solutions to the $j_{max}$ equations that arise fr
 
 The question of edge effects in determining the stability of a particular solution is important to investigate. For instance, if a particular solution to \eqref{qp eqn} is found for some $\alpha_1$ when $j_{max} = 50$, does this continue to be a solution when we consider more modes, say $j_{max} = 250$? By following the methods outlined in appendix~\ref{app: seeding}, we are able to start with a low $j_{max}$ solution and incrementally increase the number of modes being considered up to several hundred. This method was found to be more successful, given the optimization algorithms being used, than other seeding methods.
 
-As an example, consider solutions to \eqref{qp eqn} with the conditions $\alpha_0 = 1.0$ (since all QP solutions are defined up to an overall scale, $\alpha_0 = 1.0$ is taken to always be true) and $\alpha_1 = 0.2$, which corresponds to an initial temperature of $T_0 \simeq 3.146$. In figure~\ref{fig: a0.2solns}, we present an overlay of QP solutions generated by successive solving, fitting, and seeding from $j_{max} = 50$ to $j_{max}=500$ for two families of QP solutions. Similar high $j_{max}$ solutions were confirmed for $\alpha_1 \leq 0.442$.
+As an example, consider solutions to \eqref{qp eqn} with the conditions $\alpha_0 = 1.0$ (since all QP solutions are defined up to an overall scale, $\alpha_0 = 1.0$ is taken to always be true) and $\alpha_1 = 0.2$, which corresponds to an initial temperature of $T_0 \simeq 3.146$. In figure~\ref{fig: a0.2solns}, we present an overlay of QP solutions generated by successive solving, fitting, and seeding from $j_{max} = 50$ to $j_{max}=500$ for a family of QP solutions. Similar high $j_{max}$ solutions were confirmed for $\alpha_1 \leq 0.442$ and are shown in figure~\ref{fig: j350 solutions}.
 
 \begin{figure}[h]
 	\centering
@@ -218,22 +218,22 @@ As an example, consider solutions to \eqref{qp eqn} with the conditions $\alpha_
 	\caption[Energy spectra for various QP solutions]{Energy spectra for various QP solutions.}
 \end{figure}
 
-When examining the range of $\alpha_1$ values that result in QP solutions existing, it was found that any solution that existed at small $j_{max}$ could be extended to large $j_{max}$ with proper seeding and sufficient computing power. However, a hard limit exists at the maximum $\alpha_1$ value of $\alpha_1=0.442$, corresponding to a temperature of $T \simeq 4.643$. Above this limit, no QP solutions can be found even for $j_{max}$ values as low as $j_{max}=50$. There seem to be no solutions that exist at low $j_{max}$ that cease to exist at high $j_{max}$. Furthermore, there is no corresponding lower limit to $\alpha_1$ values; as $\alpha_1 \to 0$ with $\alpha_j > \alpha_{j+1}$, the TTF solution approaches the well-known single-mode solution.
+When examining the range of $\alpha_1$ values that yield QP solutions, it was found that any small $j_{max}$ QP solution could be extended to large $j_{max}$ with proper seeding and sufficient computing power; that is, there seem to be no solutions that exist at low $j_{max}$ that cease to exist at high $j_{max}$\footnote{This is not true for high temperature solutions, as we will see.}. However, a hard limit exists at the maximum $\alpha_1$ value of $\alpha_1=0.442$, corresponding to a temperature of $T \simeq 4.643$. Above this limit, no QP solutions can be found even for $j_{max}$ values as low as $j_{max}=50$. Conversely, there is no lower limit to $\alpha_1$ values; as $\alpha_1 \to 0$ with $\alpha_j > \alpha_{j+1}$, the TTF solution approaches the well-known single-mode solution.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{High Temperature Perturbations}
+\section{High Temperature Perturbations}
 \label{ssec: highT}
 
-In \cite{1507.08261}, additional QP solutions can be found by repeatedly perturbing existing solutions. The addition of some energy $\delta E$ corresponds to the changes $\alpha_j \to \alpha_j + u_j$ and $\beta_j \to \beta_j + \theta_1 + \omega_j \theta_2$. The perturbed quantities are given by the system of \emph{linear} equations
+In \cite{1507.08261}, additional QP solutions were found by repeatedly perturbing away from existing solutions: the addition of some energy $\delta E$ corresponds to the changes $\alpha_j \to \alpha_j + u_j$ and $\beta_j \to \beta_j + \theta_1 + \omega_j \theta_2$. The perturbed quantities are given by the system of linear equations
 \begin{align}
 \label{HT1}
 \delta E &= 4 \sum_j \omega^2_j \alpha_j u_j \\
 \label{HT2}
 \delta N &= 4 \sum_j \oj \alpha_j u_j = 0 \\
 \label{HT3}
-0 &= \ol \left( \alpha_l (\theta_1 + \ol \theta_2) +\beta_l u_l \right) + 6T_l \alpha_l^2 u_l + 2 \sum_{i \neq l} R_{il} (\alpha_i^2 u_l + 2 \alpha_i \alpha_l u_l ) \nonumber \\
-& + 2 \stackrel{l \leq i + j}{\sum_{i \neq l} \sum_{j \neq l}} S_{ij(i+j-l)l} \left[ u_i \alpha_j \alpha_{i+j-l} + u_j \alpha_i \alpha_{i+j-l} + \alpha_i \alpha_j u_{i+j-l} \right].
+0 &= \ol \left( \alpha_\ell (\theta_1 + \ol \theta_2) +\beta_\ell u_\ell \right) + 6T_\ell \alpha_\ell^2 u_\ell + 2 \sum_{i \neq \ell} R_{i\ell} (\alpha_i^2 u_\ell + 2 \alpha_i \alpha_\ell u_\ell ) \nonumber \\
+& + 2 \stackrel{\ell \leq i + j}{\sum_{i \neq \ell} \sum_{j \neq \ell}} S_{ij(i+j-\ell)\ell} \left[ u_i \alpha_j \alpha_{i+j-\ell} + u_j \alpha_i \alpha_{i+j-\ell} + \alpha_i \alpha_j u_{i+j-\ell} \right].
 \end{align}
 Therefore, by solving \eqref{HT1}-\eqref{HT3} for $\{ u_j, \theta_1, \theta_2 \}$, the existing QP solution can be updated and the process can be repeated. 
 
@@ -325,6 +325,13 @@ Despite high-temperature solutions being inaccessible via repeated energy pertur
 \end{figure}
 
 Starting with a low-$\jm$, high-temperature solution, we can use a fitting procedure similar to that used to find high-$\jm$, quasi-periodic solutions in \S~\!\ref{ssec: large jmax}. Instead of fitting $\alpha_j$ values away from the highest modes, we instead apply the tail fitting the final 5 modes and use the fit to generate seed values for a $\jm + 5$ solution. We see in figure~\ref{fig: manual highT} that this method results in spectra where energy becomes increasingly concentrated in high-$j$ modes. In fact, for solutions with $\jm \geq 90$, and equal or greater amount of energy resides in the high-$j$ modes than in the zero-mode. Intuitively, such a solution would collapse very quickly in the full system due to the high concentration of energy on small length scales. However, because we have arrived at this solution through the two-time formalism, evolution using \eqref{RN1}-\eqref{RN2} would ensure the solutions remain stable. To help quantify the stability of QP solutions against collapse, we calculate the scalar curvature at the origin. 
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTemperatureComparison}
+		\caption{Finding high temperature QP solutions using repeated perturbations with regular projections back to the QP plane.}
+		\label{fig: const T perturbs}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -490,12 +497,12 @@ Despite the somewhat normal profile of the spectra of padded QP solution, we see
 
 Using a known QP solution, we may ask how far away from the solution plane we can move by padding with an incremental number of zeros. In figure~\ref{fig: Qpa2_00e-01padj105_evolutionprojection}, we show the result of using intermediate solutions from the amplitude/phase evolution of a $\jm = 100$ QP solution padded with only five modes (initially set to zero). Despite QP solutions existing for $\jm = 105$, no solution was found when using the padded solution -- at any point in its evolution -- as a seed.
 
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=0.75\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/Qpa2_00e-01padj105_evolutionprojection}
-	\caption[Spectra during evolution of a padded QP solution are used as seeds to project back to the QP plane]{{\it Left}: Normalized spectra for a $\jm = 100$, QP solution that has been padded with five extra modes, then evolved in time. Intermediate spectra are used as seeds for projecting back to the QP plane at times $\tau \simeq 4.1 \times 10^{-3}, 4.1 \times 10^{-2}, 4.1 \times 10^{-1}$ (green, blue, yellow). Arrows are oriented from seed spectra to best fit spectra. {\it Right:} Corresponding $L^2$-norms of the error for each solution.}
-	\label{fig: Qpa2_00e-01padj105_evolutionprojection}
-\end{figure}
+%\begin{figure}[ht]
+%	\centering
+%	\includegraphics[width=0.75\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/Qpa2_00e-01padj105_evolutionprojection}
+%	\caption[Spectra during evolution of a padded QP solution are used as seeds to project back to the QP plane]{{\it Left}: Normalized spectra for a $\jm = 100$, QP solution that has been padded with five extra modes, then evolved in time. Intermediate spectra are used as seeds for projecting back to the QP plane at times $\tau \simeq 4.1 \times 10^{-3}, 4.1 \times 10^{-2}, 4.1 \times 10^{-1}$ (green, blue, yellow). Arrows are oriented from seed spectra to best fit spectra. {\it Right:} Corresponding $L^2$-norms of the error for each solution.}
+%	\label{fig: Qpa2_00e-01padj105_evolutionprojection}
+%\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -555,52 +562,51 @@ Following the method outlined in \S~\!\ref{ssec: by hand highT}, we consider hig
 	\label{fig: HighTa2_1819e-01j100T6_6711e+01}
 \end{figure}
 
-Attempt padding out to $\jm = 125$ and run the evolution: see figure~\ref{fig:HighTa2_1819e-01padj125T6_6711e+01_evo}
+Padding QP solutions with $T > T_{th}$ and evolving does not give sensible results: high relative residuals in QP equation.
 
-\begin{figure}[h]
-	\centering
-	\begin{subfigure}[t]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa2_192e-01padj125T6_6711e+01_spectrumevo}
-	\end{subfigure}
-	\;
-	\begin{subfigure}[t]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa2_192e-01padj125T6_6711e+01_fullevo}
-	\end{subfigure}
-	\;
-	\begin{subfigure}[t]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa2_1819e-01padj125T6_6711e+01_Qpresids}
-	\end{subfigure}
-	\;
-	\begin{subfigure}[t]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa2_1819e-01padj125T6_6711e+01_ricci}
-	\end{subfigure}
-	\caption[Evolution of the spectrum, absolute and relative residual, and Ricci scalar for a high-temperature solution that has been padded with $25$ extra modes]{Padding the same initial solution from figure~\ref{fig: making highT}, but with only $25$ extra modes.}
-	\label{fig:HighTa2_1819e-01padj125T6_6711e+01_evo}
-\end{figure}
+%Attempt padding out to $\jm = 125$ and run the evolution: see figure~\ref{fig:HighTa2_1819e-01padj125T6_6711e+01_evo}
+%\begin{figure}[h]
+%	\centering
+%	\begin{subfigure}[t]{0.45\textwidth}
+%		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa2_192e-01padj125T6_6711e+01_spectrumevo}
+%	\end{subfigure}
+%	\;
+%	\begin{subfigure}[t]{0.45\textwidth}
+%		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa2_192e-01padj125T6_6711e+01_fullevo}
+%	\end{subfigure}
+%	\;
+%	\begin{subfigure}[t]{0.45\textwidth}
+%		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa2_1819e-01padj125T6_6711e+01_Qpresids}
+%	\end{subfigure}
+%	\;
+%	\begin{subfigure}[t]{0.45\textwidth}
+%		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa2_1819e-01padj125T6_6711e+01_ricci}
+%	\end{subfigure}
+%	\caption[Evolution of the spectrum, absolute and relative residual, and Ricci scalar for a high-temperature solution that has been padded with $25$ extra modes]{Padding the same initial solution from figure~\ref{fig: making highT}, but with only $25$ extra modes.}
+%	\label{fig:HighTa2_1819e-01padj125T6_6711e+01_evo}
+%\end{figure}
 
-Finally, consider padding such a solution out to $\jm = 200$. See figure~\ref{fig:HighTa2_1819e-01padj200T6_6711e+01_evo} for results.
+%Finally, consider padding such a solution out to $\jm = 200$. See figure~\ref{fig:HighTa2_1819e-01padj200T6_6711e+01_evo} for results.
+%\begin{figure}[h]
+%	\centering
+%	\begin{subfigure}[t]{0.45\textwidth}
+%		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa2_1819e-01padj200T6_6711e+01_specevo}
+%	\end{subfigure}
+%	\;
+%	\begin{subfigure}[t]{0.45\textwidth}
+%		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa2_1819e-01padj200T6_6711e+01_modesevo}
+%	\end{subfigure}
+%	\caption[Evolution of the spectrum of a high-temperature solution padded with $100$ modes]{Padding a $\jm = 100$, high temperature solution to $\jm = 200$ and evolving in time. $\epsilon = 0.1$}
+%	\label{fig:HighTa2_1819e-01padj200T6_6711e+01_evo}
+%\end{figure}
 
-\begin{figure}[h]
-	\centering
-	\begin{subfigure}[t]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa2_1819e-01padj200T6_6711e+01_specevo}
-	\end{subfigure}
-	\;
-	\begin{subfigure}[t]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa2_1819e-01padj200T6_6711e+01_modesevo}
-	\end{subfigure}
-	\caption[Evolution of the spectrum of a high-temperature solution padded with $100$ modes]{Padding a $\jm = 100$, high temperature solution to $\jm = 200$ and evolving in time. $\epsilon = 0.1$}
-	\label{fig:HighTa2_1819e-01padj200T6_6711e+01_evo}
-\end{figure}
-
-The evolved profile of the high-temperature solution can no longer be projected back to the QP solution plane: figure~\ref{fig: HighTa2_1819e-01padj125T6_6711e+01_evolutionprojection}.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.4]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa2_1819e-01padj125T6_6711e+01_evolutionprojection}
-	\caption[Evolution of the spectrum of a high-temperature solution padded with $25$ modes]{A high-temperature solution is padded with $25$ extra modes, then evolved in time. Above are the results of projecting back to the QP plane at $t \simeq 0.002, 0.004, 0.006, 0.06$ (red diamond, green cross, blue square, yellow triangle, magenta cirlce).}
-	\label{fig: HighTa2_1819e-01padj125T6_6711e+01_evolutionprojection}
-\end{figure}
+%The evolved profile of the high-temperature solution can no longer be projected back to the QP solution plane: figure~\ref{fig: HighTa2_1819e-01padj125T6_6711e+01_evolutionprojection}.
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[scale=0.4]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa2_1819e-01padj125T6_6711e+01_evolutionprojection}
+%	\caption[Evolution of the spectrum of a high-temperature solution padded with $25$ modes]{A high-temperature solution is padded with $25$ extra modes, then evolved in time. Above are the results of projecting back to the QP plane at $t \simeq 0.002, 0.004, 0.006, 0.06$ (red diamond, green cross, blue square, yellow triangle, magenta cirlce).}
+%	\label{fig: HighTa2_1819e-01padj125T6_6711e+01_evolutionprojection}
+%\end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -661,20 +667,20 @@ Padding the threshold temperature solution of $T \sim 5.4$ from $\jm = 100$ to $
 	\label{fig:HighTa4_072e-01padj200T5_3921e+00_evo}
 \end{figure}
 
-\begin{figure}[ht]
-	\centering
-	\begin{subfigure}[t]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa4_072e-01padj200T5_3921e+00_qpresids}
-		\caption{The residuals of \eqref{qp eqn} during the evolution of the padded threshold temperature solutions shown in figure~\ref{fig:HighTa4_072e-01padj200T5_3921e+00_evo}.}
-	\end{subfigure}
-	\;
-	\begin{subfigure}[t]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa4_072e-01padj200T5_3921e+00_ricci}
-		\caption{The upper envelope of the Ricci scalar at the origin per light-crossing time for the padded threshold temperature solution.}
-	\end{subfigure}
-	\caption[Padded threshold temperature solutions cannot be projected back to the QP solution plane]{Despite the spectrum of the padded threshold temperature solution (figure~\ref{fig:HighTa4_072e-01padj200T5_3921e+00_evo}) resembling that of lower-temperature QP solutions, these solutions move away from the QP plane and can no longer be projected back.}
-	\label{fig: HighTa4_072e-01padj200T5_3921e+00_projections}
-\end{figure}
+%\begin{figure}[ht]
+%	\centering
+%	\begin{subfigure}[t]{0.45\textwidth}
+%		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa4_072e-01padj200T5_3921e+00_qpresids}
+%		\caption{The residuals of \eqref{qp eqn} during the evolution of the padded threshold temperature solutions shown in figure~\ref{fig:HighTa4_072e-01padj200T5_3921e+00_evo}.}
+%	\end{subfigure}
+%	\;
+%	\begin{subfigure}[t]{0.45\textwidth}
+%		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa4_072e-01padj200T5_3921e+00_ricci}
+%		\caption{The upper envelope of the Ricci scalar at the origin per light-crossing time for the padded threshold temperature solution.}
+%	\end{subfigure}
+%	\caption[Padded threshold temperature solutions cannot be projected back to the QP solution plane]{Despite the spectrum of the padded threshold temperature solution (figure~\ref{fig:HighTa4_072e-01padj200T5_3921e+00_evo}) resembling that of lower-temperature QP solutions, these solutions move away from the QP plane and can no longer be projected back.}
+%	\label{fig: HighTa4_072e-01padj200T5_3921e+00_projections}
+%\end{figure}
 
 \begin{figure}[ht]
 	\centering
@@ -780,13 +786,13 @@ To err on the side of caution, the modes $[ j_{max} - 30,\: j_{max} - 10]$ were 
 The auxiliary coefficients $X, Y, W, W^*, A$, and $V$ allow the symmetries of the $T, R$ and $S$ coefficients to be more easily recognized and therefore reduce the number of total calculations involved in determining \eqref{T calc} - \eqref{S calc}. These auxiliary coefficients are written simply in terms of the eigenfunctions in \eqref{ttf eigens} and their derivatives. Explicitly, they are
 \begin{align}
 \label{X int}
-X_{ijkl} &= \int^{\pi/2}_0 dx \, e'_i(x) e_j(x) e_k(x) e_l(x) \sin(x) \cos(x) \left( \tan(x) \right)^{d-1} \\
+X_{ijk\ell} &= \int^{\pi/2}_0 dx \, e'_i(x) e_j(x) e_k(x) e_\ell(x) \sin(x) \cos(x) \left( \tan(x) \right)^{d-1} \\
 \label{Y int}
-Y_{ijkl} &= \int^{\pi/2}_0 dx \, e'_i(x) e_j(x) e'_k(x) e'_l(x) \sin(x) \cos(x) \left( \tan(x) \right)^{d-1} \\
+Y_{ijk\ell} &= \int^{\pi/2}_0 dx \, e'_i(x) e_j(x) e'_k(x) e'_\ell(x) \sin(x) \cos(x) \left( \tan(x) \right)^{d-1} \\
 \label{W int}
-W_{ijkl} &= \int^{\pi/2}_0 dx \, e_i(x) e_j(x) \sin(x) \cos(x) \int^x_0 dy \, e_k(y) e_l(y) \left( \tan(y) \right)^{d-1} \\
+W_{ijk\ell} &= \int^{\pi/2}_0 dx \, e_i(x) e_j(x) \sin(x) \cos(x) \int^x_0 dy \, e_k(y) e_\ell(y) \left( \tan(y) \right)^{d-1} \\
 \label{W* int}
-W^*_{ijkl} &= \int^{\pi/2}_0 dx \, e'_i(x) e'_j(x) \sin(x) \cos(x) \int^x_0 dy \, e_k(y) e_l(y) \left( \tan(y) \right)^{d-1} \\
+W^*_{ijk\ell} &= \int^{\pi/2}_0 dx \, e'_i(x) e'_j(x) \sin(x) \cos(x) \int^x_0 dy \, e_k(y) e_\ell(y) \left( \tan(y) \right)^{d-1} \\
 \label{A int}
 A_{ij} &= \int^{\pi/2}_0 dx \, e'_i(x) e'_j(x) \sin(x) \cos(x) \\
 \label{V int}
@@ -796,16 +802,16 @@ V_{ij} &= \int^{\pi/2}_0 dx \, e_i(x) e_j(x) \sin(x) \cos(x) \, .
 In terms of these coefficients, the TTF source terms are given by
 \begin{align}
 \label{T calc}
-T_l &= \frac{1}{2} \ol^2 X_{llll} + \frac{3}{2} Y_{llll} + 2\omega_l^4 W_{llll} + 2\omega_l^2 W^*_{llll} - \omega_l^2 (A_{ll} + \omega_l^2 V_{ll} ) \\
+T_\ell &= \frac{1}{2} \ol^2 X_{\ell\ell\ell\ell} + \frac{3}{2} Y_{\ell\ell\ell\ell} + 2\omega_\ell^4 W_{\ell\ell\ell\ell} + 2\omega_\ell^2 W^*_{\ell\ell\ell\ell} - \omega_\ell^2 (A_{\ell\ell} + \omega_\ell^2 V_{\ell\ell} ) \\
 \label{R calc}
-R_{il} &=\frac{1}{2} \left(\frac{\oi^2 + \ol^2}{\ol^2 - \oi^2}\right) (\omega_l^2 X_{illi} - \omega_i^2 X_{liil}) + 2\left(\frac{\ol^2 Y_{ilil} - \oi^2 Y_{lili}}{\ol^2 - \oi^2} \right) \nonumber \\
-&+ \left(\frac{\oi^2 \ol^2}{\ol^2 - \oi^2}\right) (X_{illi} - X_{lili}) + \frac{1}{2} (Y_{iill} + Y_{llii}) + \oi^2 \ol^2 (W_{llii} + W_{iill}) \nonumber \\
-&+ \oi^2 W^*_{llii} + \ol^2 W^*_{iill} - \ol^2 (A_{ii} + \omega_i^2 V_{ii} ) \\
+R_{i\ell} &=\frac{1}{2} \left(\frac{\oi^2 + \ol^2}{\ol^2 - \oi^2}\right) (\omega_\ell^2 X_{i\ell\ell i} - \omega_i^2 X_{\ell ii\ell}) + 2\left(\frac{\ol^2 Y_{i\ell i\ell } - \oi^2 Y_{\ell i\ell i}}{\ol^2 - \oi^2} \right) \nonumber \\
+&+ \left(\frac{\oi^2 \ol^2}{\ol^2 - \oi^2}\right) (X_{i\ell \ell i} - X_{\ell i\ell i}) + \frac{1}{2} (Y_{ii\ell \ell } + Y_{\ell \ell ii}) + \oi^2 \ol^2 (W_{\ell \ell ii} + W_{ii\ell \ell }) \nonumber \\
+&+ \oi^2 W^*_{\ell \ell ii} + \ol^2 W^*_{ii\ell \ell } - \ol^2 (A_{ii} + \omega_i^2 V_{ii} ) \\
 \label{S calc}
-S_{ijkl} &= -\frac{1}{4} \left( \frac{1}{\omega_i + \omega_j} + \frac{1}{\omega_i - \omega_k} + \frac{1}{\omega_j - \omega_k} \right) (\omega_i \omega_j \omega_k X_{lijk} - \omega_l Y_{iljk}) \nonumber \\
-& - \frac{1}{4} \left( \frac{1}{\omega_i + \omega_j} +\frac{1}{\omega_i - \omega_k} - \frac{1}{\omega_j - \omega_k} \right) (\oj \ok \ol X_{ijkl} - \oi Y_{jikl} ) \nonumber \\
-& -\frac{1}{4} \left( \frac{1}{\oi + \oj} - \frac{1}{\oi - \ok} + \frac{1}{\oj -\ok} \right) (\oi \ok \ol X_{jikl} - \oj Y_{ijkl} ) \nonumber \\
-& -\frac{1}{4} \left( \frac{1}{\oi + \oj} - \frac{1}{\oi - \ok} - \frac{1}{\oj - \ok} \right) (\oi \oj \ol X_{kijl} - \ok Y_{ikjl}) \, .
+S_{ijk\ell } &= -\frac{1}{4} \left( \frac{1}{\omega_i + \omega_j} + \frac{1}{\omega_i - \omega_k} + \frac{1}{\omega_j - \omega_k} \right) (\omega_i \omega_j \omega_k X_{\ell ijk} - \omega_\ell  Y_{i\ell jk}) \nonumber \\
+& - \frac{1}{4} \left( \frac{1}{\omega_i + \omega_j} +\frac{1}{\omega_i - \omega_k} - \frac{1}{\omega_j - \omega_k} \right) (\oj \ok \ol X_{ijk\ell } - \oi Y_{jik\ell } ) \nonumber \\
+& -\frac{1}{4} \left( \frac{1}{\oi + \oj} - \frac{1}{\oi - \ok} + \frac{1}{\oj -\ok} \right) (\oi \ok \ol X_{jik\ell } - \oj Y_{ijk\ell } ) \nonumber \\
+& -\frac{1}{4} \left( \frac{1}{\oi + \oj} - \frac{1}{\oi - \ok} - \frac{1}{\oj - \ok} \right) (\oi \oj \ol X_{kij\ell } - \ok Y_{ikj\ell }) \, .
 \end{align}
 
 
