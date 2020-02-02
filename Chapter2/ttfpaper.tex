@@ -221,6 +221,7 @@ As an example, consider solutions to \eqref{qp eqn} with the conditions $\alpha_
 When examining the range of $\alpha_1$ values that yield QP solutions, it was found that any small $j_{max}$ QP solution could be extended to large $j_{max}$ with proper seeding and sufficient computing power; that is, there seem to be no solutions that exist at low $j_{max}$ that cease to exist at high $j_{max}$\footnote{This is not true for high temperature solutions, as we will see.}. However, a hard limit exists at the maximum $\alpha_1$ value of $\alpha_1=0.442$, corresponding to a temperature of $T \simeq 4.643$. Above this limit, no QP solutions can be found even for $j_{max}$ values as low as $j_{max}=50$. Conversely, there is no lower limit to $\alpha_1$ values; as $\alpha_1 \to 0$ with $\alpha_j > \alpha_{j+1}$, the TTF solution approaches the well-known single-mode solution.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{High Temperature Perturbations}
 \label{ssec: highT}
@@ -244,10 +245,12 @@ For a standard QP solution with $\alpha_1 = 0.2$, the initial temperature is $T_
 \end{align}
 It can easily be seen that $\alpha_1$ will become singular when $T = \omega_1 = 5$ in AdS$_4$. Since we are inputting a value for the temperature $T$ instead of a $\alpha_1$, we are still solving a system of $j_{max} + 1$ equations for $j_{max} + 1$ unknowns.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsection{Projections With $\alpha_1$ as the Input}
 \label{ssec: a1 projections}
 
-Let us first consider the results of the $\alpha_1$ projection method, shown in figure~\ref{fig: reop comparisons}. We have fixed the perturbation amount $\delta E$ to $1\%$ of the energy of the initial solution. Beginning with an $\alpha_1 = 0.44$ solution with low \jm, we apply repeated energy perturbations and project back to the QP solution plane with a frequency of once per 5 temperature iterations. Figure~\ref{fig: a_1andTa0.2reop5} shows the resulting values of $\alpha_1$ and $T$ during these perturbations. We see that $\alpha_1$ approaches an attractor solution of $\alpha_1 \simeq 0.43$ with $T \simeq 4.3$. The energy perturbations between the projections are insufficient to escape this local minimum so that the same solution is found by the next projection. However, when the projection frequency is decreased to once every 20 iterations, the attractor solution is able to be bypassed. Note that as the iteration number increases, we actually see a \emph{decrease} in $\alpha_1$ value while the temperature continues to increase. At iteration 150 in figure~\ref{fig: a_1andTa.2reop20}, there is a cusp in $\alpha_1$ and a discontinuity in the temperature. After several hundred iterations, $\alpha_1$ becomes negative.
+Let us first consider the results of the $\alpha_1$ projection method, shown in figure~\ref{fig: reop comparisons}. We have fixed the perturbation amount $\delta E$ to $1\%$ of the energy of the initial solution. Beginning with an $\alpha_1 = 0.44$ solution with low \jm, we apply repeated energy perturbations and project back to the QP solution plane with a frequency of once per 5 temperature iterations. Figure~\ref{fig: a_1andTa0.2reop5} shows the resulting values of $\alpha_1$ and $T$ during these perturbations. We see that $\alpha_1$ approaches an attractor solution of $\alpha_1 \simeq 0.43$ with $T \simeq 4.3$. The energy perturbations between the projections are insufficient to escape this local minimum so that repeated projections return the same solution. However, when the projection frequency is decreased to once every 20 iterations, the attractor solution is able to be bypassed (variations of the projection frequency and energy perturbations are discussed in appendix~\ref{app: reop freq}). Note that as the iteration number increases, we actually see a \emph{decrease} in $\alpha_1$ value while the temperature continues to increase. At iteration 150 in figure~\ref{fig: a_1andTa.2reop20}, there is a cusp in $\alpha_1$ and a discontinuity in the temperature. After several hundred iterations, $\alpha_1$ becomes negative.
 
 \begin{figure}[h]
 	\centering
@@ -283,7 +286,7 @@ Let us examine the energy spectra these solutions. In figure~\ref{fig: spec comp
 	\label{tab: T_thresh}
 \end{table}
 
-When the projection frequency is decreased, the temperature is able to exceed $T_{th}$. However, as seen in figure~\ref{fig: spec comparisons reop20}, once $\alpha_1 < 0$ the energy spectrum is no longer $C^1$ differentiable ({\it c.f.} spectra of iterations 120 and 180). This in itself is not necessarily a breakdown of the quasi-periodic nature of the solution, as $\alpha_j < 0$ if {$\beta_j \tau = (2n + 1) \pi$} for {$n \in \mathbb{N}^0$}. However, upon examining the condition number of the matrix formed by \eqref{HT1}-\eqref{HT3}, we find that in fact the problem becomes ill-conditioned. This results in a absolute value of $u_i$ that is greater than $\alpha_i$; that is, the perturbative condition required to derive the system of linear equations \eqref{HT1}-\eqref{HT3} breaks down. For many prospective high-temperature solutions, this break-down of the perturbative condition is signalled by the loss of $C^1$ differentiability in the energy spectrum due to the values of $\alpha_j$ becoming negative. 
+When the projection frequency is decreased, the temperature is able to exceed $T_{th}$. However, as seen in figure~\ref{fig: spec comparisons reop20}, projections back to the QP plane give $\alpha_1 < 0$ and an energy spectrum that is no longer $C^1$ differentiable ({\it c.f.} spectra of iterations 120 and 180). This in itself is not necessarily a breakdown of the quasi-periodic nature of the solution, as $\alpha_j < 0$ if {$\beta_j \tau = (2n + 1) \pi$} for {$n \in \mathbb{N}^0$}. However, upon examining the condition number of the matrix formed by \eqref{HT1}-\eqref{HT3}, we find that in fact the problem becomes ill-conditioned. This results in a absolute value of $u_i$ that is greater than $\alpha_i$; that is, the perturbative condition required to derive the system of linear equations \eqref{HT1}-\eqref{HT3} breaks down. For many prospective high-temperature solutions, this break-down of the perturbative condition is signalled by the loss of $C^1$ differentiability in the energy spectrum due to the values of $\alpha_j$ becoming negative. 
 
 \begin{figure}[h]
 	\centering
@@ -301,6 +304,9 @@ When the projection frequency is decreased, the temperature is able to exceed $T
 	\caption[Energy spectra resulting from perturbing the same QP solution at differing frequencies]{Comparing energy spectra of high-temperature perturbations of an $\alpha_1=0.44$ QP solution that have been projected back to the QP plane at different frequencies.}
 	\label{fig: spec comps with reop}
 \end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Projections at Constant Temperature}
 \label{ssec: T projections}
@@ -321,45 +327,40 @@ Recall that solutions must be robust in the limit of $\jm \to \infty$ in order t
 \subsection{Building High-Temperature Solutions}
 \label{ssec: by hand highT}
 
-Despite high-temperature solutions being inaccessible via repeated energy perturbations, we may ask if such solutions can be found by using different methods. First, we consider perturbing a known QP solution to a high temperature \emph{without} regular projections back to the QP plane. Then, at some sufficiently high temperature $T_{max}$, we attempt to project back to the QP plane. In figure~\ref{fig: T30 vs j_max}, the spectra of QP solutions before and after projection are shown for increasing $j_{max}$. For solutions with $\jm \geq 100$, high-temperature solutions are in fact projected to low-temperature solutions that may contain negative $\alpha_j$ values. Low-$\jm$ solutions, however, appear to remain at high-temperatures after projecting back to the plane. We use this type of solution in our next method.
+In figure~\ref{fig: const T perturbs} we see that continuous spectra exist for goal temperatures of $T=6.0$ and $7.0$ when $\jm = 50$. It is therefore reasonable to consider whether a high temperature, low $\jm$ solution could be extended to a high temperature, high $\jm$ solution using a fitting procedure similar to that used in \S~\!\ref{ssec: large jmax} to find quasi-periodic solutions. Instead of fitting $\alpha_j$ values away from the highest modes, we instead apply the tail fitting the final 5 modes and use the fit to generate seed values for a $\jm + 5$ solution. We see in figure~\ref{fig: manual highT} that this method results in spectra where energy becomes increasingly concentrated in high-$j$ modes. In fact, for solutions with $\jm \geq 90$, and equal or greater amount of energy resides in the high-$j$ modes than in the zero-mode. These solutions are not robust as $\jm \to \infty$ and therefore are not solutions to the TTF equations.
 
 \begin{figure}[h]
 	\centering
-	\begin{subfigure}[t]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/T30vsj_max_partial_4paper}
-		\caption{QP solutions perturbed to $T_{max}=30.00$, which were then used as seeds for the nonlinear solver. Arrows are oriented from pre-optimized to post-optimized solutions.}
-		\label{fig: T30 vs j_max}
-	\end{subfigure}
-	\;
-	\begin{subfigure}[t]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/T30_extend_highj_4paper}
-		\caption{Extensions of the $j_{max}=50$ solution from figure~\ref{fig: T30 vs j_max} to larger $j_{max}$ solutions using tail fitting on only the final 5 modes of the solution.}
-		\label{fig: manual highT}
-	\end{subfigure}
-	\caption[Constructing high temperature solutions by hand]{Constructing high temperature solutions ``by hand.''}
-	\label{fig: making highT}
+	\includegraphics[width=0.75\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/T30_extend_highj_4paper}
+	\caption[Constructing high temperature solutions by hand]{Extending a high temperature, low $\jm$ solution to higher temperatures by fitting the final 5 modes and generating seed values.}
+	\label{fig: manual highT}
 \end{figure}
 
-Starting with a low-$\jm$, high-temperature solution, we can use a fitting procedure similar to that used to find high-$\jm$, quasi-periodic solutions in \S~\!\ref{ssec: large jmax}. Instead of fitting $\alpha_j$ values away from the highest modes, we instead apply the tail fitting the final 5 modes and use the fit to generate seed values for a $\jm + 5$ solution. We see in figure~\ref{fig: manual highT} that this method results in spectra where energy becomes increasingly concentrated in high-$j$ modes. In fact, for solutions with $\jm \geq 90$, and equal or greater amount of energy resides in the high-$j$ modes than in the zero-mode. Intuitively, such a solution would collapse very quickly in the full system due to the high concentration of energy on small length scales. However, because we have arrived at this solution through the two-time formalism, evolution using \eqref{RN1}-\eqref{RN2} would ensure the solutions remain stable. To help quantify the stability of QP solutions against collapse, we calculate the scalar curvature at the origin. 
+
+%Despite high-temperature solutions being inaccessible via repeated energy perturbations, we may ask if such solutions can be found by using different methods. First, we consider perturbing a known QP solution to a high temperature \emph{without} regular projections back to the QP plane. Then, at some sufficiently high temperature $T_{max}$, we attempt to project back to the QP plane. In figure~\ref{fig: T30 vs j_max}, the spectra of QP solutions before and after projection are shown for increasing $j_{max}$. For solutions with $\jm \geq 100$, high-temperature solutions are in fact projected to low-temperature solutions that may contain negative $\alpha_j$ values. Low-$\jm$ solutions, however, appear to remain at high-temperatures after projecting back to the plane. We use this type of solution in our next method.
+%\begin{figure}[h]
+%	\centering
+%	\begin{subfigure}[t]{0.45\textwidth}
+%		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/T30vsj_max_partial_4paper}
+%		\caption{QP solutions perturbed to $T_{max}=30.00$, which were then used as seeds for the nonlinear solver. Arrows are oriented from pre-optimized to post-optimized solutions.}
+%		\label{fig: T30 vs j_max}
+%	\end{subfigure}
+%	\;
+%	\begin{subfigure}[t]{0.45\textwidth}
+%		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/T30_extend_highj_4paper}
+%		\caption{Extensions of the $j_{max}=50$ solution from figure~\ref{fig: T30 vs j_max} to larger $j_{max}$ solutions using tail fitting on only the final 5 modes of the solution.}
+%		\label{fig: manual highT}
+%	\end{subfigure}
+%	\caption[Constructing high temperature solutions by hand]{Constructing high temperature solutions ``by hand.''}
+%	\label{fig: making highT}
+%\end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Stability of QP Solutions}
-\subsubsection{The Ricci Scalar at the Origin}
 
-While the TTF theory itself is stable by construction, we can examine the behaviour of the Ricci scalar at the origin for indications that collapse might occur in the full, nonlinear system. Large values or rapid increases in the Ricci curvature at the origin often indicates impending collapse {\bf (ref?)} in numerical simulations. Therefore, we use increases in scalar curvature as a potential indication of collapse. In figure~\ref{fig: compare Pi sq}, we show the highly oscillatory behaviour of the Ricci scalar corresponding to the $T\simeq 66.6$ high-temperature solution presented in figure~\ref{fig: manual highT}. Note that the upper envelope of $\Pi^2$ is $\mathcal{O}(10^{12})$ immediately; this suggests that the high-temperature solution is \emph{not stable} against collapse, even on perturbative timescales. Conversely, the constant behaviour and maximum amplitude $\mathcal{O}(10^4)$ of $\Pi^2$ for the $T \simeq 3.15$ QP solution -- over multiples of the perturbative timescale -- confirms that the solution remains quasi-periodic and does not collapse.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.75\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/PiSq_comparison_4paper}
-	\caption[Upper envelope of $\Pi^2$ at the origin for selected low- and high-temperature QP solutions]{Comparing the upper envelope of $\Pi^2$ at the origin per light-crossing time for selected low- and high-temperature solutions with $\epsilon = 1$: $j_{max} = 375$, QP $T \simeq 3.15$ (blue crosses); $j_{max} = 75,$ high-temperature $T \simeq 26.9$ (yellow octagons); $j_{max} = 100$, high temperature $T \simeq 75.35$ (green squares); $j_{max} = 95$, high temperature $T \simeq 66.6$ (red diamonds).}
-	\label{fig: compare Pi sq}
-\end{figure}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsubsection{Constraint Equations}
+Having identified QP solutions that are robust in the limit of $\jm \to \infty$, as well as a class of higher temperature solutions found from incremental perturbations about QP solutions, we can now ask how these solutions would evolve within the perturbative description. In particular, we wish to examine possible direct and inverse energy cascades in these quasi-periodic solutions, and determine if they continue to represent stable data. The cascades of energy between length scales will be evident in the spectra. Indirect observations of stability can be made through the value of the Ricci scalar at the origin, since large absolute values and/or rapid increases in scalar curvature often indicate instability in numerical simulations {\bf (ref?)}. 
 
 Another indicator of possible collapse and/or violation of the perturbative approximation is the growth of residuals when the TTF solutions are substituted into the Einstein equations. The residuals are calculated by reconstructing the time dependence of the scalar field and its derivatives using the amplitude-phase variables, and comparing the $\mc O(\epsilon^2)$ values of the derivatives of the metric functions in \eqref{EE const1}-\eqref{EE const2}. In particular, using the numerical values of the amplitude-phase variables $A_j$ and $B_j$, \eqref{ttf phi} gives the value of the leading-order scalar field contribution, $\phi_1(t,x)$. The $\mc O(\epsilon^2)$ contribution to the derivatives of metric functions come from
 \begin{align}
