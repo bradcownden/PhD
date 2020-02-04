@@ -25,13 +25,13 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Energy spectra resulting from perturbing the same QP solution at differing frequencies}}{54}{figure.caption.29}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Finding high temperature QP solutions using repeated perturbations with regular projections back to the QP plane.\relax }}{55}{figure.caption.30}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Constructing high temperature solutions by hand}}{56}{figure.caption.31}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Absolute and relative residuals for low- and high-temperature QP solutions}}{57}{figure.caption.32}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Evolution of QP solutions at low temperature for different truncation values}}{58}{figure.caption.33}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Residual and spectrum of a low-temperature QP solution during evolution}}{59}{figure.caption.34}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Taking the spectrum of a QP solution during evolution to use as a seed to find new QP solutions}}{60}{figure.caption.35}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces The evolution of a padded QP solution}}{63}{figure.caption.36}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Examining the energy per mode during the evolution of a threshold temperature solution}}{64}{figure.caption.37}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Evolution of the energy spectrum for a high-temperature solution created by hand}}{64}{figure.caption.38}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Evolution of QP solutions at low temperature}}{58}{figure.caption.32}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Residual and spectrum of a low-temperature QP solution during evolution}}{58}{figure.caption.33}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Taking the spectrum of a QP solution during evolution to use as a seed to find new QP solutions}}{59}{figure.caption.34}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces The evolution of a padded QP solution}}{62}{figure.caption.35}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Examining the energy per mode during the evolution of a threshold temperature solution}}{63}{figure.caption.36}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Evolution of the energy spectrum for a high-temperature solution created by hand}}{63}{figure.caption.37}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Absolute and relative residuals for low- and high-temperature QP solutions}}{64}{figure.caption.38}
 \contentsline {figure}{\numberline {3.13}{\ignorespaces Evolution of a high-temperature state that does not satisfy the QP equation}}{65}{figure.caption.39}
 \contentsline {figure}{\numberline {3.14}{\ignorespaces Evolution of the spectrum of a threshold temperature solution that has been padded with $100$ modes}}{66}{figure.caption.40}
 \contentsline {figure}{\numberline {3.15}{\ignorespaces Comparison between a threshold temperature solution with $j_{max} = 200$ and the evolution of a $j_{max} = 100$ threshold temperature solution that has been padded by $100$ modes}}{67}{figure.caption.41}

@@ -370,24 +370,7 @@ Another indicator of possible collapse and/or violation of the perturbative appr
 \p_x A_2(t,x) &= -\frac{1 - d + \cos(2x)}{\sin(x) \cos(x)}(A_2 - 1) - \sin(x) \cos(x) \left( (\p_x \phi_1)^2 + (\p_t \phi_1)^2 \right) \, , \\
 \text{with} \; A_2(t,x) &= - \frac{\cos^d(x)}{\sin^{d-1}(x)} \int^x_0 \tan^{d-1}(y) \left( (\p_t \phi_1)^2 + (\p_x \phi_1)^2 \right) dy \, .
 \end{align}
-The $L^2$-norm of the differences between \eqref{ddelta}-\eqref{dA} and \eqref{EE const1}-\eqref{EE const2} would constitute the residuals of the Einstein equations. However, while the leading-order contribution to the residuals is $\mc O(\epsilon^4)$, there are in fact higher order terms that enter into the calculation of $\p_t \phi$. A careful evaluation of the constraints would therefore include calculating the $\mc O(\epsilon^4)$ term in the metric function $A(t,x)$ so that the product $A ( \Phi^2 + \Pi^2)$ would include terms $\mc O(\epsilon^6)$. Instead, we limit our focus to examining only the difference between \eqref{EE const1} and \eqref{ddelta}, which does not suffer from higher-order contributions. The examination of residuals is taken as a suggestion of how well a TTF solution continues to satisfy the Einstein equations throughout its evolution. In figure~\ref{fig:EEresids}, we show the absolute and relative $L^2$-norms both QP and high temperature solutions.
-
-\begin{figure}[h]
-	\centering
-	\begin{subfigure}[t]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/Qpa4_40e-01j100EEresids}
-		\caption{An $\alpha_1 = 0.44$, $\jm = 100$ QP solution with $\epsilon = 0.001$.}
-		\label{fig:QPEEresid}
-	\end{subfigure}
-	\;
-	\begin{subfigure}[t]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa2_1819e-01padj125T6_6711e+01_EEresids}
-		\caption{A $\jm = 100$, high-temperature solution is padded with zeros to $\jm = 125$ and evolved with $\epsilon = 0.001$.}
-		\label{fig:highTEEresid}
-	\end{subfigure}
-	\caption[Absolute and relative residuals for low- and high-temperature QP solutions]{Residuals from evaluating the constraints for QP and high temperature solutions.}
-	\label{fig:EEresids}
-\end{figure}
+The $L^2$-norm of the differences between \eqref{ddelta}-\eqref{dA} and \eqref{EE const1}-\eqref{EE const2} would constitute the residuals of the Einstein equations. However, while the leading-order contribution to the residuals is $\mc O(\epsilon^4)$, there are in fact higher order terms that enter into the calculation of $\p_t \phi$. A careful evaluation of the constraints would therefore include calculating the $\mc O(\epsilon^4)$ term in the metric function $A(t,x)$ so that the product $A ( \Phi^2 + \Pi^2)$ would include terms $\mc O(\epsilon^6)$. Instead, we limit our focus to examining only the difference between \eqref{EE const1} and \eqref{ddelta}, which does not suffer from higher-order contributions. The examination of residuals is taken as a suggestion of how well a TTF solution continues to satisfy the Einstein equations throughout its evolution, with the understanding that growing residuals would indicate that higher order terms in the perturbative expansion are becoming relevant.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -395,23 +378,9 @@ The $L^2$-norm of the differences between \eqref{ddelta}-\eqref{dA} and \eqref{E
 \section{Time Evolution of Quasi-Periodic Solutions}
 \label{sec: time evolution}
 
-Using the numerical evolution methods from \cite{1606.02712}, we use a variety of quasi-periodic and high-temperature solutions discussed above as initial data. We then examine their evolution under \eqref{RN1}-\eqref{RN2}.
+The weakly turbulent behaviour of the scalar field in the TTF is captured by the $\mc O(\epsilon^2)$ renormalization group flow equations {\eqref{RN1}-\eqref{RN2}}. Having identified different families of quasi-periodic solutions, we wish to evolve these solutions and examine the direct and inverse cascades responsible for balancing the flow of energy between long and short length scales. To do this, we use numerical methods first described by \cite{1606.02712}, and take solutions discussed in \S\!~\ref{sec: qp} as initial data.
 
-{\bf For each type of solution below, we can generate the following plots:
-\begin{itemize}
-\item Ricci scalar at the origin
-\item Einstein equation residuals
-\item Energy spectra (mode evolution, full spectrum evolution)
-\item QP equation residuals 
-\item Projection of amp/phase intermediate solutions back to QP plane
-\end{itemize}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Quasi-Periodic Solutions}
-
-Consider first the evolution of a known QP solution. We see in figure~\ref{fig:qpevo} that the fraction of the total energy in the lowest-$j$ modes remains constant over the duration of the evolution, while the fraction in the highest-$j$ modes increases after $\tau \simeq 0.3$. Given the scale of the energy in the modes $j \geq 96$, this growth can mainly be attributed to numerical errors.
+The fraction of the total energy in each mode during the evolution of a $\jm = 100$, $T = 3.146$ QP solution with $\epsilon = 0.01$ is shown in figure~\ref{fig:qpevo} (note that the normalization flow equations \eqref{RN1}-\eqref{RN2} are invariant under $t \to \epsilon^2 t$ with . We see that the total energy in the lowest-$j$ modes remains constant over the duration of the evolution, while the fraction in the highest-$j$ modes increases after $\tau \simeq 0.3$. Similar behaviour is observed for higher $\jm$ solutions and over values of $0.2 \leq \alpha_1 \leq 0.44$. Given the scale of the energy in the modes $j \geq 96$, this growth can mainly be attributed to numerical errors.
 
 \begin{figure}[h]
 	\centering
@@ -424,11 +393,14 @@ Consider first the evolution of a known QP solution. We see in figure~\ref{fig:q
 		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/QPa2_00e-01_j100_highjenergyevo}
 		\caption{From top to bottom: $j=96, 97, 98, 99$ (purple, green, blue, orange).}
 	\end{subfigure}
-	\caption[Evolution of QP solutions at low temperature for different truncation values]{Amplitude-phase evolution of an $\alpha_1 = 0.2$, $\jm = 100$, QP solution with $\epsilon=0.01$. Similar behaviour is observed for higher $\jm$ solutions and over values of $0.2 \leq \alpha_1 \leq 0.44$.}
+	\caption[Evolution of QP solutions at low temperature]{Fraction of the total energy in each mode during evolution of an $\alpha_1 = 0.2$, $\jm = 100$, QP solution with $\epsilon=0.01$.}
 	\label{fig:qpevo}
 \end{figure}
 
-To better understand how well the QP solutions continue to satisfy the TTF equation throughout their time evolution, we evaluate the residuals of \eqref{qp eqn} using data taken during the evolution. Figure~\ref{fig: Qpa4_40e-01QPresids} is a sample of the $L^2$-norm of these residuals using values for the amplitude-phase variables $A_j(\tau)$, $B_j(\tau)$ during evolution. We also examine changes in the spectrum during the evolution, and show that there is very little deviation between the initial and final spectra for QP solutions beyond numerical drift.
+To better understand how well low-temperature QP solutions continue to satisfy the TTF equation throughout their time evolution, we evaluate the residuals of \eqref{qp eqn} at regular intervals of $t=0.025$ during the evolution of a $\jm = 100$, $T=4.531$ QP solution using data taken during the evolution. Figure~\ref{fig: Qpa4_40e-01QPresids} is a sample of the $L^2$-norm of these residuals for 
+
+
+ using values for the amplitude-phase variables $A_j(\tau)$, $B_j(\tau)$ during evolution. We also examine changes in the spectrum during the evolution, and show that there is very little deviation between the initial and final spectra for QP solutions beyond numerical drift.
 
 \begin{figure}[h]
 	\centering
@@ -574,6 +546,26 @@ Following the method outlined in \S~\!\ref{ssec: by hand highT}, we consider hig
 \end{figure}
 
 Padding QP solutions with $T > T_{th}$ and evolving does not give sensible results: high relative residuals in QP equation.
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}[t]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/Qpa4_40e-01j100EEresids}
+		\caption{An $\alpha_1 = 0.44$, $\jm = 100$ QP solution with $\epsilon = 0.001$.}
+		\label{fig:QPEEresid}
+	\end{subfigure}
+	\;
+	\begin{subfigure}[t]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa2_1819e-01padj125T6_6711e+01_EEresids}
+		\caption{A $\jm = 100$, high-temperature solution is padded with zeros to $\jm = 125$ and evolved with $\epsilon = 0.001$.}
+		\label{fig:highTEEresid}
+	\end{subfigure}
+	\caption[Absolute and relative residuals for low- and high-temperature QP solutions]{Residuals from evaluating the constraints for QP and high temperature solutions.}
+	\label{fig:EEresids}
+\end{figure}
+
+
+
 
 %Attempt padding out to $\jm = 125$ and run the evolution: see figure~\ref{fig:HighTa2_1819e-01padj125T6_6711e+01_evo}
 %\begin{figure}[h]
