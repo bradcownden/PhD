@@ -380,7 +380,9 @@ The $L^2$-norm of the differences between \eqref{ddelta}-\eqref{dA} and \eqref{E
 
 The weakly turbulent behaviour of the scalar field in the TTF is captured by the $\mc O(\epsilon^2)$ renormalization group flow equations {\eqref{RN1}-\eqref{RN2}}. Having identified different families of quasi-periodic solutions, we wish to evolve these solutions and examine the direct and inverse cascades responsible for balancing the flow of energy between long and short length scales. To do this, we use numerical methods first described by \cite{1606.02712}, and take solutions discussed in \S\!~\ref{sec: qp} as initial data.
 
-The fraction of the total energy in each mode during the evolution of a $\jm = 100$, $T = 3.146$ QP solution with $\epsilon = 0.01$ is shown in figure~\ref{fig:qpevo} (note that the normalization flow equations \eqref{RN1}-\eqref{RN2} are invariant under $t \to \epsilon^2 t$ with . We see that the total energy in the lowest-$j$ modes remains constant over the duration of the evolution, while the fraction in the highest-$j$ modes increases after $\tau \simeq 0.3$. Similar behaviour is observed for higher $\jm$ solutions and over values of $0.2 \leq \alpha_1 \leq 0.44$. Given the scale of the energy in the modes $j \geq 96$, this growth can mainly be attributed to numerical errors.
+{\bf $\jm = 100$, $\alpha_1 = 0.2$, $T=3.146$}
+
+The fraction of the total energy in each mode during the evolution of a $\jm = 100$, $T = 3.146$ QP solution with $\epsilon = 0.01$ is shown in figure~\ref{fig:qpevo}. We see that energy in the lowest-$j$ modes remains constant over the duration of the evolution, while the fraction in the highest-$j$ modes increases after $\tau \simeq 0.3$. Similar behaviour is observed for higher $\jm$ solutions and over values of $0.2 \leq \alpha_1 \leq 0.44$. Given the scale of the energy in the modes $j \geq 96$, the growing energy fractions in these modes can mainly be attributed to numerical errors rather than turbulent cascades.
 
 \begin{figure}[h]
 	\centering
@@ -397,25 +399,22 @@ The fraction of the total energy in each mode during the evolution of a $\jm = 1
 	\label{fig:qpevo}
 \end{figure}
 
-To better understand how well low-temperature QP solutions continue to satisfy the TTF equation throughout their time evolution, we evaluate the residuals of \eqref{qp eqn} at regular intervals of $t=0.025$ during the evolution of a $\jm = 100$, $T=4.531$ QP solution using data taken during the evolution. Figure~\ref{fig: Qpa4_40e-01QPresids} is a sample of the $L^2$-norm of these residuals for 
+%To better understand how well such solutions continue to satisfy the TTF equation throughout their time evolution, we evaluate the residuals of \eqref{qp eqn} at regular intervals of $t=0.025$ during the evolution of a $\jm = 100$, $T=4.531$ QP solution using data taken during the evolution. Figure~\ref{fig: Qpa4_40e-01QPresids} is a sample of the $L^2$-norm of these residuals for 
 
+%\begin{figure}[h]
+%	\centering
+%	\begin{subfigure}[t]{0.45\textwidth}
+%		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/Qpa4_40e-01QPresids}
+%	\end{subfigure}
+%	\;
+%	\begin{subfigure}[t]{0.45\textwidth}
+%		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/Qpa4_40e-01specevo}
+%	\end{subfigure}
+%	\caption[Residual and spectrum of a low-temperature QP solution during evolution]{{\it Left:} $L^2$-norm of the residuals of \eqref{qp eqn} evaluated at intervals of $0.025$ during the evolution of a $\jm = 100$, $\alpha_1 = 0.44$ QP solution with $\epsilon = 0.1$. {\it Right:} The spectra of the QP solution at the beginning and end of the evolution.}
+%	\label{fig: Qpa4_40e-01QPresids}
+%\end{figure}
 
- using values for the amplitude-phase variables $A_j(\tau)$, $B_j(\tau)$ during evolution. We also examine changes in the spectrum during the evolution, and show that there is very little deviation between the initial and final spectra for QP solutions beyond numerical drift.
-
-\begin{figure}[h]
-	\centering
-	\begin{subfigure}[t]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/Qpa4_40e-01QPresids}
-	\end{subfigure}
-	\;
-	\begin{subfigure}[t]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/Qpa4_40e-01specevo}
-	\end{subfigure}
-	\caption[Residual and spectrum of a low-temperature QP solution during evolution]{{\it Left:} $L^2$-norm of the residuals of \eqref{qp eqn} evaluated at intervals of $0.025$ during the evolution of a $\jm = 100$, $\alpha_1 = 0.44$ QP solution with $\epsilon = 0.1$. {\it Right:} The spectra of the QP solution at the beginning and end of the evolution.}
-	\label{fig: Qpa4_40e-01QPresids}
-\end{figure}
-
-Furthermore, we can attempt to project the evolved solutions back to the QP plane at various times to explore if these solutions loose their quasi-periodic nature. We observe that the time-evolved, low-temperature QP solutions are easily projected back to the solution plane at all times during the evolution, and that the resulting solutions solve the QP equation \eqref{qp eqn} to a high degree of accuracy (see figure~\ref{fig: Qpa4_40e-01j100EvolutionProjection}). While this is to be expected for such low-temperature QP solutions, we will soon see that even padding a known QP solution with zeros causes the loss of quasi-periodicity during evolution. For comparison, figure~\ref{fig: QPa4_40e-01padj200_evolutionprojection} shows the results of attempting to project a QP solution that has been padded with zeros back to the QP plane during its evolution. Note the scale on the plot of the $L^2$-norm in either case.
+Furthermore, we can attempt to project the evolved solutions back to the QP plane at various times to explore if these solutions lose their quasi-periodic nature. We observe that the time-evolved, low-temperature QP solutions are easily projected back to the solution plane at all times during the evolution, and that the resulting solutions solve the QP equation \eqref{qp eqn} to a high degree of accuracy (see figure~\ref{fig: Qpa4_40e-01j100EvolutionProjection}). While this is to be expected for such low-temperature QP solutions, we will soon see that even padding a known QP solution with zeros causes the loss of quasi-periodicity during evolution. For comparison, figure~\ref{fig: QPa4_40e-01padj200_evolutionprojection} shows the results of attempting to project a QP solution that has been padded with zeros back to the QP plane during its evolution. Note the scale on the plot of the $L^2$-norm in either case.
 
 \begin{figure}[h]
 	\centering
@@ -435,7 +434,7 @@ Furthermore, we can attempt to project the evolved solutions back to the QP plan
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Padded QP Solutions}
+\subsection{Padded QP Solutions}
 
 In an effort to extend the space of QP solutions, another method used to find solutions that exist nearby known QP solutions -- but are not accessible through perturbative or conventional seeding methods -- is to pad a given quasi-periodic solution with extra modes that are initially set to zero. Upon amplitude-phase evolution, the energy in the lower-$j$ modes will flow into the higher-$j$ modes and a new quasi-periodic solution may be found. In figure~\ref{fig:paddedqpevo}, we construct initial data out of a known $\jm = 100$, $T \simeq 3.14$ solution by padding with zeros up to $\jm = 200$. As in the case of unpadded QP solution, the fraction of the total energy in the first four modes does not vary during the evolution and the highest modes accumulate some numerical error before levelling off. In figure~\ref{fig: paddedqp_fullspecevo}, we see the accumulation of numerical error in the higher modes as the evolution progresses. Also included is the value of the Ricci scalar at the origin, and the residuals of the QP equation throughout the evolution.
 
@@ -495,7 +494,7 @@ High-temperature solutions are those that are found by repeated applications of 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Regular Projections to the QP Plane}
+\subsection{Regular Projections to the QP Plane}
 \label{sssec: evo of regular projections}
 
 Here we examine a high-temperature solution obtained from repeatedly adding small amounts of energy to a $\jm = 100$, $\alpha_1 = 0.44$ QP solution. First, we consider threshold temperature solutions discussed in \S~\!\ref{ssec: highT} -- those that are on the cusp of quasi-periodic data but cannot be found through solving \eqref{qp eqn} alone. See figure~\ref{fig:HighTa4_072e-01j100T5_3921e+00_evo} for results.
@@ -528,7 +527,7 @@ Threshold temperature solutions behave much like low-temperature quasi-periodic 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{``By Hand'' High-Temperature Solutions}
+\subsection{``By Hand'' High-Temperature Solutions}
 
 Following the method outlined in \S~\!\ref{ssec: by hand highT}, we consider high-temperature solutions constructed by hand out of lower $\jm$ solutions. We now examine the behaviour of one such solution under amplitude-phase evolution. 
 
@@ -614,7 +613,7 @@ Padding QP solutions with $T > T_{th}$ and evolving does not give sensible resul
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Perturbing to an Intermediate Temperature Before Reoptimizing}
+\subsection{Perturbing to an Intermediate Temperature Before Reoptimizing}
 
 Here, a QP solution is perturbed to a high temperature without regular projections back to the QP plane. At a pre-determined temperature cutoff, $T = 20.0$, the perturbation procedure is halted and the solution is used as a seed for the nonlinear solver. Instead of projecting to a QP solution at a high temperature, the nonlinear solver converges to a solution with only $T \sim 6.71$. We apply the amplitude-phase evolution procedure to the intermediate $T = 20.0$ solution in order to study how a solution for far away from the QP plane may behave. See figure~\ref{fig:HighTa1_779e-01j100T2_0000e+01evo} for results.
 
@@ -645,7 +644,7 @@ Here, a QP solution is perturbed to a high temperature without regular projectio
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Padded Threshold Temperature Solutions}
+\subsection{Padded Threshold Temperature Solutions}
 
 Padding the threshold temperature solution of $T \sim 5.4$ from $\jm = 100$ to $\jm = 200$ and then evolving in time produces very little change in the spectrum's profile. See figure~\ref{fig:HighTa4_072e-01padj200T5_3921e+00_evo} for results. Despite appearing to remain a high-temperature solution, the evolution of this profile renders it non-QP, as shown in figure~\ref{fig: HighTa4_072e-01padj200T5_3921e+00_projections}. For a more concrete examination, figure~\ref{fig: HighTa4_072e-01spec_vs_pad} shows the threshold temperature solution for $\jm = 200$ as well as padded threshold solutions during their evolution. Under amplitude/phase evolution, the padded solution \emph{does not} approach the known threshold solution.
 
