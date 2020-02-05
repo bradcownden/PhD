@@ -370,7 +370,22 @@ Another indicator of possible collapse and/or violation of the perturbative appr
 \p_x A_2(t,x) &= -\frac{1 - d + \cos(2x)}{\sin(x) \cos(x)}(A_2 - 1) - \sin(x) \cos(x) \left( (\p_x \phi_1)^2 + (\p_t \phi_1)^2 \right) \, , \\
 \text{with} \; A_2(t,x) &= - \frac{\cos^d(x)}{\sin^{d-1}(x)} \int^x_0 \tan^{d-1}(y) \left( (\p_t \phi_1)^2 + (\p_x \phi_1)^2 \right) dy \, .
 \end{align}
-The $L^2$-norm of the differences between \eqref{ddelta}-\eqref{dA} and \eqref{EE const1}-\eqref{EE const2} would constitute the residuals of the Einstein equations. However, while the leading-order contribution to the residuals is $\mc O(\epsilon^4)$, there are in fact higher order terms that enter into the calculation of $\p_t \phi$. A careful evaluation of the constraints would therefore include calculating the $\mc O(\epsilon^4)$ term in the metric function $A(t,x)$ so that the product $A ( \Phi^2 + \Pi^2)$ would include terms $\mc O(\epsilon^6)$. Instead, we limit our focus to examining only the difference between \eqref{EE const1} and \eqref{ddelta}, which does not suffer from higher-order contributions. The examination of residuals is taken as a suggestion of how well a TTF solution continues to satisfy the Einstein equations throughout its evolution, with the understanding that growing residuals would indicate that higher order terms in the perturbative expansion are becoming relevant.
+The $L^2$-norm of the differences between \eqref{ddelta}-\eqref{dA} and \eqref{EE const1}-\eqref{EE const2} would constitute the residuals of the Einstein equations. However, while the leading-order contribution to the residuals is $\mc O(\epsilon^4)$, there are in fact higher order terms that enter into the calculation of $\p_t \phi$. A careful evaluation of the constraints would therefore include calculating the $\mc O(\epsilon^4)$ term in the metric function $A(t,x)$ so that the product $A ( \Phi^2 + \Pi^2)$ would include terms $\mc O(\epsilon^6)$. Instead, we limit our focus to examining only the difference between \eqref{EE const1} and \eqref{ddelta}, which does not suffer from higher-order contributions. The examination of residuals is taken as a suggestion of how well a TTF solution continues to satisfy the Einstein equations throughout its evolution, with the understanding that growing residuals would indicate that higher order terms in the perturbative expansion are becoming relevant. See figure~\ref{fig: qpEEresids} for an example.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/Qpa4_40e-01j100EEresids}
+	\caption[Absolute and relative residuals for a low-temperature QP solution]{Absolute and relative residuals during evolution of a low-temperature, $\jm = 100$ QP solution with $\epsilon = 0.001$.}
+	\label{fig: qpEEresids}
+\end{figure}
+
+
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[0.75\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/Qpa4_40e-01j100EEresids}
+%	\caption[Absolute and relative residuals for a low-temperature QP solution]{Absolute and relative residuals during evolution of a low-temperature, $\jm = 100$ QP solution with $\epsilon = 0.001$.}
+%	\label{fig: qpEEresids}
+%\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -378,13 +393,11 @@ The $L^2$-norm of the differences between \eqref{ddelta}-\eqref{dA} and \eqref{E
 \section{Time Evolution of Quasi-Periodic Solutions}
 \label{sec: time evolution}
 
-The weakly turbulent behaviour of the scalar field in the TTF is captured by the $\mc O(\epsilon^2)$ renormalization group flow equations {\eqref{RN1}-\eqref{RN2}}. Having identified different families of quasi-periodic solutions, we wish to evolve these solutions and examine the direct and inverse cascades responsible for balancing the flow of energy between long and short length scales. To do this, we use numerical methods first described by \cite{1606.02712}, and take solutions discussed in \S\!~\ref{sec: qp} as initial data.
+The weakly turbulent behaviour of the scalar field in the TTF is captured by the $\mc O(\epsilon^2)$ renormalization group flow equations {\eqref{RN1}-\eqref{RN2}}. Having identified different families of quasi-periodic solutions, we wish to evolve these solutions and examine the direct and inverse cascades responsible for balancing the flow of energy between long and short length scales. Furthermore, we may also be able to identify inaccessible solutions by orbiting around a time-independent solution and attempting to project back to the QP plane. To achieve these aims, we use numerical methods first described by \cite{1606.02712} and take solutions discussed in \S\!~\ref{sec: qp} as initial data. 
 
-{\bf $\jm = 100$, $\alpha_1 = 0.2$, $T=3.146$}
+Let us consider the evolution of a ``typical'' QP solution: a solution to \eqref{qp eqn} with $\alpha_1 = 0.2$ and $\jm = 100$, corresponding to a temperature of $T = 3.146$. Choosing an amplitude of $\epsilon = 0.01$ (note that the TTF equations are invariant under $\mc A(\tau) \to \epsilon \, \mc A(\tau / \epsilon^2)$ and so the value of $\epsilon$ does not change the physics), figure~\ref{fig:qpevo} shows the evolution of the fraction of the total energy per mode. We see that energy in the lowest-$j$ modes remains constant over the duration of the evolution, while the fraction in the highest-$j$ modes increases after $\tau \simeq 0.3$. Similar behaviour is observed for higher $\jm$ solutions and over values of $0.2 \leq \alpha_1 \leq 0.44$. Given the scale of the energy in the modes $j \geq 96$, the growing energy fractions in these modes can mainly be attributed to numerical errors rather than direct energy cascades.
 
-The fraction of the total energy in each mode during the evolution of a $\jm = 100$, $T = 3.146$ QP solution with $\epsilon = 0.01$ is shown in figure~\ref{fig:qpevo}. We see that energy in the lowest-$j$ modes remains constant over the duration of the evolution, while the fraction in the highest-$j$ modes increases after $\tau \simeq 0.3$. Similar behaviour is observed for higher $\jm$ solutions and over values of $0.2 \leq \alpha_1 \leq 0.44$. Given the scale of the energy in the modes $j \geq 96$, the growing energy fractions in these modes can mainly be attributed to numerical errors rather than turbulent cascades.
-
-\begin{figure}[h]
+\begin{figure}[ht]
 	\centering
 	\begin{subfigure}[t]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/QPa2_00e-01_j100_lowjenergyevo}
@@ -414,45 +427,52 @@ The fraction of the total energy in each mode during the evolution of a $\jm = 1
 %	\label{fig: Qpa4_40e-01QPresids}
 %\end{figure}
 
-Furthermore, we can attempt to project the evolved solutions back to the QP plane at various times to explore if these solutions lose their quasi-periodic nature. We observe that the time-evolved, low-temperature QP solutions are easily projected back to the solution plane at all times during the evolution, and that the resulting solutions solve the QP equation \eqref{qp eqn} to a high degree of accuracy (see figure~\ref{fig: Qpa4_40e-01j100EvolutionProjection}). While this is to be expected for such low-temperature QP solutions, we will soon see that even padding a known QP solution with zeros causes the loss of quasi-periodicity during evolution. For comparison, figure~\ref{fig: QPa4_40e-01padj200_evolutionprojection} shows the results of attempting to project a QP solution that has been padded with zeros back to the QP plane during its evolution. Note the scale on the plot of the $L^2$-norm in either case.
+We may also ask: does a given quasi-periodic solution remain unique under evolution? That is, will the solution project back to itself during its evolution? To answer this, we evolve the same low-temperature, QP solution and take the spectra at different times as seed values for projecting back to the QP plane. We observe that these solutions continue to be projected back to themselves at all times during the evolution, and that the resulting solutions solve the QP equation \eqref{qp eqn} to a high degree of accuracy (see figure~\ref{fig: Qpa4_40e-01j100EvolutionProjection}). 
+
+%While this is to be expected for such low-temperature QP solutions, we will soon see that even padding a known QP solution with zeros causes the loss of quasi-periodicity during evolution. For comparison, figure~\ref{fig: QPa4_40e-01padj200_evolutionprojection} shows the results of attempting to project a QP solution that has been padded with zeros back to the QP plane during its evolution. Note the scale on the plot of the $L^2$-norm in either case.
 
 \begin{figure}[h]
 	\centering
-	\begin{subfigure}[t]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/Qpa4_40e-01j100EvolutionProjectionPlot}
-		\caption{Projected solutions for a low-temperature, QP solution and their $L^2$-norms at $t\simeq 0.0, 0.2, 0.5, 1.0, 2.0, 2.5$ (red diamond, green cross, blue square, yellow triangle, magenta circle, blue diamond).}
-		\label{fig: Qpa4_40e-01j100EvolutionProjection}
-	\end{subfigure}
-	\;
-	\begin{subfigure}[t]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/QPa4_40e-01padj200_evolutionprojection}
-		\caption{The same QP solution is padded with zeros out to $\jm = 200$ and evolved in time. Intermediate solutions are projected back to the QP plane at $t \simeq 0.0, 5.1, 10.2, ...$ (red diamond, green cross, blue square ...)}
-		\label{fig: QPa4_40e-01padj200_evolutionprojection}
-	\end{subfigure}
-	\caption[Taking the spectrum of a QP solution during evolution to use as a seed to find new QP solutions]{Intermediate values from the amplitude/phase evolution of a solution are used as seeds for the nonlinear solver at various times. Arrows are oriented from amplitude/phase seed values (circles) to QP plane projections (pentagons).}
+	\includegraphics[width=0.6\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/Qpa4_40e-01j100EvolutionProjectionPlot}
+	\caption[Taking the spectrum of a QP solution during evolution to use as a seed to find new QP solutions]{Left: Projecting a low-temperature solution back to the QP plane during its evolution. Arrows are oriented from amplitude/phase seed values (circles) to QP plane projections (pentagons). Right: the $L^2$-norms of the projected solutions at $t\simeq 0.0, 0.2, 0.5, 1.0, 2.0, 2.5$ (red diamond, green cross, blue square, yellow triangle, magenta circle, blue diamond).}
+	\label{fig: Qpa4_40e-01j100EvolutionProjection}
 \end{figure}
+
+%\begin{figure}[h]
+%	\centering
+%	\begin{subfigure}[t]{0.45\textwidth}
+%		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/Qpa4_40e-01j100EvolutionProjectionPlot}
+%		\caption{Projected solutions for a low-temperature, QP solution and their $L^2$-norms at $t\simeq 0.0, 0.2, 0.5, 1.0, 2.0, 2.5$ (red diamond, green cross, blue square, yellow triangle, magenta circle, blue diamond).}
+%		\label{fig: Qpa4_40e-01j100EvolutionProjection}
+%	\end{subfigure}
+%	\;
+%	\begin{subfigure}[t]{0.45\textwidth}
+%		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/QPa4_40e-01padj200_evolutionprojection}
+%		\caption{The same QP solution is padded with zeros out to $\jm = 200$ and evolved in time. Intermediate solutions are projected back to the QP plane at $t \simeq 0.0, 5.1, 10.2, ...$ (red diamond, green cross, blue square ...)}
+%		\label{fig: QPa4_40e-01padj200_evolutionprojection}
+%	\end{subfigure}
+%	\caption[Taking the spectrum of a QP solution during evolution to use as a seed to find new QP solutions]{Intermediate values from the amplitude/phase evolution of a solution are used as seeds for the nonlinear solver at various times. Arrows are oriented from amplitude/phase seed values (circles) to QP plane projections (pentagons).}
+%\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Padded QP Solutions}
-
-In an effort to extend the space of QP solutions, another method used to find solutions that exist nearby known QP solutions -- but are not accessible through perturbative or conventional seeding methods -- is to pad a given quasi-periodic solution with extra modes that are initially set to zero. Upon amplitude-phase evolution, the energy in the lower-$j$ modes will flow into the higher-$j$ modes and a new quasi-periodic solution may be found. In figure~\ref{fig:paddedqpevo}, we construct initial data out of a known $\jm = 100$, $T \simeq 3.14$ solution by padding with zeros up to $\jm = 200$. As in the case of unpadded QP solution, the fraction of the total energy in the first four modes does not vary during the evolution and the highest modes accumulate some numerical error before levelling off. In figure~\ref{fig: paddedqp_fullspecevo}, we see the accumulation of numerical error in the higher modes as the evolution progresses. Also included is the value of the Ricci scalar at the origin, and the residuals of the QP equation throughout the evolution.
+Furthermore, in an effort to extend the space of QP solutions, another method used to find solutions that exist nearby known QP solutions -- but are not accessible through perturbative or conventional seeding methods -- is to pad a given quasi-periodic solution with extra modes that are initially set to zero. Upon amplitude-phase evolution, the energy in the lower-$j$ modes will flow into the higher-$j$ modes and a new quasi-periodic solution may be found, albeit with the same temperature. In figure~\ref{fig:paddedqpevo}, we construct initial data out of a known $\jm = 100$, $T \simeq 3.14$ solution by padding the data with zeros up to $\jm = 200$. As in the case of unpadded QP solution, the fraction of the total energy in the first four modes does not vary significantly during the evolution and the highest modes accumulate some numerical error before levelling off. 
 
 \begin{figure}[h]
 	\centering
 	\begin{subfigure}[t]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/paddedQPa2_00e-01_j200_lowjenergyevo}
-		\caption{The evolution of the first four modes of the padded QP solution: $j=0,1,2,3$ (purple, green, blue, orange).}
+		\caption{The evolution of the first four modes of the padded QP solution: {$j=0,1,2,3$} (purple, green, blue, orange).}
 	\end{subfigure}
 	\;
 	\begin{subfigure}[t]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/paddedQPa2_00e-01_j200_highjenergyevo}
-		\caption{The evolution of the last four modes: $j = 196, 197, 198, 199$ (purple, green, blue, orange).}
+		\caption{The evolution of the last four modes: ${j = 196, 197, 198, 199}$ (purple, green, blue, orange).}
 	\end{subfigure}
 	\;
 	\begin{subfigure}[t]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/paddedQPa2_00e-01_j200_energyevo}
-		\caption{Comparing the evolution of a selection of modes: $j= 50, 75, 100, 125, 150$ (purple, green, blue, orange, yellow).}
+		\caption{Comparing the evolution of a selection of modes: {$j= 50, 75, 100, 125, 150$} (purple, green, blue, orange, yellow).}
 	\end{subfigure}
 	\;
 	\begin{subfigure}[t]{0.45\textwidth}
@@ -460,22 +480,36 @@ In an effort to extend the space of QP solutions, another method used to find so
 		\caption{The total spectrum of the padded QP solution as a function of time.}
 		\label{fig: paddedqp_fullspecevo}
 	\end{subfigure}
-	\;
-	\begin{subfigure}[t]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/Qpa2_00e-01padj200_ricci}
-		\caption{The Ricci scalar at the origin as a function of time for the padded QP solution.}
-	\end{subfigure}
-	\;
-	\begin{subfigure}[t]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/Qp2_00e-01padj200_resids}
-		\caption{The residuals of the QP equation \eqref{qp eqn} throughout the amplitude-phase evolution of the padded QP solution.}
-		\label{fig: Qp2_00e-01padj200_resids}
-	\end{subfigure}
 	\caption[The evolution of a padded QP solution]{The evolution of the padded QP solution for $\alpha_1 =0.2$ and $\jm = 200$, with amplitude $\epsilon=0.1$.}
 	\label{fig:paddedqpevo}
 \end{figure}
 
-Despite the somewhat normal profile of the spectra of padded QP solution, we see in figure~\ref{fig: QPa4_40e-01padj200_evolutionprojection} that intermediate solutions during the evolution in fact \emph{do not} project back to the QP plane. Rather, as hinted at by the Einstein equation residuals shown in figure~\ref{fig: Qp2_00e-01padj200_resids}, the solutions have drifted away from their quasi-periodic initial data. It remains to be seen whether such profiles would be stable in the fully nonlinear system.
+Despite the somewhat normal profile of the spectra of padded QP solution -- and the relatively low value of the Ricci scalar at the origin, shown in figure~\ref{fig: Qpa2_00e-01padj200_ricci} --  we find that intermediate solutions during the evolution in fact \emph{do not} project back to the QP plane (see figure~\ref{fig: QPa4_40e-01padj200_evolutionprojection}). Rather, as hinted at by the Einstein equation residuals shown in figure~\ref{fig: Qp2_00e-01padj200_resids}, the solutions have drifted away from their quasi-periodic initial data. It remains to be seen whether such profiles would be stable in the fully nonlinear system.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.75\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/QPa4_40e-01padj200_evolutionprojection}
+	\caption[Evolving a padded QP solution]{A low temperature QP solution is padded with zeros out to $\jm = 200$ and evolved in time with $\epsilon=0.1$. Intermediate solutions are projected back to the QP plane at $t \simeq 0.0, 5.1, 10.2 $ (red diamond, green cross, blue square)}
+	\label{fig: QPa4_40e-01padj200_evolutionprojection}
+\end{figure}
+
+\begin{figure}[h]
+	\begin{subfigure}[t]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/Qpa2_00e-01padj200_ricci}
+		\caption{The Ricci scalar at the origin as a function of time.}
+	\end{subfigure}
+	\;
+	\begin{subfigure}[t]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/Qp2_00e-01padj200_resids}
+		\caption{The residuals of the QP equation \eqref{qp eqn} during the evolution of the padded QP solution.}
+		\label{fig: Qp2_00e-01padj200_resids}
+	\end{subfigure}
+	\caption[Stability indicators for a padded QP solution]{Measures of stability for an $\alpha_1 = 0.2$, $\jm = 100$ QP solution that has been padded with zeros to $\jm = 200$.}
+	\label{fig:paddedqpstab}
+	\caption{}
+	\end{figure}
+
+
 
 Using a known QP solution, we may ask how far away from the solution plane we can move by padding with an incremental number of zeros. In figure~\ref{fig: Qpa2_00e-01padj105_evolutionprojection}, we show the result of using intermediate solutions from the amplitude/phase evolution of a $\jm = 100$ QP solution padded with only five modes (initially set to zero). Despite QP solutions existing for $\jm = 105$, no solution was found when using the padded solution -- at any point in its evolution -- as a seed.
 
