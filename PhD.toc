@@ -42,10 +42,8 @@
 \contentsline {section}{\numberline {3.6}Time Evolution of Quasi-Periodic Solutions}{57}{section.3.6}
 \contentsline {subsection}{\numberline {3.6.1}Low-temperature QP data}{58}{subsection.3.6.1}
 \contentsline {subsection}{\numberline {3.6.2}High-Temperature QP Data}{60}{subsection.3.6.2}
-\contentsline {subsection}{\numberline {3.6.3}``By Hand'' High-Temperature Solutions}{62}{subsection.3.6.3}
-\contentsline {subsection}{\numberline {3.6.4}Perturbing to an Intermediate Temperature Before Reoptimizing}{63}{subsection.3.6.4}
-\contentsline {subsection}{\numberline {3.6.5}Padded Threshold Temperature Solutions}{64}{subsection.3.6.5}
-\contentsline {section}{\numberline {3.7}Discussion}{64}{section.3.7}
+\contentsline {subsection}{\numberline {3.6.3}Counter-examples}{62}{subsection.3.6.3}
+\contentsline {section}{\numberline {3.7}Discussion}{63}{section.3.7}
 \contentsline {section}{\numberline {3.A}Seeding Methods For Non-Linear Solvers}{65}{section.2.3.A}
 \contentsline {section}{\numberline {3.B}Auxiliary Integrals For Calculating the $T, R, S$ Coefficients}{65}{section.2.3.B}
 \contentsline {section}{\numberline {3.C}Frequency of Solution Checking}{67}{section.2.3.C}
@@ -66,4 +64,4 @@
 \contentsline {section}{\numberline {4.A}Derivation of Source Terms For Massive Scalars}{92}{section.3.4.A}
 \contentsline {section}{\numberline {4.B}Two Non-normalizable Modes with Equal Frequencies}{95}{section.3.4.B}
 \contentsline {chapter}{\numberline {5}Conclusion}{97}{chapter.5}
-\contentsline {chapter}{Bibliography}{105}{appendix*.53}
+\contentsline {chapter}{Bibliography}{105}{appendix*.52}

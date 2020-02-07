@@ -558,7 +558,7 @@ We now apply the same amplitude-phase evolution procedure to threshold and possi
 	\label{fig:HighTa4_072e-01j100T5_3921e+00_evo}
 \end{figure}
 
-As in the case of low-temperature QP solutions, we wish to expand the space of possible solutions by padding threshold data with extra modes initially set to zero. Consider padding the threshold temperature solution of $T \sim 5.4$ from $\jm = 100$ to $\jm = 200$ with $\alpha_j = 0$ for $j > 99$. Evolving in time produces little change in the energy spectrum, as seen in the lower lefthand plot of figure~\ref{fig: HighTa4_072e-01padj200T5_3921e+00_evo}. While the lowest frequency modes are once again unchanged, there interesting indications of large scale energy transfer amongst modes with higher frequencies (upper plots in figure~\ref{fig: HighTa4_072e-01padj200T5_3921e+00_evo}). Interestingly, the magnitude and oscillation frequency of the Ricci scalar at the origin is significantly decreased compared to the $\jm = 100$ threshold solution {\bf explanation?}. When compared against the known solution of the same temperature when $\jm = 200$, figure~\ref{fig: HighTa4_072e-01spec_vs_pad} shows us that the padded solution does note approach the known threshold solution; rather, evolution has produced two, equal-temperature solutions.
+As in the case of low-temperature QP solutions, we wish to expand the space of possible solutions by padding threshold data with extra modes initially set to zero. Consider padding the threshold temperature solution of $T \sim 5.4$ from $\jm = 100$ to $\jm = 200$ with $\alpha_j = 0$ for $j > 99$. Evolving in time produces little change in the energy spectrum, as seen in the lower lefthand plot of figure~\ref{fig: HighTa4_072e-01padj200T5_3921e+00_evo}. While the lowest frequency modes are once again unchanged, there interesting indications of large scale energy transfer amongst modes with higher frequencies (upper plots in figure~\ref{fig: HighTa4_072e-01padj200T5_3921e+00_evo}). Interestingly, the magnitude and oscillation frequency of the Ricci scalar at the origin is significantly decreased compared to the $\jm = 100$ threshold solution {\bf (explanation?)}. When compared against the known solution of the same temperature when $\jm = 200$, figure~\ref{fig: HighTa4_072e-01spec_vs_pad} shows us that the padded solution does not approach the known threshold solution; rather, evolution has produced two, equal-temperature solutions.
 
 \begin{figure}[h]
 	\centering
@@ -600,31 +600,32 @@ As in the case of low-temperature QP solutions, we wish to expand the space of p
 %	\label{fig: HighTa4_072e-01padj200T5_3921e+00_projections}
 %\end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.75\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa4_072e-01spec_vs_padv2}
 	\caption[Comparison between a threshold temperature solution with $j_{max} = 200$ and the evolution of a $j_{max} = 100$ threshold temperature solution that has been padded by $100$ modes]{Overlay of the known threshold temperature solution for $\jm = 200$ (thick red line) with snapshots of the spectra of a $\jm = 100$ solution of the same temperature found by padding with zeros to $\jm = 200$. Snapshots taken at $\tau =1, 2, 3, 4, 5 \times 10^{-5}$ (blue, green, yellow, magenta, cyan).}
 	\label{fig: HighTa4_072e-01spec_vs_pad}
 \end{figure}
 
-\subsection{``By Hand'' High-Temperature Solutions}
+\subsection{Counter-examples}
 
-Following the method outlined in \S~\!\ref{ssec: by hand highT}, we consider high-temperature solutions constructed by hand out of lower $\jm$ solutions. We now examine the behaviour of one such solution under amplitude-phase evolution. 
+As we have seen, some QP solutions retain a power law spectrum under evolution, but scalar curvature and/or large residuals in the Einstein equations indicate that such data may not persist over timescales $t \sim \epsilon^{-2}$ under fully nonlinear evolution. As a final example, we consider a solution that has been repeatedly perturbed using the method described in \S~\ref{ssec: highT} to a temperature of $T = 20$ without projecting back to the QP plane \emph{at any point}. This solution is then used as seed values to solve \eqref{ttf eqn}. For values of $\jm \lesssim 100$, solutions
 
-\begin{figure}[h!]
-	\centering
-	\begin{subfigure}[t]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa2_1819e-01j100T6_6711e+01_fullevo}
-	\end{subfigure}
-	\;
-	\begin{subfigure}[t]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa2_1819e-01j100T6_6711e+01_specevo}
-	\end{subfigure}
-	\caption[Evolution of the energy spectrum for a high-temperature solution created by hand]{The evolution of a high-temperature solution created by hand from lower $\jm$ solutions.}
-	\label{fig: HighTa2_1819e-01j100T6_6711e+01}
-\end{figure}
+It has been suggested that high-temperature QP solutions should exist in a continuous region of temperature space from $T_{min} = d$ to $T_{max} = 2\jm + d$ and that perturbing a low-temperature QP solution to a temperature above $T_{th}$ before implementing regular projections allows for all such solutions to be found. However, we have found that the majority of high temperature solutions are not robust as $\jm \to \infty$ and therefore do no constitute true solutions. 
 
-Padding QP solutions with $T > T_{th}$ and evolving does not give sensible results: high relative residuals in QP equation.
+%\begin{figure}[h]
+%	\centering
+%	\begin{subfigure}[t]{0.45\textwidth}
+%		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa2_1819e-01j100T6_6711e+01_fullevo}
+%	\end{subfigure}
+%	\;
+%	\begin{subfigure}[t]{0.45\textwidth}
+%		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa2_1819e-01j100T6_6711e+01_specevo}
+%	\end{subfigure}
+%	\caption[Evolution of the energy spectrum for a high-temperature solution created by hand]{The evolution of a high-temperature solution created by hand from lower $\jm$ solutions.}
+%	\label{fig: HighTa2_1819e-01j100T6_6711e+01}
+%\end{figure}
+
 
 %\begin{figure}[h]
 %	\centering
@@ -642,9 +643,6 @@ Padding QP solutions with $T > T_{th}$ and evolving does not give sensible resul
 %	\caption[Absolute and relative residuals for low- and high-temperature QP solutions]{Residuals from evaluating the constraints for QP and high temperature solutions.}
 %	\label{fig:EEresids}
 %\end{figure}
-
-
-
 
 %Attempt padding out to $\jm = 125$ and run the evolution: see figure~\ref{fig:HighTa2_1819e-01padj125T6_6711e+01_evo}
 %\begin{figure}[h]
@@ -691,22 +689,19 @@ Padding QP solutions with $T > T_{th}$ and evolving does not give sensible resul
 %\end{figure}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Perturbing to an Intermediate Temperature Before Reoptimizing}
-
-Here, a QP solution is perturbed to a high temperature without regular projections back to the QP plane. At a pre-determined temperature cutoff, $T = 20.0$, the perturbation procedure is halted and the solution is used as a seed for the nonlinear solver. Instead of projecting to a QP solution at a high temperature, the nonlinear solver converges to a solution with only $T \sim 6.71$. We apply the amplitude-phase evolution procedure to the intermediate $T = 20.0$ solution in order to study how a solution for far away from the QP plane may behave. See figure~\ref{fig:HighTa1_779e-01j100T2_0000e+01evo} for results.
+Here, a QP solution is perturbed to a high temperature without regular projections back to the QP plane. At a pre-determined temperature cutoff, $T = 20.0$, the perturbation procedure is halted and the solution is used as a seed for the nonlinear solver. Instead of projecting to a QP solution at a high temperature, the nonlinear solver converges to a solution with only $T \sim 6.71$. We apply the amplitude-phase evolution procedure to the intermediate $T = 20.0$ solution in order to study how a solution for far away from the QP plane may behave. See figure~\ref{fig:HighTa1_779e-01j100T2_0000e+01evo} for results. The same results hold for high-temperature solutions created by hand from lower $\jm$ solutions.
 
 \begin{figure}[h]
 	\centering
 	\begin{subfigure}[t]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa1_779e-01j100T2_0000e+01_lowjevo}
-		\caption{Evolution of the first four modes.}
+		\caption{Evolution of the first four modes: ${j = 0, 1, 2, 3}$ (purple, green, blue, orange).}
 	\end{subfigure}
 	\;
 	\begin{subfigure}[t]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa1_779e-01j100T2_0000e+01_fullevo}
-		\caption{Comparative evolution of modes\\ $j=0, 25, 50, 75, 99$.}
+		\caption{Comparative evolution of modes ${j=0, 25, 50, 75, 99}$ (purple, green, blue, orange).}
 	\end{subfigure}
 	\;
 	\begin{subfigure}[t]{0.45\textwidth}
@@ -721,11 +716,6 @@ Here, a QP solution is perturbed to a high temperature without regular projectio
 	\caption[Evolution of a high-temperature state that does not satisfy the QP equation]{The evolution of an intermediate, high-temperature solution that \emph{does not} correspond to a solution of the QP equations.}
 	\label{fig:HighTa1_779e-01j100T2_0000e+01evo}
 \end{figure}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Padded Threshold Temperature Solutions}
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
