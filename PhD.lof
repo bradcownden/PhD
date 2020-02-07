@@ -25,24 +25,23 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Energy spectra resulting from perturbing the same QP solution at differing frequencies}}{54}{figure.caption.29}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Finding high temperature QP solutions using repeated perturbations with regular projections back to the QP plane.\relax }}{55}{figure.caption.30}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Constructing high temperature solutions by hand}}{56}{figure.caption.31}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Absolute and relative residuals for a low-temperature QP solution}}{57}{figure.caption.32}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Absolute and relative residuals for a low-temperature QP solution}}{58}{figure.caption.32}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Evolution of QP solutions at low temperature}}{58}{figure.caption.33}
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Taking the spectrum of a QP solution during evolution to use as a seed to find new QP solutions}}{59}{figure.caption.34}
 \contentsline {figure}{\numberline {3.9}{\ignorespaces The evolution of a padded QP solution}}{60}{figure.caption.35}
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Examining the energy per mode during the evolution of a threshold temperature solution}}{61}{figure.caption.36}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Evolution of the energy spectrum for a high-temperature solution created by hand}}{62}{figure.caption.37}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Absolute and relative residuals for low- and high-temperature QP solutions}}{63}{figure.caption.38}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Evolution of a high-temperature state that does not satisfy the QP equation}}{64}{figure.caption.39}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Evolution of the spectrum of a threshold temperature solution that has been padded with $100$ modes}}{65}{figure.caption.40}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Comparison between a threshold temperature solution with $j_{max} = 200$ and the evolution of a $j_{max} = 100$ threshold temperature solution that has been padded by $100$ modes}}{66}{figure.caption.41}
-\contentsline {figure}{\numberline {3.A.1}{\ignorespaces Comparison of seed values to known QP solutions and exponential fitting}}{69}{figure.caption.44}
-\contentsline {figure}{\numberline {3.A.2}{\ignorespaces Illustrating the tail fitting procedure}}{70}{figure.caption.45}
-\contentsline {figure}{\numberline {3.C.1}{\ignorespaces Comparison of spectra and temperatures for different projection frequencies between $j_{max}=50$ and $j_{max} = 150$ solutions}}{71}{figure.caption.46}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Evolution of the spectrum of a threshold temperature solution that has been padded with $100$ modes}}{62}{figure.caption.37}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Comparison between a threshold temperature solution with $j_{max} = 200$ and the evolution of a $j_{max} = 100$ threshold temperature solution that has been padded by $100$ modes}}{63}{figure.caption.38}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Evolution of the energy spectrum for a high-temperature solution created by hand}}{63}{figure.caption.39}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Evolution of a high-temperature state that does not satisfy the QP equation}}{64}{figure.caption.40}
+\contentsline {figure}{\numberline {3.A.1}{\ignorespaces Comparison of seed values to known QP solutions and exponential fitting}}{67}{figure.caption.43}
+\contentsline {figure}{\numberline {3.A.2}{\ignorespaces Illustrating the tail fitting procedure}}{68}{figure.caption.44}
+\contentsline {figure}{\numberline {3.C.1}{\ignorespaces Comparison of spectra and temperatures for different projection frequencies between $j_{max}=50$ and $j_{max} = 150$ solutions}}{69}{figure.caption.45}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Evaluating non-vanishing resonances for normalizable modes over a range of $m^2$ values}}{81}{figure.caption.47}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Source term for two equal frequency, non-normalizable modes when $m^2 = 0$}}{84}{figure.caption.48}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Source term for two equal frequency, non-normalizable modes when $m^2 = -1$}}{85}{figure.caption.49}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Source term for two non-normalizable modes whose frequencies add to an integer when $m^2 = -1$ and $\overline {\omega }_1+ \overline {\omega }_2= 4$}}{88}{figure.caption.50}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Source term for two non-normalizable modes whose frequencies add to an integer when $m^2 = 0$ for $\overline {\omega }_1+ \overline {\omega }_2= 4$ and $8$}}{89}{figure.caption.51}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Source term for two non-normalizable modes with frequencies $\omega _\alpha = 2 \alpha + \chi $ over various choices of $\chi $}}{91}{figure.caption.52}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Evaluating non-vanishing resonances for normalizable modes over a range of $m^2$ values}}{79}{figure.caption.46}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Source term for two equal frequency, non-normalizable modes when $m^2 = 0$}}{82}{figure.caption.47}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Source term for two equal frequency, non-normalizable modes when $m^2 = -1$}}{83}{figure.caption.48}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Source term for two non-normalizable modes whose frequencies add to an integer when $m^2 = -1$ and $\overline {\omega }_1+ \overline {\omega }_2= 4$}}{86}{figure.caption.49}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Source term for two non-normalizable modes whose frequencies add to an integer when $m^2 = 0$ for $\overline {\omega }_1+ \overline {\omega }_2= 4$ and $8$}}{87}{figure.caption.50}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Source term for two non-normalizable modes with frequencies $\omega _\alpha = 2 \alpha + \chi $ over various choices of $\chi $}}{89}{figure.caption.51}
 \addvspace {10\p@ }
