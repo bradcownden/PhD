@@ -10,11 +10,11 @@
 
 Having examined the collapse of massive scalars fields in AdS$_5$, we now wish to explore the perturbatively stable solutions for massless scalars. These solutions resist collapse on time scales of $t \sim \epsilon^{-2}$ and give analytic descriptions of the direct and inverse energy cascades that must be balanced for stability to be achieved.
 
-Using the Two-Time Formalism (TTF), renormalization flow equations are derived that absorb secular terms into renormalized integration constants in the first-order solution for the scalar field. These flow equations can be combined using a quasi-periodic (QP) ansatz to relate the amplitude and phases and lead to a system of $\jm + 1$ QP equations that relate the $\jm + 3$ unknowns. While the TTF theory technically involves an infinite sum of terms, by truncating the series to a finite \jm value, numerical values for the amplitudes and phases can be calculated. How the truncation value affects the space of solutions, and whether these solutions continue to be valid during evolution, remains to be addressed.
+Using the Two-Time Formalism (TTF), renormalization flow equations are derived that absorb secular terms into renormalized integration constants in the first-order solution for the scalar field. These flow equations can be combined using a quasi-periodic (QP) ansatz to relate the amplitude and phases and lead to a system of $\jm + 1$ QP equations that relate the $\jm + 3$ unknowns. While the TTF theory technically involves an infinite sum of terms, by truncating the series to a finite $\jm$ value, numerical values for the amplitudes and phases can be calculated. How the truncation value affects the space of solutions, and whether these solutions continue to be valid during evolution, remains to be addressed.
 
 \section{Contributions of Authors}
 
-In this collaboration, QP solutions to \eqref{qp eqn} were found numerically through programs initially written by N.~Deppe, but later expanded and developed by myself. In particular, I developed code to achieve the tail fitting and seeding procedure detailed in appendix~\ref{app: seeding} that allowed for solutions to \eqref{qp eqn} to be developed for \jm values of several hundred -- almost an order of magnitude greater than the solutions previous found in the literature. Implementation of the high temperature perturbation method outlined in \ref{ssec: highT} was done using code I developed, as was the procedure of reoptimization that allowed for the high temperature solution to be projected back to the QP solution plane at various frequencies. Evolution of the solutions was based on numerical methods initially developed by N.~Deppe. All data management and analysis was done using programs written by myself.
+In this collaboration, QP solutions to \eqref{qp eqn} were found numerically through programs initially written by N.~Deppe, but later expanded and developed by myself. In particular, I developed code to achieve the tail fitting and seeding procedure detailed in appendix~\ref{app: seeding} that allowed for solutions to \eqref{qp eqn} to be developed for $\jm$ values of several hundred -- almost an order of magnitude greater than the solutions previous found in the literature. Implementation of the high temperature perturbation method outlined in \ref{ssec: highT} was done using code I developed, as was the procedure of reoptimization that allowed for the high temperature solution to be projected back to the QP solution plane at various frequencies. Evolution of the solutions was based on numerical methods initially developed by N.~Deppe. All data management and analysis was done using programs written by myself.
 
 Much of the numerical work for this project was done using the University of Winnipeg's tesla server, where CPU hours are not tracked. However, for larger systems increased computing power was required, which necessitated transferring all code to Compute Canada's new Cedar cluster. Once there, I used 5.43 CPU years' worth of computing power to run evolutions and analysis of the results. Finally, I wrote the paper, with input from the other authors, that appears here.
 
@@ -581,7 +581,7 @@ As in the case of low-temperature QP solutions, we wish to expand the space of p
 	\begin{subfigure}[t]{0.45\textwidth}
 	\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa4_072e-01padj200T5_3921e+00_ricci}
 	\end{subfigure}
-	\caption[Evolution of the spectrum of a threshold temperature solution that has been padded with $100$ modes]{Evolution of a padded threshold temperature solution.}
+	\caption[Evolution of the spectrum of a threshold temperature solution that has been padded with $100$ modes]{The threshold temperature solution shown in figure~\ref{fig:HighTa4_072e-01j100T5_3921e+00_evo} is padded with 100 extra modes and evolved.}
 	\label{fig: HighTa4_072e-01padj200T5_3921e+00_evo}
 \end{figure}
 
@@ -607,11 +607,9 @@ As in the case of low-temperature QP solutions, we wish to expand the space of p
 	\label{fig: HighTa4_072e-01spec_vs_pad}
 \end{figure}
 
-\subsection{Counter-examples}
+It has been suggested that high-temperature QP solutions should exist in a continuous region of temperature space ${T \in [T_{min}, T_{max}] = [d, 2\jm + d]}$ and that perturbing a low-temperature QP solution to a temperature above $T_{th}$ before implementing perturbative increases in energy followed by regular projections allows for all such solutions to be found. However, we have found that high temperature solutions produced using regular projections back to the solution plane are not robust as $\jm \to \infty$ and therefore do no constitute physical solutions. The question of whether new families of solutions can be accessed by perturbing significantly away from the initial solutions to find a new solution plane bears consideration. 
 
-As we have seen, some QP solutions retain a power law spectrum under evolution, but scalar curvature and/or large residuals in the Einstein equations indicate that such data may not persist over timescales $t \sim \epsilon^{-2}$ under fully nonlinear evolution. As a final example, we consider a solution that has been repeatedly perturbed using the method described in \S~\ref{ssec: highT} to a temperature of $T = 20$ without projecting back to the QP plane \emph{at any point}. This solution is then used as seed values to solve \eqref{ttf eqn}. For values of $\jm \lesssim 100$, solutions
-
-It has been suggested that high-temperature QP solutions should exist in a continuous region of temperature space from $T_{min} = d$ to $T_{max} = 2\jm + d$ and that perturbing a low-temperature QP solution to a temperature above $T_{th}$ before implementing regular projections allows for all such solutions to be found. However, we have found that the majority of high temperature solutions are not robust as $\jm \to \infty$ and therefore do no constitute true solutions. 
+Therefore, we consider perturbing up to an intermediate temperature $T_{th} << T_{int} < T_{max}$ before attempting to project back to the QP plane using the $T_{int}$ data as seed values. In particular, we repeatedly perturb a $T \sim 4.5$ solution using the method described in \S~\ref{ssec: highT} to a temperature of $T_{int} = 20$ without projecting back to the QP plane \emph{at any point}. For $\jm \lesssim 100$, projection back to the solution plane finds a new solution with $T < T_{int}$ that -- much like the spectra shown in figure~\ref{fig: spec comparisons reop20} -- loses $C^1$ differentiability. Furthermore, the fractional energy in the low-frequency modes oscillates rapidly over several orders of magnitude during the evolution, and the Ricci scalar reaches values $\mc O (10^6)$; these solutions are almost certainly not quasi-periodic. The same result is found for high temperature solutions created by fitting tail data (see figure~\ref{fig: manual highT} for example spectra). Finally, for $\jm \geq 100$, projection back to the QP solution plane once $T = T_{int}$ fails entirely. Thus, the space of QP solutions is greatly diminished with $T_{max} << 2\jm + d$. 
 
 %\begin{figure}[h]
 %	\centering
@@ -688,34 +686,30 @@ It has been suggested that high-temperature QP solutions should exist in a conti
 %	\label{fig: HighTa2_1819e-01padj125T6_6711e+01_evolutionprojection}
 %\end{figure}
 
-
-
-Here, a QP solution is perturbed to a high temperature without regular projections back to the QP plane. At a pre-determined temperature cutoff, $T = 20.0$, the perturbation procedure is halted and the solution is used as a seed for the nonlinear solver. Instead of projecting to a QP solution at a high temperature, the nonlinear solver converges to a solution with only $T \sim 6.71$. We apply the amplitude-phase evolution procedure to the intermediate $T = 20.0$ solution in order to study how a solution for far away from the QP plane may behave. See figure~\ref{fig:HighTa1_779e-01j100T2_0000e+01evo} for results. The same results hold for high-temperature solutions created by hand from lower $\jm$ solutions.
-
-\begin{figure}[h]
-	\centering
-	\begin{subfigure}[t]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa1_779e-01j100T2_0000e+01_lowjevo}
-		\caption{Evolution of the first four modes: ${j = 0, 1, 2, 3}$ (purple, green, blue, orange).}
-	\end{subfigure}
-	\;
-	\begin{subfigure}[t]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa1_779e-01j100T2_0000e+01_fullevo}
-		\caption{Comparative evolution of modes ${j=0, 25, 50, 75, 99}$ (purple, green, blue, orange).}
-	\end{subfigure}
-	\;
-	\begin{subfigure}[t]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa1_779e-01j100T2_0000e+01_specevo}
-		\caption{Energy spectrum at selected times throughout the evolution.}
-	\end{subfigure}
-	\;
-	\begin{subfigure}[t]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa1_779e-01j100T2_0000e+01_Ricci}
-		\caption{The upper envelope of the Ricci scalar at the origin, per light-crossing time.}
-	\end{subfigure}
-	\caption[Evolution of a high-temperature state that does not satisfy the QP equation]{The evolution of an intermediate, high-temperature solution that \emph{does not} correspond to a solution of the QP equations.}
-	\label{fig:HighTa1_779e-01j100T2_0000e+01evo}
-\end{figure}
+%\begin{figure}[h]
+%	\centering
+%	\begin{subfigure}[t]{0.45\textwidth}
+%		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa1_779e-01j100T2_0000e+01_lowjevo}
+%		\caption{Evolution of the first four modes: ${j = 0, 1, 2, 3}$ (purple, green, blue, orange).}
+%	\end{subfigure}
+%	\;
+%	\begin{subfigure}[t]{0.45\textwidth}
+%		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa1_779e-01j100T2_0000e+01_fullevo}
+%		\caption{Comparative evolution of modes ${j=0, 25, 50, 75, 99}$ (purple, green, blue, orange, yellow).}
+%	\end{subfigure}
+%	\;
+%	\begin{subfigure}[t]{0.45\textwidth}
+%		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa1_779e-01j100T2_0000e+01_specevo}
+%		\caption{Energy spectrum at selected times throughout the evolution.}
+%	\end{subfigure}
+%	\;
+%	\begin{subfigure}[t]{0.45\textwidth}
+%		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa1_779e-01j100T2_0000e+01_Ricci}
+%		\caption{The upper envelope of the Ricci scalar at the origin, per light-crossing time.}
+%	\end{subfigure}
+%	\caption[Evolution of a high-temperature state that does not satisfy the QP equation]{The evolution of an intermediate, high-temperature solution that \emph{does not} correspond to a solution of the QP equations.}
+%	\label{fig:HighTa1_779e-01j100T2_0000e+01evo}
+%\end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -723,6 +717,10 @@ Here, a QP solution is perturbed to a high temperature without regular projectio
 
 \section{Discussion}
 \label{sec: discussion}
+
+We have explored the space of quasi-periodic solutions within the weakly turbulent description of a massless scalar field in AdS$_4$. Using the conserved quantities $E$ and $N$, we constructed families of quasi-periodic solutions that were distinguished by the temperature $T = E/N$ for different choices of the truncation value $\jm$. We have demonstrated that low temperature QP solutions -- those that are immediately accessible by solving \eqref{ttf eqn} for a given $\alpha_1$ such that $\alpha_1 < \alpha_0 = 1$ -- can be extended to arbitrarily large $\jm$ values, and therefore constitute solutions to the TTF theory. We have also examined high temperature QP solutions, which are found by perturbing low temperature solutions by $\delta E$ while keeping $N$ fixed. We found that a high temperature solutions were robust in the limit of large $\jm$ only for temperatures close to the solution plane; solutions with even $3 T_0 / 2$, where $T_0$ is the highest temperature achievable without applying the perturbative method, did not persist as $\jm$ was increased. Several alternative methods for generating QP solutions up to $T_{max} = 2\jm + d$ were explored, none of which yielded solutions to the untruncated TTF system.
+
+(Something about evolutions)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -749,7 +747,7 @@ in AdS$_4$, where $\mu = \ln (3 / 5 \alpha_1 )$, as $j_{max}$ increased, the see
 
 Care was taken to avoid edge effects due to truncation when choosing the points that constituted the tail of the data. To illustrate the variance of the solution with truncation, we examine a fixed $\alpha_j$ value over a variety of $j_{max}$, starting with $\alpha_j = \alpha_{j_{max}}$. In table~\ref{table: edge effects} we see that the value of $\alpha_{50}$ for QP solutions with $\alpha_1 = 0.2$ becomes impervious to truncation effects once $j_{max} > 55$. 
 
-\begin{table}
+\begin{table}[h]
 		\centering
 		\begin{tabular}[t]{| c | c |}
 			\hline 
@@ -855,7 +853,7 @@ The frequency of applying the nonlinear solver to project back down to the QP so
 
 For example, consider the process of applying perturbations of $\delta E = 0.01\%$ up to some intermediate temperature without projecting back to the QP plane, then projecting back every 100 iterations until a maximum temperature is reached. Starting with the QP solution corresponding to $\alpha_1 = 0.2$, the lower panel of figure~\ref{fig: reop check} shows the result of repeated perturbations of $\delta E = 0.01\%$ that are not projected back the to QP plane.
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\centering
 	\begin{subfigure}[t]{0.48\textwidth}
 		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/j50T17cont_4paper}
