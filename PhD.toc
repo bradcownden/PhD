@@ -43,24 +43,24 @@
 \contentsline {subsection}{\numberline {3.6.1}Low-temperature QP data}{58}{subsection.3.6.1}
 \contentsline {subsection}{\numberline {3.6.2}High-Temperature QP Data}{60}{subsection.3.6.2}
 \contentsline {section}{\numberline {3.7}Discussion}{63}{section.3.7}
-\contentsline {section}{\numberline {3.A}Seeding Methods For Non-Linear Solvers}{65}{section.2.3.A}
-\contentsline {section}{\numberline {3.B}Auxiliary Integrals For Calculating the $T, R, S$ Coefficients}{65}{section.2.3.B}
-\contentsline {section}{\numberline {3.C}Frequency of Solution Checking}{67}{section.2.3.C}
-\contentsline {chapter}{\numberline {4}Perturbative Descriptions of Driven Instabilities in AdS}{70}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introduction}{71}{section.4.1}
-\contentsline {section}{\numberline {4.2}Source Terms and Boundary Conditions}{72}{section.4.2}
-\contentsline {section}{\numberline {4.3}Resonances From Normalizable Solutions}{76}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Naturally Vanishing Resonances: $(+++)$ and $(+--)$}{77}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Non-vanishing Resonance: $(++-)$}{78}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Resonances From Non-normalizable Modes}{79}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Two Non-normalizable Modes with Equal Frequencies}{80}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Special Values of Non-normalizable Frequencies}{81}{subsection.4.4.2}
-\contentsline {subsubsection}{\numberline {4.4.2.1}Add to an integer}{83}{subsubsection.4.4.2.1}
-\contentsline {subsection}{\numberline {4.4.3}Integer Plus $\chi $}{86}{subsection.4.4.3}
-\contentsline {subsubsection}{\numberline {4.4.3.1}$\omega _i+ \omega _\gamma = \omega _{\beta }- \omega _\ell $}{88}{subsubsection.4.4.3.1}
-\contentsline {subsubsection}{\numberline {4.4.3.2}$\omega _i+ \omega _\gamma = \omega _{\beta }+ \omega _\ell $}{88}{subsubsection.4.4.3.2}
-\contentsline {section}{\numberline {4.5}Discussion}{90}{section.4.5}
-\contentsline {section}{\numberline {4.A}Derivation of Source Terms For Massive Scalars}{92}{section.3.4.A}
-\contentsline {section}{\numberline {4.B}Two Non-normalizable Modes with Equal Frequencies}{95}{section.3.4.B}
-\contentsline {chapter}{\numberline {5}Conclusion}{97}{chapter.5}
-\contentsline {chapter}{Bibliography}{105}{appendix*.51}
+\contentsline {section}{\numberline {3.A}Seeding Methods For Non-Linear Solvers}{66}{section.2.3.A}
+\contentsline {section}{\numberline {3.B}Auxiliary Integrals For Calculating the $T, R, S$ Coefficients}{66}{section.2.3.B}
+\contentsline {section}{\numberline {3.C}Frequency of Solution Checking}{68}{section.2.3.C}
+\contentsline {chapter}{\numberline {4}Perturbative Descriptions of Driven Instabilities in AdS}{71}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{72}{section.4.1}
+\contentsline {section}{\numberline {4.2}Source Terms and Boundary Conditions}{73}{section.4.2}
+\contentsline {section}{\numberline {4.3}Resonances From Normalizable Solutions}{77}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Naturally Vanishing Resonances: $(+++)$ and $(+--)$}{78}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Non-vanishing Resonance: $(++-)$}{79}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Resonances From Non-normalizable Modes}{80}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Two Non-normalizable Modes with Equal Frequencies}{81}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Special Values of Non-normalizable Frequencies}{82}{subsection.4.4.2}
+\contentsline {subsubsection}{\numberline {4.4.2.1}Add to an integer}{84}{subsubsection.4.4.2.1}
+\contentsline {subsection}{\numberline {4.4.3}Integer Plus $\chi $}{87}{subsection.4.4.3}
+\contentsline {subsubsection}{\numberline {4.4.3.1}$\omega _i+ \omega _\gamma = \omega _{\beta }- \omega _\ell $}{89}{subsubsection.4.4.3.1}
+\contentsline {subsubsection}{\numberline {4.4.3.2}$\omega _i+ \omega _\gamma = \omega _{\beta }+ \omega _\ell $}{89}{subsubsection.4.4.3.2}
+\contentsline {section}{\numberline {4.5}Discussion}{91}{section.4.5}
+\contentsline {section}{\numberline {4.A}Derivation of Source Terms For Massive Scalars}{93}{section.3.4.A}
+\contentsline {section}{\numberline {4.B}Two Non-normalizable Modes with Equal Frequencies}{96}{section.3.4.B}
+\contentsline {chapter}{\numberline {5}Conclusion}{98}{chapter.5}
+\contentsline {chapter}{Bibliography}{106}{appendix*.51}
