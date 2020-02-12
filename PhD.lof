@@ -1,45 +1,45 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Horizon size and horizon formation time for a massive scalar}}{13}{figure.caption.4}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Horizon size and horizon formation time for a massive scalar}}{20}{figure.caption.4}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Horizon formation time vs. amplitude for classes of initial data}}{21}{figure.caption.5}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Stability phase diagram}}{24}{figure.caption.6}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Fitting the leading coefficient of $t_H = a\epsilon ^{-p} + b$ as a function of initial data width}}{26}{figure.caption.7}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Horizon formation times for metastable initial data}}{27}{figure.caption.8}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Horizon formation times for irregular initial data}}{29}{figure.caption.10}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Evidence for chaotic evolution}}{31}{figure.caption.11}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Phase space trajectories for irregular and unstable initial data}}{32}{figure.caption.13}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Mass density profiles for chaotic systems}}{33}{figure.caption.14}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Energy spectra of best fit gaussians to the $j=0$ eigenmode for various masses}}{34}{figure.caption.15}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Initial energy spectra for each type of initial data}}{35}{figure.caption.16}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Evolution of the energy spectra}}{37}{figure.caption.17}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Late-time spectra}}{38}{figure.caption.18}
-\contentsline {figure}{\numberline {2.A.1}{\ignorespaces Comparison of order of convergence of $\phi $, $M$, $A$, $\delta $ as a function of time for $\mu = 0.5$ over two base resolutions}}{40}{figure.caption.20}
-\contentsline {figure}{\numberline {2.A.2}{\ignorespaces Order of convergence for $\phi $, $M$, $A$, $\delta $ as a function of time for $\mu = 15$ at nearby amplitudes}}{41}{figure.caption.21}
-\contentsline {figure}{\numberline {2.A.3}{\ignorespaces Order of convergence for $\phi $, $M$, $A$, $\delta $ as a function of time for $\mu = 0$ at nearby amplitudes}}{41}{figure.caption.22}
-\contentsline {figure}{\numberline {2.A.4}{\ignorespaces Order of convergence for $\phi $, $M$, $A$, $\delta $ as a function of time for $\mu = 5$ at nearby amplitudes}}{42}{figure.caption.23}
-\contentsline {figure}{\numberline {2.A.5}{\ignorespaces Order of convergence for $\phi $, $M$, $A$, $\delta $ as a function of time for $\mu = 1$ at nearby amplitudes}}{42}{figure.caption.24}
-\contentsline {figure}{\numberline {2.A.6}{\ignorespaces Order of convergence for $\phi $, $M$, $A$, $\delta $ as a function of time for $\mu = 20$ at nearby amplitudes}}{43}{figure.caption.25}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Horizon formation time vs. amplitude for classes of initial data}}{30}{figure.caption.5}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Stability phase diagram}}{35}{figure.caption.6}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Fitting the leading coefficient of $t_H = a\epsilon ^{-p} + b$ as a function of initial data width}}{37}{figure.caption.7}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Horizon formation times for metastable initial data}}{38}{figure.caption.8}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Horizon formation times for irregular initial data}}{42}{figure.caption.10}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Evidence for chaotic evolution}}{44}{figure.caption.11}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Phase space trajectories for irregular and unstable initial data}}{45}{figure.caption.13}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Mass density profiles for chaotic systems}}{47}{figure.caption.14}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Energy spectra of best fit gaussians to the $j=0$ eigenmode for various masses}}{49}{figure.caption.15}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Initial energy spectra for each type of initial data}}{51}{figure.caption.16}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Evolution of the energy spectra}}{52}{figure.caption.17}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Late-time spectra}}{54}{figure.caption.18}
+\contentsline {figure}{\numberline {2.A.1}{\ignorespaces Comparison of order of convergence of $\phi $, $M$, $A$, $\delta $ as a function of time for $\mu = 0.5$ over two base resolutions}}{58}{figure.caption.20}
+\contentsline {figure}{\numberline {2.A.2}{\ignorespaces Order of convergence for $\phi $, $M$, $A$, $\delta $ as a function of time for $\mu = 15$ at nearby amplitudes}}{59}{figure.caption.21}
+\contentsline {figure}{\numberline {2.A.3}{\ignorespaces Order of convergence for $\phi $, $M$, $A$, $\delta $ as a function of time for $\mu = 0$ at nearby amplitudes}}{59}{figure.caption.22}
+\contentsline {figure}{\numberline {2.A.4}{\ignorespaces Order of convergence for $\phi $, $M$, $A$, $\delta $ as a function of time for $\mu = 5$ at nearby amplitudes}}{60}{figure.caption.23}
+\contentsline {figure}{\numberline {2.A.5}{\ignorespaces Order of convergence for $\phi $, $M$, $A$, $\delta $ as a function of time for $\mu = 1$ at nearby amplitudes}}{60}{figure.caption.24}
+\contentsline {figure}{\numberline {2.A.6}{\ignorespaces Order of convergence for $\phi $, $M$, $A$, $\delta $ as a function of time for $\mu = 20$ at nearby amplitudes}}{61}{figure.caption.25}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Energy spectra for various QP solutions}}{51}{figure.caption.26}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces High temperature solutions resulting from projecting back to the QP solution plane at various frequencies}}{53}{figure.caption.27}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Energy spectra resulting from perturbing the same QP solution at differing frequencies}}{54}{figure.caption.29}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Finding high temperature QP solutions using repeated perturbations with regular projections back to the QP plane.\relax }}{55}{figure.caption.30}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Constructing high temperature solutions by hand}}{56}{figure.caption.31}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Absolute and relative residuals for a low-temperature QP solution}}{58}{figure.caption.32}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Evolution of QP solutions at low temperature}}{58}{figure.caption.33}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Taking the spectrum of a QP solution during evolution to use as a seed to find new QP solutions}}{59}{figure.caption.34}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces The evolution of a padded QP solution}}{60}{figure.caption.35}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Examining the energy per mode during the evolution of a threshold temperature solution}}{61}{figure.caption.36}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Evolution of the spectrum of a threshold temperature solution that has been padded with $100$ modes}}{62}{figure.caption.37}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Comparison between a threshold temperature solution with $j_{max} = 200$ and the evolution of a $j_{max} = 100$ threshold temperature solution that has been padded by $100$ modes}}{63}{figure.caption.38}
-\contentsline {figure}{\numberline {3.A.1}{\ignorespaces Comparison of seed values to known QP solutions and exponential fitting}}{68}{figure.caption.41}
-\contentsline {figure}{\numberline {3.A.2}{\ignorespaces Illustrating the tail fitting procedure}}{69}{figure.caption.42}
-\contentsline {figure}{\numberline {3.C.1}{\ignorespaces Comparison of spectra and temperatures for different projection frequencies between $j_{max}=50$ and $j_{max} = 150$ solutions}}{70}{figure.caption.43}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Energy spectra for various QP solutions}}{73}{figure.caption.26}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces High temperature solutions resulting from projecting back to the QP solution plane at various frequencies}}{76}{figure.caption.27}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Energy spectra resulting from perturbing the same QP solution at differing frequencies}}{78}{figure.caption.29}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Finding high temperature QP solutions using repeated perturbations with regular projections back to the QP plane.\relax }}{87}{figure.caption.30}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Constructing high temperature solutions by hand}}{88}{figure.caption.31}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Absolute and relative residuals for a low-temperature QP solution}}{88}{figure.caption.32}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Evolution of QP solutions at low temperature}}{89}{figure.caption.33}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Taking the spectrum of a QP solution during evolution to use as a seed to find new QP solutions}}{89}{figure.caption.34}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces The evolution of a padded QP solution}}{90}{figure.caption.35}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Examining the energy per mode during the evolution of a threshold temperature solution}}{91}{figure.caption.36}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Evolution of the spectrum of a threshold temperature solution that has been padded with $100$ modes}}{92}{figure.caption.37}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Comparison between a threshold temperature solution with $j_{max} = 200$ and the evolution of a $j_{max} = 100$ threshold temperature solution that has been padded by $100$ modes}}{93}{figure.caption.38}
+\contentsline {figure}{\numberline {3.A.1}{\ignorespaces Comparison of seed values to known QP solutions and exponential fitting}}{96}{figure.caption.41}
+\contentsline {figure}{\numberline {3.A.2}{\ignorespaces Illustrating the tail fitting procedure}}{97}{figure.caption.42}
+\contentsline {figure}{\numberline {3.C.1}{\ignorespaces Comparison of spectra and temperatures for different projection frequencies between $j_{max}=50$ and $j_{max} = 150$ solutions}}{98}{figure.caption.43}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Evaluating non-vanishing resonances for normalizable modes over a range of $m^2$ values}}{80}{figure.caption.44}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Source term for two equal frequency, non-normalizable modes when $m^2 = 0$}}{83}{figure.caption.45}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Source term for two equal frequency, non-normalizable modes when $m^2 = -1$}}{84}{figure.caption.46}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Source term for two non-normalizable modes whose frequencies add to an integer when $m^2 = -1$ and $\overline {\omega }_1+ \overline {\omega }_2= 4$}}{87}{figure.caption.47}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Source term for two non-normalizable modes whose frequencies add to an integer when $m^2 = 0$ for $\overline {\omega }_1+ \overline {\omega }_2= 4$ and $8$}}{88}{figure.caption.48}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Source term for two non-normalizable modes with frequencies $\omega _\alpha = 2 \alpha + \chi $ over various choices of $\chi $}}{90}{figure.caption.49}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Evaluating non-vanishing resonances for normalizable modes over a range of $m^2$ values}}{113}{figure.caption.44}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Source term for two equal frequency, non-normalizable modes when $m^2 = 0$}}{117}{figure.caption.45}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Source term for two equal frequency, non-normalizable modes when $m^2 = -1$}}{118}{figure.caption.46}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Source term for two non-normalizable modes whose frequencies add to an integer when $m^2 = -1$ and $\overline {\omega }_1+ \overline {\omega }_2= 4$}}{122}{figure.caption.47}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Source term for two non-normalizable modes whose frequencies add to an integer when $m^2 = 0$ for $\overline {\omega }_1+ \overline {\omega }_2= 4$ and $8$}}{123}{figure.caption.48}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Source term for two non-normalizable modes with frequencies $\omega _\alpha = 2 \alpha + \chi $ over various choices of $\chi $}}{127}{figure.caption.49}
 \addvspace {10\p@ }
