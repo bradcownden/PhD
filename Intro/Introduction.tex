@@ -14,7 +14,7 @@ The goal of this thesis is to leverage the AdS/CFT correspondence to study the d
 
 This thesis contains three manuscripts that either have been, or are about to be, submitted for publication. In chapter~\ref{ch: massive}, we examine the limits of the nonlinear stability of AdS$_5$ by examining the range of behaviours exhibited by differing initial data with static boundary conditions. Next, in chapter~\ref{ch: ttf}, we expand upon solutions to the perturbative theory that capture the weakly turbulent dynamics involved in the collapse process. We focus on determining the stability of solutions to the leading nonlinear contributions to the perturbative theory, known as quasi-periodic solutions. We then evolve these solutions in the perturbative framework and evaluate their longevity beyond the perturbative time scale. Finally, in chapter~\ref{ch: driven} we consider the addition of a time-dependent source term on the conformal boundary of the gravitational theory, and derive the renormalization flow equations for the first non-trivial order in the small-amplitude expansion. A discussion of the results follows in chapter~\ref{ch: conclusion}.
 
-However, before utilizing the correspondence to study any particular process, we first review the main tenet of the gauge/gravity duality and its consequences: that there exists a fundamental relationship between a conformal field theory in $d$-dimensions and a negative-curvature gravitational theory in ($d + 1$)-dimensions.
+However, before utilizing the correspondence to study any particular process, we first review the main tenet of the gauge/gravity duality and its consequences: that there exists a fundamental relationship between a conformal field theory in $d$-dimensions and a gravitational theory in ($d + 1$)-dimensions.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -29,16 +29,16 @@ It was shown by \cite{hep-th/9711200} that a non-perturbative correspondence exi
 \subsection{Extra Dimensions In Gauge Theories}
 \label{ssec: extra dims in gauge theories}
 
-Although \cite{hep-th/9711200} was the first to establish explicitly a correspondence between a gravitational theory in $(d+1)$-dimensional AdS and a conformal field theory in $d$-dimensions, the concept of a holographic relationship between a gauge theory and a gravitational theory in one higher dimension was conjectured earlier by \cite{gr-qc/9310026} and \cite{hep-th/9409089} from the point of view of the field theory. 
+Although \cite{hep-th/9711200} was the first to establish explicitly a correspondence between a gravitational theory in $(d+1)$-dimensional AdS and a conformal field theory in $d$-dimensions, the concept of a holographic relationship between a gauge theory and a gravitational theory in one higher dimension was conjectured earlier by \cite{gr-qc/9310026} and \cite{hep-th/9409089} without relying solely on string theory. 
 
 For most gauge theories, there is a running of the coupling that dictates the evolution of the couplings with energy. Therefore, the physics of the theory is local with respect to an extra dimension, the energy. However, since many gauge theories suffer UV divergences at large energies, the size of the extra dimension may be limited. In contrast, supersymmetric theories have vanishing beta functions; therefore, there is no running of the coupling. In this case, the energy scale is arbitrary and the extra dimension of the theory has no bound.
 
-The vanishing of the beta function also indicates that the conformal invariance of the theory is unbroken; conformal invariance requires (among other things) that the theory remain invariant under rigid scale transformations $x^\mu \to \ell x^\mu$. Interpreting the energy scale as an extra dimension, $r$, we require it to transform as $r \to r/ \ell$. The most generic metric that also obeys Poincar\'e plus scale symmetries is
+The vanishing of the beta function also indicates that the conformal invariance of the theory is unbroken; conformal invariance requires (among other things) that the theory remain invariant under rigid scale transformations by a unitless constant $a$, such that $x^\mu \to a x^\mu$. Interpreting the energy scale as an extra dimension, $r$, we require it to transform in the same way as energy, so that $r \to r/ a$. The most generic metric that also obeys Poincar\'e plus scale symmetries is
 \begin{align}
 \label{Poincare ads}
-ds^2 = \frac{\ell^2}{z^2} \left( \eta_{\mu \nu}dx^\mu dx^\nu +dz^2 \right) \, ,
+ds^2 = \frac{a^2}{z^2} \left( \eta_{\mu \nu}dx^\mu dx^\nu +dz^2 \right) \, ,
 \end{align}
-where $z = \ell^2 / r$. This is precisely the metric for AdS$_5$ with characteristic length $\ell$. 
+where $z = a^2 / r$. This is precisely the metric for Anti-de Sitter space with characteristic length $a$. 
 
 More than being an \emph{a posteriori} observation, the gauge/gravity correspondence is in fact a much deeper and more specific relationship. The derivation of the duality is thoroughly covered from the full string theory perspective in, among others, \cite{hep-th/9711200, gr-qc/0602037, 1501.00007, hep-th/9902131, hep-th/9905111}. For now, let us establish the duality that will be most applicable to us: the duality between type IIb supergravity on conformal \ads and $\mc N = 4$ supersymmetric Yang-Mills theory in $(3+1)$-dimensions.
 
@@ -52,9 +52,9 @@ Consider a stack of $N$ coincident D3-branes in type IIb string theory (ten Mink
 \label{bb geom}
 ds^2 = f(r)^{-1/2} \eta_{\mu \nu} dx^\mu dx^\nu + f(r)^{1/2} \left(  dr^2 + r^2 d\Omega_5^2 \right)  \quad  \text{with} \quad f(r) = 1 + \frac{4 \pi g_s N \ell_s^4}{r^4} \, ,
 \end{align}
-where the $x^\mu$ span the worldvolume of the D3-branes and $d\Omega_5^2$ is the metric of the unit 5-sphere.
+where the $x^\mu$ span the worldvolume of the D3-branes, $d\Omega_5^2$ is the metric of the unit 5-sphere, and $\ell_s$ is the length of the string.
 
-Now we take the low-energy limit of the theories at either coupling limit. At weak coupling, the open strings decouple from the closed strings, resulting in an $SU(N)$ super-Yang-Mills gauge theory on the brane worldvolume. In the $g_s N \gg 1$ case, the low-energy limit corresponds to the near-horizon limit, $r \to 0$. In this limit, the 10D metric factors into the product AdS$_5 \times$S$^5$ ({\it cf.}~the near-horizon limit of an extremal Reissner-Nordstr\o m black hole in $d=4$ \cite{Horowitz:1991cd}). To see this, we define $\ell \equiv (4\pi g_s N)^{1/4} \ell_s$, so that $f^{1/2}(r) \to \ell^2 / r^2$ in the near-horizon limit and \eqref{bb geom} becomes
+Now we take the low-energy limit of the theories at either coupling limit. At weak coupling, the open strings decouple from the closed strings, resulting in an $SU(N)$ super-Yang-Mills gauge theory on the brane worldvolume. In the $g_s N \gg 1$ case, the low-energy limit corresponds to the near-horizon limit, $r \to 0$. In this limit, the 10D metric factors into the product AdS$_5 \times$S$^5$. To see this, we define $\ell \equiv (4\pi g_s N)^{1/4} \ell_s$, so that $f^{1/2}(r) \to \ell^2 / r^2$ in the near-horizon limit and \eqref{bb geom} becomes
 \begin{align}
 \label{param rels}
 ds^2 = \frac{r^2}{\ell^2} \eta_{\mu \nu} dx^\mu dx^\nu + \frac{\ell^2}{r^2}dr^2 + \ell^2 d\Omega_5^2 \, .
@@ -68,7 +68,7 @@ Given that we now know what string theory we are working with, we can more direc
 \end{align}
 where $\lambda$ is the 't Hooft coupling $\lambda \equiv g_s N = g_{YM}^2 N$, and $\ell_s$ is the string length. To remove stringy corrections to the geometry, $\ell / \ell_s \gg 1$ so that the AdS length is much larger than the string length. Furthermore, string interactions are suppressed when $g_s \ll 1$. Thus, the bulk theory approaches  classical Einstein-Hilbert gravity when $N \gg \lambda \gg 1$.
 
-By considering other superstring models, such as M-theory (eleven Minkowski dimensions), we are able to establish similar dualities between gravitational and conformal field theories. In particular, the M-theory\footnote{M-theory is a superstring theory that can be mapped to the other major, ten-dimensional superstring theories through choices of compactifications and length/coupling dualities \cite{Polchinski:1998rr}.} equivalent of D$2$-branes, M$2$-branes, are used -- along with corresponding coupling limits -- to establish a duality between a gravitational bulk theory on AdS$_4 \times$S$^7$ and a CFT on {$\mathbb{R}\times$S$^2$}~\cite{hep-th/9711200}. In fact, many such dualities can be constructed through applying different compactifications and/or sources in the extra dimensions, each of which describes a different type of CFTs on the boundary. For a review of other types of holographic constructions, see e.g.~\cite{1612.07324, 1606.08953}.
+By considering other superstring avatars, such as M-theory (eleven Minkowski dimensions), we are able to establish similar dualities between gravitational and conformal field theories. In particular, the M-theory\footnote{M-theory is a superstring theory that can be mapped to the other major, ten-dimensional superstring theories through choices of compactifications and length/coupling dualities \cite{Polchinski:1998rr}.} equivalent of D$2$-branes, M$2$-branes, are used -- along with corresponding coupling limits -- to establish a duality between a gravitational bulk theory on AdS$_4 \times$S$^7$ and a CFT in $(2+1)$-dimensions \cite{hep-th/9711200}. In fact, many such dualities can be constructed through applying different compactifications and/or sources in the extra dimensions, each of which describes a different type of CFTs on the boundary. For a review of other types of holographic constructions, see e.g.~\cite{1612.07324, 1606.08953}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -103,7 +103,7 @@ ds^2 = R^2 \left( \frac{d^2u}{u^2} + u^2 (- dt^2 + d {\vec x}^2) \right) \, .
 
 AdS$_{p+2}$ has the isometry $SO(2,p+1)$, and is homogeneous and isotropic \cite{hep-th/9905111}. The global coordinate representation helps us to interpret the maximal compact subgroup of $SO(2, p+1)$, $SO(2)\times SO(p+1)$, as constant translations in $\tau$ plus rotations of S$^p$. Likewise, the Poincar\'e coordinates describe the symmetries of AdS in terms of the Poincar\'e transformation on $(t, \vec x)$ plus the dilatation transformation {$(t, \vec x, u) \to (ct, c \vec x, c^{-1}u)$} for $u >0$.
 
-In particular, a bulk theory on \ads has $SO(2,4)\times SO(6)$ symmetry. The gauge theory on the boundary of this space has an $SO(2,4)$ isometry from its conformal invariance (Poincar\'e plus scale and special conformal transformations), as well as $SU(4) \simeq SO(6)$ R-symmetry that relates the six scalar fields and four fermions of the theory \cite{1501.00007}. Therefore, the spatial isometries of the bulk space are interpreted as global symmetries of the boundary theory. Additionally, the supersymmetries inherent in the original type IIB superstring theory remain unbroken by the strong/weak coupling limits. Hence, the gauge/gravity correspondence conserves the symmetries of both theories.
+In particular, a bulk theory on \ads has $SO(2,4)\times SO(6)$ symmetry. The gauge theory on the boundary of this space has an $SO(2,4)$ isometry from its conformal invariance (Poincar\'e plus scale and special conformal transformations), as well as $SU(4) \simeq SO(6)$ R-symmetry that relates the six scalar fields and four fermions of the theory \cite{1501.00007}. Therefore, the spatial isometries of the bulk space are interpreted as global symmetries of the boundary theory. Additionally, the supersymmetries inherent in the original type IIb superstring theory remain unbroken by the strong/weak coupling limits. Hence, the gauge/gravity correspondence conserves the symmetries of both theories.
 
 {\bf Observables}
 
@@ -353,6 +353,12 @@ The following chapters each contain a manuscript that is focused on research int
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\bibliographystyle{/Users/bradc/Documents/University_of_Manitoba/Thesis/PhD/JHEP}
+\bibliography{/Users/bradc/Documents/University_of_Manitoba/Thesis/PhD/Intro/introbib}
+\addcontentsline{toc}{chapter}{Bibliography}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}
 
