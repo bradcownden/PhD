@@ -138,16 +138,16 @@ We will see that bulk scalar fields play an important role in the dual descripti
 
 Another important ingredient of the AdS/CFT correspondence was first mentioned in \S~\!\ref{ssec: AdS5xS5}: black holes. As discussed previously, the weak coupling limit of the $N$ D3-branes produced an extremal black-brane geometry given by \eqref{param rels}, which is the Poincar\'e patch description of AdS. Since the interaction cross-section of the branes with low-energy states in the bulk shrinks to zero, the effective geometry for these states is Anti-de Sitter. When discussing black holes in the AdS/CFT correspondence, we are referring to black holes embedded within an AdS geometry. 
 
-The connection between black hole physics and thermodynamics was noted by \cite{Bekenstein:1973ur}, and has been thoroughly examined since then. For a review of the thermodynamic properties of black holes, see \cite{Jacobson1996, Bardeen:1973gs, Hawking:1982dh, 1803.03633}. It suffices for our purposes to highlight a few key features of the thermodynamic properties of black holes, and thereby motivate a correspondence between black holes in the bulk theory and a gauge theory in thermal equilibrium on the boundary.
+The connection between black hole physics and thermodynamics was noted by \cite{Bekenstein:1973ur}, and has been thoroughly examined since then. For a review of the thermodynamic properties of black holes, see \cite{Jacobson1996, Bardeen:1973gs, 1803.03633}. It suffices for our purposes to highlight a few key features of the thermodynamic properties of black holes, and thereby motivate a correspondence between black holes in the bulk theory and a gauge theory in thermal equilibrium on the boundary.
 
-By considering quantum effects near the event horizon \cite{Hawking:1974rv}, it can be shown that black holes emit particles whose thermal spectrum is equivalent to a black body of temperature \cite{Hawking:1974sw}
+By considering quantum effects near the event horizon, it can be shown that black holes emit particles whose thermal spectrum is equivalent to a black body of temperature \cite{Hawking:1974rv, Hawking:1974sw}
 \begin{align}
 \label{hawking temp}
 T_H = \frac{(\ell^2 + 2r_H^2)}{2 \pi r_H \ell^2} \, ,
 \end{align}
-where $r_H$ is the size of the event horizon. When the black hole is placed in a geometry with a conformal boundary, it will be in thermal equilibrium with its Hawking radiation, and a stationary observer at asymptotic infinity will observe a black body spectrum corresponding to the temperature $T_H$ \cite{Carroll:2004st}. In the asymptotically flat limit (which we are concerned with) $\ell \gg r_H$ and $T_H \simeq 1/2\pi r_H$. 
+where $r_H$ is the size of the event horizon. When the black hole is placed in a geometry with a conformal boundary, it will be in thermal equilibrium with its Hawking radiation, and a stationary observer at asymptotic infinity will observe a black body spectrum corresponding to the temperature $T_H$ \cite{Carroll:2004st}. The black hole will have positive specific heat, and therefore be thermodynamically stable, for $\ell \gg r_H$ so that $T_H \simeq 1/2\pi r_H$ \cite{Hawking:1982dh}. 
 
-Now consider the partition function for a 4D thermal system in contact with a heat reservoir at temperature $\beta^{-1}$. The quantum partition function involves the trace over the eigenvectors of the Hamiltonian,
+Now consider the partition function for a thermal system in contact with a heat reservoir at temperature $\beta^{-1}$. The quantum partition function involves the trace over the eigenvectors of the Hamiltonian,
 \begin{align}
 \label{quantum par}
 Z = \text{Tr} \, e^{- \beta H} = \int dq \, \langle q | \exp ( - \beta H ) | q \rangle \, .
@@ -159,7 +159,12 @@ The trace vanishes by orthogonality of states except when the states have period
 \end{align}
 where $S_E$ is the Euclidean action. Equivalently, we may sum over all states but impose the periodicity condition $\tau \sim \tau + \beta$. 
 
-Since this system lives on the $4$-dimensional boundary of AdS$_{5}$, it shares its time coordinate with the black hole solution in the bulk. It can be shown that the metric of a Schwarzschild-AdS black hole in the near-horizon limit requires the Euclidean time $\tau$ to be periodically identified by $\tau \sim \tau + 2\pi r_H$ to avoid a conical singularity at $r=r_H$ \cite{1401.1504}. By matching the conditions on $\tau$ from the bulk and boundary theories, we can see that 
+Now, we place this quantum theory in the background of a Schwarzschild black hole. After Wick rotating $t \to i\tau$, the metric is
+\begin{align}
+\label{Euclidean}
+ds^2 = +\left(1 - \frac{2GM}{r} \right) d\tau^2 + \left(1 - \frac{2GM}{r}\right)^{-1}dr^2 + r^2 d\Omega_{d-1}^2 \, .
+\end{align}
+Note that within the horizon $r < 2GM$, the metric of \eqref{Euclidean} is no longer Euclidean but instead is $\text{diag}(- - + +)$, unlike the Lorentz signature metric where the time and radial position change roles without changing the signature. Taking the near-horizon limit, we see that the metric develops a conical singularity. To resolve the singularity at $r=r_H$, we require that the Euclidean time be periodic such that $\tau \sim \tau + 2\pi r_H$ \cite{hep-th/9803131}. By matching this condition on $\tau$ with the one from finite-temperature quantum system, we can see that 
 \begin{align}
 \label{temp/grav}
 \left. \begin{aligned}
