@@ -22,12 +22,12 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Energy spectra for various QP solutions}}{73}{figure.caption.26}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces High temperature solutions resulting from projecting back to the QP solution plane at various frequencies}}{76}{figure.caption.27}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Energy spectra resulting from perturbing the same QP solution at differing frequencies}}{78}{figure.caption.29}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Finding high temperature QP solutions using repeated perturbations with regular projections back to the QP plane.\relax }}{87}{figure.caption.30}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Constructing high temperature solutions by hand}}{88}{figure.caption.31}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Absolute and relative residuals for a low-temperature QP solution}}{88}{figure.caption.32}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Evolution of QP solutions at low temperature}}{89}{figure.caption.33}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Taking the spectrum of a QP solution during evolution to use as a seed to find new QP solutions}}{89}{figure.caption.34}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Energy spectra resulting from perturbing the same QP solution at differing frequencies}}{77}{figure.caption.29}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Finding high temperature QP solutions using repeated perturbations with regular projections back to the QP plane.\relax }}{79}{figure.caption.30}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Constructing high temperature solutions by hand}}{80}{figure.caption.31}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Absolute and relative residuals for a low-temperature QP solution}}{82}{figure.caption.32}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Evolution of QP solutions at low temperature}}{83}{figure.caption.33}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Taking the spectrum of a QP solution during evolution to use as a seed to find new QP solutions}}{84}{figure.caption.34}
 \contentsline {figure}{\numberline {3.9}{\ignorespaces The evolution of a padded QP solution}}{90}{figure.caption.35}
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Examining the energy per mode during the evolution of a threshold temperature solution}}{91}{figure.caption.36}
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Evolution of the spectrum of a threshold temperature solution that has been padded with $100$ modes}}{92}{figure.caption.37}
