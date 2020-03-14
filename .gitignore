@@ -5,3 +5,4 @@
 *.lot
 *.lof
 *.DS_Store
+*/*.DS_Store
