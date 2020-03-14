@@ -6,3 +6,5 @@
 *.lof
 *.DS_Store
 */*.DS_Store
+*.synctex.gz
+*/*.synctex.gz
