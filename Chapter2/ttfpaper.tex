@@ -50,22 +50,22 @@ Physics,\\ University of Winnipeg\\
 
 \bigskip
 
-We construct a families of perturbative solutions for massless scalar fields in AdS$_4$ by solving the renormalization flow equations derived from the Two-Time Formalism using a quasi-periodic (QP) ansatz. We verify that these solutions are robust against the choice of truncation and examine their evolution within the perturbative framework. Furthermore, we investigate methods for extending the space of such solutions and find that the space of solutions is much more restricted than previously thought. In particular, several families of solutions that appear to solve the system at low truncation number fail to do so as the truncation value is increased. We show that new families of QP solutions are accessible only through evolution of the perturbative system.
+We examine a family of numerical solutions in the Two-Time Formalism (TTF) description of massless scalars in AdS$_4$ characterized by the dimensionless parameter $T$. The TTF theory is only a complete description of the weakly turbulent behaviour of the system when the scalar field includes an infinite sum over spatial eigenmodes, $e_j(x)$. However, numerical solutions can be found when the number of modes is truncated to a finite $j \leq \jm$. We extensively verify the robustness of such solutions against truncation, and over a range of $T$. We find that solutions with low values of $T$ are robust as $\jm \to \infty$, while solutions with high values of $T$ are not. We demonstrate that one possible method for extending low-$T$ solutions into include high-$T$ solutions fails for large values of $\jm$. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Introduction}
 
-The question of the nonperturbative stability of ($d+1$)-dimensional Anti-de Sitter spacetime has been examined extensively, both as a question of mathematical physics and given its application to the AdS/CFT correspondence (see reviews such as \cite{1708.05600}). Beginning with the seminal work of \cite{1104.3702}, the generic instability of spherically symmetric AdS$_{d+1}$ gravity minimally coupled to a scalar field has been repeatedly demonstrated \cite{1108.4539, 1106.2339, 1110.5823, 1210.0890, 1510.02592}. The primary driver of the instability in the fully nonlinear system is the weakly turbulent flow of energy to short length scales. However, \cite{1303.3186, 1307.2875, 1403.5434} (and others) have shown that some initial conditions in asymptotically AdS spacetimes resist gravitational collapse; these conditions form islands of stability in the space of initial data. As these islands of stability continue to be explored, more subtle behaviours have been identified, particularly along the ``shorelines'' \cite{1508.02709, 1711.00454,1602.03535, 1803.02830}. Within the stability islands are various solutions created from exciting a single linear mode, known as oscillons or breathers for real scalars \cite{1104.3702,1210.0890,1303.3186,1503.07746}, boson stars for complex scalars (on a fixed metric)\cite{1304.4166,1307.2875}, and geons in pure gravity \cite{1109.1825,1208.5772}.
+The question of the nonperturbative stability of ($d+1$)-dimensional Anti-de Sitter spacetime against horizon formation has been examined extensively, both as a question of mathematical physics and given its application to the AdS/CFT correspondence; see reviews such as \cite{1708.05600}. Beginning with the seminal work of \cite{1104.3702}, others (including \cite{1108.4539, 1106.2339, 1110.5823, 1210.0890, 1510.02592}) have repeatedly demonstrated the generic instability of spherically symmetric AdS$_{d+1}$ gravity minimally coupled to a scalar field. The primary driver of the instability in the fully nonlinear system is the weakly turbulent flow of energy to short length scales. However, \cite{1303.3186, 1307.2875, 1403.5434} and others have shown that some initial conditions in asymptotically AdS spacetimes resist gravitational collapse; these conditions form islands of stability in the space of initial data. As these islands of stability continue to be explored, more subtle behaviours continue to be identified, particularly along the ``shorelines'' \cite{1508.02709, 1711.00454,1602.03535, 1803.02830}. Within the stability islands are various solutions created from exciting a single linear mode, known as oscillons or breathers for real scalars \cite{1104.3702,1210.0890,1303.3186,1503.07746}, boson stars for complex scalars (on a fixed metric)\cite{1304.4166,1307.2875}, and geons in pure gravity \cite{1109.1825,1208.5772}.
 
-While the nonperturbative physics of AdS instability requires numerical study, the perturbative formulation encapsulates the weakly turbulent nonlinear physics at $\mc O(\epsilon^3)$. At this order, resonances can be removed at each order by frequency shifts; however, data constructed from superpositions of eigenmodes contain resonances that cannot be removed this way \cite{1109.1825}. For fields constructed from multiple excited eigenmodes, the secular growth of resonant terms that satisfy certain frequency conditions triggers the onset of instability \cite{1109.1825, 1306.0317, 1312.5544, 1506.03519}.
+While the nonperturbative physics of AdS instability requires numerical study, the perturbative formulation encapsulates the weakly turbulent nonlinear physics at $\mc O(\epsilon^3)$. {\bf Explain expansion order/ eigenmode expansion}. At this order, resonances can be removed at each order by frequency shifts; however, data constructed from superpositions of eigenmodes contain resonances that cannot be removed this way \cite{1109.1825}. For fields constructed from multiple excited eigenmodes, the secular growth of resonant terms triggers the onset of instability \cite{1109.1825, 1306.0317, 1312.5544, 1506.03519}.
 
-To control the secular growth, the amplitude and phase of each eigenmode are allowed to flow with respect to a second scale. Applying renormalization techniques to these new slowly-varying amplitudes and phases leads to a ladder of coupled first-order ordinary differential equations describing the flow.  There are several equivalent methods to arrive at the flow equations: the Two-Time Formalism (TTF) -- wherein the slow time $\tau = \epsilon^2 t$ is the flow parameter \cite{1403.6471} -- a renormalization-like formalism \cite{1407.6273,1412.3249}, and time averaging procedure \cite{1412.3249,1510.07836}. By absorbing the secular terms into the renormalized amplitudes and phases, the $\mc O(\epsilon^3)$ resonances are controlled and collapse is avoided over time scales of $t \sim \epsilon^{-2}$. 
+To describe the secular growth, the amplitude and phase of each eigenmode are allowed to flow with respect time. Applying renormalization techniques to these new slowly-varying amplitudes and phases leads to a ladder of coupled first-order ordinary differential equations describing the flow.  There are several equivalent methods to arrive at the flow equations: the Two-Time Formalism (TTF) -- wherein the slow time $\tau = \epsilon^2 t$ is the flow parameter \cite{1403.6471} -- a renormalization-like formalism \cite{1407.6273,1412.3249}, and time averaging procedure \cite{1412.3249,1510.07836}. The $\mc O(\epsilon^3)$ resonances are then controlled by absorbing the secular terms into the renormalized amplitudes and phases.
 
-In order to solve the flow equations for a general scalar field, one naturally has truncate the mode expansion at a maximum eigenmode number $\jm$. After having found solutions to the truncated TTF system, one can probe their stability by taking a quasi-periodic (QP) ansatz for the amplitude/phase variables. These QP solutions orbit static solutions in phase space, have constant energy $E$ and particle number\footnote{ The symmetries inherent to the TTF system yield these two conserved quantities \cite{1412.4761}.} $N$, and are categorized in terms of the ``temperature" $T= E/N$ \cite{1403.6471,1507.08261}. Understanding the bounds of the space of QP solutions allows us to better understand how to construct more general long-lived scalar fields. QP solutions are special in that the time-dependence of each mode is harmonic, so QP solutions satisfy algebraic equations. The first families of solutions were classified as ``low-temperature'' and were found by directly solving these algebraic equations\cite{1507.08261}. It was then suggested that the space of solutions could be extended into higher temperatures by perturbing low-temperature solutions, up to a maximum temperature of $T_{max} = 2\jm + d$. 
+In order to solve the flow equations for a general scalar field, one naturally must truncate the mode expansion at a maximum eigenmode number $\jm$. After having found solutions to the truncated TTF system, one can probe their stability by taking a quasi-periodic (QP) ansatz for the amplitude/phase variables. These QP solutions orbit static solutions in phase space, have constant energy $E$ and particle number\footnote{The symmetries inherent to the TTF system yield these two conserved quantities \cite{1412.4761}.} $N$, and are categorized in terms of the ``temperature" $T= E/N$ \cite{1403.6471,1507.08261}. Understanding the bounds of the space of QP solutions allows us to better understand how to construct more general long-lived scalar fields. QP solutions are special in that the time-dependence of each mode is harmonic, so QP solutions satisfy algebraic equations. The first families of solutions were classified as ``low-temperature'' and were found by directly solving these algebraic equations\cite{1507.08261}. It was then suggested that the space of solutions could be extended into higher temperatures by perturbing low-temperature solutions, up to a maximum temperature of $T_{max} = 2\jm + d$. 
 
-In this work, we examine the persistence of QP solutions, especially those with high temperatures, in the limit of large $\jm$ to eliminate the influence of truncation effects on the solutions. The space of high temperature solutions is explored using established perturbative methods and solutions are tested against various choices of $\jm$. The stability of both classes of solutions are examined through indicators such as the scalar curvature and energy transfer among eigenmodes. 
+In this work, we ask when QP solutions of the truncated TTF theory extend to the full untruncated theory. The space of high temperature solutions is explored using established perturbative methods and solutions are tested against various choices of $\jm$. The stability of both classes of solutions are examined through indicators such as the scalar curvature and energy transfer among eigenmodes. 
 
 This work is organized as follows: we begin in \S~\!\ref{sec: scalar in AdS} with a review of the linearized solutions for a minimally coupled, massless scalar field in AdS$_{d+1}$ and establish the renormalization flow equations that govern the time evolution of the amplitude and phase functions in the scalar field. In \S~\!\ref{sec: qp}, we find quasi-periodic solutions in AdS$_4$ by directly solving a set of algebraic equations and establish the bounds of low-temperature QP solutions. We then consider methods of expanding the space of QP solutions to include high-temperature solutions in \S\!~\ref{ssec: highT}. Evolution of all QP solutions in the perturbative theory is presented \S\!~\ref{sec: time evolution}. We end with a discussion of results \S~\!\ref{sec: ttf discussion}. 
 
@@ -75,7 +75,7 @@ This work is organized as follows: we begin in \S~\!\ref{sec: scalar in AdS} wit
 \section{Minimally Coupled Scalar Fields in AdS$_{d+1}$}
 \label{sec: scalar in AdS}
 
-Consider a spherically-symmetric, asymptotically AdS$_{d+1}$ spacetime with characteristic curvature $L=1$. Written in Schwarzschild-like coordinates, the metric in units of AdS scale is given by
+Consider a spherically-symmetric, asymptotically AdS$_{d+1}$ spacetime with characteristic curvature $L=1$. Written in Schwarzschild-like coordinates, the metric is given by
 \begin{align}
 ds^2 = \frac{1}{\cos^2(x)} \left( -Ae^{-2\delta} dt^2 + A^{-1}dx^2 + \sin^2(x) d\Omega^{d-1}\right) \, ,
 \end{align}
@@ -90,7 +90,7 @@ The canonical equations of motion for the scalar field are
 \begin{align}
 \p_t \phi = A e^{-\delta} \Pi, \quad \p_t \Phi = \p_x ( A e^{-\delta} \Pi), \quad \text{and} \quad \p_t \Pi = \frac{\p_x \left(\Phi A e^{-\delta} \tan^{d-1} (x) \right)}{\tan^{d-1}(x)} \, ,
 \end{align}
-where the canonical momentum is $\Pi(t,x) = A^{-1}e^\delta \phi$ and $\Phi(t,x) \equiv \p_x \phi$ is an auxiliary variable. In terms of these fields, \eqref{EEs}-\eqref{KG} reduce to 
+where the canonical momentum is $\Pi(t,x) = A^{-1}e^\delta \phi$ and $\Phi(t,x) \equiv \p_x \phi$ is an auxiliary variable. In terms of these fields, \eqref{EEs} reduces to 
 \begin{align}
 	\label{EE const1}
 	\p_x \delta &= - \left( \Pi^2 + \Phi^2 \right) \sin(x) \cos(x), \\
@@ -107,47 +107,48 @@ The linearized scalar field solutions come from expanding in terms of a small am
 \label{eps expansion}
 \phi(t,x) = \sum_{j=0}^\infty \epsilon^{2j+1} \phi_{2j+1}(t,x), \quad \! \! A(t,x) = 1 - \sum_{j=1}^\infty \epsilon^{2j} A_{2j}(t,x), \quad \! \! \delta(t,x) = \sum_{j=1}^\infty \epsilon^{2j} \delta_{2j} (t,x) . \hspace{-0.1in}
 \end{align}
-Under this expansion, the $\mc O(\epsilon)$ terms give the linearized equation of motion for the scalar field:
+Under this expansion, the $\mc O(\epsilon)$ terms give the linearized equation of motion for the scalar field
 \begin{align}
 \label{ttf eom}
 \p^2_t \phi_1 + \hat L \phi_1 = 0 \quad \text{where} \quad \hat L_1 \equiv - \frac{1}{\tan^{d-1}(x)} \p_x \left( \tan^{d-1}(x) \p_x \right) \, .
 \end{align}
-The eigenvalues of $\hat L$ are simply $\omega^2_j = \left(d + 2j\right)^2$ and the eigenfunctions are
+The eigenfunctions of $\hat L$ satisfy $\hat L e_j = \omega^2_j e_j$, where $\omega_j = 2d + j$ and 
 \begin{align}
 \label{ttf eigens}
 e_j (x) = k_j \cos^d (x) P^{(\frac{d}{2} - 1, \frac{d}{2})}_j \left( \cos(2x) \right) \quad \text{with} \quad k_j = \frac{2 \sqrt{j! (j + d - 1)!}}{\Gamma(j + \frac{d}{2})} \, .
 \end{align}
-Note the the normalizations are chosen such that $\hat L e_j = \omega^2_j e_j$ and 
+Note that the normalizations are chosen such that {\bf what does Andrew mean by ``same notation as below''?}
 \begin{align}
-\langle e_i | e_j \rangle \equiv \int^{\frac{\pi}{2}}_0 dx \, \bar e_i e_j \tan^{d-1}(x) \, .
+\langle e_i | e_j \rangle \equiv \int^{\frac{\pi}{2}}_0 dx \, e_i e_j \tan^{d-1}(x) = \delta_{ij}\, .
 \end{align}
-By expanding the scalar field functions in terms of the eigenbasis given in \eqref{ttf eigens} and substituting into \eqref{ttf eom}, we find that the time-dependent functions {$c^{(2j + 1)}_n (t) = \langle \phi_{2j + 1}(t,x), e_n (x) \rangle$} satisfy {$\ddot c_j^{(1)} + \omega^2_j c_j^{(1)} = 0$}. The general solution for the scalar field is can then be written in terms of time-dependent amplitude and phase variables:
+By expanding the scalar field functions in terms of the eigenbasis given in \eqref{ttf eigens} and substituting into \eqref{ttf eom}, we find that the time-dependent functions {$c^{(2j + 1)}_n (t) = \langle \phi_{2j + 1}(t,x), e_n (x) \rangle$} satisfy ${\ddot c_j^{(1)} + \omega^2_j c_j^{(1)} = 0}$. The general solution for the scalar field is can then be written as a sum over eigenfunctions with time-dependent amplitude and phase variables
 \begin{align}
 \label{ttf phi}
 \phi_1 (t,x) = \sum_{j=0}^\infty A_j (t) \cos \left(\omega_j t + B_j(t) \right) e_j (x) \, .
 \end{align}
+{\bf Andrew's comment about A, B being constant at first order?}
 
-As discussed in \cite{1412.3249, 1407.6273, 1508.04943}, the integer nature of the mode frequencies mean that the spectrum is fully resonant. Unlike solutions such as oscillons, the resonant terms cannot be absorbed by a frequency shift and therefore result in \emph{secular} terms: resonant contributions that grow rapidly with time and induce collapse. These resonant terms appear at $\mc O (\epsilon^3)$ and can be expressed in terms of a source, $S(t)$:
+As discussed in \cite{1412.3249, 1407.6273, 1508.04943}, the integer nature of the mode frequencies mean that the spectrum is fully resonant. In general, secular growth caused by resonances cannot be absorbed by frequency shifts, and therefore result in \emph{secular} terms: resonant contributions that grow rapidly with time and induce collapse. These resonant terms appear at $\mc O (\epsilon^3)$ and can be expressed in terms of a source, $S(t)$: {\bf Highlighted this, but not explained why}
 \begin{align}
-\ddot \phi_3 + \hat L \phi_3 = S \equiv 2 (A_2 - \delta_2) \ddot \phi_1 + ( \dot A_2 - \dot \delta_2 ) \dot \phi_1 + (A'_2 - \delta'_2) \phi'_1 \, ,
+\ddot \phi_3 + \hat L \phi_3 = S(t) \equiv 2 (A_2 - \delta_2) \ddot \phi_1 + ( \dot A_2 - \dot \delta_2 ) \dot \phi_1 + (A'_2 - \delta'_2) \phi'_1 \, ,
 \end{align}
-where $A_2$, $\delta_2$ are the leading-order contributions to the metric functions in \eqref{eps expansion} that are determined by the $\mc O(\epsilon^2)$ backreaction with the metric. Projecting onto the $e_j(x)$ basis, the source term can be expressed in terms of the time-dependent coefficients
+where $A_2$, $\delta_2$ are the leading-order contributions to the metric functions in \eqref{eps expansion} that are determined by the $\mc O(\epsilon^2)$ backreaction of the metric. Projecting onto the $e_j(x)$ basis, the source term is
 \begin{align}
 \ddot c_j^{(3)} + \omega_j^2 c_j^{(3)} = S_j \, .
 \end{align}  
 
-To control the growth of secular terms, \cite{1412.3249} used resummation techniques to absorb singular contributions into the amplitude $A_j$ and phase $B_j$ of \eqref{ttf phi}. This also resulted in a set of conserved quantities: the energy of the system, $E$, and particle number, $N$. The simultaneous conservation of both $E$ and $N$ imply the existence of inverse energy cascades that must balance direct cascades, and provide a mechanism through which two-mode data could remain stable \cite{1412.4761}.
+To describe the growth of secular terms, \cite{1412.3249} used renormalization techniques to absorb secular contributions into the amplitude $A_j$ and phase $B_j$ of \eqref{ttf phi}. As explained in \cite{1412.3249}, this procedure allows for explicit expressions for the source term $S_j$ to be calculated on resonance. These resonances occur for specific combinations of the frequencies found in $S_j$, such that the frequency of the $\ell^{th}$ mode is equal to either $\omega_i + \omega_j + \omega_k$, $\omega_i - \omega_j - \omega_k$, or $\omega_i + \omega_j - \omega_k$. After direct calculation of the source terms in each of these cases, \cite{1412.3249} showed that the source terms naturally vanished for both the $\omega_\ell = \omega_i + \omega_j + \omega_k$ and $\omega_\ell = \omega_i - \omega_j -\omega_k$ channels. It was only for $\omega_\ell = \omega_i + \omega_j - \omega_k$ that $S(t) \neq 0$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Two-Time Formalism}
 
-The Two-Time Formalism (TTF) describes the solution to \eqref{ttf eom} in terms of slowly-modulating amplitude and phase variables, $A_j$ and $B_j$, that are functions of the slow time $\tau = \epsilon^2 t$,
+The Two-Time Formalism (TTF) introduces a second time scale, the slow time $\tau = \epsilon^2 t$, that dictates the evolution of the amplitude and phase variables. In terms of $\tau$, the scalar field at linear order in $\epsilon$ is {\bf I'm following the description from the source papers}
 \begin{align}
 \label{phi ttf}
 \phi(t,x) = \epsilon \sum_{j=0}^\infty A_j (\epsilon^2 t) \cos \left(\omega_j t + B_j(\epsilon^2 t) \right) e_j(x) .
 \end{align}
-The next non-trivial order in the equations of motion include gravitational self-interactions of the scalar field, and provides source terms for $A_j$ and $B_j$. Following the time-averaging procedure of \cite{1407.6273} -- and using the resonance condition $\oi + \oj = \ok + \ol$ to eliminate one of the indices -- the $\ell^{th}$ amplitude and phase are given by
+The next non-trivial order in the equations of motion include gravitational self-interactions of the scalar field, and provides source terms for the time derivatives of $A_j$ and $B_j$. Following the renormalization procedure of \cite{1407.6273} the $\ell^{th}$ amplitude and phase are given by
 \begin{align}
 \label{RN1}
 -\frac{2\omega_\ell}{\epsilon^2} \frac{d A_\ell}{d t} &= \stackrel{\ell \leq i + j}{\sum_{i \neq \ell} \sum_{j \neq \ell}} S_{ij (i + j -\ell) \ell} A_i A_j A_{i + j - \ell} \sin \left( B_\ell + B_{i+j-\ell} - B_i - B_j \right) , \\
@@ -155,15 +156,15 @@ The next non-trivial order in the equations of motion include gravitational self
 - \frac{2 \omega_\ell A_\ell}{\epsilon^2} \frac{d B_\ell}{dt} &= T_\ell A_\ell^3 + \sum_{i \neq \ell} R_{i \ell} A^2_i A_\ell  \nonumber \\
 & \qquad + \stackrel{\ell \leq i + j}{\sum_{i \neq \ell} \sum_{j \neq \ell}} S_{ij (i + j -\ell) \ell} A_i A_j A_{i + j - \ell} \cos \left( B_\ell + B_{i+j-\ell} - B_i - B_j \right) \, .
 \end{align}
-The coefficients $T, R, S$ are calculated directly from integrals over the product of eigenmodes and contain some useful symmetry properties: the integrals vanish except with the resonance condition $\omega_i + \omega_j = \omega_\ell$ is met. 
+{\it NB.} The remaining non-vanishing resonance condition allows us to write $\ok = \oi + \oj - \ol$ above. The coefficients $T, R, S$ are calculated directly from integrals over the product of eigenmodes. Computationally, we find it more convenient to write $T, R, S$ in terms of auxiliary coefficients with greater symmetry properties (as shown in \cite{1508.04943}). The explicit expressions for these integrals in the interior gauge, in which $\delta(t,x=0)=0$, are given in appendix~\ref{app: integrals}. 
 
-Computationally, we find it more convenient to write $T, R, S$ in terms of auxiliary coefficients with greater symmetry properties (as shown in \cite{1508.04943}). The explicit expressions for these integrals in the interior gauge, in which $\delta(t,x=0)=0$, are given in appendix~\ref{app: integrals}. 
-
-Using a complex amplitude of the form $\mc A_j(\tau) = A_j \exp (-i B_j )$ in \eqref{phi ttf} allows us to combine equations \eqref{RN1} and \eqref{RN2} into a single TTF equation:
+Using a complex amplitude of the form $\mc A_j(\tau) = A_j \exp (-i B_j )$ in \eqref{phi ttf} allows us to combine equations \eqref{RN1} and \eqref{RN2} into a single equation
 \begin{align}
 \label{ttf eqn}
 -2i \ol \frac{\mc A_\ell}{d \tau} = T_\ell |\mc A_\ell|^2 \mc A_\ell + \sum_{i \neq \ell} R_{i\ell} |\mc A_i|^2 \mc A_\ell + \stackrel{\ell \leq i+j}{\sum_{i \neq \ell} \sum_{j \neq \ell}} S_{ij(i+j-\ell)\ell} \mc A_i \mc A_j \bar{\mc A}_{i+j-\ell} \, .
 \end{align}
+
+It was further demonstrated by \cite{1412.4761} that the TTF theory resulted in a set of conserved quantities: the energy of the system, $E$, and particle number, $N$. The simultaneous conservation of both $E$ and $N$ imply the existence of inverse energy cascades that must balance direct cascades, thereby providing a mechanism through which two-mode data could remain stable.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -171,31 +172,31 @@ Using a complex amplitude of the form $\mc A_j(\tau) = A_j \exp (-i B_j )$ in \e
 \section{Quasi-periodic Solutions in AdS$_4$}
 \label{sec: qp}
 
-The stability of the solutions to \eqref{ttf eqn} can be examined using a \emph{quasi-periodic} (QP) ansatz for the complex amplitude,
+The stability of the solutions to \eqref{ttf eqn} can be examined using a \emph{quasi-periodic} (QP) ansatz for the complex amplitude
 \begin{align}
 \label{qp ansatz}
 \mc A_j = \alpha_j e^{i \beta_j \tau} \, ,
 \end{align}
-where $\alpha_j, \beta_j \in \mathbb{R}$. Substituting \eqref{qp ansatz} into \eqref{phi ttf} allows us to relate the QP modes $\alpha_j$ and $\beta_j$ to the amplitude/phase modes via $A_j = 2 \alpha_j$, $B_j = \beta_j \tau$. When we examine how well the QP solutions solve the Einstein equations, we use this conversion to re-construct the scalar and metric fields from the QP solutions. The time dependence in \eqref{ttf eqn} is removed via the condition $\beta_j = \beta_0 + j(\beta_1~-~\beta_0)$, leaving $\beta_0$ and $\beta_1$ as unknown parameters. Considering modes of \eqref{phi ttf} up to some $j_{max}$, the QP ansatz results in a set of $j_{max} + 1$ algebraic equations for $j_{max} + 3$ unknowns
+where $\alpha_j, \beta_j \in \mathbb{R}$. Substituting \eqref{qp ansatz} into \eqref{phi ttf} allows us to relate the QP modes $\alpha_j$ and $\beta_j$ to the amplitude/phase modes via $A_j = 2 \alpha_j$, $B_j = \beta_j \tau$. The time dependence in \eqref{ttf eqn} is removed via the condition $\beta_j = \beta_0 + j(\beta_1~-~\beta_0)$, leaving $\beta_0$ and $\beta_1$ as unknown parameters. Considering modes of \eqref{phi ttf} up to some $j_{max}$, the QP ansatz results in a set of $j_{max} + 1$ algebraic equations for $j_{max} + 3$ unknowns
 \begin{align}
 \label{qp eqn}
 2 \omega_\ell \alpha_\ell \beta_\ell = T_\ell \alpha_\ell^3 + \sum_{i \neq \ell} R_{i\ell} \alpha_i^2 \alpha_\ell + \stackrel{\ell \leq i + j}{\sum_{i \neq \ell} \sum_{j \neq \ell}} S_{ij(i+j-\ell)\ell} \alpha_i \alpha_j \alpha_{i+j-\ell} \, .
 \end{align}
-As shown in \cite{1507.08261, 1510.07836}, the TTF is invariant under a $U(1)$ transformation that leads to the conserved quantities
+As shown in \cite{1507.08261, 1510.07836}, the TTF is invariant under two $U(1)$ transformations which lead to the conserved quantities
 \begin{align}
 \label{qp cons}
 E = 4\sum_j \omega^2_j \alpha_j^2 \qquad \text{and} \qquad N= 4 \sum_j \omega_j \alpha_j^2 \, .
 \end{align}
 These definitions allow for two of the free parameters to be fixed. Families of solutions can be examined by fixing $\alpha_0 = 1$ and sampling a range of $\alpha_1$ values in the range $\alpha_1 \ll \alpha_0$. The families of solutions can be distinguished by their ``temperature'', or energy per particle number $T=E/N$. 
 
-Practically speaking, finding solutions to the $j_{max}$ equations that arise from \eqref{ttf eqn} requires truncating the series at a finite value $j_{max} < \infty$. However, solutions must continue to be present and unaffected by increasing $j_{max}$ to represent true solutions to the TTF theory. 
+Practically speaking, finding solutions to the $j_{max}$ equations that arise from \eqref{ttf eqn} requires truncating the series at a finite value $j_{max} < \infty$. However, a solution must continue to be present and unaffected by increasing $j_{max}$ in order for it to represent a valid solution to the TTF theory. Let us first examine how robust low temperature QP solutions are to the choice of truncation. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Persistence at Large $j_{max}$}
 \label{ssec: large jmax}
 
-The question of edge effects in determining the stability of a particular solution is important to investigate. For instance, if a particular solution to \eqref{qp eqn} is found for some $\alpha_1$ when $j_{max} = 50$, does this continue to be a solution when we consider more modes, say $j_{max} = 250$? By following the methods outlined in appendix~\ref{app: seeding}, we are able to start with a low $j_{max}$ solution and incrementally increase the number of modes being considered up to several hundred. This method was found to be more successful, given the optimization algorithms being used, than other seeding methods.
+The question of edge effects in determining the robustness of a particular solution is important to investigate. For instance, if a particular solution to \eqref{qp eqn} is found for some $\alpha_1$ when $j_{max} = 50$, does this continue to be a solution when we consider more modes, say $j_{max} = 250$? By following the methods outlined in appendix~\ref{app: seeding}, we are able to start with a low $j_{max}$ solution and incrementally increase the number of modes being considered up to several hundred. This method was found to be more successful, given the optimization algorithms being used, than other seeding methods.
 
 As an example, consider solutions to \eqref{qp eqn} with the conditions $\alpha_0 = 1.0$ (since all QP solutions are defined up to an overall scale, $\alpha_0 = 1.0$ is taken to always be true) and $\alpha_1 = 0.2$, which corresponds to an initial temperature of $T_0 \simeq 3.146$. In figure~\ref{fig: a0.2solns}, we present an overlay of QP solutions generated by successive solving, fitting, and seeding from $j_{max} = 50$ to $j_{max}=500$ for a family of QP solutions. Similar high $j_{max}$ solutions were confirmed for $\alpha_1 \leq 0.442$ and are shown in figure~\ref{fig: j350 solutions}.
 
@@ -203,19 +204,19 @@ As an example, consider solutions to \eqref{qp eqn} with the conditions $\alpha_
 	\centering
 	\begin{subfigure}[t]{0.47\textwidth}
 		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/a020_overlay_4paper}
-		\caption{An overlay of QP solutions with $\alpha_1 = 0.2$, corresponding to $T_0 \simeq 3.146$.}
+		\caption[The smooth continuation of a low temperature QP solution from $\jm = 50$ to $\jm = 500$]{An overlay of QP solutions with $\alpha_1 = 0.2$, corresponding to $T \simeq 3.146$, for increasing values of $\jm$.}
 		\label{fig: a0.2solns}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[t]{0.47\textwidth}
 		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/j350_solutions_4paper}
-		\caption{Families of QP solutions up to $j_{max}~=~350$.}
+		\caption{QP solutions with ${j_{max} = 350}$ spanning temperatures of ${3.116 \lesssim T \lesssim 4.531}$.}
 		\label{fig: j350 solutions}
 	\end{subfigure}
-	\caption[Energy spectra for various QP solutions]{Energy spectra for various QP solutions.}
+	\caption[Energy spectra for various low-$T$ QP solutions]{Energy spectra for various low temperature QP solutions.}
 \end{figure}
 
-When examining the range of $\alpha_1$ values that yield QP solutions, it was found that any small $j_{max}$ QP solution could be extended to large $j_{max}$ with proper seeding and sufficient computing power; that is, there seem to be no solutions that exist at low $j_{max}$ that cease to exist at high $j_{max}$. However, a hard limit exists at the maximum $\alpha_1$ value of $\alpha_1=0.442$, corresponding to a temperature of $T \simeq 4.643$. Above this limit, no QP solutions can be found even for $j_{max}$ values as low as $j_{max}=50$. Conversely, there is no lower limit to $\alpha_1$ values; as $\alpha_1 \to 0$ with $\alpha_j > \alpha_{j+1}$, the TTF solution approaches the well-known single-mode solution.
+When examining the range of $\alpha_1$ values that yield low temperature QP solutions, it was found that any small $j_{max}$ QP solution could be extended to large $j_{max}$ with proper seeding and sufficient computing power; that is, there seem to be no solutions that exist at low $j_{max}$ that cease to exist at high $j_{max}$. However, a hard limit exists at the maximum $\alpha_1$ value of $\alpha_1=0.442$, corresponding to a temperature of $T \simeq 4.643$. Above this limit, no QP solutions can be found by directly solving \eqref{qp eqn} for $j_{max}$ values as low as $j_{max}=50$. Conversely, there is no lower limit to $\alpha_1$ values; as $\alpha_1 \to 0$ with $\alpha_j > \alpha_{j+1}$, the TTF solution approaches the well-known single-mode solution.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
