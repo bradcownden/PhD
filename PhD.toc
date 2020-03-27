@@ -38,9 +38,9 @@
 \contentsline {subsection}{\numberline {3.5.1}Projections at Constant $\alpha _1$}{75}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {3.5.2}Projections at Constant Temperature}{78}{subsection.3.5.2}
 \contentsline {subsection}{\numberline {3.5.3}Building High-Temperature Solutions}{78}{subsection.3.5.3}
-\contentsline {section}{\numberline {3.6}Time Evolution of Quasi-Periodic Solutions}{81}{section.3.6}
+\contentsline {section}{\numberline {3.6}Time Evolution of Quasi-Periodic Solutions}{82}{section.3.6}
 \contentsline {subsection}{\numberline {3.6.1}Low-temperature QP data}{82}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2}High-Temperature QP Data}{85}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.6.2}High-Temperature QP Data}{84}{subsection.3.6.2}
 \contentsline {section}{\numberline {3.7}Discussion}{87}{section.3.7}
 \contentsline {section}{\numberline {3.A}Seeding Methods For Non-Linear Solvers}{90}{section.2.3.A}
 \contentsline {section}{\numberline {3.B}Auxiliary Integrals For Calculating the $T, R, S$ Coefficients}{91}{section.2.3.B}

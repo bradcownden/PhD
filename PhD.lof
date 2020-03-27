@@ -25,13 +25,13 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Energy spectra resulting from perturbing the same QP solution at differing frequencies}}{77}{figure.caption.29}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Finding high temperature QP solutions using repeated perturbations with regular projections back to the QP surface}}{79}{figure.caption.30}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Constructing high temperature solutions by hand}}{80}{figure.caption.31}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Evolution of QP solutions at low temperature}}{82}{figure.caption.32}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Taking the spectrum of a QP solution during evolution to use as a seed to find new QP solutions}}{83}{figure.caption.33}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces The evolution of a padded QP solution}}{84}{figure.caption.34}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Examining the energy per mode during the evolution of a $T \simeq 5.4$ QP solution}}{85}{figure.caption.35}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Evolution of QP solutions at low temperature}}{83}{figure.caption.32}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Taking the spectrum of a QP solution during evolution to use as a seed to find new QP solutions}}{84}{figure.caption.33}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces The evolution of a padded QP solution}}{85}{figure.caption.34}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Examining the energy per mode during the evolution of a $T \simeq 5.4$ QP solution}}{86}{figure.caption.35}
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Evolution of the energy spectrum and Ricci scalar for a $T \simeq 5.4$ QP solution}}{86}{figure.caption.36}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Evolution of the spectrum of a threshold temperature solution that has been padded with $100$ modes}}{86}{figure.caption.37}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Comparison between a threshold temperature solution with $j_{max} = 200$ and the evolution of a $j_{max} = 100$ threshold temperature solution that has been padded by $100$ modes}}{87}{figure.caption.38}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Evolution of the spectrum of a $T \simeq 5.4$ QP solution that has been padded with $100$ modes}}{87}{figure.caption.37}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Comparison between a attracor solution with $j_{max} = 200$ and the evolution of a $j_{max} = 100$, $T \simeq 5.4$ solution that has been padded by $100$ modes}}{87}{figure.caption.38}
 \contentsline {figure}{\numberline {3.A.1}{\ignorespaces Comparison of seed values to known QP solutions and exponential fitting}}{92}{figure.caption.41}
 \contentsline {figure}{\numberline {3.A.2}{\ignorespaces Illustrating the tail fitting procedure}}{93}{figure.caption.42}
 \contentsline {figure}{\numberline {3.C.1}{\ignorespaces Comparison of spectra and temperatures for different projection frequencies between $j_{max}=50$ and $j_{max} = 150$ solutions}}{94}{figure.caption.43}
