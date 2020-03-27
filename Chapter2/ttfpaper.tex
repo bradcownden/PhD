@@ -247,7 +247,7 @@ It can easily be seen that $\alpha_1$ will become singular when $T = \omega_1 = 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Projections With $\alpha_1$ as the Input}
+\subsection{Projections at Constant $\alpha_1$}
 \label{ssec: a1 projections}
 
 Let us first consider the results of the $\alpha_1$ projection method, shown in figure~\ref{fig: reop comparisons}. We have fixed the perturbation amount $\delta E$ to $1\%$ of the energy of the initial solution. Beginning with an $\alpha_1 = 0.44$ solution with low $\jm$, we apply repeated energy perturbations and project back to the QP solution surface with a frequency of once per 5 temperature iterations (see appendix~\ref{app: reop freq} for further discussion  on projection frequency and energy perturbation value). Figure~\ref{fig: a_1andTa0.2reop5} shows the resulting values of $\alpha_1$ and $T$ during these perturbations. We see that $\alpha_1$ approaches an attractor solution of $\alpha_1 \simeq 0.43$ with $T \simeq 4.3$. The energy perturbations between projections are insufficient to escape this local minimum, thus repeated projections return the same solution. However, when the projection frequency is decreased to once every 20 iterations, the resulting QP solution is able to bypass the attractor solution (variations of the projection frequency and energy perturbations are discussed in appendix~\ref{app: reop freq}). Note that as the iteration number increases, we actually see a \emph{decrease} in $\alpha_1$ value while the temperature continues to increase. At iteration 150 in figure~\ref{fig: a_1andTa.2reop20}, there is a cusp in $\alpha_1$ and a discontinuity in the temperature. After several hundred iterations, $\alpha_1$ becomes negative.
@@ -320,7 +320,7 @@ We again use a series of small energy perturbations to seek high-temperature QP 
 \begin{figure}[tp!]
 	\centering
 		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTemperatureComparison}
-		\caption{Finding high temperature QP solutions using repeated perturbations with regular projections back to the QP surface.}
+		\caption[Finding high temperature QP solutions using repeated perturbations with regular projections back to the QP surface]{Finding high temperature QP solutions using repeated perturbations with regular projections back to the QP surface.}
 		\label{fig: const T perturbs}
 \end{figure}
 
@@ -341,6 +341,14 @@ However, the solutions were not robust with the addition of extra modes. Instead
 	\caption[Constructing high temperature solutions by hand]{Extending a high temperature, low $\jm$ solution to higher temperatures by fitting the final 5 modes and generating seed values.}
 	\label{fig: manual highT}
 \end{figure}
+
+In \cite{1507.08261}, it was suggested that QP solutions should exist in a continuous region of temperature space ${T \in [T_{min}, T_{max}] = [d, 2\jm + d]}$. To produce high-temperature solutions, successive energy perturbations could be applied to a low-temperature solution with a low frequency of projecting back to the QP surface. However, we have found that the high temperature solutions produced using regular projections back to the solution surface are not robust as $\jm$ increases and therefore do no constitute physical solutions. In further pursuit of high temperature QP solutions, we investigated additional methods for generating these solutions.
+
+First, we considered applying a similar fitting technique to a $T \simeq 5.4$ QP solution as that which was used to extend low-temperature QP solutions. In this case, values were taken from the middle\footnote{Where power law scaling still holds} of high temperature solutions with $\jm = 50$ and fit with an exponential function (see figure~\ref{fig: solutionfitting} for a similar procedure with tail values) to produce 10 new modes, $\{ \alpha_{fit} \}$. We then inserted the new values $\alpha_{fit}$ with the existing data so that $\alpha_j = \langle \alpha_{j< j_{mid}}, \alpha_{fit}, \alpha_{j > j_{mid}} \rangle$. The result was to extend the data by 10 modes and slightly increase the temperature, thereby providing a good seed for the constant-temperature nonlinear solver. However, no solutions were found by the Newton-Raphson solver, starting either with $\jm = 50$, $T>5.5$ data, or $\jm = 200$, $T \simeq 5.5$ data.
+
+Next, we considered perturbing up to an intermediate temperature $T_{th} \ll T_{int} < T_{max}$ before attempting to project back to the QP surface using the $T_{int}$ data as seed values. In particular, we repeatedly perturbed a $T \simeq 4.5$ solution using the method described in \S~\ref{ssec: highT} to a temperature of $T_{int} = 20$ without projecting back to the QP surface \emph{at any point}. For $\jm \lesssim 100$, projection back to the solution surface finds a new solution with $T < T_{int}$ that -- much like the spectra shown in figure~\ref{fig: spec comparisons reop20} -- loses its smooth profile. Under evolution within the TTF theory (discussed below), the fractional energy in the low-frequency modes oscillates rapidly over several orders of magnitude during the evolution and the Ricci scalar reaches values $\mc O (10^6)$; these solutions are almost certainly not quasi-periodic. The same result is found for high-temperature solutions created by fitting tail data (see figure~\ref{fig: manual highT} for example spectra). Finally, for $\jm \geq 100$, projection back to the QP solution surface once $T = T_{int}$ fails entirely. Thus, we did not find evidence for QP solutions with temperatures above $T \simeq 5.5$.
+
+
 
 
 %Despite high-temperature solutions being inaccessible via repeated energy perturbations, we may ask if such solutions can be found by using different methods. First, we consider perturbing a known QP solution to a high temperature \emph{without} regular projections back to the QP surface. Then, at some sufficiently high temperature $T_{max}$, we attempt to project back to the QP surface. In figure~\ref{fig: T30 vs j_max}, the spectra of QP solutions before and after projection are shown for increasing $j_{max}$. For solutions with $\jm \geq 100$, high-temperature solutions are in fact projected to low-temperature solutions that may contain negative $\alpha_j$ values. Low-$\jm$ solutions, however, appear to remain at high-temperatures after projecting back to the surface. We use this type of solution in our next method.
@@ -377,13 +385,13 @@ However, the solutions were not robust with the addition of extra modes. Instead
 \section{Time Evolution of Quasi-Periodic Solutions}
 \label{sec: time evolution}
 
-The weakly turbulent behaviour of the scalar field in the TTF is captured by the $\mc O(\epsilon^2)$ renormalization group flow equations {\eqref{RN1}-\eqref{RN2}}. Having identified different families of quasi-periodic solutions, we wish to evolve these solutions and examine the direct and inverse cascades of energy between long and short length scales. Furthermore, we may also be able to identify previously inaccessible solutions by evolving a QP solution within the TTF framework and attempting to project back to the QP surface. To achieve these aims, we use numerical methods first described by \cite{1606.02712} and take solutions discussed in \S\!~\ref{sec: qp} as initial data. 
+The weakly turbulent behaviour of the scalar field in the TTF is captured by the $\mc O(\epsilon^2)$ renormalization group flow equations {\eqref{RN1}-\eqref{RN2}}. Having identified different families of quasi-periodic solutions, we wish to evolve these solutions within the TTF description. Furthermore, we may also be able to identify previously inaccessible solutions by evolving a QP solution within the TTF framework before attempting to project back to the QP surface. To achieve these aims, we use numerical methods first described by \cite{1606.02712} and take both low-temperature and high-temperature QP solutions as initial data. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Low-temperature QP data}
 
-Let us consider the evolution of a ``typical'' QP solution: a solution to \eqref{qp eqn} with $\alpha_1 = 0.2$ and $\jm = 100$, corresponding to a temperature of $T = 3.146$. Choosing an amplitude of $\epsilon = 0.01$ (note that the TTF equations are invariant under $\mc A(\tau) \to \epsilon \, \mc A(\tau / \epsilon^2)$ and so the value of $\epsilon$ does not change the physics), figure~\ref{fig:qpevo} shows the evolution of the fraction of the total energy per mode. We see that energy in the lowest-$j$ modes remains constant over the duration of the evolution, while the fraction in the highest-$j$ modes increases after $\tau \simeq 0.3$. Similar behaviour is observed for higher $\jm$ solutions and over values of $0.2 \leq \alpha_1 \leq 0.44$. Given the scale of the energy in the modes $j \geq 96$, the growing energy fractions in these modes can mainly be attributed to numerical errors rather than direct energy cascades.
+Let us consider the evolution of a ``typical'' QP solution: a solution to \eqref{qp eqn} with $\alpha_1 = 0.2$ and $\jm = 100$, corresponding to a temperature of $T \simeq 3.146$. Choosing an amplitude of $\epsilon = 0.01$ (note that the TTF equations are invariant under $\mc A(\tau) \to \epsilon \, \mc A(\tau / \epsilon^2)$ and so the value of $\epsilon$ does not change the physics), figure~\ref{fig:qpevo} shows the evolution of the fraction of the total energy per mode. We see that energy in the lowest-$j$ modes remains constant over the duration of the evolution, while the fraction in the highest-$j$ modes increases after $\tau \simeq 0.3$. Similar behaviour is observed for higher $\jm$ solutions and over values of $0.2 \leq \alpha_1 \leq 0.44$. Given the scale of the energy in the modes $j \geq 96$, the growing energy fractions in these modes can mainly be attributed to numerical errors rather than direct energy cascades.
 \\
 
 \begin{figure}[H]
@@ -416,7 +424,7 @@ Let us consider the evolution of a ``typical'' QP solution: a solution to \eqref
 %	\label{fig: Qpa4_40e-01QPresids}
 %\end{figure}
 
-We may also ask: does a given quasi-periodic solution remain unique under evolution? That is, will the solution project back to itself during its evolution? To answer this, we evolve the same low-temperature, QP solution and take the spectra at different times as seed values for projecting back to the QP surface. We observe that these solutions continue to be projected back to themselves at all times during the evolution, and that the resulting solutions solve the QP equation \eqref{qp eqn} to a high degree of accuracy (see figure~\ref{fig: Qpa4_40e-01j100EvolutionProjection}). 
+We may also ask: does a given quasi-periodic solution remain unique under evolution? That is, will the solution project back to itself during its evolution? To answer this, we evolve the same low-temperature, QP solution and take the spectra at different times as seed values for projecting back to the QP surface. We see that seed values taken from data with $t > 0$ are projected back to themselves (using the constant $\alpha_1$ Newton-Raphson method) at all times during the evolution, and that the resulting solutions solve the QP equation \eqref{qp eqn} to a high degree of accuracy (see figure~\ref{fig: Qpa4_40e-01j100EvolutionProjection}). 
 
 %While this is to be expected for such low-temperature QP solutions, we will soon see that even padding a known QP solution with zeros causes the loss of quasi-periodicity during evolution. For comparison, figure~\ref{fig: QPa4_40e-01padj200_evolutionprojection} shows the results of attempting to project a QP solution that has been padded with zeros back to the QP surface during its evolution. Note the scale on the plot of the $L^2$-norm in either case.
 
@@ -443,9 +451,11 @@ We may also ask: does a given quasi-periodic solution remain unique under evolut
 %	\caption[Taking the spectrum of a QP solution during evolution to use as a seed to find new QP solutions]{Intermediate values from the amplitude/phase evolution of a solution are used as seeds for the nonlinear solver at various times. Arrows are oriented from amplitude/phase seed values (circles) to QP surface projections (pentagons).}
 %\end{figure}
 
-In an effort to extend the space of QP solutions, another method can be used to find solutions that exist nearby known QP solutions -- but are not accessible through perturbative or conventional seeding methods: padding a given quasi-periodic solution with extra modes that are initially set to zero. Upon amplitude-phase evolution via \eqref{RN1}-\eqref{RN2}, the energy in the lower-$j$ modes will flow into the higher-$j$ modes and a new quasi-periodic solution may be found, albeit with the same temperature. In figure~\ref{fig:paddedqpevo}, we construct initial data out of a known $\jm = 100$, $T \simeq 3.14$ solution by padding the data with zeros up to $\jm = 200$. As in the case of unpadded QP solution, the fraction of the total energy in the first four modes does not vary significantly during the evolution and the highest modes accumulate some numerical error before levelling off. Despite the somewhat normal profile of the spectra of padded QP solution (shown in figure~\ref{fig: paddedqp_fullspecevo}) and the relatively low value of the Ricci scalar (see figure~\ref{fig: Qpa2_00e-01padj200_ricci}) --  we find that intermediate solutions during the evolution in fact \emph{do not} project back to the QP surface after roughly halfway through the evolution. Evaluating the residuals of the Einstein equations, we find relative residuals on the order ${\sim 5 \times 10^{-1}}$, indicating a drift away from the quasi-periodic initial data (\emph{c.f.} figure~\ref{fig: qpEEresids}). It remains to be seen whether such profiles would be stable in the fully nonlinear system. Finally, we may ask how far away from the solution surface we can move by padding a known QP solution with an incremental number of zeros. Beginning with the same $\jm = 100$ QP solution, we pad with only five modes this time. Despite a QP solution with $\jm = 105$ already being known, the evolution did not result in the padded solution approaching the known solution. Furthermore, using intermediate spectra of the padded solution as seed values for projecting back to the QP surface did not result in new QP solutions at any point during the evolution.
+\vspace{-0.1in}
 
-\begin{figure}[H]
+In an effort to find new QP solutions, we consider an alternative method for finding solutions that may not be accessible through established seeding methods. We pad a given quasi-periodic solution with extra modes that are initially set to zero and project back to the QP solution surface. Upon amplitude-phase evolution via \eqref{RN1}-\eqref{RN2}, the energy in the lower-$j$ modes will flow into the higher-$j$ modes. This may lead to new quasi-periodic solution with the same temperature but larger $\jm$. In figure~\ref{fig:paddedqpevo}, we construct initial data from a known $\jm = 100$, $T \simeq 3.14$ solution by padding the data with zeros up to $\jm = 200$. As in the case of unpadded QP solution, the fraction of the total energy in the first four modes does not vary significantly during the evolution and the highest modes accumulate some numerical error before levelling off. Despite the somewhat normal profile of the spectra of padded QP solution (shown in figure~\ref{fig: paddedqp_fullspecevo}) and the relatively low value of the Ricci scalar (see figure~\ref{fig: Qpa2_00e-01padj200_ricci}), we find that the Newton-Raphson solver -- both constant-$\alpha_1$ and constant-$T$ -- is not able to project back to the QP surface when the evolved QP solution is used as seed data. To check whether the failure to project back to the QP surface is due to the addition of too many extra modes, we also investigated incrementally adding a small number of modes. Beginning with the same $\jm = 100$ QP solution, we padded with only five modes. Despite a QP solution with $\jm = 105$ already being known, the evolution did not result in the padded solution approaching the known solution. 
+%\vspace{-0.125in}
+\begin{figure}[ht]
 	\centering
 	\begin{subfigure}[t]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/paddedQPa2_00e-01_j200_lowjenergyevo}
@@ -512,39 +522,38 @@ In an effort to extend the space of QP solutions, another method can be used to 
 
 \subsection{High-Temperature QP Data}
 
-We now apply the same amplitude-phase evolution procedure to threshold and possible high-temperature QP data. First, consider a threshold temperature solution with $\jm = 100$ and $T \sim 5.4$. Such a solution was demonstrated in figure~\ref{fig: const T perturbs} to be within the regime of solutions accessible through repeated energy perturbations that persisted as $\jm \to \infty$. In figure~\ref{fig:HighTa4_072e-01j100T5_3921e+00_evo} we show the energy spectrum at various times during the evolution, as well as the fractional energy per mode. Because of the initial profile of solutions with these temperatures, there is a much higher fraction of the total energy in the higher modes; therefore, the accumulation of numerical errors that were present in low-temperature solutions are not seen here. Close inspection of figure~\ref{fig: HighTa4_072e-01j100T5_3921e+00_highjevo}, which shows the fractional energy in the high frequency components of the scalar field, reveals small oscillations in $E_j/E_{tot}$ as energy undergoes direct and inverse cascades between high and low frequency components. However, these oscillations are not sufficient to produce a qualitative change in the full energy spectrum, as shown in figure~\ref{fig: HighTa4_072e-01j100T5_3921e+00_spectrumevo}. Finally, examination of the absolute value of the scalar curvature at the origin in figure~\ref{fig: HighTa4_072e-01j100T5_3921e+00Ricci} shows that the large initial value of $| \mc R |$ oscillates rapidly during evolution. Since the TTF description is inherently stable, the curvature will never become infinite; however, large values of curvature with rapid oscillations are good indicators of instability. It would be interesting to use such a solution as initial data for evolution in the fully nonlinear system to see if stability is maintained over the perturbative timescale. 
-
-\begin{figure}[ht]
+We now apply the same amplitude-phase evolution procedure to higher temperature QP data. First, we consider a QP solution with $\jm = 100$ and $T \simeq 5.4$. Such a solution was demonstrated in figure~\ref{fig: const T perturbs} to be robust as $\jm$ increased. In figure~\ref{fig: HighTa4_072e-01j100T5_3921e+00_highjevo} we show  the fractional energy per mode during evolution. Because of the initial profile of solutions with these temperatures, there is a much higher fraction of the total energy in the higher modes; therefore, the accumulation of numerical errors that were present in low-temperature solutions are not as significant. Close inspection of figure~\ref{fig: HighTa4_072e-01j100T5_3921e+00_highjevo}, which shows the fractional energy in the high frequency components of the scalar field, reveals small oscillations in $E_j/E_{tot}$. However, these oscillations are not sufficient to produce a qualitative change in the full energy spectrum, as shown in the left pane of figure~\ref{fig:HighTa4_072e-01j100T5_3921e+00_evo}. Examination of the absolute value of the scalar curvature at the origin in the right pane of figure~\ref{fig:HighTa4_072e-01j100T5_3921e+00_evo} shows that the large initial value of $| \mc R |$ oscillates rapidly during evolution. Since the TTF description is inherently stable, the curvature will never become infinite; however, large values of curvature with rapid oscillations are good indicators of instability. It would be interesting to use such a solution as initial data for evolution in the fully nonlinear system to see if stability is maintained over the perturbative timescale. 
+\vspace{0.1in}
+\begin{figure}[H]
 	\centering
 	\begin{subfigure}[t]{0.48\textwidth}
 		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa4_072e-01j100T5_3921e+00_lowjevo}
-		\caption{$j = 0, 1, 2, 3$ (purple, green, blue, orange).}
+		\label{}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[t]{0.48\textwidth}
 		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa4_072e-01j100T5_3921e+00_highjevo}
-		\caption{$j=96, 97, 98, 99$ (purple, green, blue, orange).}
-		\label{fig: HighTa4_072e-01j100T5_3921e+00_highjevo}
+		\label{}
 	\end{subfigure}
-	\\
+	\caption[Examining the energy per mode during the evolution of a $T \simeq 5.4$ QP solution]{Examining the energy per mode during the evolution of a $T \simeq 5.4$ QP solution with ${\epsilon = 0.1}$ over ${\tau \in [0, 4.25]}$. {\bf Left}: $E_j$ for ${j = 0, 1, 2, 3}$ (purple, green, blue, orange). {\bf Right}: $E_j$ for ${j = 0, 1, 2, 3}$ (purple, green, blue, orange).}
+	\label{fig: HighTa4_072e-01j100T5_3921e+00_highjevo}
+\end{figure}
+	
+\begin{figure}[H]
 	\begin{subfigure}[t]{0.48\textwidth}
 		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa4_072e-01j100T5_3921e+00_spectrumevo}
-		\caption{The energy spectrum during evolution.}
 		\label{fig: HighTa4_072e-01j100T5_3921e+00_spectrumevo}
 	\end{subfigure}
 	\:
 	\begin{subfigure}[t]{0.48\textwidth}
 		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa4_072e-01j100T5_3921e+00Ricci}
-		\caption{The upper envelope of the scalar curvature.}
 		\label{fig: HighTa4_072e-01j100T5_3921e+00Ricci}
 	\end{subfigure}
-	\caption[Examining the energy per mode during the evolution of a threshold temperature solution]{The evolution of a threshold temperature solution with $T \sim 5.4$ with $\epsilon = 0.1$ over $\tau \in [0, 4.25]$.}
-	\label{fig:HighTa4_072e-01j100T5_3921e+00_evo}
+	\caption[Evolution of the energy spectrum and Ricci scalar for a $T \simeq 5.4$ QP solution]{The evolution of the energy spectrum (left) and upper envelope of the Ricci scalar (right) for a $T \simeq 5.4$ QP solution with $\epsilon = 0.1$ over $\tau \in [0, 4.25]$.}
+	\label{fig:HighTa4_072e-01j100T5_3921e+00_evo}	
 \end{figure}
 
-As in the case of low-temperature QP solutions, we wish to expand the space of possible solutions by padding threshold data with extra modes initially set to zero. Consider padding the threshold temperature solution of $T \sim 5.4$ from $\jm = 100$ to $\jm = 200$ with $\alpha_j = 0$ for $j > 99$. Figure~\ref{fig: HighTa4_072e-01padj200T5_3921e+00_evo} demonstrates that after evolving in time there are indications of large scale energy transfer amongst modes with higher frequencies. Interestingly, the magnitude and oscillation frequency of the Ricci scalar at the origin is significantly decreased compared to the $\jm = 100$ threshold solution. When compared against the known solution of the same temperature when $\jm = 200$, figure~\ref{fig: HighTa4_072e-01spec_vs_pad} indicates that the padded solution may not approach the known threshold solution and instead may have produced a distinct, but equal temperature, solution.
-
-\begin{figure}[ht]
+\begin{figure}[h]
 	\centering
 %	\begin{subfigure}[t]{0.45\textwidth}
 %		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa4_072e-01padj200T5_3921e+00_lowjevo}
@@ -561,6 +570,16 @@ As in the case of low-temperature QP solutions, we wish to expand the space of p
 	\label{fig: HighTa4_072e-01padj200T5_3921e+00_evo}
 \end{figure}
 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.75\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa4_072e-01spec_vs_padv2}
+	\caption[Comparison between a threshold temperature solution with $j_{max} = 200$ and the evolution of a $j_{max} = 100$ threshold temperature solution that has been padded by $100$ modes]{Overlay of the known threshold temperature solution for $\jm = 200$ (thick red line) with the spectra in figure~\ref{fig: HighTa4_072e-01padj200T5_3921e+00_evo}.}
+	\label{fig: HighTa4_072e-01spec_vs_pad}
+\end{figure}
+
+
+As in the case of low-temperature QP solutions, we wish to expand the space of possible solutions by padding threshold data with extra modes initially set to zero. To do so, we consider padding a $T \simeq 5.4$ QP solution from $\jm = 100$ to $\jm = 200$ with $\alpha_j = 0$ for $j > 99$. Figure~\ref{fig: HighTa4_072e-01padj200T5_3921e+00_evo} demonstrates that after evolving in time there are indications of large scale energy transfer amongst modes with higher frequencies. Interestingly, the magnitude and oscillation frequency of the Ricci scalar at the origin is significantly decreased compared to the $\jm = 100$ threshold solution. When compared against the known solution of the same temperature when $\jm = 200$, figure~\ref{fig: HighTa4_072e-01spec_vs_pad} indicates that the padded solution may not approach the known QP solution and instead may have produced a distinct, isothermal, but non quasi-periodic, solution.
+
 %\begin{figure}[ht]
 %	\centering
 %	\begin{subfigure}[t]{0.45\textwidth}
@@ -576,18 +595,7 @@ As in the case of low-temperature QP solutions, we wish to expand the space of p
 %	\label{fig: HighTa4_072e-01padj200T5_3921e+00_projections}
 %\end{figure}
 
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=0.75\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa4_072e-01spec_vs_padv2}
-	\caption[Comparison between a threshold temperature solution with $j_{max} = 200$ and the evolution of a $j_{max} = 100$ threshold temperature solution that has been padded by $100$ modes]{Overlay of the known threshold temperature solution for $\jm = 200$ (thick red line) with the spectra in figure~\ref{fig: HighTa4_072e-01padj200T5_3921e+00_evo}.}
-	\label{fig: HighTa4_072e-01spec_vs_pad}
-\end{figure}
 
-It has been suggested that high-temperature QP solutions should exist in a continuous region of temperature space ${T \in [T_{min}, T_{max}] = [d, 2\jm + d]}$ and that perturbing a low-temperature QP solution to a temperature above $T_{th}$ before implementing perturbative increases in energy followed by regular projections allows for all such solutions to be found. However, we have found that high temperature solutions produced using regular projections back to the solution surface are not robust as $\jm \to \infty$ and therefore do no constitute physical solutions. The question of whether new families of solutions can be accessed by alternative methods bears consideration. 
-
-First, we consider applying a similar fitting technique to threshold temperature data as was used to extend low-temperature QP solutions. In this case, values were taken from the middle of high temperature solutions with $\jm = 50$ and fit with an exponential function (see figure~\ref{fig: solutionfitting} for a similar procedure with tail values) over 10 modes. The new values $\alpha_{fit}$ were then combined with the existing values so that $\alpha_j = \langle \alpha_{j< j_{mid}}, \alpha_{fit}, \alpha_{j > j_{mid}} \rangle$. This would extend the high temperature solution by 10 modes and would slightly increase the temperature, hopefully providing a good seed for the constant-temperature nonlinear solver. However, no solutions were found using this method, starting either with $\jm = 50$, $T>5.5$ data, or $\jm = 200$, $T = 5.5$ data.
-
-Next, we consider perturbing up to an intermediate temperature $T_{th} \ll T_{int} < T_{max}$ before attempting to project back to the QP surface using the $T_{int}$ data as seed values. In particular, we repeatedly perturb a $T \sim 4.5$ solution using the method described in \S~\ref{ssec: highT} to a temperature of $T_{int} = 20$ without projecting back to the QP surface \emph{at any point}. For $\jm \lesssim 100$, projection back to the solution surface finds a new solution with $T < T_{int}$ that -- much like the spectra shown in figure~\ref{fig: spec comparisons reop20} -- loses $C^1$ differentiability. Furthermore, the fractional energy in the low-frequency modes oscillates rapidly over several orders of magnitude during the evolution, and the Ricci scalar reaches values $\mc O (10^6)$; these solutions are almost certainly not quasi-periodic. The same result is found for high temperature solutions created by fitting tail data (see figure~\ref{fig: manual highT} for example spectra). Finally, for $\jm \geq 100$, projection back to the QP solution surface once $T = T_{int}$ fails entirely. Thus, the space of QP solutions is greatly diminished with $T_{max} \ll 2\jm + d$. 
 
 %\begin{figure}[ht]
 %	\centering
@@ -866,24 +874,24 @@ The behaviour of the $j_{max}=150$ solutions is consistent with their lower-mode
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\subsection{Stability of QP Solutions}
+%\subsection{Stability of QP Solutions}
 
-Having identified QP solutions that are robust in the limit of $\jm \to \infty$, as well as a class of higher temperature solutions found from incremental perturbations about QP solutions, we can now ask how these solutions would evolve within the perturbative description. In particular, we wish to examine possible direct and inverse energy cascades in these quasi-periodic solutions, and determine if they continue to represent stable data. The cascades of energy between length scales will be evident in the spectra. Indirect observations of stability can be made through the value of the Ricci scalar at the origin, since large absolute values and/or rapid increases in scalar curvature often indicate instability in numerical simulations \cite{1104.3702}. 
+%Having identified QP solutions that are robust in the limit of $\jm \to \infty$, as well as a class of higher temperature solutions found from incremental perturbations about QP solutions, we can now ask how these solutions would evolve within the perturbative description. In particular, we wish to examine possible direct and inverse energy cascades in these quasi-periodic solutions, and determine if they continue to represent stable data. The cascades of energy between length scales will be evident in the spectra. Indirect observations of stability can be made through the value of the Ricci scalar at the origin, since large absolute values and/or rapid increases in scalar curvature often indicate instability in numerical simulations \cite{1104.3702}. 
 
-Another indicator of possible collapse and/or violation of the perturbative approximation is the growth of residuals when the TTF solutions are substituted into the Einstein equations. The residuals are calculated by reconstructing the time dependence of the scalar field and its derivatives using the amplitude-phase variables, and comparing the $\mc O(\epsilon^2)$ values of the derivatives of the metric functions in \eqref{EE const1}-\eqref{EE const2}. In particular, using the numerical values of the amplitude-phase variables $A_j$ and $B_j$, \eqref{ttf phi} gives the value of the leading-order scalar field contribution, $\phi_1(t,x)$. The $\mc O(\epsilon^2)$ contribution to the derivatives of metric functions come from
-\begin{align}
-\label{ddelta}
-\p_x \delta_2(t,x) &= -\sin(x) \cos(x) \left( (\p_x \phi_1)^2 + (\p_t \phi_1)^2 \right) \, , \\
-\label{dA}
-\p_x A_2(t,x) &= -\frac{1 - d + \cos(2x)}{\sin(x) \cos(x)}(A_2 - 1) - \sin(x) \cos(x) \left( (\p_x \phi_1)^2 + (\p_t \phi_1)^2 \right) \, , \\
-\text{with} \; A_2(t,x) &= - \frac{\cos^d(x)}{\sin^{d-1}(x)} \int^x_0 \tan^{d-1}(y) \left( (\p_t \phi_1)^2 + (\p_x \phi_1)^2 \right) dy \, .
-\end{align}
-The $L^2$-norm of the differences between \eqref{ddelta}-\eqref{dA} and \eqref{EE const1}-\eqref{EE const2} would constitute the residuals of the Einstein equations. However, while the leading-order contribution to the residuals is $\mc O(\epsilon^4)$, there are in fact higher order terms that enter into the calculation of $\p_t \phi$. A careful evaluation of the constraints would therefore include calculating the $\mc O(\epsilon^4)$ term in the metric function $A(t,x)$ so that the product $A ( \Phi^2 + \Pi^2)$ would include terms $\mc O(\epsilon^6)$. Instead, we limit our focus to examining only the difference between \eqref{EE const1} and \eqref{ddelta}, which does not suffer from higher-order contributions. The examination of residuals is taken as a suggestion of how well a TTF solution continues to satisfy the Einstein equations throughout its evolution, with the understanding that growing residuals would indicate that higher order terms in the perturbative expansion are becoming relevant. See figure~\ref{fig: qpEEresids} for an example.
+%Another indicator of possible collapse and/or violation of the perturbative approximation is the growth of residuals when the TTF solutions are substituted into the Einstein equations. The residuals are calculated by reconstructing the time dependence of the scalar field and its derivatives using the amplitude-phase variables, and comparing the $\mc O(\epsilon^2)$ values of the derivatives of the metric functions in \eqref{EE const1}-\eqref{EE const2}. In particular, using the numerical values of the amplitude-phase variables $A_j$ and $B_j$, \eqref{ttf phi} gives the value of the leading-order scalar field contribution, $\phi_1(t,x)$. The $\mc O(\epsilon^2)$ contribution to the derivatives of metric functions come from
+%\begin{align}
+%\label{ddelta}
+%\p_x \delta_2(t,x) &= -\sin(x) \cos(x) \left( (\p_x \phi_1)^2 + (\p_t \phi_1)^2 \right) \, , \\
+%\label{dA}
+%\p_x A_2(t,x) &= -\frac{1 - d + \cos(2x)}{\sin(x) \cos(x)}(A_2 - 1) - \sin(x) \cos(x) \left( (\p_x \phi_1)^2 + (\p_t \phi_1)^2 \right) \, , \\
+%\text{with} \; A_2(t,x) &= - \frac{\cos^d(x)}{\sin^{d-1}(x)} \int^x_0 \tan^{d-1}(y) \left( (\p_t \phi_1)^2 + (\p_x \phi_1)^2 \right) dy \, .
+%\end{align}
+%The $L^2$-norm of the differences between \eqref{ddelta}-\eqref{dA} and \eqref{EE const1}-\eqref{EE const2} would constitute the residuals of the Einstein equations. However, while the leading-order contribution to the residuals is $\mc O(\epsilon^4)$, there are in fact higher order terms that enter into the calculation of $\p_t \phi$. A careful evaluation of the constraints would therefore include calculating the $\mc O(\epsilon^4)$ term in the metric function $A(t,x)$ so that the product $A ( \Phi^2 + \Pi^2)$ would include terms $\mc O(\epsilon^6)$. Instead, we limit our focus to examining only the difference between \eqref{EE const1} and \eqref{ddelta}, which does not suffer from higher-order contributions. The examination of residuals is taken as a suggestion of how well a TTF solution continues to satisfy the Einstein equations throughout its evolution, with the understanding that growing residuals would indicate that higher order terms in the perturbative expansion are becoming relevant. See figure~\ref{fig: qpEEresids} for an example.
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.5\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/Qpa4_40e-01j100EEresids}
-	\caption[Absolute and relative residuals for a low-temperature QP solution]{Absolute and relative residuals of the Einstein equations during evolution of a low-temperature, $\jm = 100$ QP solution with $\epsilon = 0.001$.}
-	\label{fig: qpEEresids}
-\end{figure}
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=0.5\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/Qpa4_40e-01j100EEresids}
+%	\caption[Absolute and relative residuals for a low-temperature QP solution]{Absolute and relative residuals of the Einstein equations during evolution of a low-temperature, $\jm = 100$ QP solution with $\epsilon = 0.001$.}
+%	\label{fig: qpEEresids}
+%\end{figure}
 
