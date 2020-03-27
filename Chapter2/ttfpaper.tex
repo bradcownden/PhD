@@ -189,7 +189,7 @@ E = 4\sum_j \omega^2_j \alpha_j^2 \qquad \text{and} \qquad N= 4 \sum_j \omega_j 
 \end{align}
 These definitions allow for two of the free parameters to be fixed. Families of solutions can be examined by fixing $\alpha_0 = 1$ and sampling a range of $\alpha_1$ values in the range $\alpha_1 \ll \alpha_0$. The families of solutions can be distinguished by their ``temperature'', or energy per particle number $T=E/N$. 
 
-Practically speaking, finding solutions to the $j_{max}$ equations that arise from \eqref{ttf eqn} requires truncating the series at a finite value $j_{max} < \infty$. Then, one of the free parameters (either $\alpha_1$ or $T$) is set and used to generate seed values so that \eqref{ttf eqn} can be solved using a Newton-Raphson solver (see appendix~\ref{app: seeding} for more details). We can imagine each QP solution with temperature $T$ as a hypersurface in the $\jm$-dimensional space spanned by $\{\alpha_1, \ldots, \alpha_{\jm} \}$ formed by the constraint equation for $T$. Given seed values for the $\alpha_j$, solving \eqref{qp eqn} is tantamount to projecting an initial value onto the nearest QP solution surface. For this reason, we refer to resolving the constraint equation \eqref{qp eqn} with new seed values as \emph{projecting back} to the solution surface.
+Practically speaking, finding solutions to the $j_{max}$ equations that arise from \eqref{ttf eqn} requires truncating the series at a finite value $j_{max} < \infty$. Then, one of the free parameters (either $\alpha_1$ or $T$) is set and used to generate seed values so that \eqref{ttf eqn} can be solved using a Newton-Raphson solver (see appendix~\ref{app: seeding} for more details). Within a space spanned by $\{\alpha_1, \ldots, \alpha_{\jm} \}$ we can imagine a surface that represents all possible QP solutions. For a set of seed values, solving \eqref{qp eqn} with fixed $\alpha_1$ ($T$) is tantamount to moving along lines of constant $\alpha_1$ ($T$) until the solution surface is intersected\footnote{For low temperatures, the same QP solution is found whether travelling along lines of constant $\alpha_1$ or $T$. For higher temperatures, however, this picture becomes more complicated.}. For this reason, we refer to solving the QP equation \eqref{qp eqn} given seed values for ${[ \alpha_2, \ldots, \alpha_{\jm} ]}$ and one fixed value as \emph{projecting back} to the solution surface.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -290,6 +290,8 @@ Let us examine the energy spectra of these solutions. In figure~\ref{fig: spec c
 
 When the projection frequency is decreased, the temperature is able to exceed $T_{th}$. However, as seen in figure~\ref{fig: spec comparisons reop20}, projections back to the QP surface give $\alpha_1 < 0$ and an energy spectrum that is no longer a smooth\footnote{Here we appeal to the colloquial meaning of ``smooth'' instead of a strictly mathematical meaning, since $E_j$ is a function of a discrete variable.} function of $j$ ({\it c.f.} spectra of iterations 120 and 180). This in itself is not necessarily a breakdown of the quasi-periodic nature of the solution. However, upon examining the condition number of the matrix formed by \eqref{HT1}-\eqref{HT3}, we find that in fact the problem becomes ill-conditioned. This results in a absolute value of $u_i$ that is greater than $\alpha_i$; that is, the perturbative condition required to derive the system of linear equations \eqref{HT1}-\eqref{HT3} breaks down. For many prospective high-temperature solutions, this break-down of the perturbative condition is signalled by the loss of a smooth energy spectrum due to the values of $\alpha_j$ becoming negative. 
 
+\vspace{0.1in}
+
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}[t]{0.47\textwidth}
@@ -313,7 +315,7 @@ When the projection frequency is decreased, the temperature is able to exceed $T
 \subsection{Projections at Constant Temperature}
 \label{ssec: T projections}
 
-We again use a series of small energy perturbations to seek high-temperature QP solutions, this time using a constant-temperature projection method at regular intervals. Starting from a standard $\alpha_1 = 0.44$ QP solution, we apply successive perturbations to increase the temperature. After five increments, the temperature is calculated and used as the input to the second nonlinear solver. This ensures that the temperature is not changed when projecting back to the QP solution surface. The seed values were projected back to the QP solution surface when goal temperatures of $T=5.5$, $6.0$, and $7.0$ were reached (or at the first perturbation when these temperatures were exceeded). The resulting spectra for each temperature goal over several choices of $\jm$ are shown in figure~\ref{fig: const T perturbs}. It is worth noting that we did not include the spectra for $\jm = 250$ solutions with goal temperatures of $T=6.0$ and $7.0$ because the constant-temperature projection failed to find a solution.
+We again use a series of small energy perturbations to seek high-temperature QP solutions, this time using a constant-temperature projection method at regular intervals. Starting from a standard $\alpha_1 = 0.44$ QP solution, we apply successive perturbations to increase the temperature. After five increments, the temperature is calculated and used as the input to the second nonlinear solver. This ensures that the temperature is not changed when projecting back to the QP solution surface. The seed values were projected back to the QP solution surface when goal temperatures of $T=5.5$, $6.0$, and $7.0$ were reached (or at the first perturbation when these temperatures were exceeded). The resulting spectra for each temperature goal over several choices of $\jm$ are shown in figure~\ref{fig: const T perturbs}. It is worth noting that we did not include the spectra for $\jm = 250$ solutions with goal temperatures of $T=6.0$ and $7.0$ because the fixed-temperature projection failed to find a solution.
 
 \begin{figure}[tp!]
 	\centering
@@ -322,14 +324,16 @@ We again use a series of small energy perturbations to seek high-temperature QP 
 		\label{fig: const T perturbs}
 \end{figure}
 
-Recall that solutions must be robust in the limit of $\jm \to \infty$ in order to be considered solutions to the full TTF theory. While the upper panel of figure~\ref{fig: const T perturbs} suggests that solutions with temperatures at or near $T=5.5$ can be constructed in the large-$\jm$ limit, we do not find evidence that low $\jm$ solutions with $T=6.0, 7.0$ do not extend to the full theory.
+Recall that solutions must be robust in the limit of $\jm \to \infty$ in order to be considered solutions to the full TTF theory. While the upper panel of figure~\ref{fig: const T perturbs} suggests that solutions with temperatures at or near $T=5.5$ can be constructed in the large-$\jm$ limit, we do not find evidence that low $\jm$ solutions with $T=6.0, 7.0$ extend to the full theory.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Building High-Temperature Solutions}
 \label{ssec: by hand highT}
 
-In figure~\ref{fig: const T perturbs} we see that smooth spectra exist for goal temperatures of $T=6.0$ and $7.0$ when $\jm = 50$. It is therefore reasonable to consider whether a high temperature, low $\jm$ solution could be extended to a high temperature, high $\jm$ solution by using a fitting procedure to generate seed values for the fixed-$\alpha_1$ Newton-Raphson solver. This time, instead of fitting $\alpha_j$ values for modes ${[ j_{max} - 30, j_{max} - 10 ]}$ (as outlined in appendix~\ref{fig: fit & resids}), we applied the fitting method to final 5 modes and used the result to generate seed values for a solution with $\jm + 5$ modes. We see in figure~\ref{fig: manual highT} that this method results in spectra where energy becomes increasingly concentrated in high-$j$ modes. In fact, for solutions with $\jm \geq 90$, and equal or greater amount of energy resides in the high-$j$ modes than in the zero-mode. These solutions are not robust as $\jm \to \infty$ and therefore are not solutions to the TTF equations.
+In figure~\ref{fig: const T perturbs} we see that QP solutions with smooth spectra exist for goal temperatures of $T=6.0$ and $7.0$ when $\jm = 50$ but cease being smooth as $\jm$ increases and the temperature is held constant. It is therefore reasonable to ask whether high temperature, low $\jm$ QP solutions can be extended to higher $\jm$ by using a fitting procedure to generate seed values for the fixed-$\alpha_1$ Newton-Raphson solver. In figure~\ref{fig: manual highT}, instead of fitting $\alpha_j$ values for modes ${[ j_{max} - 30, j_{max} - 10 ]}$ (as outlined in appendix~\ref{fig: fit & resids}), we have applied the fitting method to final 5 modes and used the result to generate seed values for a solution with $\jm + 5$ modes. This method was successful in finding QP solutions with substantially higher temperatures than the previous seeding method. 
+
+However, the solutions were not robust with the addition of extra modes. Instead, the distribution of energy in the resulting spectra becomes increasingly concentrated in {high-$j$} modes with the addition of as few as five extra modes. As we seed in figure~\ref{fig: manual highT}, fitting the tail of the $\jm = 75$, $T \simeq 27$ and producing seed values for a $\jm = 80$ solution resulted in a QP solution with $T \simeq 38$ after projecting back to the QP surface with constant $\alpha_1$. Because these solutions were not robust as $\jm$ was increased, they do not provide evidence of solutions to the untruncated theory at those temperatures.
 
 \begin{figure}[ht]
 	\centering
@@ -373,7 +377,7 @@ In figure~\ref{fig: const T perturbs} we see that smooth spectra exist for goal 
 \section{Time Evolution of Quasi-Periodic Solutions}
 \label{sec: time evolution}
 
-The weakly turbulent behaviour of the scalar field in the TTF is captured by the $\mc O(\epsilon^2)$ renormalization group flow equations {\eqref{RN1}-\eqref{RN2}}. Having identified different families of quasi-periodic solutions, we wish to evolve these solutions and examine the direct and inverse cascades responsible for balancing the flow of energy between long and short length scales. Furthermore, we may also be able to identify inaccessible solutions by orbiting around a time-independent solution and attempting to project back to the QP surface. To achieve these aims, we use numerical methods first described by \cite{1606.02712} and take solutions discussed in \S\!~\ref{sec: qp} as initial data. 
+The weakly turbulent behaviour of the scalar field in the TTF is captured by the $\mc O(\epsilon^2)$ renormalization group flow equations {\eqref{RN1}-\eqref{RN2}}. Having identified different families of quasi-periodic solutions, we wish to evolve these solutions and examine the direct and inverse cascades of energy between long and short length scales. Furthermore, we may also be able to identify previously inaccessible solutions by evolving a QP solution within the TTF framework and attempting to project back to the QP surface. To achieve these aims, we use numerical methods first described by \cite{1606.02712} and take solutions discussed in \S\!~\ref{sec: qp} as initial data. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -419,7 +423,7 @@ We may also ask: does a given quasi-periodic solution remain unique under evolut
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.6\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/Qpa4_40e-01j100EvolutionProjectionPlot}
-	\caption[Taking the spectrum of a QP solution during evolution to use as a seed to find new QP solutions]{Left: Projecting a low-temperature solution back to the QP surface during its evolution. Arrows are oriented from amplitude/phase seed values (circles) to QP surface projections (pentagons). Right: the $L^2$-norms of the projected solutions at $t\simeq 0.0, 0.2, 0.5, 1.0, 2.0, 2.5$ (red diamond, green cross, blue square, yellow triangle, magenta circle, blue diamond).}
+	\caption[Taking the spectrum of a QP solution during evolution to use as a seed to find new QP solutions]{Left: Projecting a low-temperature solution back to the QP surface with constant $\alpha_1$ during its evolution. Arrows are oriented from amplitude/phase seed values (circles) to QP surface projections (pentagons). Right: the $L^2$-norms of the errors between  solutions at $t\simeq 0.0, 0.2, 0.5, 1.0, 2.0, 2.5$ (red diamond, green cross, blue square, yellow triangle, magenta circle, blue diamond).}
 	\label{fig: Qpa4_40e-01j100EvolutionProjection}
 \end{figure}
 
