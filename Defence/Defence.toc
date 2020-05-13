@@ -1,0 +1,16 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Gravitational Collapse}{3}{0}{1}
+\beamer@sectionintoc {2}{Massive Scalars in AdS$_5$ [arXiv:1711.00454]}{5}{0}{2}
+\beamer@subsectionintoc {2}{1}{Phase Diagram \& Islands of Stability}{6}{0}{2}
+\beamer@subsectionintoc {2}{2}{Classifying Phases}{9}{0}{2}
+\beamer@subsectionintoc {2}{3}{Spectra}{11}{0}{2}
+\beamer@subsectionintoc {2}{4}{Phases}{17}{0}{2}
+\beamer@sectionintoc {3}{High-Temperature QP Solutions in AdS$_4$}{23}{0}{3}
+\beamer@subsectionintoc {3}{1}{The Two-Time Formalism (TTF)}{24}{0}{3}
+\beamer@subsectionintoc {3}{2}{Quasi-Periodic Solutions}{26}{0}{3}
+\beamer@subsectionintoc {3}{3}{Outstanding Questions}{32}{0}{3}
+\beamer@sectionintoc {4}{Examining Instabilities Due to Driven Scalars in AdS [arXiv:1912.07143]}{33}{0}{4}
+\beamer@subsectionintoc {4}{1}{Time-dependent Boundary Conditions}{34}{0}{4}
+\beamer@subsectionintoc {4}{2}{Resonant Contributions}{35}{0}{4}
+\beamer@subsectionintoc {4}{3}{Special Values of Non-normalizable Frequencies}{36}{0}{4}
+\beamer@sectionintoc {5}{Conclusions}{37}{0}{5}
