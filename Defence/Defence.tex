@@ -107,81 +107,20 @@
 }
 }
 
-\frame
-{
-  \frametitle{Outline}
-  \bi
-  \its Manuscript thesis
-  \ei
-}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Massive Scalars in AdS$_5$ [arXiv:1711.00454]}
-\subsection{Phase Diagram \& Islands of Stability}
+\subsection{Scalar Field Collapse in AdS}
 \frame
 {
-  \frametitle{Phase Diagram \& Islands of Stability}
-  \begin{columns}
-  \column{0.6\textwidth}
-    \begin{itemize}
-    \its Classical gravity in AdS$_{d+1}$ $\Leftrightarrow$ CFT in $d$-dimensions\footnotemark
-    \its Scalar field in the bulk $\Leftrightarrow$ expectation value of operator in the boundary
-    \its Heating vacuum state
-    \its \alert{Black hole in AdS $\Leftrightarrow$ CFT in thermal equilibrium}
-    \its Stability against collapse $\Leftrightarrow$ no thermalization
-  \end{itemize}
-  \column{0.4\textwidth}
-    \begin{overlayarea}{\textwidth}{3cm}
-    \begin{figure}
-    \centering
-    \only<1>{\hspace{-0.15in} \includegraphics[scale=0.28]{adscft} \\ {\scr Learner.org}}
-    \end{figure}
-    \end{overlayarea}
-  \end{columns}
-  
-  \footnotetext[4]{{\scr Maldecena [hep-th/9711200]}}
-}
-
-\frame % NB. Run in Presentation program to get proper playback
-{
-  \frametitle{Scalar Fields in Anti-de Sitter Spacetime}
-  \bi
-  \its Massless scalars: reflected off the boundary \href{run:./Massless_multi_bounce.mp4}{\beamerbutton{multiple times $\triangleright$}}, or \href{run:./masslessnobounce.mp4}{\beamerbutton{collapse immediately  $\triangleright$}}
-    \its Massive scalars: can be gravitationally \href{run:./massive_long.mp4}{\beamerbutton{refocused  $\triangleright$}}, or also \href{run:./massive_short.mp4}{\beamerbutton{collapse immediately  $\triangleright$}}
-    \its<2->{Classify as stable or unstable}
-  \ei
-
-  \uncover<2->{
-    \begin{columns}
-    \column{0.5\textwidth}
-      \begin{figure}
-      \centering
-      \includegraphics[scale=0.75]{m0w15} \\ $\mu = 0, \sigma = 1.5$
-      \end{figure}
-    \column{0.5\textwidth}
-      \begin{figure}
-      \centering
-      \includegraphics[scale=0.75]{m0w025} \\ $\mu = 0, \sigma = 0.25$
-      \end{figure}
-    \end{columns}
-  }
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Classifying Phases}
-\frame
-{
-  \frametitle{Classifying Phases}
+  \frametitle{Scalar Field Collapse in AdS}
   \vspace{-0.7in}
   \bi
   \its Minimally-coupled scalar field in AdS$_5$ (dual to 4D CFT)
   \its Spherical symmetry, Schwarzschild-like coordinates $\to$ \alert<1>{$A(t,x)$}, \alert<1>{$\delta(t,x)$}
   \uncover<2->{\its Einstein + Klein-Gordon $\Rightarrow$ constraint equations}
-  \uncover<2->{\its Interior gauge $\delta(t,x=0) = 0$, mass conservation at $x = \pi/2$, $\phi(t=0,x) = 0$}
-  \uncover<2->{\its Canonical momentum $\Pi(t,x) = e^{\delta} A^{-1}  \p_t \phi$, define $\Phi(t,x) \equiv \p_x \phi$}
+  \uncover<2->{\its Interior gauge $\delta(t,x=0) = 0$, spherical symmetry $\p_x \phi(t,x=0) = 0$}
   \uncover<2->{\its Horizon formation when $A(t_H, x_H) \ll 1$}
   \ei
 
@@ -194,30 +133,103 @@
      \only<2>{
      		\p_x \delta &= - \left( \Pi^2 + \Phi^2) \sin(x) \cos(x) \right) \\
      		\p_x M &= \frac{\tan^{d-1}(x)}{2} \left( A (\Pi^2 + \Phi^2) + \frac{\alert{\mu^2} \phi^2}{\cos^2(x)} \right) \\
-		A &= 1 - \frac{2 M \sin^2(x)}{(d-1) \tan^d (x)} \\
     		\Pi(t=0, x) &= \epsilon \exp \left( - \frac{\tan^2(x)}{\alert{\sigma^2}} \right) \qquad \text{Phase space:} \: \alert{\mu, \; \sigma}
     }
     \end{align*}
   \end{overlayarea}
   \vfill
-
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Spectra}
+\subsection{Classifying Phases}
 \frame
 {
-  \frametitle{Spectra}
+  \frametitle{Stable vs Unstable Profiles}
   \bi
-  \its
+  \its Sstable: abrupt jump in $t_H$ when $\epsilon < \epsilon_{crit}$
+  \its<2->{Unstable: fit $t_H \approx a \epsilon^{-p} + b$ $\to$ unstable when $p \approx 2$}
   \ei
+  \begin{columns}
+  \column{0.5\textwidth}
+    \begin{figure}
+    \centering
+    \includegraphics[scale=0.75]{m0w15} \\ $\mu =0$, $\sigma =1.5$
+    \end{figure}
+  \column{0.5\textwidth}
+    \begin{figure}
+    \centering
+    \uncover<2->{\includegraphics[scale=0.75]{m0w025} \\ $\mu = 5$, $\sigma=0.25$}
+    \end{figure}
+  \end{columns}
+}
+
+\frame
+{
+  \frametitle{Metastable Profiles}
+  \bi
+  \its Scaling of $p > 2$
+  \ei
+  \begin{columns}
+  \column{0.5\textwidth}
+    \begin{figure}
+    \centering
+    \includegraphics[scale=0.75]{m5w17} \\ $\mu = 5$, $\sigma = 1.7$
+    \end{figure}
+  \column{0.5\textwidth}
+    \begin{figure}
+    \centering
+    \includegraphics[scale=0.75]{m05w17} \\ $\mu = 0.5$, $\sigma = 1.7$
+    \end{figure}
+  \end{columns}
+}
+
+\frame
+{
+  \frametitle{Irregular Profiles I}
+  \bi
+  \its No scaling
+  \ei
+  \begin{columns}
+  \column{0.45\textwidth}
+  	\begin{figure}
+  	\centering
+  	\includegraphics[width=\textwidth]{m5w034} \\ $\mu = 5$, $\sigma = 0.34$
+  	\end{figure}
+  \column{0.45\textwidth}
+  	\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{m20w016} \\ $\mu = 20$, $\sigma = 0.16$
+  	\end{figure}
+  \end{columns}
+}
+
+\frame
+{
+  \frametitle{Irregular Profiles II}
+  \bi
+  \its Evidence of chaotic behaviour $\to$ possible \alert{self-interaction}
+  \its Previous chaotic evolution only seen in thin-shell interactions\footnotemark\ in AdS, scalar collapse in Gauss-Bonnet gravity\footnotemark
+  \ei
+  \vspace{-0.15in}
+  \begin{columns}
+    \column{0.75\textwidth}
+      \begin{figure}
+  	\centering
+	\includegraphics[scale=0.75]{selfinteraction} \\ $\mu = 0$, $\sigma=1.1$, $\epsilon = 1.01$
+       \end{figure}
+    \column{0.25\textwidth}
+    \hspace{-0.6in}
+       $t = 60, {\color[rgb]{0.06,0.64,0.01} 62}, {\color[rgb]{.98,0,0.04} 64}$
+   \end{columns}
+  
+  \footnotetext[4]{{\scr Brito {\it et al.} [1602.03535]}}
+  \footnotetext[5]{{\scr Deppe, Kolly, {\it et al.} [1608.05402]}}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
+\subsection{Phase Diagram \& Energy Cascades}
 \frame
 {
   \frametitle{Phase Diagram}
@@ -252,87 +264,6 @@
   \end{figure}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Phases}
-\frame
-{
-  \frametitle{Unstable Profiles}
-    \bi
-    \its Fit $t_H \approx a \epsilon^{-p} + b$ $\to$ unstable when $p \approx 2$
-    \its<2->{$\sigma < 1$: $a \sim \sigma^{-2}$, mass independent}
-    \ei
-    \begin{columns}
-    \column{0.5\textwidth}  
-      \begin{figure}
-      \centering
-      \includegraphics[scale=0.75]{m0w025} \\ $\mu = 5$, $\sigma=0.25$
-      \end{figure}
-    \column{0.5\textwidth}
-      \begin{figure}
-      \centering
-      \hspace{-0.2in}
-      \vspace{0.2in}
-      \uncover<2->{\includegraphics[scale=1.5]{coefficientscaling}}
-      \end{figure}
-    \end{columns}
-}
-
-\frame
-{
-  \frametitle{Metastable Profiles}
-  \bi
-  \its Scaling of $p > 2$
-  \ei
-  \begin{columns}
-  \column{0.5\textwidth}
-    \begin{figure}
-    \centering
-    \includegraphics[scale=0.75]{m5w17} \\ $\mu = 5$, $\sigma = 1.7$
-    \end{figure}
-  \column{0.5\textwidth}
-    \begin{figure}
-    \centering
-    \includegraphics[scale=0.75]{m05w17} \\ $\mu = 0.5$, $\sigma = 1.7$
-    \end{figure}
-  \end{columns}
-}
-
-\frame
-{
-  \frametitle{Irregular Profiles}
-  \only<1>{
-  \bi
-  \its No scaling
-  \ei
-  \begin{columns}
-  \column{0.45\textwidth}
-  	\begin{figure}
-  	\centering
-  	\includegraphics[width=\textwidth]{m5w034} \\ $\mu = 5$, $\sigma = 0.34$
-  	\end{figure}
-  \column{0.45\textwidth}
-  	\begin{figure}
-	\centering
-	\includegraphics[width=\textwidth]{m20w016} \\ $\mu = 20$, $\sigma = 0.16$
-  	\end{figure}
-  \end{columns}
-  }
-  \only<2>{
-  \bi
-  \its Evidence of chaotic behaviour $\to$ possible \alert{self-interaction}
-  \its Previous chaotic evolution only seen in thin-shell interactions\footnotemark\ in AdS, scalar collapse in Gauss-Bonnet gravity\footnotemark
-  \ei
-  \begin{figure}
-  	\centering
-	\includegraphics[scale=1.0]{chaotic} \\ $\mu = 5$, $\sigma=0.34$, $\epsilon = 3.52$, $t = 137$
-  \end{figure}
-  
-  \footnotetext[5]{{\scr Brito {\it et al.} [1602.03535]}}
-  \footnotetext[6]{{\scr Deppe, Kolly, {\it et al.} [1608.05402]}}
-  }
-}
-
 \frame
 {
   \frametitle{Energy Cascades}
@@ -352,6 +283,14 @@
       \end{figure}
   \end{columns}
 }
+  
+\frame
+{
+  \frametitle{Results}
+  \bi
+  \its Summary of results
+  \ei
+}  
   
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -532,7 +471,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Outstanding Questions}
+\subsection{High Temperature Families}
 \frame
 {
   \frametitle{Outstanding Questions}
