@@ -147,8 +147,8 @@
 {
   \frametitle{Stable vs Unstable Profiles}
   \bi
-  \its Sstable: abrupt jump in $t_H$ when $\epsilon < \epsilon_{crit}$
-  \its<2->{Unstable: fit $t_H \approx a \epsilon^{-p} + b$ $\to$ unstable when $p \approx 2$}
+  \its Stable: abrupt jump in $t_H$ when $\epsilon < \epsilon_{crit}$
+  \its<2->{Unstable: fit $t_H \approx a \epsilon^{-p} + b$ for $t_H \geq 60$ $\to$ unstable when $p \approx 2$}
   \ei
   \begin{columns}
   \column{0.5\textwidth}
@@ -208,7 +208,7 @@
 {
   \frametitle{Irregular Profiles II}
   \bi
-  \its Evidence of chaotic behaviour $\to$ possible \alert{self-interaction}
+  \its Evidence of chaotic behaviour $\to$ possible self-interaction
   \its Previous chaotic evolution only seen in thin-shell interactions\footnotemark\ in AdS, scalar collapse in Gauss-Bonnet gravity\footnotemark
   \ei
   \vspace{-0.15in}
@@ -283,13 +283,21 @@
       \end{figure}
   \end{columns}
 }
-  
+
+\subsection*{}  
 \frame
 {
   \frametitle{Results}
   \bi
-  \its Summary of results
+  \its First full phase diagram of stability in AdS$_5$ $\to$ islands of stability and ``shorelines''
+  \its Evidence of metastable and irregular phases at finite $\epsilon$
+  \its Fate of metastable phase as $\epsilon \to 0$ yet to be determined
+  \its Irregular phase contains quasi-stable initial data\footnotemark$^{,}$\footnotemark $\to$ first evidence for weakly chaotic evolution in massless, spherically-symmetry scalars in AdS
+  \its Metastable and irregular data to be studied in multiscale perturbation theory
   \ei
+  
+  \footnotetext[6]{{\scr Deppe \& Frey [1508.02709]}}
+  \footnotetext[7]{{\scr Buchel {\it et al.} [1304.4166]}}
 }  
   
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -298,40 +306,51 @@
 \section{High-Temperature QP Solutions in AdS$_4$}
 
 \subsection{The Two-Time Formalism (TTF)}
-\frame{
+\frame
+{
   \frametitle{The Two-Time Formalism (TTF) I}
+  \vspace{-0.75in}
   \bi
-  \its Perturbative description of massless scalar field collapse $\to$ expand $\phi(t,x)$, $A(t,x)$, $\delta(t,x)$ in powers of small amplitude, $\epsilon$
-  \its Consider TTF in AdS$_4$
-  \its $\mc O(\epsilon)$: solution in terms of eigenfunctions of AdS, $e_j(x)$
-  \its Truncate series to $\jm$ 
-  \its Solutions must be robust as $\jm \to \infty$
-  \its Develop numerical techniques for extending $\jm \gtrsim 100$ \& quantify effects of truncation
+  \its Small perturbations in AdS$_4$: expand scalar field, metric functions in $\epsilon$
+  \its $\mc O(\epsilon)$: $\phi_1$ in terms of eigenfunctions of AdS, \alert<1>{$e_j(x)$}
+  \its Integer eigenvalues $\omega_j = (2j + d)$ $\to$ fully resonant spectrum
+  \its $\mc O(\epsilon^2)$: backreaction on metric in terms of $\phi_1$
+  \its <2->{$\mc O(\epsilon^3)$: \alert{source terms} for resonant contributions }
+  \its<2->{Define slow time $\tau \equiv \epsilon^2 t$}
   \ei
 
+  \begin{overlayarea}{\textwidth}{0.1cm}
   \begin{align*}
-  \phi_1 (t,x) = \sum^\infty_{j=0} A_j(t) \cos (\omega_j t + B_j(t)) \: e_j (x)
+  \only<1>{
+  \vspace{0.4in}
+  \phi_1 (t,x) = \sum^\infty_{j=0} A_j(t) \cos (\omega_j t + B_j(t)) \: \alert{e_j (x)}
+  }
+  \only<2>{
+  \vspace{-0.3in}
+   -\! 2 \omega_\ell \frac{d A_\ell (\tau)}{d \tau} &= \stackrel{\ell \leq i + j}{\sum_{i \neq \ell} \sum_{j \neq \ell}} \alert{f_1} \left(A_i, A_j, A_{i+j-\ell}, B_i, B_j, B_{i+j-\ell} \right) \\
+  -2 \omega_\ell A_\ell \frac{d B_\ell(\tau)}{d \tau} &= \stackrel{\ell \leq i + j}{\sum_{i \neq \ell} \sum_{j \neq \ell}} \alert{f_2} \left(A_i, A_j, A_{i+j-\ell}, B_i, B_j, B_{i+j-\ell} \right)
+  }
   \end{align*}
+  \end{overlayarea}
+  \vspace{0.41in}
 }
 
 \frame
 {
   \frametitle{The Two-Time Formalism (TTF) II}
   \bi
-  \its Integer eigenvalues $\omega_j = (2j + d)$ $\to$ fully resonant spectrum
-  \its $\mc O(\epsilon^2)$: backreaction on metric
-  \its $\mc O(\epsilon^3)$: \alert{source terms} for resonant contributions $\to$ resummation techniques absorb remaining resonances into amplitude/phase\footnotemark
   \its Energy exchange between modes through slowly varying amplitude $A_j(\tau)$ and phase $B_j(\tau)$ to resist collapse\footnotemark
-  \its Define slow time $\tau \equiv \epsilon^2 t$
+  \its Resummation techniques absorb resonances into amplitude/phase variables\footnotemark
+  \its Solve by truncating series to $\jm < \infty$
+  \its Solutions must be robust as $\jm \to \infty$
+  \its Examine quasi-periodic families of solutions\footnotemark
+  \its Develop numerical techniques for extending $\jm \gtrsim 100$
+  \its Verify families of solutions remain valid as $\jm$ increases
   \ei
-  \vspace{-0.1in}
-  \begin{align*}
-  - 2 \omega_l \frac{d A_l (\tau)}{d \tau} &= \stackrel{l \leq i + j}{\sum_{i \neq l} \sum_{j \neq l}} \alert{f_1} \left(A_i, A_j, A_{i+j-l}, B_i, B_j, B_{i+j-l} \right) \\
-  -2 \omega_l A_l \frac{d B_l(\tau)}{d \tau} &= \stackrel{l \leq i + j}{\sum_{i \neq l} \sum_{j \neq l}} \alert{f_2} \left(A_i, A_j, A_{i+j-l}, B_i, B_j, B_{i+j-l} \right)
-  \end{align*}
-
-  \footnotetext[7]{{\scr Craps {\it et al.} [1407.6273]}}
+  
   \footnotetext[8]{{\scr Balasubramanian {\it et al.} [1403.6471]}}
+  \footnotetext[9]{{\scr Craps {\it et al.} [1407.6273]}}
+  \footnotetext[10]{{\scr Green {\it et al.} [1507.08261]}}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -339,28 +358,25 @@
 \subsection{Quasi-Periodic Solutions}
 \frame
 {
-  \frametitle{Quasi-Periodic Solutions}
+  \frametitle{Quasi-Periodic Solutions I}
   \bi
-  \its Quasi-periodic\footnotemark\ ansatz $A_j = \alpha_j e^{i \beta_j \tau}$ $\to$ TTF equations become time-independent when $\beta_j = \beta_0 + j(\beta_1 - \beta_0)$
-  \its $\alpha_j > \alpha_{j+1} \: \forall \: j $
-  \its Scaling symmetry (full {\bf and} TTF theory) $A(\tau) \to \epsilon A(\tau / \epsilon^2)$ allows for $\alpha_0 = 1$ $\to$ families of solutions in $\alpha_1$ 
-  \its Origin of collapse time $t_H \approx a \epsilon^{-p} + b$ in nonlinear profiles
-  \its Solve QP equation with Newton-Raphson $\to$ seed equation $\alpha_j \propto e^{-j}$ for low $\jm$
+  \its Quasi-periodic ansatz $A_j = \alpha_j e^{i \beta_j \tau}$ $\to$ TTF equations become time-independent when $\beta_j = \beta_0 + j(\beta_1 - \beta_0)$
+  \its Solve QP equation with Newton-Raphson $\to$ seed equation $\alpha_j \propto e^{-j}$, $j \neq 0$ for low $\jm$
+  \its TTF: conserved quantities\footnotemark\ $E$, $N$ $\to$ classify solutions by $T \equiv E/N$
   \its $T_i$, $R_{ij}$, $S_{ijkl}$ calculated numerically
   \ei
   
    \begin{align*}
   2\omega_l \alpha_l \beta_l = T_l \alpha_l^3 + \sum_{i \neq l} R_{il} \alpha_i^2 \alpha_l + \stackrel{l \leq i + j}{\sum_{i \neq l} \sum_{j \neq l}} S_{i j (i+j-l)l} \alpha_i \alpha_j \alpha_{i+j-l}
   \end{align*}
-  
-  \footnotetext[9]{{\scr Green {\it et al.} [1507.08261]}}
+ 
+ \footnotetext[11]{{\scr Craps {\it et al.} [1412.3249]}}
 }
 
 \frame
 {
-  \frametitle{Quasi-Periodic Solutions}
+  \frametitle{Quasi-Periodic Solutions II}
   \bi
-  \its TTF: conserved quantities\footnotemark\ $E$, $N$ $\to$ classify solutions by $T \equiv E/N$
   \its Solutions found for $3 \geq T \gtrsim 4.6$
   \its Able to extend existing solutions from $\jm \sim 100$ to $\jm = 500$
   \its Robust in $\jm \to \infty$ limit
@@ -384,17 +400,19 @@
   \end{center}
   
   \vfill
-  
-  \footnotetext[10]{{\scr Craps {\it et al.} [1412.3249]}}
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{High-Temperature Families}
 \frame
 {
-  \frametitle{High-Temperature Solutions}
+  \frametitle{High-Temperature Solutions I}
   \bi
-  \its Perturb by $\delta E$ $\to$ new solutions have energy $E + \delta E$, N, and $T + \delta T$
+  \its Perturb by $\delta E$ $\to$ new solutions have energy $E + \delta E$, $N$, and $T + \delta T$
   \its Repeat process to $T_{max} = (2\jm + d)$
-  \its Vary projection frequency back to solution plane $\to$ threshold \\ temperature $T_{th}$
+  \its Project back to QP solution surface at constant $\alpha_1$ or $T$
+  \its Loss of smooth profile above a certain temperature at \alert<1>{constant $\alpha_1$} 
   \ei
   
   \vspace{-0.15in}
@@ -417,12 +435,20 @@
   {\scr Cownden, Deppe, \& Frey: In progress}
   \end{center}
   \vspace{-0.1in}
-  \bi
-  \its If $T > T_{th}$, \alert{not robust} in $\jm \to \infty$
-  \its $T_{th} << T_{max}$
-  \ei
 %\marginnote{\pdfcomment[icon=note]{(L) reop 5}}
 %\marginnote{\pdfcomment[icon=note]{(R) reop 20}}
+}
+
+\frame
+{
+  \frametitle{High-Temperature Solutions II}
+  \bi
+  \its And at \alert{constant T}
+  \ei
+   \begin{figure}
+    \centering
+    \includegraphics[scale=0.4]{constantTproj} \\ {\scr Cownden, Deppe, \& Frey: In progress}
+  \end{figure}
 }
 
 \frame[shrink]
@@ -468,27 +494,16 @@
   }
 }
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{High Temperature Families}
+\subsection*{}
 \frame
 {
-  \frametitle{Outstanding Questions}
-  \begin{columns}
-  \column{0.45\textwidth}
+  \frametitle{Results}
     \bi
     \its Physical interpretation for $T_{th}$?
     \its Is $| T_{QP} - T_{th}|$ a function of AdS parameters? What does this mean for boundary CFT?
     \its Compare perturbative evolution to full numerical $\to$ establish absolute timescale for approximation
     \its Use high-temperature QP solutions as initial data in nonlinear evolution $\to$ metastable/irregular? What is mechanism of collapse?
     \ei
-  \column{0.55\textwidth}
-    \begin{figure}
-      \centering
-      \includegraphics[width=\textwidth]{Green_hamiltonian} \\ {\scr Green {\it et al.} [1507.08261]}
-    \end{figure}
-  \end{columns}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
