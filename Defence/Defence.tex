@@ -363,11 +363,11 @@
   \its Quasi-periodic ansatz $A_j = \alpha_j e^{i \beta_j \tau}$ $\to$ TTF equations become time-independent when $\beta_j = \beta_0 + j(\beta_1 - \beta_0)$
   \its Solve QP equation with Newton-Raphson $\to$ seed equation $\alpha_j \propto e^{-j}$, $j \neq 0$ for low $\jm$
   \its TTF: conserved quantities\footnotemark\ $E$, $N$ $\to$ classify solutions by $T \equiv E/N$
-  \its $T_i$, $R_{ij}$, $S_{ijkl}$ calculated numerically
+  \its $T_i$, $R_{ij}$, $S_{ijk\ell}$ calculated numerically
   \ei
   
    \begin{align*}
-  2\omega_l \alpha_l \beta_l = T_l \alpha_l^3 + \sum_{i \neq l} R_{il} \alpha_i^2 \alpha_l + \stackrel{l \leq i + j}{\sum_{i \neq l} \sum_{j \neq l}} S_{i j (i+j-l)l} \alpha_i \alpha_j \alpha_{i+j-l}
+  2\omega_\ell \alpha_\ell \beta_\ell = T_\ell \alpha_\ell^3 + \sum_{i \neq \ell} R_{i\ell} \alpha_i^2 \alpha_\ell + \stackrel{\ell \leq i + j}{\sum_{i \neq \ell} \sum_{j \neq \ell}} S_{i j (i+j-\ell)\ell} \alpha_i \alpha_j \alpha_{i+j-\ell}
   \end{align*}
  
  \footnotetext[11]{{\scr Craps {\it et al.} [1412.3249]}}
@@ -447,51 +447,30 @@
   \ei
    \begin{figure}
     \centering
-    \includegraphics[scale=0.4]{constantTproj} \\ {\scr Cownden, Deppe, \& Frey: In progress}
+    \includegraphics[scale=0.43]{constantTproj} \\ {\scr Cownden, Deppe, \& Frey: In progress}
   \end{figure}
 }
 
-\frame[shrink]
+\frame
 {
-  \frametitle{Evolving TTF Solutions}
+  \frametitle{High-Temperature Solutions III}
   \bi
-  \its Evolution of: \href{run:./Qpa4_40e-01j100eps0_01.mp4}{\beamerbutton{low-temperature QP $\triangleright$}} \: \href{run:./HighTa1_779e-01j100T2_0000e+01eps0_1.mp4}{\beamerbutton{high-temperature QP $\triangleright$}}
-  \uncover<2->{\its Energy in $j=0,1,2,3$ modes (purple, green, blue, orange)}
-  \uncover<3->{\its Residuals of QP equation}
-  \ei
-  \vspace{-0.2in}
-  \uncover<1->{
-  \begin{columns}
-    \column{0.5\textwidth}
+  \its Alternative methods for finding high-T solutions
+  \its<2->{Fit low $\jm$, high-T data to generate seeds for Newton-Raphson solver \uncover<3->{$\to$ \alert<3>{not robust as $\jm$ increases}}}
+  \its<4->{Pad low $\jm$ data with zeros, evolve within the TTF \uncover<5->{$\to$ \alert<5>{isothermal evolution does not match known solution}}}
+   \ei
+   \begin{overlayarea}{\textwidth}{0.65\textheight}
       \begin{figure}
       \centering
-      \only<1>{
-      \includegraphics[width=\textwidth]{Qpa4_40e-01j100_specevo}
+      \only<2-3>{
+      \vspace{-0.35in}
+      \includegraphics[scale=0.6]{highTseeds}
       }
-       \only<2>{
-      \includegraphics[width=\textwidth]{QPa2_00e-01_j100_lowjenergyevo}  
+      \only<4->{
+      \includegraphics[scale=1.0]{TTFEvo}
       }
-      \only<3>{
-      \includegraphics[width=\textwidth]{Qpa4_40e-01QPresids} 
-      }
-      \begin{center} Low-temperature \end{center}
       \end{figure}
-    \column{0.5\textwidth}
-      \begin{figure}
-      \centering
-      \only<1>{
-      \includegraphics[width=\textwidth]{HighTa1_779e-01j100T2_0000e+01_specevo}
-      }
-      \only<2>{
-      \includegraphics[width=\textwidth]{HighTa1_779e-01j100T2_0000e+01_lowjevo}
-      }
-      \only<3>{
-      \includegraphics[width=\textwidth]{HighTresiduals} 
-      } 
-       \begin{center} High-temperature \end{center}
-      \end{figure}
-  \end{columns}
-  }
+  \end{overlayarea}
 }
 
 \subsection*{}
@@ -499,10 +478,12 @@
 {
   \frametitle{Results}
     \bi
-    \its Physical interpretation for $T_{th}$?
-    \its Is $| T_{QP} - T_{th}|$ a function of AdS parameters? What does this mean for boundary CFT?
-    \its Compare perturbative evolution to full numerical $\to$ establish absolute timescale for approximation
-    \its Use high-temperature QP solutions as initial data in nonlinear evolution $\to$ metastable/irregular? What is mechanism of collapse?
+    \its Low-T QP solutions robust as $\jm$ increases
+    \its Not able to find evidence that high-T solutions continued to exist at large $\jm$ $\to$ possible reduction of space of QP solutions up to $T_{max} = 2\jm + d$
+    \its {\bf Caveat}: focused on configurations where $\alpha_0 = 1$ $\to$ free to set dominant energy in any $\alpha_j$
+    \its Motivation for temperature limit of $T \sim 5.5$?
+    \its Perturbative system: massless scalar, static boundary conditions at $x = \pi/2$
+    \its Extend to massive scalars, time-dependent boundary conditions $\to$ activation of non-normalizable modes
     \ei
 }
 
@@ -563,6 +544,7 @@
    \its PhD Committee: (),  (), (),  ()
    \its Co-authors: Nils Deppe (Cornell), Brayden Yarish (junior collaborator)
    \its University of Winnipeg and University of Manitoba
+   \its Westgrid \& Compute Canada
    \end{itemize}
 }
 
@@ -584,6 +566,7 @@
 {
   \frametitle{References}
   \bi
+  \its A. Buchel, S. L. Liebling, and L Lehner, \emph{Boson Stars in AdS Spacetime}, Phys. Rev. D87 (2013) 123006, [1304.4166].
   \its V. Balasubramanian, A. Buchel, S. R. Green, L. Lehner, and S. L. Liebling, \emph{Holographic Thermalization, Stability of Anti-de Sitter Space, and the Fermi-Pasta-Ulam Paradox}, Phys. Rev. Lett. 113 (2014) 071601, [1403.6471].
   \its S. R. Green, A. Maillard, L. Lehner, and S. L. Liebling, \emph{Islands of stability and recurrence times in AdS}, Phys. Rev. D92 (2015) 084001, [1507.08261].
   \its B. Craps, O. Evnin, and J. Vanhhof, \emph{Renormalization, averaging, conservation laws and AdS (in)stability}, J. High Energ. Phys. 1501 (2015) 108, [1412.3249].
