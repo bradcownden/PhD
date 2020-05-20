@@ -13,6 +13,7 @@
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 \usepackage{hyperref}
 %\usepackage[T1]{fontenc}
+\usepackage{cancel}
 
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{items}[triangle]
@@ -407,7 +408,7 @@
 \subsection{High-Temperature Families}
 \frame
 {
-  \frametitle{High-Temperature Solutions I}
+  \frametitle{High-Temperature Families I}
   \bi
   \its Perturb by $\delta E$ $\to$ new solutions have energy $E + \delta E$, $N$, and $T + \delta T$
   \its Repeat process to $T_{max} = (2\jm + d)$
@@ -441,7 +442,7 @@
 
 \frame
 {
-  \frametitle{High-Temperature Solutions II}
+  \frametitle{High-Temperature Families II}
   \bi
   \its And at \alert{constant T}
   \ei
@@ -453,7 +454,7 @@
 
 \frame
 {
-  \frametitle{High-Temperature Solutions III}
+  \frametitle{High-Temperature Families III}
   \bi
   \its Alternative methods for finding high-T solutions
   \its<2->{Fit low $\jm$, high-T data to generate seeds for Newton-Raphson solver \uncover<3->{$\to$ \alert<3>{not robust as $\jm$ increases}}}
@@ -473,14 +474,16 @@
   \end{overlayarea}
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsection*{}
 \frame
 {
   \frametitle{Results}
     \bi
     \its Low-T QP solutions robust as $\jm$ increases
-    \its Not able to find evidence that high-T solutions continued to exist at large $\jm$ $\to$ possible reduction of space of QP solutions up to $T_{max} = 2\jm + d$
-    \its {\bf Caveat}: focused on configurations where $\alpha_0 = 1$ $\to$ free to set dominant energy in any $\alpha_j$
+    \its Not able to find evidence that high-T solutions continued to exist at large $\jm$ $\to$ possible reduction of space of QP
+    \its {\bf Caveat}: focused on configurations where $\alpha_0 = 1$ $\to$ free to set dominant energy in any $\alpha_j$ $\to$ other configurations required for high temperatures?
     \its Motivation for temperature limit of $T \sim 5.5$?
     \its Perturbative system: massless scalar, static boundary conditions at $x = \pi/2$
     \its Extend to massive scalars, time-dependent boundary conditions $\to$ activation of non-normalizable modes
@@ -521,23 +524,32 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Resonant Contributions}
-\frame
+\frame[shrink]
 {
   \frametitle{Resonant Contributions}
   \bi
   \its $\mc O(\epsilon^2)$: backreaction on metric in terms of $\phi_1$
   \its $\mc O(\epsilon^3)$: source terms for resonant contributions $\to$ examine resonance conditions 
-  \its<2->{\alert<2>{All normalizable}: restrictions on indices {\bf and} mass value}
+  \its<2->{All normalizable: restrictions on indices {\bf and} mass value \uncover<3->{$\to$ \alert<3>{two channels vanish numerically}}}
+  \its<4->{One \alert<4>{non-vanishing} channel \uncover<5>{$\to$ evaluate numerically}}
   \ei
   
   \begin{overlayarea}{\textwidth}{0.25\textheight}
+  \only<1-4>{
+  \vspace{0.2in}
   \begin{align*}
-  \only<2>{
-  \omega_i + \omega_j + \omega_k &= \omega_\ell \quad \Rightarrow \quad i + j + k = \ell - \Delta^+  \in \mathbb{Z}^+ \\
-  \omega_i - \omega_j - \omega_k &= \omega_\ell \quad \Rightarrow \quad i - j - k = \ell + \Delta^+  \in \mathbb{Z}^+ \\
-  \omega_i + \omega_j - \omega_k &= \omega_\ell \quad \Rightarrow \quad i + j = k + \ell \, \in \mathbb{Z}^+
-  }
+ \alert<3>{\omega_i + \omega_j + \omega_k} &\alert<3>{= \omega_\ell} \uncover<2>{\quad \Rightarrow \quad i + j + k = \ell - \Delta^+  \in \mathbb{Z}^+} \\
+  \alert<3>{\omega_i - \omega_j - \omega_k} &\alert<3>{= \omega_\ell} \uncover<2>{\quad \Rightarrow \quad i - j - k = \ell + \Delta^+  \in \mathbb{Z}^+} \\
+  \alert<4>{\omega_i + \omega_j - \omega_k} &\alert<4>{= \omega_\ell} \uncover<2>{\quad \Rightarrow \quad i + j = k + \ell \, \in \mathbb{Z}^+}
   \end{align*}
+  }
+  \only<5>{
+  \begin{figure}
+  \vspace{-0.2in}
+  \centering
+  \includegraphics[scale=0.55]{norm} 
+  \end{figure}
+  }
   \end{overlayarea}
 }
 
@@ -547,6 +559,14 @@
 \frame
 {
   \frametitle{Special Values of Non-normalizable Frequencies}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection*{}
+\frame
+{
+  \frametitle{Results}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
