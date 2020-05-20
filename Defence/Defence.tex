@@ -491,10 +491,31 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Examining Instabilities Due to Driven Scalars in AdS [arXiv:1912.07143]}
-\subsection{Time-dependent Boundary Conditions}
+\subsection{Extending TTF to Driven Scalars}
 \frame
 {
-  \frametitle{Time-dependent Boundary Conditions}
+  \frametitle{Extending TTF to Driven Scalars}
+  \bi
+  \its Driven scalars $\to$ scalars with time-dependent boundary conditions at $x = \pi / 2$
+  \its $\mc O(\epsilon)$: $\phi_1(t, x=\pi/2) = f(t)$
+  \its<2->{Examine scaling behaviour as $x \to \pi/2$: $\Phi^+(x) \sim (\cos x)^{\Delta^+}$ and $\Phi^-(x) \sim (\cos x)^{\Delta^-}$}
+  \its<3->{Scalar field is linear combination of both kinds of modes}
+  \its<3->{\alert<3>{$e_j(x)$} are same eigenfunctions of AdS \& have eigenvalues \alert<3>{$\omega_j = (2j + \Delta^+)$}}
+  \its<4->{\alert{$E_\alpha(x)$} are hypergeometric functions \& have continuous eigenvalues \alert{$\omega_\alpha$}}
+  \ei
+  \vspace{-0.2in}
+  \begin{overlayarea}{\textwidth}{0.25\textheight}
+  \begin{align*}
+  \only<2>{
+    \Phi^+(x) \equiv \text{``normalizable''} \quad & \quad \Phi^-(x) \equiv \text{``non-normalizable''}
+    }
+  \only<3->{
+    \phi_1(t,x) = \sum_{j=0}^\infty A_j(t) \cos & \left(\alert<3>{\omega_j} t + B_j (t)\right) \alert<3>{e_j(x)} + \sum_{\alpha = 0}^\infty \bar{A}_\alpha(t) \cos \left( \alert<4>{\omega_\alpha} t + \bar{B}_\alpha \right) \alert<4>{E_\alpha (x)} \\
+    & \alert<3>{\Delta^\pm = \frac{d}{2} \pm \frac{1}{2} \sqrt{d^2 - 4m^2}}
+    }
+  \end{align*}
+  \end{overlayarea}
+  \vspace{0.3in}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -503,6 +524,21 @@
 \frame
 {
   \frametitle{Resonant Contributions}
+  \bi
+  \its $\mc O(\epsilon^2)$: backreaction on metric in terms of $\phi_1$
+  \its $\mc O(\epsilon^3)$: source terms for resonant contributions $\to$ examine resonance conditions 
+  \its<2->{\alert<2>{All normalizable}: restrictions on indices {\bf and} mass value}
+  \ei
+  
+  \begin{overlayarea}{\textwidth}{0.25\textheight}
+  \begin{align*}
+  \only<2>{
+  \omega_i + \omega_j + \omega_k &= \omega_\ell \quad \Rightarrow \quad i + j + k = \ell - \Delta^+  \in \mathbb{Z}^+ \\
+  \omega_i - \omega_j - \omega_k &= \omega_\ell \quad \Rightarrow \quad i - j - k = \ell + \Delta^+  \in \mathbb{Z}^+ \\
+  \omega_i + \omega_j - \omega_k &= \omega_\ell \quad \Rightarrow \quad i + j = k + \ell \, \in \mathbb{Z}^+
+  }
+  \end{align*}
+  \end{overlayarea}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -566,7 +602,7 @@
 {
   \frametitle{References}
   \bi
-  \its A. Buchel, S. L. Liebling, and L Lehner, \emph{Boson Stars in AdS Spacetime}, Phys. Rev. D87 (2013) 123006, [1304.4166].
+  \its A. Buchel, S. L. Liebling, and L. Lehner, \emph{Boson Stars in AdS Spacetime}, Phys. Rev. D87 (2013) 123006, [1304.4166].
   \its V. Balasubramanian, A. Buchel, S. R. Green, L. Lehner, and S. L. Liebling, \emph{Holographic Thermalization, Stability of Anti-de Sitter Space, and the Fermi-Pasta-Ulam Paradox}, Phys. Rev. Lett. 113 (2014) 071601, [1403.6471].
   \its S. R. Green, A. Maillard, L. Lehner, and S. L. Liebling, \emph{Islands of stability and recurrence times in AdS}, Phys. Rev. D92 (2015) 084001, [1507.08261].
   \its B. Craps, O. Evnin, and J. Vanhhof, \emph{Renormalization, averaging, conservation laws and AdS (in)stability}, J. High Energ. Phys. 1501 (2015) 108, [1412.3249].
