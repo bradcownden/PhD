@@ -93,19 +93,12 @@
 {
   \frametitle{Gravitational Collapse}
   \bi
-  \its Numerical studies of gravitational collapse in Minkowski spacetime: horizon size = power law\footnotemark , mass gap
-  \its AdS/CFT $\to$ thermal quench in gauge theory $\Leftrightarrow$ formation of black hole in gravitational theory
-  \its Massless scalar fields in AdS: unstable against generic initial data, no mass gap\footnotemark\ $\to$ c.f. Minkowski
+  \its AdS/CFT\footnote<1->{{\scr Maldacena [hep-th/9711200]}} $\to$ thermal quench in gauge theory $\Leftrightarrow$ formation of black hole in gravitational theory
+  \its Massless scalar fields in AdS: unstable against generic initial data, no mass gap\footnote<1->{{\scr Bizo\'n \& Rostworowski [1104.3702]}} $\to$ c.f. Minkowski\footnote<1->{{\scr Choptuik PRL70 9 (1993)}} 
   \its Stability for specific initial data below critical energy
-  \its Perturbative theory for stable/nearly-stable solutions
-  \its {\bf Nonlinear theory:} continue with exploration of phase space\footnotemark
-  \its {\bf Perturbative theory:} effects of truncation, space of solutions, evolution of nearly-stable solutions
+  \its {\bf Nonlinear theory:} continue\footnote<1->{{\scr Deppe \& Frey [1508.02709]}} with exploration of phase space
+  \its {\bf Perturbative theory:} effects of truncation, space of solutions, time-dependent boundary conditions
   \ei	
-  
-  \footnotetext[1]{{\scr Choptuik PRL70 9 (1993)}} 
-  \footnotetext[2]{{\scr Bizo\'n \& Rostworowski [1104.3702]}}
-  \footnotetext[3]{{\scr Deppe \& Frey [1508.02709]}}
-}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -210,7 +203,7 @@
   \frametitle{Irregular Profiles II}
   \bi
   \its Evidence of chaotic behaviour $\to$ possible self-interaction
-  \its Previous chaotic evolution only seen in thin-shell interactions\footnotemark\ in AdS, scalar collapse in Gauss-Bonnet gravity\footnotemark
+  \its Previous chaotic evolution only seen in thin-shell interactions\footnote<1->{{\scr Brito {\it et al.} [1602.03535]}} in AdS, scalar collapse in Gauss-Bonnet gravity\footnote<1->{{\scr Deppe, Kolly, {\it et al.} [1608.05402]}}
   \ei
   \vspace{-0.15in}
   \begin{columns}
@@ -223,9 +216,7 @@
     \hspace{-0.6in}
        $t = 60, {\color[rgb]{0.06,0.64,0.01} 62}, {\color[rgb]{.98,0,0.04} 64}$
    \end{columns}
-  
-  \footnotetext[4]{{\scr Brito {\it et al.} [1602.03535]}}
-  \footnotetext[5]{{\scr Deppe, Kolly, {\it et al.} [1608.05402]}}
+
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -297,8 +288,8 @@
   \its Metastable and irregular data to be studied in multiscale perturbation theory
   \ei
   
-  \footnotetext[6]{{\scr Deppe \& Frey [1508.02709]}}
-  \footnotetext[7]{{\scr Buchel {\it et al.} [1304.4166]}}
+  \footnotetext[7]{{\scr Deppe \& Frey [1508.02709]}}
+  \footnotetext[8]{{\scr Buchel {\it et al.} [1304.4166]}}
 }  
   
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -309,49 +300,29 @@
 \subsection{The Two-Time Formalism (TTF)}
 \frame
 {
-  \frametitle{The Two-Time Formalism (TTF) I}
-  \vspace{-0.75in}
+  \frametitle{The Two-Time Formalism (TTF)}
   \bi
   \its Small perturbations in AdS$_4$: expand scalar field, metric functions in $\epsilon$
   \its $\mc O(\epsilon)$: $\phi_1$ in terms of eigenfunctions of AdS, \alert<1>{$e_j(x)$}
   \its Integer eigenvalues $\omega_j = (2j + d)$ $\to$ fully resonant spectrum
-  \its $\mc O(\epsilon^2)$: backreaction on metric in terms of $\phi_1$
-  \its <2->{$\mc O(\epsilon^3)$: \alert{source terms} for resonant contributions }
-  \its<2->{Define slow time $\tau \equiv \epsilon^2 t$}
+  \its <2->{$\mc O(\epsilon^3)$: \alert{source terms} for resonant contributions}
+  \its <2->{Absorb resonances into amplitudes \& phases\footnote<2->{{\scr Balasubramanian {\it et al.} [1403.6471]}}}
   \ei
 
-  \begin{overlayarea}{\textwidth}{0.1cm}
+  \begin{overlayarea}{\textwidth}{0.3\textheight}
   \begin{align*}
   \only<1>{
   \vspace{0.4in}
-  \phi_1 (t,x) = \sum^\infty_{j=0} A_j(t) \cos (\omega_j t + B_j(t)) \: \alert{e_j (x)}
+  \phi_1 (t,x) = \sum^\infty_{j=0} a_j(t) \cos (\omega_j t + b_j(t)) \: \alert{e_j (x)}
   }
   \only<2>{
   \vspace{-0.3in}
-   -\! 2 \omega_\ell \frac{d A_\ell (\tau)}{d \tau} &= \stackrel{\ell \leq i + j}{\sum_{i \neq \ell} \sum_{j \neq \ell}} \alert{f_1} \left(A_i, A_j, A_{i+j-\ell}, B_i, B_j, B_{i+j-\ell} \right) \\
-  -2 \omega_\ell A_\ell \frac{d B_\ell(\tau)}{d \tau} &= \stackrel{\ell \leq i + j}{\sum_{i \neq \ell} \sum_{j \neq \ell}} \alert{f_2} \left(A_i, A_j, A_{i+j-\ell}, B_i, B_j, B_{i+j-\ell} \right)
+   -\! 2 \omega_\ell \frac{d a_\ell (\tau)}{d \tau} &= \stackrel{\ell \leq i + j}{\sum_{i \neq \ell} \sum_{j \neq \ell}} \alert{f_1} \left(a_i, a_j, a_{i+j-\ell}, b_i, b_j, b_{i+j-\ell} \right) \\
+  -2 \omega_\ell a_\ell \frac{d b_\ell(\tau)}{d \tau} &= \stackrel{\ell \leq i + j}{\sum_{i \neq \ell} \sum_{j \neq \ell}} \alert{f_2} \left(a_i, a_j, a_{i+j-\ell}, b_i, b_j, b_{i+j-\ell} \right)
   }
   \end{align*}
   \end{overlayarea}
-  \vspace{0.41in}
-}
-
-\frame
-{
-  \frametitle{The Two-Time Formalism (TTF) II}
-  \bi
-  \its Energy exchange between modes through slowly varying amplitude $A_j(\tau)$ and phase $B_j(\tau)$ to resist collapse\footnotemark
-  \its Resummation techniques absorb resonances into amplitude/phase variables\footnotemark
-  \its Solve by truncating series to $\jm < \infty$
-  \its Solutions must be robust as $\jm \to \infty$
-  \its Examine quasi-periodic families of solutions\footnotemark
-  \its Develop numerical techniques for extending $\jm \gtrsim 100$
-  \its Verify families of solutions remain valid as $\jm$ increases
-  \ei
-  
-  \footnotetext[8]{{\scr Balasubramanian {\it et al.} [1403.6471]}}
-  \footnotetext[9]{{\scr Craps {\it et al.} [1407.6273]}}
-  \footnotetext[10]{{\scr Green {\it et al.} [1507.08261]}}
+  \vfill
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -360,25 +331,28 @@
 \frame
 {
   \frametitle{Quasi-Periodic Solutions I}
-  \bi
-  \its Quasi-periodic ansatz $A_j = \alpha_j e^{i \beta_j \tau}$ $\to$ TTF equations become time-independent when $\beta_j = \beta_0 + j(\beta_1 - \beta_0)$
-  \its Solve QP equation with Newton-Raphson $\to$ seed equation $\alpha_j \propto e^{-j}$, $j \neq 0$ for low $\jm$
-  \its TTF: conserved quantities\footnotemark\ $E$, $N$ $\to$ classify solutions by $T \equiv E/N$
-  \its $T_i$, $R_{ij}$, $S_{ijk\ell}$ calculated numerically
+  \bi 
+  \its Renormalization flow techniques to cancel an infinite number of resonaces $\to$ express non-vanishing ones analytically\footnote<1->{{\scr Craps {\it et al.} [1407.6273]}}
+  \its Need to truncate number of modes to find solutions: $\jm < \infty$ (must be robust as $\jm \to \infty$)
+  \its<2->{Quasi-periodic\footnote<2->{{\scr Craps {\it et al.} [1412.3249]}} solutions $a_j = \alpha_j e^{i \beta_j \tau}$ $\to$ TTF equations become time-independent when $\beta_j = \beta_0 + j(\beta_1 - \beta_0)$}
+  \its<2->{TTF: conserved quantities\footnote<2->{{\scr Green {\it et al.} [1507.08261]}} $(E, N)$ $\to$ classify solutions by $T \equiv E/N$}
+  \its<2->{Solve QP equation using Newton-Raphson method}
   \ei
-  
+  \vspace{-0.15in}
+  \begin{overlayarea}{\textwidth}{0.2\textheight}
    \begin{align*}
+   \uncover<2->{
   2\omega_\ell \alpha_\ell \beta_\ell = T_\ell \alpha_\ell^3 + \sum_{i \neq \ell} R_{i\ell} \alpha_i^2 \alpha_\ell + \stackrel{\ell \leq i + j}{\sum_{i \neq \ell} \sum_{j \neq \ell}} S_{i j (i+j-\ell)\ell} \alpha_i \alpha_j \alpha_{i+j-\ell}
+  }
   \end{align*}
- 
- \footnotetext[11]{{\scr Craps {\it et al.} [1412.3249]}}
+  \end{overlayarea}
 }
 
 \frame
 {
   \frametitle{Quasi-Periodic Solutions II}
   \bi
-  \its Solutions found for $3 \geq T \gtrsim 4.6$
+  \its Solutions found for $3 \geq T \gtrsim 5.5$
   \its Able to extend existing solutions from $\jm \sim 100$ to $\jm = 500$
   \its Robust in $\jm \to \infty$ limit
   \ei
@@ -411,7 +385,7 @@
   \frametitle{High-Temperature Families I}
   \bi
   \its Perturb by $\delta E$ $\to$ new solutions have energy $E + \delta E$, $N$, and $T + \delta T$
-  \its Repeat process to $T_{max} = (2\jm + d)$
+  \its Repeat process to determine $T_{max}$
   \its Project back to QP solution surface at constant $\alpha_1$ or $T$
   \its Loss of smooth profile above a certain temperature at \alert<1>{constant $\alpha_1$} 
   \ei
@@ -500,7 +474,6 @@
   \frametitle{Extending TTF to Driven Scalars}
   \bi
   \its Driven scalars $\to$ scalars with time-dependent boundary conditions at $x = \pi / 2$
-  \its $\mc O(\epsilon)$: $\phi_1(t, x=\pi/2) = f(t)$
   \its<2->{Examine scaling behaviour as $x \to \pi/2$: $\Phi^+(x) \sim (\cos x)^{\Delta^+}$ and $\Phi^-(x) \sim (\cos x)^{\Delta^-}$}
   \its<3->{Scalar field is linear combination of both kinds of modes}
   \its<3->{\alert<3>{$e_j(x)$} are same eigenfunctions of AdS \& have eigenvalues \alert<3>{$\omega_j = (2j + \Delta^+)$}}
@@ -513,8 +486,8 @@
     \Phi^+(x) \equiv \text{``normalizable''} \quad & \quad \Phi^-(x) \equiv \text{``non-normalizable''}
     }
   \only<3->{
-    \phi_1(t,x) = \sum_{j=0}^\infty A_j(t) \cos & \left(\alert<3>{\omega_j} t + B_j (t)\right) \alert<3>{e_j(x)} + \sum_{\alpha = 0}^\infty \bar{A}_\alpha(t) \cos \left( \alert<4>{\omega_\alpha} t + \bar{B}_\alpha \right) \alert<4>{E_\alpha (x)} \\
-    & \alert<3>{\Delta^\pm = \frac{d}{2} \pm \frac{1}{2} \sqrt{d^2 - 4m^2}}
+    \phi_1(t,x) = \sum_{j=0}^\infty a_j(t) \cos & \left(\alert<3>{\omega_j} t + b_j (t)\right) \alert<3>{e_j(x)} + \sum_{\alpha = 0}^\infty \bar{A}_\alpha(t) \cos \left( \alert<4>{\omega_\alpha} t + \bar{B}_\alpha \right) \alert<4>{E_\alpha (x)} \\
+    & \alert<3>{\Delta^\pm = \frac{d}{2} \pm \frac{1}{2} \sqrt{d^2 + 4m^2}}
     }
   \end{align*}
   \end{overlayarea}
@@ -528,10 +501,9 @@
 {
   \frametitle{Resonant Contributions}
   \bi
-  \its $\mc O(\epsilon^2)$: backreaction on metric in terms of $\phi_1$
   \its $\mc O(\epsilon^3)$: source terms for resonant contributions $\to$ examine resonance conditions 
-  \its<2->{All normalizable: restrictions on indices {\bf and} mass value \uncover<3->{$\to$ \alert<3>{two channels vanish numerically}}}
-  \its<4->{One \alert<4>{non-vanishing} channel \uncover<5>{$\to$ evaluate numerically}}
+  \its<2->{{\bf Unforced}: restrictions on indices and mass value \uncover<3->{$\to$ \alert<3>{two channels vanish numerically}}}
+  \its<4->{One \alert<4>{non-vanishing} channel \uncover<5->{$\to$ sum over $i$, $j$ with $i + j \leq \ell$}}
   \ei
   
   \begin{overlayarea}{\textwidth}{0.25\textheight}
@@ -545,7 +517,7 @@
   }
   \only<5>{
   \begin{figure}
-  \vspace{-0.2in}
+  \vspace{-0.1in}
   \centering
   \includegraphics[scale=0.55]{norm} 
   \end{figure}
@@ -559,6 +531,60 @@
 \frame
 {
   \frametitle{Special Values of Non-normalizable Frequencies}
+  \bi
+  \its<1->{{\bf Forced}: choose values of $\omega_\alpha$ that satisfy resonance condition $\to$ two normalizable, two non-normalizable}
+  \its<2->{\alert<2>{Equal frequencies}: $\omega_\alpha = \bar\omega$}
+  \its<3->{\alert<3>{Add to integer}: $\bar\omega_1 + \bar\omega_2 = 2n$}
+  \its<4->{Source terms give flow equations for amplitude/phase of $\phi_1$, e.g. two equal non-normalizable frequencies $\to$ {\it c.f.} normalizable modes only}
+  \ei
+
+  \begin{overlayarea}{\textwidth}{0.4\textheight}
+  \only<1-3>{
+  \begin{columns}
+  \column{0.5\textwidth}
+  	 \uncover<1-3>{
+	 \begin{align*}
+  	 \pm \omega_I \pm \omega_J \pm \omega_K \pm \omega_\ell &= 0 \quad I \in \{i, \alpha\} \\
+  	 \only<2>{
+  	 \alert{\omega_i + \bar\omega - \bar\omega} &\alert{= \omega_\ell}
+  	 }
+	 \end{align*}
+	 }
+	 \only<3>{
+	 \vspace{-0.4in}
+	 \[
+	 \left\{ \begin{array}{ll}
+	 	 \alert<3>{(++): \omega_i + 2n = \omega_\ell \quad \forall \, \ell \geq n} \\
+	 	 \alert<3>{(+-):  \omega_i - 2n = \omega_\ell \quad \forall \, n} \\
+	\alert<3>{(-+): - \omega_i + 2n = \omega_\ell \quad \forall \, n \geq \ell + d}
+		\end{array}
+	\right\}
+	\]
+	}
+  \column{0.5\textwidth}
+  	\begin{figure}
+	\centering
+	\uncover<2-3>{
+	\only<2>{
+	\vspace{-0.75in}
+	\includegraphics[scale=0.23]{equalNNm0}
+	}
+	\only<3>{
+	\vspace{-0.6in}
+	\includegraphics[scale=0.7]{NNsum4m0}
+	}
+	}
+	\end{figure}
+  \end{columns}
+  }
+  \only<4>{
+	\begin{align*}
+	\vspace{-0.75in}
+	\frac{2\omega_\ell}{\epsilon^2} \frac{d a_\ell}{dt} &= 0 \\
+	\frac{2 \omega_\ell a_\ell}{\epsilon^2} \frac{db_\ell}{dt} &= - S_\ell a_\ell \bar{A}^2_{\bar \omega}
+	\end{align*}
+  }
+  \end{overlayarea}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -567,6 +593,16 @@
 \frame
 {
   \frametitle{Results}
+  \bi
+  \its Confirm two of three resonant channels vanish for massive scalar (all normalizable)\footnotemark
+  \its First TTF formulation with time-dependent boundary conditions
+  \its No naturally-vanishing source terms for $\omega_\alpha$ considered $\to$ sum resonant channels
+  \its Flow equations are linear in amplitude/phase variables $a_\ell(t)$, $b_\ell(t)$
+  \its {\bf Further work}: quasi-periodic solutions? Conserved quantities? Energy cascades? Relation to driven holographic CFTs\footnotemark?
+  \ei
+  
+  \footnotetext[12]{{\scr Biasi {\it et al.} [1810.04753]}}
+  \footnotetext[13]{{\scr Rangamani {\it et al.} [1502.05726]}}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -579,16 +615,7 @@
 {
    \frametitle{Conclusions}
    \bi
-   \its Collapse of scalar field in AdS $\Leftrightarrow$ thermalization of dual CFT
-   \its {\bf Nonlinear theory:} ``islands of stability'', metastable \& irregular phases, chaotic behaviour from self-interaction
-   \its Weakly turbulent energy cascade to short length scales $\to$ TTF for inverse cascades 
-   \its {\bf Perturbative theory:} QP solutions robust in $j_{max} \to \infty$, high-T solutions are not; space of stable solutions is restricted by $T_{th}$
-   \its {\bf Next steps}
-     \begin{itemize}
-     \its Physical interpretation of $T_{th}$ 
-     \its Ways to construct robust QP solutions with $T > T_{th}$
-     \end{itemize}
-   \its {\bf Future:} develop theory for \underline{\emph{massive}} TTF $\to$ less symmetry in equations $\therefore$ fewer cancelations of resonant terms; TTF in AdS$_5$; time-dependent boundary conditions
+   \its 
     \ei
 }
 \section*{}
@@ -598,7 +625,7 @@
    \begin{itemize}
    \its Supervisor: Andrew Frey (University of Winnipeg)
    \its PhD Committee: (),  (), (),  ()
-   \its Co-authors: Nils Deppe (Cornell), Brayden Yarish (junior collaborator)
+   \its Co-authors: Nils Deppe (Cornell)
    \its University of Winnipeg and University of Manitoba
    \its Westgrid \& Compute Canada
    \end{itemize}
@@ -608,24 +635,26 @@
 {
   \frametitle{References}
   \bi
-  \its M. Choptuik, \emph{Universality and scaling in gravitational collapse of a massless scalar field}, Phys. Rev. Lett. 70 (1993) 9-12. 
+  \its J. Maldacena, \emph{The Large N limit of superconformal field theories and supergravity}, Int. J. Theor. Phys. 38 (1999) 1113-1133, [hep-th/9711200].
   \its P. Bizo\'n and A. Rostworowski, \emph{On weakly turbulent instability of anti-de Sitter space}, Phys. Rev. Lett. 107 (2011) 031102, [1104.3702]. 
+  \its M. Choptuik, \emph{Universality and scaling in gravitational collapse of a massless scalar field}, Phys. Rev. Lett. 70 (1993) 9-12. 
   \its N. Deppe and A. R. Frey, \emph{Classes of Stable Initial Data for Massless and Massive Scalars in Anti-de Sitter Spacetime}, JHEP 12 (2015) 004, [1508.02709]. 
-  \its J. M. Maldacena, \emph{The Large N limit of superconformal field theories and supergravity}, Int. J. Theor. Phys. 38 (1999) 1113, [hep-th/9711200]. 
   \its R. Brito, V. Cardoso, and J. V. Rocha, \emph{Interacting shells in AdS spacetime and chaos}, Phys. Rev. D94 (2016), no. 2 024003, [1602.03535]. 
   \its N. Deppe, A. Kolly, A. R. Frey, and G. Kunstatter, \emph{Black Hole Formation in AdS Einstein-Gauss-Bonnet Gravity}, J. High Energ. Phys. (2016) 2016: 87, [1608.05402].
-  \its B. Craps, O. Evnin, and J. Vanhoof, \emph{Renormalization group, secular term resummation and AdS (in)stability}, JHEP 10 (2014) 048, [1407.6273].
-   \ei
+  \its A. Buchel, S. L. Liebling, and L. Lehner, \emph{Boson Stars in AdS Spacetime}, Phys. Rev. D87 (2013) 123006, [1304.4166].
+ \ei
 }
 
 \frame[noframenumbering]
 {
   \frametitle{References}
   \bi
-  \its A. Buchel, S. L. Liebling, and L. Lehner, \emph{Boson Stars in AdS Spacetime}, Phys. Rev. D87 (2013) 123006, [1304.4166].
   \its V. Balasubramanian, A. Buchel, S. R. Green, L. Lehner, and S. L. Liebling, \emph{Holographic Thermalization, Stability of Anti-de Sitter Space, and the Fermi-Pasta-Ulam Paradox}, Phys. Rev. Lett. 113 (2014) 071601, [1403.6471].
+  \its B. Craps, O. Evnin, and J. Vanhoof, \emph{Renormalization group, secular term resummation and AdS (in)stability}, JHEP 10 (2014) 048, [1407.6273].
   \its S. R. Green, A. Maillard, L. Lehner, and S. L. Liebling, \emph{Islands of stability and recurrence times in AdS}, Phys. Rev. D92 (2015) 084001, [1507.08261].
   \its B. Craps, O. Evnin, and J. Vanhhof, \emph{Renormalization, averaging, conservation laws and AdS (in)stability}, J. High Energ. Phys. 1501 (2015) 108, [1412.3249].
+  \its A. Biasi, B. Craps, and O. Evnin, \emph{Energy Returns in Global AdS$_4$}, [1810.04753].
+  \its M. Rangamani, M. Rozali and A. Wong, \emph{Driven Holographic CFTs}, JHEP 04 (2015) 093, [1502.05726].
   \ei
 }
 }
