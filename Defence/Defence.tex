@@ -43,7 +43,7 @@
 
 \title[Gravitational Collapse in AdS]{Gravitational Collapse in Anti-de Sitter Space}
 \author[Brad Cownden]{Brad Cownden \\ PhD Thesis Defence}
-\date[June --, 2020 UM]{June --, 2020 \\ University of Manitoba}
+\date[July 28th, 2020]{July 28th, 2020}
 
 
 \newcommand{\bi}{\begin{itemize}}
@@ -104,7 +104,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Massive Scalars in AdS$_5$ [arXiv:1711.00454]}
+\section{Massive Scalars in AdS$_5$ [{\it Phys.Rev.D} {\bf 102} (2020) 026015]}
 \subsection{Scalar Field Collapse in AdS}
 \frame
 {
@@ -332,10 +332,10 @@
 {
   \frametitle{Quasi-Periodic Solutions I}
   \bi 
-  \its Renormalization flow techniques to cancel an infinite number of resonaces $\to$ express non-vanishing ones analytically\footnote<1->{{\scr Craps {\it et al.} [1407.6273]}}
+  \its Renormalization flow techniques to cancel an infinite number of resonances $\to$ express non-vanishing ones analytically\footnote<1->{{\scr Craps {\it et al.} [1407.6273]}}
   \its Need to truncate number of modes to find solutions: $\jm < \infty$ (must be robust as $\jm \to \infty$)
-  \its<2->{Quasi-periodic\footnote<2->{{\scr Craps {\it et al.} [1412.3249]}} solutions $a_j = \alpha_j e^{i \beta_j \tau}$ $\to$ TTF equations become time-independent when $\beta_j = \beta_0 + j(\beta_1 - \beta_0)$}
-  \its<2->{TTF: conserved quantities\footnote<2->{{\scr Green {\it et al.} [1507.08261]}} $(E, N)$ $\to$ classify solutions by $T \equiv E/N$}
+  \its<2->{Quasi-periodic\footnote<2->{{\scr Balasubramanian {\it et al.} [1403.6471]}} solutions $a_j = \alpha_j e^{i \beta_j \tau}$ $\to$ TTF equations become time-independent when $\beta_j = \beta_0 + j(\beta_1 - \beta_0)$}
+  \its<2->{TTF: conserved quantities\footnote<2->{{\scr Craps {\it et al.} [1412.3249]}} $(E, N)$ $\to$ classify solutions by $T \equiv E/N$}
   \its<2->{Solve QP equation using Newton-Raphson method}
   \ei
   \vspace{-0.15in}
@@ -431,18 +431,18 @@
   \frametitle{High-Temperature Families III}
   \bi
   \its Alternative methods for finding high-T solutions
-  \its<2->{Fit low $\jm$, high-T data to generate seeds for Newton-Raphson solver \uncover<3->{$\to$ \alert<3>{not robust as $\jm$ increases}}}
-  \its<4->{Pad low $\jm$ data with zeros, evolve within the TTF \uncover<5->{$\to$ \alert<5>{isothermal evolution does not match known solution}}}
+  \its Fit low $\jm$, high-T data to generate seeds for Newton-Raphson solver \uncover<2->{$\to$ \alert<2>{not robust as $\jm$ increases}}
+  \its<3->{Pad low $\jm$ data with zeros, evolve within the TTF \uncover<4->{$\to$ \alert<4>{isothermal evolution does not match known solution}}}
    \ei
    \begin{overlayarea}{\textwidth}{0.65\textheight}
       \begin{figure}
       \centering
-      \only<2-3>{
+      \only<1-2>{
       \vspace{-0.35in}
-      \includegraphics[scale=0.6]{highTseeds}
+      \includegraphics[scale=0.53]{highTseeds} \\ {\scr Cownden, Deppe, \& Frey: In progress}
       }
-      \only<4->{
-      \includegraphics[scale=1.0]{TTFEvo}
+      \only<3->{
+      \includegraphics[width=0.78\textwidth]{TTFEvo} \\ {\scr Cownden, Deppe, \& Frey: In progress}
       }
       \end{figure}
   \end{overlayarea}
@@ -531,18 +531,21 @@
 \frame
 {
   \frametitle{Special Values of Non-normalizable Frequencies}
+  \vspace{-0.5in}
   \bi
-  \its<1->{{\bf Forced}: choose values of $\omega_\alpha$ that satisfy resonance condition $\to$ two normalizable, two non-normalizable}
-  \its<2->{\alert<2>{Equal frequencies}: $\omega_\alpha = \bar\omega$}
+  \its<1->{{\bf Forced}: $\omega_\alpha$ set by driving term $\to$ explore several scenarios}
+  \its<2->{\alert<2>{Single frequency}: $\omega_\alpha = \bar\omega$}
   \its<3->{\alert<3>{Add to integer}: $\bar\omega_1 + \bar\omega_2 = 2n$}
-  \its<4->{Source terms give flow equations for amplitude/phase of $\phi_1$, e.g. two equal non-normalizable frequencies $\to$ {\it c.f.} normalizable modes only}
+  \its<4->{$\omega_\alpha = 2i + \chi, \; \chi \notin \mathbb{Z}^+$}
+  \its<4->{Source terms give flow equations for amplitude/phase of $\phi_1$, e.g. single frequency $\to$ equations decouple}
   \ei
 
-  \begin{overlayarea}{\textwidth}{0.4\textheight}
-  \only<1-3>{
+  \vspace{-0.75in}
+  \begin{overlayarea}{\textwidth}{0.3\textheight}
+  \uncover<1-3>{
   \begin{columns}
   \column{0.5\textwidth}
-  	 \uncover<1-3>{
+  	 \uncover<2-3>{
 	 \begin{align*}
   	 \pm \omega_I \pm \omega_J \pm \omega_K \pm \omega_\ell &= 0 \quad I \in \{i, \alpha\} \\
   	 \only<2>{
@@ -550,7 +553,7 @@
   	 }
 	 \end{align*}
 	 }
-	 \only<3>{
+	 \uncover<3>{
 	 \vspace{-0.4in}
 	 \[
 	 \left\{ \begin{array}{ll}
@@ -566,22 +569,22 @@
 	\centering
 	\uncover<2-3>{
 	\only<2>{
-	\vspace{-0.75in}
+	\vspace{-0.5in}
 	\includegraphics[scale=0.23]{equalNNm0}
 	}
 	\only<3>{
-	\vspace{-0.6in}
-	\includegraphics[scale=0.7]{NNsum4m0}
+	\vspace{-0.47in}
+	\includegraphics[scale=0.75]{NNsum4m0}
 	}
 	}
 	\end{figure}
   \end{columns}
   }
   \only<4>{
+  	\vspace{-0.2in}
 	\begin{align*}
-	\vspace{-0.75in}
 	\frac{2\omega_\ell}{\epsilon^2} \frac{d a_\ell}{dt} &= 0 \\
-	\frac{2 \omega_\ell a_\ell}{\epsilon^2} \frac{db_\ell}{dt} &= - S_\ell a_\ell \bar{A}^2_{\bar \omega}
+	\frac{2 \omega_\ell}{\epsilon^2} \frac{db_\ell}{dt} &= - S_\ell \bar{A}^2_{\bar \omega}
 	\end{align*}
   }
   \end{overlayarea}
@@ -594,15 +597,14 @@
 {
   \frametitle{Results}
   \bi
-  \its Confirm two of three resonant channels vanish for massive scalar (all normalizable)\footnotemark
+  \its Confirm two of three resonant channels vanish for massive scalar (all normalizable)\footnote{{\scr Biasi {\it et al.} [1810.04753]}}
   \its First TTF formulation with time-dependent boundary conditions
-  \its No naturally-vanishing source terms for $\omega_\alpha$ considered $\to$ sum resonant channels
-  \its Flow equations are linear in amplitude/phase variables $a_\ell(t)$, $b_\ell(t)$
-  \its {\bf Further work}: quasi-periodic solutions? Conserved quantities? Energy cascades? Relation to driven holographic CFTs\footnotemark?
+  \its No naturally-vanishing source terms $\to$ sum resonant channels
+  \its Some flow equations decouple amplitude/phase variables $a_\ell(t)$, $b_\ell(t)$
+  \its {\bf Note}: normalizable modes are still present $\to$ sum all contributions
+  \its {\bf Further work}: quasi-periodic solutions\footnote{{\scr Carracedo {\it et al.} [1612.07701]}}? Conserved quantities? Energy cascades?
   \ei
-  
-  \footnotetext[12]{{\scr Biasi {\it et al.} [1810.04753]}}
-  \footnotetext[13]{{\scr Rangamani {\it et al.} [1502.05726]}}
+
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -615,17 +617,23 @@
 {
    \frametitle{Conclusions}
    \bi
-   \its 
-    \ei
+   \its Examine the stability of AdS to scalar field collapse in various dimensions in perturbative \& non-perturbative regimes $\to$ addition of time-dependent boundary conditions
+   \its<2->{Constructed phase diagram of scalar field collapse in AdS$_5$ $\to$ two new phases on ``shorelines'' $\to$ non-perturbative regime only}
+   \its<2->{First evidence of weakly chaotic evolution of scalars in AdS$_5$}
+   \its<3->{Verified low-T QP solutions are robust in the $j_{max} \to \infty$ limit}
+   \its<3->{No evidence of high-T QP solutions for $\alpha_0 = 1$ family}
+   \its<4->{Developed perturbative theory for massive scalars with time-dependent boundary conditions}
+   \its<4->{Derived flow equations for amplitude/phase variables for some choices of driving term $\to$ evaluated source terms numerically}
+   \ei
 }
 \section*{}
 \frame[noframenumbering]
 {
    \frametitle{Thanks}
    \begin{itemize}
-   \its Supervisor: Andrew Frey (University of Winnipeg)
-   \its PhD Committee: (),  (), (),  ()
-   \its Co-authors: Nils Deppe (Cornell)
+   \its Supervisor: Andrew Frey
+   \its PhD Committee: Derek Krepski, Gabor Kunstatter, Robert Mann, Khodr Shamseddine
+   \its Co-authors: Nils Deppe
    \its University of Winnipeg and University of Manitoba
    \its Westgrid \& Compute Canada
    \end{itemize}
@@ -654,7 +662,7 @@
   \its S. R. Green, A. Maillard, L. Lehner, and S. L. Liebling, \emph{Islands of stability and recurrence times in AdS}, Phys. Rev. D92 (2015) 084001, [1507.08261].
   \its B. Craps, O. Evnin, and J. Vanhhof, \emph{Renormalization, averaging, conservation laws and AdS (in)stability}, J. High Energ. Phys. 1501 (2015) 108, [1412.3249].
   \its A. Biasi, B. Craps, and O. Evnin, \emph{Energy Returns in Global AdS$_4$}, [1810.04753].
-  \its M. Rangamani, M. Rozali and A. Wong, \emph{Driven Holographic CFTs}, JHEP 04 (2015) 093, [1502.05726].
+  \its P. Carracedo, J. Mas, D. Musso and A. Serantes, \emph{Adiabatic pumping solutions in global AdS}, JHEP 05 (2017) 141, [1612.07701].
   \ei
 }
 }
