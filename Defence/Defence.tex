@@ -163,7 +163,7 @@ colupper=white
   \frametitle{Stable vs Unstable Profiles}
   \bi
   \its Stable: abrupt jump in $t_H$ when $\epsilon < \epsilon_{crit}$
-  \its<2->{Unstable: fit $t_H \approx a \epsilon^{-p} + b$ for $t_H \geq 60$ $\to$ unstable when $p \approx 2$}
+  \its<2->{Unstable: fit $t_H \approx a \epsilon^{-p} + b$ for $t_H \geq 60$ $\to$ unstable when $p \approx 2$ (TTF)}
   \ei
   \begin{columns}
   \column{0.5\textwidth}
@@ -242,7 +242,7 @@ colupper=white
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Phase Diagram \& Energy Cascades}
+\subsection{Phase Diagram}
 \frame
 {
   \frametitle{Phase Diagram}
@@ -277,25 +277,25 @@ colupper=white
   \end{figure}
 }
 
-\frame
-{
-  \frametitle{Energy Cascades}
-  \bi
-  \its Stable solutions: \alert{direct} and \alert{inverse} energy cascades
-  \ei
-  \begin{columns}
-  \column{0.5\textwidth}
-      \begin{figure}
-      \centering
-      \includegraphics[width=\textwidth]{Em0w18} \\ $\mu = 0$, $\sigma = 1.8$, $\epsilon=0.13$ \\ Stable
-      \end{figure}
-  \column{0.5\textwidth}
-      \begin{figure}
-      \centering
-      \includegraphics[width=\textwidth]{Em0w025} \\ $\mu = 0$, $\sigma = 0.25$, $\epsilon=2.28$ \\ Unstable
-      \end{figure}
-  \end{columns}
-}
+%\frame
+%{
+% \frametitle{Energy Cascades}
+%  \bi
+%  \its Stable solutions: \alert{direct} and \alert{inverse} energy cascades
+%  \ei
+%  \begin{columns}
+%  \column{0.5\textwidth}
+%      \begin{figure}
+%      \centering
+%      \includegraphics[width=\textwidth]{Em0w18} \\ $\mu = 0$, $\sigma = 1.8$, $\epsilon=0.13$ \\ Stable
+%      \end{figure}
+%  \column{0.5\textwidth}
+%      \begin{figure}
+%      \centering
+%      \includegraphics[width=\textwidth]{Em0w025} \\ $\mu = 0$, $\sigma = 0.25$, $\epsilon=2.28$ \\ Unstable
+%      \end{figure}
+%  \end{columns}
+%}
 
 \subsection*{}  
 \frame
@@ -349,8 +349,8 @@ colupper=white
   }
   \only<2>{
   \vspace{-0.3in}
-   -\! 2 \omega_\ell \frac{d a_\ell (\tau)}{d \tau} &= \stackrel{\ell \leq i + j}{\sum_{i \neq \ell} \sum_{j \neq \ell}} \alert{f_1} \left(a_i, a_j, a_{i+j-\ell}, b_i, b_j, b_{i+j-\ell} \right) \\
-  -2 \omega_\ell a_\ell \frac{d b_\ell(\tau)}{d \tau} &= \stackrel{\ell \leq i + j}{\sum_{i \neq \ell} \sum_{j \neq \ell}} \alert{f_2} \left(a_i, a_j, a_{i+j-\ell}, b_i, b_j, b_{i+j-\ell} \right)
+   -\! 2 \omega_\ell \frac{d a_\ell (\tau)}{d \tau} &= \sum_{i,j,k} \alert{f_1} \left(a_i, a_j, a_k, b_i, b_j, b_k \right) \\
+  -2 \omega_\ell a_\ell \frac{d b_\ell(\tau)}{d \tau} &= \sum_{i,j,k} \alert{f_2} \left(a_i, a_j, a_k, b_i, b_j, b_k \right)
   }
   \end{align*}
   \end{overlayarea}
@@ -394,19 +394,18 @@ colupper=white
   \column{0.5\textwidth}
   \begin{figure}
   \centering
-  \includegraphics[scale=0.75]{largejmax} 
+  \includegraphics[scale=0.9]{largejmax} 
   \end{figure}
   \column{0.5\textwidth}
   \begin{figure}
   \centering
-  \includegraphics[scale=0.75]{families}
+  \includegraphics[scale=0.9]{families}
   \end{figure}
   \end{columns}
   \begin{center}
-  {\scr BC, Deppe, \& Frey: In progress}
   \end{center}
   
-  \vfill
+  %\vfill
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -428,20 +427,16 @@ colupper=white
   \begin{figure}
   \centering
   \hspace{0.1in}
-  \includegraphics[scale=0.75]{reop5}
+  \includegraphics[scale=0.85]{reop5}
   \end{figure}
   \column{0.5\textwidth}
   \begin{figure}
   \centering
   \hspace{-0.1in}
-  \includegraphics[scale=0.75]{reop20}
+   \vspace{-0.2in}
+  \includegraphics[scale=0.85]{reop20}
   \end{figure}
   \end{columns}
-  \begin{center}
-  \vspace{-0.12in}
-  {\scr Cownden, Deppe, \& Frey: In progress}
-  \end{center}
-  \vspace{-0.1in}
 %\marginnote{\pdfcomment[icon=note]{(L) reop 5}}
 %\marginnote{\pdfcomment[icon=note]{(R) reop 20}}
 }
@@ -454,7 +449,7 @@ colupper=white
   \ei
    \begin{figure}
     \centering
-    \includegraphics[scale=0.43]{constantTproj} \\ {\scr Cownden, Deppe, \& Frey: In progress}
+    \includegraphics[scale=0.5]{constantTproj}
   \end{figure}
 }
 
@@ -471,10 +466,10 @@ colupper=white
       \centering
       \only<1-2>{
       \vspace{-0.35in}
-      \includegraphics[scale=0.53]{highTseeds} \\ {\scr Cownden, Deppe, \& Frey: In progress}
+      \includegraphics[scale=0.6]{highTseeds}
       }
       \only<3->{
-      \includegraphics[width=0.78\textwidth]{TTFEvo} \\ {\scr Cownden, Deppe, \& Frey: In progress}
+      \includegraphics[width=0.85\textwidth]{TTFEvo}
       }
       \end{figure}
   \end{overlayarea}
@@ -500,12 +495,12 @@ colupper=white
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Driven Scalars in AdS}
-\frame[c, noframenumbering]
+\frame[c, noframenumbering, fragile=singleslide]
 {
   \frametitle{}
   \begin{center}
     \begin{mybox}[]
-    B Cownden, {\it Examining Instabilities Due to Driven Scalars in AdS}, [1912.07143].
+    B Cownden, {\it Examining Instabilities Due to Driven Scalars in AdS}, \verb|JHEP_252P_0420| , [1912.07143].
     \end{mybox}
   \end{center}
 }
@@ -517,15 +512,18 @@ colupper=white
 {
   \frametitle{Extending TTF to Driven Scalars}
   \bi
-  \its Driven scalars $\to$ scalars with time-dependent boundary conditions at $x = \pi / 2$
+  \its Driven scalars $\to$ equation for $\phi_1$ has inhomogeneous term at $x = \pi / 2$
   \its<2->{Examine scaling behaviour as $x \to \pi/2$: $\Phi^+(x) \sim (\cos x)^{\Delta^+}$ and $\Phi^-(x) \sim (\cos x)^{\Delta^-}$}
   \its<3->{Scalar field is linear combination of both kinds of modes}
   \its<3->{\alert<3>{$e_j(x)$} are same eigenfunctions of AdS \& have eigenvalues \alert<3>{$\omega_j = (2j + \Delta^+)$}}
-  \its<4->{\alert{$E_\alpha(x)$} are hypergeometric functions \& have continuous eigenvalues \alert{$\omega_\alpha$}}
+  \its<4->{\alert{$E_\alpha(x)$} are hypergeometric functions \& eigenvalues \alert{$\omega_\alpha$} from $\mc F(t)$}
   \ei
   \vspace{-0.2in}
   \begin{overlayarea}{\textwidth}{0.25\textheight}
   \begin{align*}
+  \only<1>{
+  	\p^2_t \phi_1 + \hat L \phi_1 = \delta(x - \pi/2) \mc F(t)
+  }
   \only<2>{
     \Phi^+(x) \equiv \text{``normalizable''} \quad & \quad \Phi^-(x) \equiv \text{``non-normalizable''}
     }
