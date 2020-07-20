@@ -14,11 +14,20 @@
 \usepackage{hyperref}
 %\usepackage[T1]{fontenc}
 \usepackage{cancel}
+\usepackage{tcolorbox}
 
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{items}[triangle]
 \setbeamertemplate{section in toc}[ball unnumbered]
-%\definecolor{my red}{fg={\usebeamercolor[fg]{palette primary}}}
+
+% Create a custom colour for alert boxes
+\definecolor{myred}{RGB}{144,0,2}
+\newtcolorbox{mybox}[1][]{
+colback=myred,
+colframe=myred,
+colupper=white
+}
+
 %\setbeamercolor{button}{bg={\usebeamercolor[fg]{alerted text} red}, fg=white}
 
 %\addtobeamertemplate{footline}{\insertframenumber / \inserttotalframenumber}
@@ -80,7 +89,7 @@
 
 \frame
 {
-  \frametitle{}
+  \frametitle{Outline}
   \tableofcontents
 }
 
@@ -104,7 +113,19 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Massive Scalars in AdS$_5$ [{\it Phys.Rev.D} {\bf 102} (2020) 026015]}
+\section{Massive Scalars in AdS$_5$}
+\frame[c, noframenumbering]
+{
+  \frametitle{}
+  \begin{center}
+    \begin{mybox}[]
+    B Cownden, N Deppe, and AR Frey, {\it Phase Diagram of Stability for Massive Scalars in Anti-de Sitter Spacetime}, Phys.Rev.D 102 (2020) 026015, [1711.00454].
+    \end{mybox}
+  \end{center}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsection{Scalar Field Collapse in AdS}
 \frame
 {
@@ -296,6 +317,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{High-Temperature QP Solutions in AdS$_4$}
+\frame[c, noframenumbering]
+{
+  \frametitle{}
+  \begin{center}
+    \begin{mybox}[]
+    B Cownden, N Deppe, and AR Frey, {\it On the Stability of High-Temperature, Quasi-Periodic Solutions for Massless Scalars in AdS$_4$}, In progress.
+    \end{mybox}
+  \end{center}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{The Two-Time Formalism (TTF)}
 \frame
@@ -467,7 +499,19 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Examining Instabilities Due to Driven Scalars in AdS [arXiv:1912.07143]}
+\section{Driven Scalars in AdS}
+\frame[c, noframenumbering]
+{
+  \frametitle{}
+  \begin{center}
+    \begin{mybox}[]
+    B Cownden, {\it Examining Instabilities Due to Driven Scalars in AdS}, [1912.07143].
+    \end{mybox}
+  \end{center}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsection{Extending TTF to Driven Scalars}
 \frame
 {
