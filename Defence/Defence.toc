@@ -8,8 +8,8 @@
 \beamer@subsectionintoc {3}{1}{The Two-Time Formalism (TTF)}{19}{0}{3}
 \beamer@subsectionintoc {3}{2}{Quasi-Periodic Solutions}{21}{0}{3}
 \beamer@subsectionintoc {3}{3}{High-Temperature Families}{25}{0}{3}
-\beamer@sectionintoc {4}{Driven Scalars in AdS}{31}{0}{4}
-\beamer@subsectionintoc {4}{1}{Extending TTF to Driven Scalars}{32}{0}{4}
-\beamer@subsectionintoc {4}{2}{Resonant Contributions}{36}{0}{4}
-\beamer@subsectionintoc {4}{3}{Special Values of Non-normalizable Frequencies}{41}{0}{4}
-\beamer@sectionintoc {5}{Conclusions}{46}{0}{5}
+\beamer@sectionintoc {4}{Driven Scalars in AdS}{30}{0}{4}
+\beamer@subsectionintoc {4}{1}{Extending TTF to Driven Scalars}{31}{0}{4}
+\beamer@subsectionintoc {4}{2}{Resonant Contributions}{35}{0}{4}
+\beamer@subsectionintoc {4}{3}{Special Values of Non-normalizable Frequencies}{40}{0}{4}
+\beamer@sectionintoc {5}{Conclusions}{45}{0}{5}
