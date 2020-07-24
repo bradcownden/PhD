@@ -103,8 +103,8 @@ colupper=white
   \frametitle{Gravitational Collapse}
   \bi
   \its AdS/CFT\footnote<1->{{\scr Maldacena [hep-th/9711200]}} $\to$ thermal quench in gauge theory $\Leftrightarrow$ formation of black hole in gravitational theory
-  \its Massless scalar fields in AdS: unstable against generic initial data, no mass gap\footnote<1->{{\scr Bizo\'n \& Rostworowski [1104.3702]}} $\to$ c.f. Minkowski\footnote<1->{{\scr Choptuik PRL70 9 (1993)}} 
-  \its Stability for specific initial data below critical energy
+  \its Massless scalar fields in AdS: unstable against generic initial data, no minimum amplitude\footnote<1->{{\scr Bizo\'n \& Rostworowski [1104.3702]}} $\to$ c.f. Minkowski\footnote<1->{{\scr Choptuik PRL70 9 (1993)}} 
+  \its Stability for specific initial data below critical amplitude
   \its {\bf Nonlinear theory:} continue\footnote<1->{{\scr Deppe \& Frey [1508.02709]}} with exploration of phase space
   \its {\bf Perturbative theory:} effects of truncation, space of solutions, time-dependent boundary conditions
   \ei	
@@ -134,9 +134,10 @@ colupper=white
   \bi
   \its Minimally-coupled scalar field in AdS$_5$ (dual to 4D CFT)
   \its Spherical symmetry, Schwarzschild-like coordinates $\to$ \alert<1>{$A(t,x)$}, \alert<1>{$\delta(t,x)$}
-  \uncover<2->{\its Einstein + Klein-Gordon $\Rightarrow$ constraint equations}
-  \uncover<2->{\its Interior gauge $\delta(t,x=0) = 0$, spherical symmetry $\p_x \phi(t,x=0) = 0$}
-  \uncover<2->{\its Horizon formation when $A(t_H, x_H) \ll 1$}
+  \its Horizon formation when $A(t_H, x_H) \ll 1$
+  \uncover<2->{\its Einstein equations $\Rightarrow$ constraints}
+  \uncover<2->{\its Klein-Gordon equations $\Rightarrow$ dynamics}
+  \uncover<2->{\its Examine behaviour near critical amplitude for different \alert{masses}, \alert{widths}}
   \ei
 
   \vspace{-0.2in}
@@ -146,9 +147,8 @@ colupper=white
      ds^2 &= \frac{\ell^2}{\cos^2 (x/\ell)} \left( - \alert<1>{Ae^{-2\delta}} dt^2 + \alert<1>{A^{-1}} dx^2 + \sin^2 (x/\ell) d\Omega^{d-1} \right)
      }
      \only<2>{
-     		\p_x \delta &= - \left( \Pi^2 + \Phi^2) \sin(x) \cos(x) \right) \\
-     		\p_x M &= \frac{\tan^{d-1}(x)}{2} \left( A (\Pi^2 + \Phi^2) + \frac{\alert{\mu^2} \phi^2}{\cos^2(x)} \right) \\
-    		\Pi(t=0, x) &= \epsilon \exp \left( - \frac{\tan^2(x)}{\alert{\sigma^2}} \right) \qquad \text{Phase space:} \: \alert{\mu, \; \sigma}
+     		\p_x M_{\text{ADM}} &= \frac{\tan^{d-1}(x)}{2} \left( A (\Pi^2 + \Phi^2) + \frac{\alert{\mu^2} \phi^2}{\cos^2(x)} \right) \\
+    		\Pi(t=0, x) &= \epsilon \exp \left( - \frac{\tan^2(x)}{\alert{\sigma^2}} \right) \qquad \text{Phase space:} \: (\alert{\mu, \; \sigma})
     }
     \end{align*}
   \end{overlayarea}
@@ -158,85 +158,78 @@ colupper=white
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Classifying Phases}
+
 \frame
 {
   \frametitle{Stable vs Unstable Profiles}
-  \bi
-  \its Stable: abrupt jump in $t_H$ when $\epsilon < \epsilon_{crit}$
-  \its<2->{Unstable: fit $t_H \approx a \epsilon^{-p} + b$ for $t_H \geq 60$ $\to$ unstable when $p \approx 2$ (TTF)}
-  \ei
+  \begin{center}
+  Blue dot $=$ collapse detected, red triangle $=$ no collapse detected for $t \leq t_{max}$
+  \end{center}
+  \vspace{-0.1in}
   \begin{columns}
-  \column{0.5\textwidth}
+    \column{0.4\textwidth}
+    \vspace{-0.25in}
+    \bi
+    \its Stable: abrupt jump in $t_H$ when $\epsilon < \epsilon_{crit}$
+    \its<2->{Unstable: fit $t_H \approx a \epsilon^{-p} + b$ for $t_H \geq 60$ $\to$ perturbatively unstable when $p \approx 2$ (TTF)}
+    \ei
+    \column{0.6\textwidth}
     \begin{figure}
-    \centering
-    \includegraphics[scale=0.75]{m0w15} \\ $\mu =0$, $\sigma =1.5$
+      \centering
+      \only<1>{\includegraphics[width=\textwidth]{m0w15} \\ $\mu =0$, $\sigma =1.5$}
+      \only<2>{\includegraphics[width=\textwidth]{m0w025} \\ $\mu = 5$, $\sigma=0.25$}
     \end{figure}
-  \column{0.5\textwidth}
-    \begin{figure}
-    \centering
-    \uncover<2->{\includegraphics[scale=0.75]{m0w025} \\ $\mu = 5$, $\sigma=0.25$}
-    \end{figure}
-  \end{columns}
+ \end{columns}
 }
 
 \frame
 {
-  \frametitle{Metastable Profiles}
-  \bi
-  \its Scaling of $p > 2$
-  \ei
+  \frametitle{Metastable \& Irregular Profiles}
+  \begin{center}
+  Blue dot $=$ collapse detected, red triangle $=$ no collapse detected for $t \leq t_{max}$
+  \end{center}
+  \vspace{-0.1in}
   \begin{columns}
-  \column{0.5\textwidth}
+    \column{0.4\textwidth}
+    \vspace{-0.25in}
+    \bi
+    \its Metastable: fit $t_H \approx a \epsilon^{-p} + b$ for $t_H \geq 60$ $\to$ $p > 2$
+    \its<2->{Irregular: no scaling}
+    \ei
+    \column{0.6\textwidth}
     \begin{figure}
-    \centering
-    \includegraphics[scale=0.75]{m5w17} \\ $\mu = 5$, $\sigma = 1.7$
+      \centering
+      \only<1>{\includegraphics[width=\textwidth]{m5w17} \\ $\mu = 5$, $\sigma = 1.7$}
+      \only<2>{\includegraphics[width=\textwidth]{m20w016} \\ $\mu = 20$, $\sigma = 0.16$}
     \end{figure}
-  \column{0.5\textwidth}
-    \begin{figure}
-    \centering
-    \includegraphics[scale=0.75]{m05w17} \\ $\mu = 0.5$, $\sigma = 1.7$
-    \end{figure}
-  \end{columns}
+ \end{columns}
+ \vfill
 }
 
 \frame
 {
-  \frametitle{Irregular Profiles I}
-  \bi
-  \its No scaling
-  \ei
+  \frametitle{Observations of Chaotic Behaviour}
   \begin{columns}
-  \column{0.45\textwidth}
-  	\begin{figure}
-  	\centering
-  	\includegraphics[width=\textwidth]{m5w034} \\ $\mu = 5$, $\sigma = 0.34$
-  	\end{figure}
-  \column{0.45\textwidth}
-  	\begin{figure}
-	\centering
-	\includegraphics[width=\textwidth]{m20w016} \\ $\mu = 20$, $\sigma = 0.16$
-  	\end{figure}
-  \end{columns}
-}
-
-\frame
-{
-  \frametitle{Irregular Profiles II}
+  \column{0.4\textwidth}
+  \vspace{-0.35in}
   \bi
-  \its Evidence of chaotic behaviour $\to$ possible self-interaction
-  \its Previous chaotic evolution only seen in thin-shell interactions\footnote<1->{{\scr Brito {\it et al.} [1602.03535]}} in AdS, scalar collapse in Gauss-Bonnet gravity\footnote<1->{{\scr Deppe, Kolly, {\it et al.} [1608.05402]}}
+  \its Possible chaotic evolution $\to$ scalar self-interaction
+  \its Previous chaotic evolution only seen in thin-shell interactions\footnotemark \: in AdS, scalar collapse in Gauss-Bonnet gravity\footnotemark
   \ei
-  \vspace{-0.15in}
-  \begin{columns}
-    \column{0.75\textwidth}
+  \column{0.6\textwidth}
       \begin{figure}
   	\centering
-	\includegraphics[scale=0.75]{selfinteraction} \\ $\mu = 0$, $\sigma=1.1$, $\epsilon = 1.01$
+	\includegraphics[width=\textwidth]{selfinteraction} 
+	\vspace{-0.15in}
+	\begin{align*} 
+	\mu = 0,\; &\sigma=1.1, \; \epsilon = 1.01 \\ 
+	&t = 60, {\color[rgb]{0.06,0.64,0.01} 62}, {\color[rgb]{.98,0,0.04} 64}
+	\end{align*}
        \end{figure}
-    \column{0.25\textwidth}
-    \hspace{-0.6in}
-       $t = 60, {\color[rgb]{0.06,0.64,0.01} 62}, {\color[rgb]{.98,0,0.04} 64}$
-   \end{columns}
+ \end{columns}
+  \vspace{-0.4in}
+ \footnotetext[5]{{\scr Brito {\it et al.} [1602.03535]}}
+ \footnotetext[6]{{\scr Deppe, Kolly, {\it et al.} [1608.05402]}}
 
 }
 
@@ -246,9 +239,11 @@ colupper=white
 \frame
 {
   \frametitle{Phase Diagram}
+  \uncover<2->{
   \bi
-  \its<2->{{\color{orange} Unstable}\uncover<3->{, {\color[rgb]{.34,.69,0.29} metastable}, }\uncover<4->{{\color{red} irregular}, }\uncover<5->{and {\color{blue} stable} initial data}}
+  \its {\color{orange} Unstable}, \uncover<3->{{\color[rgb]{.34,.69,0.29} metastable}, } \uncover<4->{{\color{red} irregular}, }\uncover<5->{and {\color{blue} stable} initial data}
   \ei 
+  }
   \begin{figure}
   \centering
   \only<1>{
@@ -337,24 +332,22 @@ colupper=white
   \its Small perturbations in AdS$_4$: expand scalar field, metric functions in $\epsilon$
   \its $\mc O(\epsilon)$: $\phi_1$ in terms of eigenfunctions of AdS, \alert<1>{$e_j(x)$}
   \its Integer eigenvalues $\omega_j = (2j + d)$ $\to$ fully resonant spectrum
-  \its <2->{$\mc O(\epsilon^3)$: \alert{source terms} for resonant contributions}
-  \its <2->{Absorb resonances into amplitudes \& phases\footnote<2->{{\scr Balasubramanian {\it et al.} [1403.6471]}}}
+  \its<2->{Secular growth of resonant contributions $\to$ scalar field collapse}
+  \its <2->{$\mc O(\epsilon^3)$: \alert{source term} for resonant contributions}
+  \its <2->{Complex amplitudes vary with ``slow time'' $\tau$ $\to$ flow equation to absorb resonances\footnote<2->{{\scr Balasubramanian {\it et al.} [1403.6471]}}}
   \ei
-
+  \vfill
   \begin{overlayarea}{\textwidth}{0.3\textheight}
   \begin{align*}
   \only<1>{
-  \vspace{0.4in}
-  \phi_1 (t,x) = \sum^\infty_{j=0} a_j(t) \cos (\omega_j t + b_j(t)) \: \alert{e_j (x)}
+  \phi_1 (t,x) = \sum^\infty_{j=0} \Big( A_j(t) e^{i\omega_j t} + \bar A_j (t) e^{-i \omega_j t} \Big) \: \alert{e_j (x)}
   }
   \only<2>{
-  \vspace{-0.3in}
-   -\! 2 \omega_\ell \frac{d a_\ell (\tau)}{d \tau} &= \sum_{i,j,k} \alert{f_1} \left(a_i, a_j, a_k, b_i, b_j, b_k \right) \\
-  -2 \omega_\ell a_\ell \frac{d b_\ell(\tau)}{d \tau} &= \sum_{i,j,k} \alert{f_2} \left(a_i, a_j, a_k, b_i, b_j, b_k \right)
+   -2i \omega_\ell \frac{d A_\ell (\tau)}{d \tau} &= \sum_{i,j,k} \alert{f^{(\ell)}_{ijk}} \bar A_i A_j A_k
   }
   \end{align*}
   \end{overlayarea}
-  \vfill
+
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -366,7 +359,7 @@ colupper=white
   \bi 
   \its Renormalization flow techniques to cancel an infinite number of resonances $\to$ express non-vanishing ones analytically\footnote<1->{{\scr Craps {\it et al.} [1407.6273]}}
   \its Need to truncate number of modes to find solutions: $\jm < \infty$ (must be robust as $\jm \to \infty$)
-  \its<2->{Quasi-periodic\footnote<2->{{\scr Balasubramanian {\it et al.} [1403.6471]}} solutions $a_j = \alpha_j e^{i \beta_j \tau}$ $\to$ TTF equations become time-independent when $\beta_j = \beta_0 + j(\beta_1 - \beta_0)$}
+  \its<2->{Quasi-periodic\footnote<2->{{\scr Balasubramanian {\it et al.} [1403.6471]}} solutions $A_j = \alpha_j e^{i \beta_j \tau}$ with ${\alpha_j, \beta_j \in \mathbb{R}}$ $\to$ TTF equations become time-independent when $\beta_j = \beta_0 + j(\beta_1 - \beta_0)$}
   \its<2->{TTF: conserved quantities\footnote<2->{{\scr Craps {\it et al.} [1412.3249]}} $(E, N)$ $\to$ classify solutions by $T \equiv E/N$}
   \its<2->{Solve QP equation using Newton-Raphson method}
   \ei
@@ -383,29 +376,21 @@ colupper=white
 \frame
 {
   \frametitle{Quasi-Periodic Solutions II}
-  \bi
-  \its Solutions found for $3 \geq T \gtrsim 5.5$
-  \its Able to extend existing solutions from $\jm \sim 100$ to $\jm = 500$
-  \its Robust in $\jm \to \infty$ limit
-  \ei
-  
-  \vspace{-0.1in}
   \begin{columns}
-  \column{0.5\textwidth}
+  \column{0.3\textwidth}
+  \bi
+  \its Solutions found for $3 \leq T \lesssim 5.5$
+  \its<2->{Able to extend existing solutions from $\jm \sim 100$ to $\jm = 500$}
+  \its<2->{Robust in $\jm \to \infty$ limit}
+  \ei
+  \column{0.7\textwidth}
   \begin{figure}
   \centering
-  \includegraphics[scale=0.9]{largejmax} 
-  \end{figure}
-  \column{0.5\textwidth}
-  \begin{figure}
-  \centering
-  \includegraphics[scale=0.9]{families}
+    \only<1>{\includegraphics[width=\textwidth]{families}}
+    \only<2>{\includegraphics[width=\textwidth]{largejmax}}
   \end{figure}
   \end{columns}
-  \begin{center}
-  \end{center}
-  
-  %\vfill
+ 
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -416,40 +401,20 @@ colupper=white
   \frametitle{High-Temperature Families I}
   \bi
   \its Perturb by $\delta E$ $\to$ new solutions have energy $E + \delta E$, $N$, and $T + \delta T$
-  \its Repeat process to determine $T_{max}$
-  \its Project back to QP solution surface at constant $\alpha_1$ or $T$
-  \its Loss of smooth profile above a certain temperature at \alert<1>{constant $\alpha_1$} 
+  \its Solve for updated values of $\alpha_j + \delta \alpha_j, \beta_j + \delta \beta_j$
+  \its Use updated values as seeds to resolve QP equation
+  \its Repeat process up to $T_{max}$\footnote<1->{{\scr Green {\it et al.}} [1507.08261]}
+  \its<2->{{\bf Issue}: $\delta \alpha_j, \delta \beta_j$ become larger than $\alpha_j, \beta_j$ at high temperatures}
+  \its<2->{No solutions that remain robust as $j_{max}$ increases}
   \ei
-  
-  \vspace{-0.15in}
-  \begin{columns}
-  \column{0.5\textwidth}
-  \begin{figure}
-  \centering
-  \hspace{0.1in}
-  \includegraphics[scale=0.85]{reop5}
-  \end{figure}
-  \column{0.5\textwidth}
-  \begin{figure}
-  \centering
-  \hspace{-0.1in}
-   \vspace{-0.2in}
-  \includegraphics[scale=0.85]{reop20}
-  \end{figure}
-  \end{columns}
-%\marginnote{\pdfcomment[icon=note]{(L) reop 5}}
-%\marginnote{\pdfcomment[icon=note]{(R) reop 20}}
 }
 
 \frame
 {
   \frametitle{High-Temperature Families II}
-  \bi
-  \its And at \alert{constant T}
-  \ei
    \begin{figure}
     \centering
-    \includegraphics[scale=0.5]{constantTproj}
+    \includegraphics[scale=0.53]{constantTproj}
   \end{figure}
 }
 
@@ -457,19 +422,15 @@ colupper=white
 {
   \frametitle{High-Temperature Families III}
   \bi
-  \its Alternative methods for finding high-T solutions
-  \its Fit low $\jm$, high-T data to generate seeds for Newton-Raphson solver \uncover<2->{$\to$ \alert<2>{not robust as $\jm$ increases}}
-  \its<3->{Pad low $\jm$ data with zeros, evolve within the TTF \uncover<4->{$\to$ \alert<4>{isothermal evolution does not match known solution}}}
-   \ei
+  \its Alternative methods for finding high-T solutions explored 
+  \its E.g. fit low $\jm$, high-T data to generate seeds for Newton-Raphson solver
+     \ei
    \begin{overlayarea}{\textwidth}{0.65\textheight}
       \begin{figure}
       \centering
       \only<1-2>{
-      \vspace{-0.35in}
+      \vspace{-0.13in}
       \includegraphics[scale=0.6]{highTseeds}
-      }
-      \only<3->{
-      \includegraphics[width=0.85\textwidth]{TTFEvo}
       }
       \end{figure}
   \end{overlayarea}
@@ -516,7 +477,7 @@ colupper=white
   \its<2->{Examine scaling behaviour as $x \to \pi/2$: $\Phi^+(x) \sim (\cos x)^{\Delta^+}$ and $\Phi^-(x) \sim (\cos x)^{\Delta^-}$}
   \its<3->{Scalar field is linear combination of both kinds of modes}
   \its<3->{\alert<3>{$e_j(x)$} are same eigenfunctions of AdS \& have eigenvalues \alert<3>{$\omega_j = (2j + \Delta^+)$}}
-  \its<4->{\alert{$E_\alpha(x)$} are hypergeometric functions \& eigenvalues \alert{$\omega_\alpha$} from $\mc F(t)$}
+  \its<4->{\alert{$E_\alpha(x)$} are hypergeometric functions with frequencies \alert{$\omega_\alpha$} from $\mc F(t)$}
   \ei
   \vspace{-0.2in}
   \begin{overlayarea}{\textwidth}{0.25\textheight}
@@ -528,7 +489,7 @@ colupper=white
     \Phi^+(x) \equiv \text{``normalizable''} \quad & \quad \Phi^-(x) \equiv \text{``non-normalizable''}
     }
   \only<3->{
-    \phi_1(t,x) = \sum_{j=0}^\infty a_j(t) \cos & \left(\alert<3>{\omega_j} t + b_j (t)\right) \alert<3>{e_j(x)} + \sum_{\alpha = 0}^\infty \bar{A}_\alpha(t) \cos \left( \alert<4>{\omega_\alpha} t + \bar{B}_\alpha \right) \alert<4>{E_\alpha (x)} \\
+    \phi_1(t,x) = \sum_{j=0}^\infty a_j(t) \cos & \left(\alert<3>{\omega_j} t + b_j (t)\right) \alert<3>{e_j(x)} + \sum_{\alpha = 0}^\infty \mathcal A_\alpha(t) \cos \left( \alert<4>{\omega_\alpha} t + \mathcal B_\alpha \right) \alert<4>{E_\alpha (x)} \\
     & \alert<3>{\Delta^\pm = \frac{d}{2} \pm \frac{1}{2} \sqrt{d^2 + 4m^2}}
     }
   \end{align*}
@@ -539,96 +500,92 @@ colupper=white
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Resonant Contributions}
-\frame[shrink]
+\frame
 {
-  \frametitle{Resonant Contributions}
+  \frametitle{Resonant Contributions I}
   \bi
   \its $\mc O(\epsilon^3)$: source terms for resonant contributions $\to$ examine resonance conditions 
   \its<2->{{\bf Unforced}: restrictions on indices and mass value \uncover<3->{$\to$ \alert<3>{two channels vanish numerically}}}
-  \its<4->{One \alert<4>{non-vanishing} channel \uncover<5->{$\to$ sum over $i$, $j$ with $i + j \leq \ell$}}
+  \its<4->{One \alert{non-vanishing} channel}
   \ei
   
-  \begin{overlayarea}{\textwidth}{0.25\textheight}
+  \begin{overlayarea}{\textwidth}{0.5\textheight}
   \only<1-4>{
   \vspace{0.2in}
   \begin{align*}
- \alert<3>{\omega_i + \omega_j + \omega_k} &\alert<3>{= \omega_\ell} \uncover<2>{\quad \Rightarrow \quad i + j + k = \ell - \Delta^+  \in \mathbb{Z}^+} \\
-  \alert<3>{\omega_i - \omega_j - \omega_k} &\alert<3>{= \omega_\ell} \uncover<2>{\quad \Rightarrow \quad i - j - k = \ell + \Delta^+  \in \mathbb{Z}^+} \\
-  \alert<4>{\omega_i + \omega_j - \omega_k} &\alert<4>{= \omega_\ell} \uncover<2>{\quad \Rightarrow \quad i + j = k + \ell \, \in \mathbb{Z}^+}
+ \alert<3>{\omega_i + \omega_j + \omega_k} &\alert<3>{= \omega_\ell} \uncover<2->{\alert<3>{\quad \Rightarrow \quad i + j + k = \ell - \Delta^+  \in \mathbb{Z}^+}} \\
+  \alert<3>{\omega_i - \omega_j - \omega_k} &\alert<3>{= \omega_\ell} \uncover<2->{\alert<3>{\quad \Rightarrow \quad i - j - k = \ell + \Delta^+  \in \mathbb{Z}^+}} \\
+  \alert<4>{\omega_i + \omega_j - \omega_k} &\alert<4>{= \omega_\ell} \uncover<2->{\alert<4>{\quad \Rightarrow \quad i + j = k + \ell \, \in \mathbb{Z}^+}}
   \end{align*}
-  }
-  \only<5>{
-  \begin{figure}
-  \vspace{-0.1in}
-  \centering
-  \includegraphics[scale=0.55]{norm} 
-  \end{figure}
-  }
+  }  
   \end{overlayarea}
 }
+
+\frame
+{
+   \frametitle{Resonant Contributions II} 
+   \bi
+   \its Sum over $i$, $j$ with $i + j \leq \ell$
+   \ei
+   \begin{figure}
+   \centering
+    \includegraphics[scale=0.75]{norm} 
+    \end{figure}
+}
+   
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Special Values of Non-normalizable Frequencies}
-\frame
+\frame[shrink]
 {
   \frametitle{Special Values of Non-normalizable Frequencies}
-  \vspace{-0.5in}
-  \bi
-  \its<1->{{\bf Forced}: $\omega_\alpha$ set by driving term $\to$ explore several scenarios}
-  \its<2->{\alert<2>{Single frequency}: $\omega_\alpha = \bar\omega$}
-  \its<3->{\alert<3>{Add to integer}: $\bar\omega_1 + \bar\omega_2 = 2n$}
-  \its<4->{$\omega_\alpha = 2i + \chi, \; \chi \notin \mathbb{Z}^+$}
-  \its<4->{Source terms give flow equations for amplitude/phase of $\phi_1$, e.g. single frequency $\to$ equations decouple}
-  \ei
-
-  \vspace{-0.75in}
-  \begin{overlayarea}{\textwidth}{0.3\textheight}
-  \uncover<1-3>{
   \begin{columns}
-  \column{0.5\textwidth}
-  	 \uncover<2-3>{
-	 \begin{align*}
-  	 \pm \omega_I \pm \omega_J \pm \omega_K \pm \omega_\ell &= 0 \quad I \in \{i, \alpha\} \\
-  	 \only<2>{
-  	 \alert{\omega_i + \bar\omega - \bar\omega} &\alert{= \omega_\ell}
-  	 }
-	 \end{align*}
-	 }
-	 \uncover<3>{
-	 \vspace{-0.4in}
-	 \[
-	 \left\{ \begin{array}{ll}
-	 	 \alert<3>{(++): \omega_i + 2n = \omega_\ell \quad \forall \, \ell \geq n} \\
-	 	 \alert<3>{(+-):  \omega_i - 2n = \omega_\ell \quad \forall \, n} \\
-	\alert<3>{(-+): - \omega_i + 2n = \omega_\ell \quad \forall \, n \geq \ell + d}
-		\end{array}
-	\right\}
-	\]
-	}
-  \column{0.5\textwidth}
+  \column{0.4\textwidth}
+  \bi
+  \its {\bf Forced}: $\omega_\alpha$ set by driving term
+  \its\alert<1>{Single frequency}: $\omega_\alpha = \bar\omega$ $\to$ one channel
+  \its<2->{\alert<2>{Add to integer}: $\bar\omega_1 + \bar\omega_2 = 2n$ $\to$ three channels}
+  \ei
+  \vfill
+  \begin{overlayarea}{0.3\textwidth}{0.25\textheight}
+  \[
+	\begin{array}{ll}
+		\only<1>{ & \alert{\omega_i + \bar\omega - \bar\omega = \omega_\ell} \\} 
+	 	 \only<2>{ \alert<2>{(++): \omega_i + 2n = \omega_\ell \quad \forall \, \ell \geq n} \\
+	 	 \alert<2>{(+-):  \omega_i - 2n = \omega_\ell \quad \forall \, n} \\
+	\alert<2>{(-+): - \omega_i + 2n = \omega_\ell \quad \forall \, n \geq \ell + d}}
+	\end{array}
+  \]
+  \end{overlayarea}
+
+  \column{0.6\textwidth}
   	\begin{figure}
 	\centering
-	\uncover<2-3>{
+	\only<1>{
+	\vspace{-0.2in}
+	\includegraphics[width=0.87\textwidth]{equalNNm0}
+	}
 	\only<2>{
-	\vspace{-0.5in}
-	\includegraphics[scale=0.23]{equalNNm0}
-	}
-	\only<3>{
-	\vspace{-0.47in}
-	\includegraphics[scale=0.75]{NNsum4m0}
-	}
+	\vspace{-0.1in}
+	\includegraphics[width=0.85\textwidth]{NNsum4m0}
 	}
 	\end{figure}
   \end{columns}
-  }
-  \only<4>{
-  	\vspace{-0.2in}
-	\begin{align*}
+ }
+
+\frame
+{
+  \frametitle{Flow Equations}
+  \bi
+  \its Source terms give flow equations for amplitude/phase of $\phi_1$, e.g. single frequency $\to$ equations decouple
+  \ei
+  
+  \begin{overlayarea}{\textwidth}{0.5\textheight}
+  	\begin{align*}
 	\frac{2\omega_\ell}{\epsilon^2} \frac{d a_\ell}{dt} &= 0 \\
 	\frac{2 \omega_\ell}{\epsilon^2} \frac{db_\ell}{dt} &= - S_\ell \bar{A}^2_{\bar \omega}
 	\end{align*}
-  }
   \end{overlayarea}
 }
 
@@ -701,9 +658,9 @@ colupper=white
   \bi
   \its V. Balasubramanian, A. Buchel, S. R. Green, L. Lehner, and S. L. Liebling, \emph{Holographic Thermalization, Stability of Anti-de Sitter Space, and the Fermi-Pasta-Ulam Paradox}, Phys. Rev. Lett. 113 (2014) 071601, [1403.6471].
   \its B. Craps, O. Evnin, and J. Vanhoof, \emph{Renormalization group, secular term resummation and AdS (in)stability}, JHEP 10 (2014) 048, [1407.6273].
-  \its S. R. Green, A. Maillard, L. Lehner, and S. L. Liebling, \emph{Islands of stability and recurrence times in AdS}, Phys. Rev. D92 (2015) 084001, [1507.08261].
   \its B. Craps, O. Evnin, and J. Vanhhof, \emph{Renormalization, averaging, conservation laws and AdS (in)stability}, J. High Energ. Phys. 1501 (2015) 108, [1412.3249].
-  \its A. Biasi, B. Craps, and O. Evnin, \emph{Energy Returns in Global AdS$_4$}, [1810.04753].
+  \its S. R. Green, A. Maillard, L. Lehner, and S. L. Liebling, \emph{Islands of stability and recurrence times in AdS}, Phys. Rev. D92 (2015) 084001, [1507.08261].
+    \its A. Biasi, B. Craps, and O. Evnin, \emph{Energy Returns in Global AdS$_4$}, [1810.04753].
   \its P. Carracedo, J. Mas, D. Musso and A. Serantes, \emph{Adiabatic pumping solutions in global AdS}, JHEP 05 (2017) 141, [1612.07701].
   \ei
 }
