@@ -446,7 +446,7 @@ colupper=white
     \its Low-T QP solutions robust as $\jm$ increases
     \its Not able to find evidence that high-T solutions continued to exist at large $\jm$ $\to$ possible reduction of space of QP
     \its {\bf Caveat}: focused on configurations where $\alpha_0 = 1$ $\to$ free to set dominant energy in any $\alpha_j$ $\to$ other configurations required for high temperatures?
-    \its Motivation for temperature limit of $T \sim 5.5$?
+    \its {\bf To do}: Motivation for temperature limit of $T \sim 5.5$?
     \its Perturbative system: massless scalar, static boundary conditions at $x = \pi/2$
     \its Extend to massive scalars, time-dependent boundary conditions $\to$ activation of non-normalizable modes
     \ei
@@ -525,7 +525,7 @@ colupper=white
 {
    \frametitle{Resonant Contributions II} 
    \bi
-   \its Sum over $i$, $j$ with $i + j \leq \ell$
+   \its Sum over $i$, $j$ with $i + j \leq \ell$ (dots: $a_\ell^3$, triangles: $a_i^2 a_\ell$, X: $a_i a_j a_{i + j -\ell}$)
    \ei
    \begin{figure}
    \centering
@@ -537,7 +537,7 @@ colupper=white
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Special Values of Non-normalizable Frequencies}
-\frame[shrink]
+\frame
 {
   \frametitle{Special Values of Non-normalizable Frequencies}
   \begin{columns}
@@ -547,18 +547,23 @@ colupper=white
   \its\alert<1>{Single frequency}: $\omega_\alpha = \bar\omega$ $\to$ one channel
   \its<2->{\alert<2>{Add to integer}: $\bar\omega_1 + \bar\omega_2 = 2n$ $\to$ three channels}
   \ei
-  \vfill
-  \begin{overlayarea}{0.3\textwidth}{0.25\textheight}
+
+  \uncover<1->{
+  \begin{overlayarea}{\textwidth}{0.25\textheight}
   \[
+  	\only<1>{\alert{\omega_i + \bar\omega - \bar\omega = \omega_\ell}} 
+  	\only<2>{
 	\begin{array}{ll}
-		\only<1>{ & \alert{\omega_i + \bar\omega - \bar\omega = \omega_\ell} \\} 
-	 	 \only<2>{ \alert<2>{(++): \omega_i + 2n = \omega_\ell \quad \forall \, \ell \geq n} \\
-	 	 \alert<2>{(+-):  \omega_i - 2n = \omega_\ell \quad \forall \, n} \\
-	\alert<2>{(-+): - \omega_i + 2n = \omega_\ell \quad \forall \, n \geq \ell + d}}
+	 	 \alert<2>{(++): \omega_i + 2n = \omega_\ell \quad \forall \, \ell \geq n} & \\
+	 	 \alert<2>{(+-):  \omega_i - 2n = \omega_\ell \quad \forall \, n} & \\
+		 \alert<2>{(-+): - \omega_i + 2n = \omega_\ell \quad \forall \, n \geq \ell + d} & 
 	\end{array}
+	}
   \]
   \end{overlayarea}
-
+ }
+ 
+ \only<1>{\vspace{0.1in}}
   \column{0.6\textwidth}
   	\begin{figure}
 	\centering
@@ -578,15 +583,26 @@ colupper=white
 {
   \frametitle{Flow Equations}
   \bi
-  \its Source terms give flow equations for amplitude/phase of $\phi_1$, e.g. single frequency $\to$ equations decouple
+  \its Source terms give flow equations for amplitude/phase of normalizable modes
+  \its No naturally vanishing resonances, {\it c.f.} static boundary conditions
+  \its E.g. single frequency $\to$ \alert<1>{single channel} $\to$ equations decouple
+  \its<2->{E.g. add to integer $\to$ sum all \alert{three channels} $\to$ equations are coupled with single power of normalizable amplitude}
   \ei
-  
+  \vspace{-0.2in}
   \begin{overlayarea}{\textwidth}{0.5\textheight}
   	\begin{align*}
-	\frac{2\omega_\ell}{\epsilon^2} \frac{d a_\ell}{dt} &= 0 \\
-	\frac{2 \omega_\ell}{\epsilon^2} \frac{db_\ell}{dt} &= - S_\ell \bar{A}^2_{\bar \omega}
+	\only<1>{
+	\frac{2 \omega_\ell}{\epsilon^2} \frac{d a_\ell}{dt} = 0 \qquad \text{and} \qquad \frac{2 \omega_\ell}{\epsilon^2} \frac{db_\ell}{dt} = \alert{f^{(\ell)}} \mathcal A^2_{\bar \omega} 
+	}
+	\only<2>{
+	&\frac{2 \omega_\ell}{\mathcal A_1 \mathcal A_2 \epsilon^2} \frac{d a_\ell}{dt} = \sum_{(++)} \alert{f^{(\ell)}_{(++)}} a_{n - \ell - d} \sin \left(b_{n-\ell - d} - \mathcal B_1 - \mathcal B_2\right) \\
+	& \!\!\!\! + \sum_{(+-)} \alert{f^{(\ell)}_{(+-)}} a_{\ell - n} \sin \left( b_{\ell - n} - \mathcal B_1 - \mathcal B_2 \right) + \sum_{(-+)} \alert{f^{(\ell)}_{(-+)}} a_{\ell + n} \sin \left( b_{\ell + n} - \mathcal B_1 - \mathcal B_2 \right) \\
+	 & \frac{2 \omega_\ell a_\ell}{\mathcal A_1 \mathcal A_2 \epsilon^2} \frac{db_\ell}{dt} = \alert{f^{(\ell)}} a_\ell + \sum_{(++)} \alert{f^{(\ell)}_{(++)}} a_{n - \ell - d} \cos \left(b_{n-\ell - d} - \mathcal B_1 - \mathcal B_2\right) \\
+	 & \!\!\!\! + \sum_{(+-)} \alert{f^{(\ell)}_{(+-)}} a_{\ell - n} \cos \left(b_{\ell - n} - \mathcal B_1 - \mathcal B_2 \right) + \sum_{(-+)} \alert{f^{(\ell)}_{(-+)}} a_{\ell + n} \cos \left( b_{\ell + n} - \mathcal B_1 - \mathcal B_2 \right)
+	}
 	\end{align*}
   \end{overlayarea}
+    \vfill
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -671,4 +687,10 @@ colupper=white
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\frac{2 \omega_\ell}{\mathcal A_1 \mathcal A_2 \epsilon^2} \frac{d a_\ell}{dt} &= \sum_{(++)} f^{(\ell)}_{(++)} a_{n - \ell - d} \sin \left(b_{n-\ell - d} - \mathcal B_1 - \mathcal B_2\right) \\ 
+	& \!\!\!\! + \sum_{(+-)} f^{(\ell)}_{(+-)} a_{\ell - n} \sin \left( b_{\ell - n} - \mathcal B_1 - \mathcal B_2 \right) 
+	  + \sum_{(-+)} f^{(\ell)}_{(-+)} a_{\ell + n} \sin \left( b_{\ell + n} - \mathcal B_1 - \mathcal B_2 \right) \\
+	   \frac{1}{\mathcal A_1 \mathcal A_2} \frac{2 \omega_\ell a_\ell}{\epsilon^2} \frac{db_\ell}{dt} &= \sum_{(++)} f^{(\ell)}_{(++)} a_{n - \ell - d} \cos \left(b_{n-\ell - d} - \mathcal B_1 - \mathcal B_2\right)  \\
+	 & \!\!\!\! + \sum_{(+-)} f^{(\ell)}_{(+-)} a_{\ell - n} \cos \left(b_{\ell - n} - \mathcal B_1 - \mathcal B_2 \right) 
+	  + \sum_{(-+)} f^{(\ell)}_{(-+)} a_{\ell + n} \cos \left( b_{\ell + n} - \mathcal B_1 - \mathcal B_2 \right) + f^{(\ell)} a_\ell
 
