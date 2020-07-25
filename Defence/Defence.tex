@@ -130,24 +130,24 @@ colupper=white
 \frame
 {
   \frametitle{Scalar Field Collapse in AdS}
-  \vspace{-0.7in}
+  \vspace{-0.2in}
   \bi
   \its Minimally-coupled scalar field in AdS$_5$ (dual to 4D CFT)
   \its Spherical symmetry, Schwarzschild-like coordinates $\to$ \alert<1>{$A(t,x)$}, \alert<1>{$\delta(t,x)$}
-  \its Horizon formation when $A(t_H, x_H) \ll 1$
+  \its Interior gauge $\delta(t, x=0) = 0$
+  \its Horizon formation when $A(t_H, x_H) \leq 2^{7-n}$
   \uncover<2->{\its Einstein equations $\Rightarrow$ constraints}
   \uncover<2->{\its Klein-Gordon equations $\Rightarrow$ dynamics}
   \uncover<2->{\its Examine behaviour near critical amplitude for different \alert{masses}, \alert{widths}}
   \ei
 
-  \vspace{-0.2in}
-  \begin{overlayarea}{\textwidth}{0.1cm}
+  \begin{overlayarea}{\textwidth}{0.3\textheight}
     \begin{align*}
     \only<1>{
      ds^2 &= \frac{\ell^2}{\cos^2 (x/\ell)} \left( - \alert<1>{Ae^{-2\delta}} dt^2 + \alert<1>{A^{-1}} dx^2 + \sin^2 (x/\ell) d\Omega^{d-1} \right)
      }
      \only<2>{
-     		\p_x M_{\text{ADM}} &= \frac{\tan^{d-1}(x)}{2} \left( A (\Pi^2 + \Phi^2) + \frac{\alert{\mu^2} \phi^2}{\cos^2(x)} \right) \\
+     		\p_x M &= \frac{\tan^{d-1}(x)}{2} \left( A (\Pi^2 + \Phi^2) + \frac{\alert{\mu^2} \phi^2}{\cos^2(x)} \right) \\
     		\Pi(t=0, x) &= \epsilon \exp \left( - \frac{\tan^2(x)}{\alert{\sigma^2}} \right) \qquad \text{Phase space:} \: (\alert{\mu, \; \sigma})
     }
     \end{align*}
@@ -471,7 +471,7 @@ colupper=white
 {
   \frametitle{Extending TTF to Driven Scalars}
   \bi
-  \its Driven scalars $\to$ equation for $\phi_1$ has inhomogeneous term at $x = \pi / 2$
+  \its Driven scalars $\to$ $\phi_1$ has time-dependent boundary term at $x = \pi / 2$
   \its<2->{Examine scaling behaviour as $x \to \pi/2$: $\Phi^+(x) \sim (\cos x)^{\Delta^+}$ and $\Phi^-(x) \sim (\cos x)^{\Delta^-}$}
   \its<3->{Scalar field is linear combination of both kinds of modes}
   \its<3->{\alert<3>{$e_j(x)$} are same eigenfunctions of AdS \& have eigenvalues \alert<3>{$\omega_j = (2j + \Delta^+)$}}
@@ -481,7 +481,7 @@ colupper=white
   \begin{overlayarea}{\textwidth}{0.25\textheight}
   \begin{align*}
   \only<1>{
-  	\p^2_t \phi_1 + \hat L \phi_1 = \delta(x - \pi/2) \mc F(t)
+  	\p^2_t \phi_1 + \hat L \phi_1 = 0 \qquad \text{with} \qquad \phi_1(t, x \to \pi/2) = \left( \cos x \right)^{\Delta^-}\! \mathcal F(t)
   }
   \only<2>{
     \Phi^+(x) \equiv \text{``normalizable''} \quad & \quad \Phi^-(x) \equiv \text{``non-normalizable''}
