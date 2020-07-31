@@ -155,15 +155,14 @@ where $A_j (\tau)$ and $B_j(\tau)$ now contain both $\mc O(1)$ and $\mc O(\epsil
 - \frac{2 \omega_\ell A_\ell}{\epsilon^2} \frac{d B_\ell}{dt} &= T_\ell A_\ell^3 + \sum_{i \neq \ell} R_{i \ell} A^2_i A_\ell  \nonumber \\
 & \qquad + \stackrel{\ell \leq i + j}{\sum_{i \neq \ell} \sum_{j \neq \ell}} S_{ij (i + j -\ell) \ell} A_i A_j A_{i + j - \ell} \cos \left( B_\ell + B_{i+j-\ell} - B_i - B_j \right) \, .
 \end{align}
-{\it NB.} The remaining non-vanishing resonance condition allows us to write $\ok = \oi + \oj - \ol$ above. The coefficients $T, R, S$ are calculated directly from integrals over the product of eigenmodes. Computationally, we find it more convenient to write $T, R, S$ in terms of auxiliary coefficients with greater symmetry properties (as shown in \cite{1508.04943}). The explicit expressions for these integrals in the interior gauge, in which $\delta(t,x=0)=0$, are given in appendix~\ref{app: integrals}. 
+{\it NB.} The remaining non-vanishing resonance condition allows us to write $\ok = \oi + \oj - \ol$ above. The coefficients $T_i, R_{ij}, S_{ijk}$ are calculated directly from integrals over the product of eigenmodes. Computationally, we find it more convenient to write these in terms of auxiliary coefficients with greater symmetry properties (as shown in \cite{1508.04943}). The explicit expressions for these integrals in the interior gauge, in which $\delta(t,x=0)=0$, are given in appendix~\ref{app: integrals}. 
 
 Using a complex amplitude of the form $\mc A_j(\tau) = A_j \exp (-i B_j )$ in \eqref{phi ttf} allows us to combine equations \eqref{RN1} and \eqref{RN2} into a single equation
 \begin{align}
 \label{ttf eqn}
--2i \ol \frac{\mc A_\ell}{d \tau} = T_\ell |\mc A_\ell|^2 \mc A_\ell + \sum_{i \neq \ell} R_{i\ell} |\mc A_i|^2 \mc A_\ell + \stackrel{\ell \leq i+j}{\sum_{i \neq \ell} \sum_{j \neq \ell}} S_{ij(i+j-\ell)\ell} \mc A_i \mc A_j \bar{\mc A}_{i+j-\ell} \, .
+-2i \ol \frac{\mc A_\ell}{d \tau} = T_\ell |\mc A_\ell|^2 \mc A_\ell + \sum_{i \neq \ell} R_{i\ell} |\mc A_i|^2 \mc A_\ell + \stackrel{\ell \leq i+j}{\sum_{i \neq \ell} \sum_{j \neq \ell}} S_{ij(i+j-\ell)\ell} \mc A_i \mc A_j \bar{\mc A}_{i+j-\ell} \, ,
 \end{align}
-
-It was further demonstrated by \cite{1412.4761} that the TTF theory resulted in a set of conserved quantities: the energy of the system, $E$, and particle number, $N$. The simultaneous conservation of both $E$ and $N$ imply the existence of inverse energy cascades that must balance direct cascades, thereby providing a mechanism through which two-mode data could remain stable.
+where $\bar{\mc A}$ denotes the complex conjugate. It was further demonstrated by \cite{1412.4761} that the TTF theory resulted in a set of conserved quantities: the energy of the system, $E$, and particle number, $N$. The simultaneous conservation of both $E$ and $N$ imply the existence of inverse energy cascades that must balance direct cascades, thereby providing a mechanism through which two-mode data could remain stable.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -390,7 +389,7 @@ The weakly turbulent behaviour of the scalar field in the TTF is captured by the
 
 \subsection{Low-temperature QP data}
 
-Let us consider the evolution of a ``typical'' QP solution: a solution to \eqref{qp eqn} with $\alpha_1 = 0.2$ and $\jm = 100$, corresponding to a temperature of $T \simeq 3.146$. Choosing an amplitude of $\epsilon = 0.01$ (note that the TTF equations are invariant under $\mc A(\tau) \to \epsilon \, \mc A(\tau / \epsilon^2)$ and so the value of $\epsilon$ does not change the physics), figure~\ref{fig:qpevo} shows the evolution of the fraction of the total energy per mode. We see that energy in the lowest-$j$ modes remains constant over the duration of the evolution, while the fraction in the highest-$j$ modes increases after $\tau \simeq 0.3$. Similar behaviour is observed for higher $\jm$ solutions and over values of $0.2 \leq \alpha_1 \leq 0.44$. Given the scale of the energy in the modes $j \geq 96$, the growing energy fractions in these modes can mainly be attributed to numerical errors rather than direct energy cascades.
+Let us consider the evolution of a ``typical'' QP solution: a solution to \eqref{qp eqn} with $\alpha_1 = 0.2$ and $\jm = 100$, corresponding to a temperature of $T \simeq 3.146$. Choosing an amplitude of $\epsilon = 0.01$ (note that the TTF equations are invariant under $\mc A(\tau) \to \epsilon \, \mc A(\tau / \epsilon^2)$ and so the value of $\epsilon$ does not change the physics), figure~\ref{fig:qpevo} shows the evolution of the fraction of the total energy per mode. We see that energy in the lowest-$j$ modes remains constant over the duration of the evolution, while the fraction in the highest-$j$ modes increases after $t \simeq 300$. Similar behaviour is observed for higher $\jm$ solutions and over values of $0.2 \leq \alpha_1 \leq 0.44$. Given the scale of the energy in the modes $j \geq 96$, the growing energy fractions in these modes can mainly be attributed to numerical errors rather than direct energy cascades.
 
 \begin{figure}[H]
 	\centering
@@ -481,7 +480,7 @@ In an effort to find new QP solutions, we consider an alternative method for fin
 		\caption{The Ricci scalar at the origin as a function of time.}
 		\label{fig: Qpa2_00e-01padj200_ricci}
 	\end{subfigure}
-	\caption[The evolution of a padded QP solution]{The evolution of the padded QP solution for $\alpha_1 =0.2$ and $\jm = 200$, with amplitude $\epsilon=0.27$.}
+	\caption[The evolution of a padded QP solution]{The evolution of the padded QP solution for $\alpha_1 =0.2$ and $\jm = 200$, with amplitude $\epsilon=0.27$ over $t \in [0, 25]$.}
 	\label{fig:paddedqpevo}
 \end{figure}
 
@@ -533,7 +532,7 @@ We now apply the same amplitude-phase evolution procedure to higher temperature 
 		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa4_072e-01j100T5_3921e+00_highjevo}
 		\label{}
 	\end{subfigure}
-	\caption[Examining the energy per mode during the evolution of a $T \simeq 5.4$ QP solution]{Examining the energy per mode during the evolution of a $T \simeq 5.4$ QP solution with ${\epsilon = 0.1}$ over ${\tau \in [0, 4.25]}$. $E_j$ for ${j = 0, 1, 2, 3}$ (purple, green, blue, orange) is on the left,  $E_j$ for ${j = 96, 97, 98, 99}$ (purple, green, blue, orange) is on the right.}
+	\caption[Examining the energy per mode during the evolution of a $T \simeq 5.4$ QP solution]{Examining the energy per mode during the evolution of a $T \simeq 5.4$ QP solution with ${\epsilon = 0.1}$ over ${t \in [0, 425]}$. $E_j$ for ${j = 0, 1, 2, 3}$ (purple, green, blue, orange) is on the left,  $E_j$ for ${j = 96, 97, 98, 99}$ (purple, green, blue, orange) is on the right.}
 	\label{fig: HighTa4_072e-01j100T5_3921e+00_highjevo}
 \end{figure}
 	
@@ -547,7 +546,7 @@ We now apply the same amplitude-phase evolution procedure to higher temperature 
 		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa4_072e-01j100T5_3921e+00Ricci}
 		\label{fig: HighTa4_072e-01j100T5_3921e+00Ricci}
 	\end{subfigure}
-	\caption[Evolution of the energy spectrum and Ricci scalar for a $T \simeq 5.4$ QP solution]{The evolution of the energy spectrum (left) and upper envelope of the Ricci scalar (right) for a $T \simeq 5.4$ QP solution with $\epsilon = 0.1$ over $\tau \in [0, 4.25]$.}
+	\caption[Evolution of the energy spectrum and Ricci scalar for a $T \simeq 5.4$ QP solution]{The evolution of the energy spectrum (left) and upper envelope of the Ricci scalar (right) for a $T \simeq 5.4$ QP solution with $\epsilon = 0.1$ over $t \in [0, 425]$.}
 	\label{fig:HighTa4_072e-01j100T5_3921e+00_evo}	
 \end{figure}
 
@@ -564,7 +563,7 @@ We now apply the same amplitude-phase evolution procedure to higher temperature 
 	\begin{subfigure}[t]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{/Users/bradc/Research/Thesis/PhD/Chapter2/figs/HighTa4_072e-01padj200T5_3921e+00_spectrum}
 	\end{subfigure}
-	\caption[Evolution of the spectrum of a $T \simeq 5.4$ QP solution that has been padded with $100$ modes]{A $T \simeq 5.4$ QP solution shown in figure~\ref{fig:HighTa4_072e-01j100T5_3921e+00_evo} is padded with 100 extra modes and evolved with $\epsilon = 0.1$.}
+	\caption[Evolution of the spectrum of a $T \simeq 5.4$ QP solution that has been padded with $100$ modes]{A $T \simeq 5.4$ QP solution shown in figure~\ref{fig:HighTa4_072e-01j100T5_3921e+00_evo} is padded with 100 extra modes and evolved with $\epsilon = 0.1$ over $t \in [0, 100]$}
 	\label{fig: HighTa4_072e-01padj200T5_3921e+00_evo}
 \end{figure}
 
@@ -701,7 +700,7 @@ As in the case of low-temperature QP solutions, we wish to expand the space of p
 \section{Discussion}
 \label{sec: ttf discussion}
 
-We have explored the space of quasi-periodic solutions within the perturbative description of a massless scalar field in AdS$_4$. Using the conserved quantities $E$ and $N$, we constructed families of quasi-periodic solutions that were distinguished by the temperature $T = E/N$ for different choices of the truncation value $\jm$. We have demonstrated that low temperature QP solutions, i.e. those that are clearly accessible by solving \eqref{qp eqn} for a given $\alpha_1$ such that $\alpha_1 < \alpha_0 = 1$, can be extended to arbitrarily large $\jm$ values, and therefore constitute solutions to the TTF theory. We have also examined high temperature QP solutions, which are found by perturbing low temperature solutions by $\delta E$ while keeping $N$ fixed. We found that a high temperature solutions were robust against increasing $\jm$ only for temperatures $T \lesssim 5.5$. We also applied several alternative methods for generating high temperature QP solutions, however we were not able to find evidence of any solutions that could be extended to the untruncated TTF system. We constructed low-$\jm$ solutions with $T \gg 5.5$, but found that they were not robust with increasing $\jm$ and therefore were not true solutions. Rather, only solutions with temperatures $T \lesssim 5.5$ could be extended to large $\jm$ values. The nature of this temperature threshold is not totally understood. It may be due to numerical limitations with the Newton-Raphson solving method, or it may be a physical limitation of the quasi-periodic ansatz.
+We have explored the space of quasi-periodic solutions within the perturbative description of a massless scalar field in AdS$_4$. Using the conserved quantities $E$ and $N$, we constructed families of quasi-periodic solutions that were distinguished by the temperature $T = E/N$ for different choices of the truncation value $\jm$. We have demonstrated that low temperature QP solutions, i.e. those that are clearly accessible by solving \eqref{qp eqn} for a given $\alpha_1$ such that $\alpha_1 < \alpha_0 = 1$, can be extended to arbitrarily large $\jm$ values, and therefore constitute solutions to the TTF theory. We have also examined high temperature QP solutions, which are found by perturbing low temperature solutions by $\delta E$ while keeping $N$ fixed. We found that a high temperature solutions were robust against increasing $\jm$ only for temperatures $T \lesssim 5.5$. We also applied several alternative methods for generating high temperature QP solutions. However, we were not able to find evidence of any solutions that could be extended to the untruncated TTF system. We constructed low-$\jm$ solutions with $T \gg 5.5$, but found that they were not robust with increasing $\jm$ and therefore were not true solutions. Rather, only solutions with temperatures $T \lesssim 5.5$ could be extended to large $\jm$ values. The nature of this temperature threshold is not totally understood. It may be due to numerical limitations with the Newton-Raphson solving method, or it may be a physical limitation of the quasi-periodic ansatz.
 
 By construction, TTF solutions are stable against gravitational collapse and therefore evolution within the TTF description will not produce a singularity. However, there are several indicators for instability in the fully nonlinear theory: the value of the Ricci scalar at the origin, the growth higher-order contributions to the lapse function $\delta$, and rapid growth/oscillations in the energy of high frequency modes. With these indicators in mind, we have shown that low temperature QP solutions constructed from directly solving \eqref{qp eqn} did produce oscillations in $\mc R$, however they did not exhibit other behaviour -- such as the rapid transfer of energy from low- to high-frequency components -- that would suggest instability in the fully nonlinear theory. At late times in their TTF evolution, these solutions project back to the QP surface without altering their energy spectra. 
 
